@@ -111,6 +111,10 @@ public class PddClient
     /// </summary>
     public TicketApi TicketApi { get; }
 
+    /// <summary>
+    /// 快团团API
+    /// </summary>
+    public KttApi KttApi { get; }
 
     public ErrorResponse ErrorResponse;
     public ClientConfig Config { get; set; }
@@ -145,6 +149,7 @@ public class PddClient
         MallApi = new MallApi(config.ClientId, config.ClientSecret, config.AccessToken);
         OverseaApi = new OverseaApi(config.ClientId, config.ClientSecret, config.AccessToken);
         TicketApi = new TicketApi(config.ClientId, config.ClientSecret, config.AccessToken);
+        KttApi = new KttApi(config.ClientId, config.ClientSecret, config.AccessToken);
 
     }
     protected void SetToken(string accessToken)
@@ -174,6 +179,7 @@ public class PddClient
         MallApi.AccessToken = accessToken;
         OverseaApi.AccessToken = accessToken;
         TicketApi.AccessToken = accessToken;
+        KttApi.AccessToken = accessToken;
 
     }
 
