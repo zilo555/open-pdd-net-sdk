@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Goods;
-public partial class UpdateGoodsLogisticsSerTemplateResponse : PddResponseModel
+public partial class UpdateGoodsLogisticsSerTemplateResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class UpdateGoodsLogisticsSerTemplateResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("goods_logistics_ser_template_update_response")]
     public GoodsLogisticsSerTemplateUpdateResponseResponse GoodsLogisticsSerTemplateUpdateResponse { get; set; }
-    public partial class GoodsLogisticsSerTemplateUpdateResponseResponse : PddResponseModel
+
+    public partial class GoodsLogisticsSerTemplateUpdateResponseResponse
     {
 
         /// <summary>
@@ -15,6 +16,7 @@ public partial class UpdateGoodsLogisticsSerTemplateResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("template_id")]
         public string TemplateId { get; set; }
+
 
     }
 

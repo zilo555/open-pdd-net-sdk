@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.LogisticsCompany;
-public partial class NotifyLogisticsTicketResponse : PddResponseModel
+public partial class NotifyLogisticsTicketResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class NotifyLogisticsTicketResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("logistics_ticket_notify_response")]
     public LogisticsTicketNotifyResponseResponse LogisticsTicketNotifyResponse { get; set; }
-    public partial class LogisticsTicketNotifyResponseResponse : PddResponseModel
+
+    public partial class LogisticsTicketNotifyResponseResponse
     {
 
         /// <summary>
@@ -15,6 +16,7 @@ public partial class NotifyLogisticsTicketResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("is_success")]
         public bool? IsSuccess { get; set; }
+
 
     }
 

@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ktt;
-public partial class ImageKttGoodsUploadResponse : PddResponseModel
+public partial class ImageKttGoodsUploadResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class ImageKttGoodsUploadResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("response")]
     public ResponseResponse Response { get; set; }
-    public partial class ResponseResponse : PddResponseModel
+
+    public partial class ResponseResponse
     {
 
         /// <summary>
@@ -21,6 +22,7 @@ public partial class ImageKttGoodsUploadResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("success")]
         public bool? Success { get; set; }
+
 
     }
 

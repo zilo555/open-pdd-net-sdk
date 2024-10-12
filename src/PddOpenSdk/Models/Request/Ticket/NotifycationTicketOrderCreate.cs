@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Ticket;
 public partial class NotifycationTicketOrderCreate
 {
-
     /// <summary>
     /// 码类型。status=2时必填。1.无凭证(身份证/手机号) 2. 数字码 3.QR图片 4.外链
     /// </summary>
@@ -49,9 +48,10 @@ public partial class NotifycationTicketOrderCreate
     /// </summary>
     [JsonPropertyName("ticket_type")]
     public int? TicketType { get; set; }
+
+
     public partial class TicketsModel
     {
-
         /// <summary>
         /// 辅助凭证，有辅助凭证时返回
         /// </summary>
@@ -75,6 +75,8 @@ public partial class NotifycationTicketOrderCreate
         /// </summary>
         [JsonPropertyName("url")]
         public string Url { get; set; }
+
+
 
     }
 

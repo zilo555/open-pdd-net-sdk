@@ -1,15 +1,15 @@
 namespace PddOpenSdk.Models.Request.WayBill;
 public partial class QueryCloudPrinterStatus
 {
-
     /// <summary>
     /// 打印状态查询请求
     /// </summary>
     [JsonPropertyName("cloud_printer_status_query_request")]
     public CloudPrinterStatusQueryRequestModel CloudPrinterStatusQueryRequest { get; set; }
+
+
     public partial class CloudPrinterStatusQueryRequestModel
     {
-
         /// <summary>
         /// 打印机id
         /// </summary>
@@ -21,6 +21,8 @@ public partial class QueryCloudPrinterStatus
         /// </summary>
         [JsonPropertyName("share_code")]
         public string ShareCode { get; set; }
+
+
 
     }
 

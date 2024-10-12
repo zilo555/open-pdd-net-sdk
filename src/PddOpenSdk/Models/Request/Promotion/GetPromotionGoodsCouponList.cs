@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Promotion;
 public partial class GetPromotionGoodsCouponList
 {
-
     /// <summary>
     /// 页码，默认1
     /// </summary>
@@ -37,6 +36,8 @@ public partial class GetPromotionGoodsCouponList
     /// </summary>
     [JsonPropertyName("sort_by")]
     public int? SortBy { get; set; }
+
+
 
 }
 

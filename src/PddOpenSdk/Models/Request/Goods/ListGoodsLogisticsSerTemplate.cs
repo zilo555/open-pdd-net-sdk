@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Goods;
 public partial class ListGoodsLogisticsSerTemplate
 {
-
     /// <summary>
     /// 查询大小
     /// </summary>
@@ -25,6 +24,8 @@ public partial class ListGoodsLogisticsSerTemplate
     /// </summary>
     [JsonPropertyName("template_type")]
     public int TemplateType { get; set; }
+
+
 
 }
 

@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Virtual;
-public partial class NotifyVirtualMobileChargeResponse : PddResponseModel
+public partial class NotifyVirtualMobileChargeResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class NotifyVirtualMobileChargeResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("mobile_charge_notify_response")]
     public MobileChargeNotifyResponseResponse MobileChargeNotifyResponse { get; set; }
-    public partial class MobileChargeNotifyResponseResponse : PddResponseModel
+
+    public partial class MobileChargeNotifyResponseResponse
     {
 
         /// <summary>
@@ -15,6 +16,7 @@ public partial class NotifyVirtualMobileChargeResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("success")]
         public bool? Success { get; set; }
+
 
     }
 

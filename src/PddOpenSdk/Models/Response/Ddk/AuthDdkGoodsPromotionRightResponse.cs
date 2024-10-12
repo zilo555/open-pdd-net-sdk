@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ddk;
-public partial class AuthDdkGoodsPromotionRightResponse : PddResponseModel
+public partial class AuthDdkGoodsPromotionRightResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class AuthDdkGoodsPromotionRightResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("goods_promotion_right_auth_response")]
     public GoodsPromotionRightAuthResponseResponse GoodsPromotionRightAuthResponse { get; set; }
-    public partial class GoodsPromotionRightAuthResponseResponse : PddResponseModel
+
+    public partial class GoodsPromotionRightAuthResponseResponse
     {
 
         /// <summary>
@@ -21,6 +22,7 @@ public partial class AuthDdkGoodsPromotionRightResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("result")]
         public bool? Result { get; set; }
+
 
     }
 

@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Mall;
-public partial class PostMallInfoGroupQueryResponse : PddResponseModel
+public partial class PostMallInfoGroupQueryResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class PostMallInfoGroupQueryResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("response")]
     public ResponseResponse Response { get; set; }
-    public partial class ResponseResponse : PddResponseModel
+
+    public partial class ResponseResponse
     {
 
         /// <summary>
@@ -21,7 +22,8 @@ public partial class PostMallInfoGroupQueryResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("total")]
         public int? Total { get; set; }
-        public partial class MallStoreGroupListResponse : PddResponseModel
+
+        public partial class MallStoreGroupListResponse
         {
 
             /// <summary>
@@ -41,6 +43,7 @@ public partial class PostMallInfoGroupQueryResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("mall_id")]
             public long? MallId { get; set; }
+
 
         }
 

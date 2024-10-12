@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Ktt;
 public partial class PagequeryKttUserSite
 {
-
     /// <summary>
     /// 页码 从1开始
     /// </summary>
@@ -13,6 +12,8 @@ public partial class PagequeryKttUserSite
     /// </summary>
     [JsonPropertyName("page_size")]
     public int PageSize { get; set; }
+
+
 
 }
 

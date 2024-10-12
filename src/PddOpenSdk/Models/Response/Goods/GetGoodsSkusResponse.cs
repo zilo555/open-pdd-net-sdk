@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Goods;
-public partial class GetGoodsSkusResponse : PddResponseModel
+public partial class GetGoodsSkusResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetGoodsSkusResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("goods_sku_get_response")]
     public GoodsSkuGetResponseResponse GoodsSkuGetResponse { get; set; }
-    public partial class GoodsSkuGetResponseResponse : PddResponseModel
+
+    public partial class GoodsSkuGetResponseResponse
     {
 
         /// <summary>
@@ -63,7 +64,8 @@ public partial class GetGoodsSkusResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("spec")]
         public List<SpecResponse> Spec { get; set; }
-        public partial class SpecResponse : PddResponseModel
+
+        public partial class SpecResponse
         {
 
             /// <summary>
@@ -95,6 +97,7 @@ public partial class GetGoodsSkusResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("spec_note")]
             public string SpecNote { get; set; }
+
 
         }
 

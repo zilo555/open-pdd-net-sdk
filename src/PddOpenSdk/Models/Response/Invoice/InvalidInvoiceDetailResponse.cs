@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Invoice;
-public partial class InvalidInvoiceDetailResponse : PddResponseModel
+public partial class InvalidInvoiceDetailResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class InvalidInvoiceDetailResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("invoice_detail_invalid_response")]
     public InvoiceDetailInvalidResponseResponse InvoiceDetailInvalidResponse { get; set; }
-    public partial class InvoiceDetailInvalidResponseResponse : PddResponseModel
+
+    public partial class InvoiceDetailInvalidResponseResponse
     {
 
         /// <summary>
@@ -33,7 +34,8 @@ public partial class InvalidInvoiceDetailResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("success")]
         public bool? Success { get; set; }
-        public partial class ResultResponse : PddResponseModel
+
+        public partial class ResultResponse
         {
 
             /// <summary>
@@ -41,6 +43,7 @@ public partial class InvalidInvoiceDetailResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("result")]
             public bool? Result { get; set; }
+
 
         }
 

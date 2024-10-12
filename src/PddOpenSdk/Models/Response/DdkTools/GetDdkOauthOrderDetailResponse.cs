@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.DdkTools;
-public partial class GetDdkOauthOrderDetailResponse : PddResponseModel
+public partial class GetDdkOauthOrderDetailResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetDdkOauthOrderDetailResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("order_detail_response")]
     public OrderDetailResponseResponse OrderDetailResponse { get; set; }
-    public partial class OrderDetailResponseResponse : PddResponseModel
+
+    public partial class OrderDetailResponseResponse
     {
 
         /// <summary>
@@ -333,6 +334,7 @@ public partial class GetDdkOauthOrderDetailResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("bandan_risk_consult")]
         public int? BandanRiskConsult { get; set; }
+
 
     }
 

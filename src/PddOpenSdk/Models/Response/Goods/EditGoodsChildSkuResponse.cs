@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Goods;
-public partial class EditGoodsChildSkuResponse : PddResponseModel
+public partial class EditGoodsChildSkuResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class EditGoodsChildSkuResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("child_sku_edit_response")]
     public ChildSkuEditResponseResponse ChildSkuEditResponse { get; set; }
-    public partial class ChildSkuEditResponseResponse : PddResponseModel
+
+    public partial class ChildSkuEditResponseResponse
     {
 
         /// <summary>
@@ -21,6 +22,7 @@ public partial class EditGoodsChildSkuResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("goods_id")]
         public long? GoodsId { get; set; }
+
 
     }
 

@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Ktt;
 public partial class DeliveryKttPurchaseOrder
 {
-
     /// <summary>
     /// 物流公司id
     /// </summary>
@@ -31,6 +30,8 @@ public partial class DeliveryKttPurchaseOrder
     /// </summary>
     [JsonPropertyName("waybill_no")]
     public string WaybillNo { get; set; }
+
+
 
 }
 

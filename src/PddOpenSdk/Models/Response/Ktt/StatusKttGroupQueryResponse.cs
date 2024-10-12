@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ktt;
-public partial class StatusKttGroupQueryResponse : PddResponseModel
+public partial class StatusKttGroupQueryResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class StatusKttGroupQueryResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("response")]
     public ResponseResponse Response { get; set; }
-    public partial class ResponseResponse : PddResponseModel
+
+    public partial class ResponseResponse
     {
 
         /// <summary>
@@ -39,7 +40,8 @@ public partial class StatusKttGroupQueryResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("status")]
         public int? Status { get; set; }
-        public partial class GoodsListResponse : PddResponseModel
+
+        public partial class GoodsListResponse
         {
 
             /// <summary>
@@ -59,7 +61,8 @@ public partial class StatusKttGroupQueryResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("sku_list")]
             public List<SkuListResponse> SkuList { get; set; }
-            public partial class SkuListResponse : PddResponseModel
+
+            public partial class SkuListResponse
             {
 
                 /// <summary>
@@ -79,6 +82,7 @@ public partial class StatusKttGroupQueryResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("spec_id_list")]
                 public List<long?> SpecIdList { get; set; }
+
 
             }
 

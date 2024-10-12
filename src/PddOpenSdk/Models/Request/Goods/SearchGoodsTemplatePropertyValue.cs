@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Goods;
 public partial class SearchGoodsTemplatePropertyValue
 {
-
     /// <summary>
     /// 类目id
     /// </summary>
@@ -43,6 +42,8 @@ public partial class SearchGoodsTemplatePropertyValue
     /// </summary>
     [JsonPropertyName("ref_pid")]
     public long? RefPid { get; set; }
+
+
 
 }
 

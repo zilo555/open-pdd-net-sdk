@@ -86,7 +86,7 @@ public class PddApiDocHelper
         catch (Exception e)
         {
             System.Console.WriteLine(e.Message);
-            return default;
+            return [];
         }
     }
 
@@ -106,10 +106,10 @@ public class PddApiDocHelper
             {
                 var json = await response.Content.ReadAsStringAsync();
                 var result = JsonSerializer.Deserialize<CatListResponseModel>(json);
-                return result.Result.DocList;
+                return result?.Result.DocList ?? [];
             }
         }
-        return null;
+        return [];
     }
 
     /// <summary>
@@ -117,21 +117,19 @@ public class PddApiDocHelper
     /// </summary>
     /// <param name="id">类别id</param>
     /// <returns></returns>
-    public async Task<ApiDocDetail> GetDocDetailByIdAsync(string id)
+    public async Task<ApiDocDetail?> GetDocDetailByIdAsync(string id)
     {
-        using (var hc = new HttpClient())
+        using var hc = new HttpClient();
+        var requestContent = new StringContent(JsonSerializer.Serialize(new { id }), Encoding.UTF8,
+                                               "application/json");
+        var response = await hc.PostAsync(DocInfoUrl, requestContent);
+        if (response.IsSuccessStatusCode)
         {
-            var requestContent = new StringContent(JsonSerializer.Serialize(new { id }), Encoding.UTF8,
-                                                   "application/json");
-            var response = await hc.PostAsync(DocInfoUrl, requestContent);
-            if (response.IsSuccessStatusCode)
-            {
-                var json = await response.Content.ReadAsStringAsync();
-                var result = JsonSerializer.Deserialize<ApiDocResponseModel>(json);
-                return result.Result;
-            }
+            var json = await response.Content.ReadAsStringAsync();
+            var result = JsonSerializer.Deserialize<ApiDocResponseModel>(json);
+            return result?.Result;
         }
-        return null;
+        return default;
     }
 
     public async Task TestApi(string id)
@@ -234,10 +232,6 @@ $@"
         var responseModelName = methodName + "Response";
         // 根据返回示例生成
         var responseContent = BuildResponseModel(responseModelName, doc.ResponseParamList);
-        if (string.IsNullOrEmpty(responseContent))
-        {
-            responseContent = BuildResponseModel(responseModelName, doc.ResponseParamList);
-        }
 
         if (string.IsNullOrEmpty(responseContent))
         {
@@ -271,7 +265,7 @@ $@"
     {
         if (string.IsNullOrEmpty(className))
         {
-            return default;
+            return string.Empty;
         }
         className = className.Replace("$", "");
 
@@ -330,7 +324,7 @@ $"""
     {
         if (string.IsNullOrEmpty(className))
         {
-            return default;
+            return string.Empty;
         }
         var currentParamLists = paramLists.Where(p => p.ParentId == parentId).ToList();
         var indentBuilder = new IndentBuilder();
@@ -344,7 +338,10 @@ $"""
 
             var attribution = NameHelper.GetAttributionName(param.ParamName, ConvertParamType(param.ParamType), 0, "Response", param.ChildrenNum > 0);
 
-            var paramName = Function.ToPascalCase(param.ParamName.Replace("_", " "))?.Replace(" ", "")?.Replace("$", "");
+            var paramName = Function.ToPascalCase(
+                param.ParamName.Replace("_", " "))?
+                .Replace(" ", "")?
+                .Replace("$", "");
             // 如果是对象类型，生成子类模型
             if (param.ChildrenNum > 0)
             {
@@ -353,7 +350,7 @@ $"""
                 {
                     childClassName = "Inner" + childClassName;
                 }
-                childClass += BuildResponseModel(paramName + "Response", paramLists, (int)param.Id);
+                childClass += BuildResponseModel(childClassName, paramLists, (int)param.Id);
             }
             // 参数注释
             var paramComment =

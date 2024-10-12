@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Goods;
-public partial class SetGoodsSaleStatusResponse : PddResponseModel
+public partial class SetGoodsSaleStatusResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class SetGoodsSaleStatusResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("goods_sale_status_set_response")]
     public GoodsSaleStatusSetResponseResponse GoodsSaleStatusSetResponse { get; set; }
-    public partial class GoodsSaleStatusSetResponseResponse : PddResponseModel
+
+    public partial class GoodsSaleStatusSetResponseResponse
     {
 
         /// <summary>
@@ -15,6 +16,7 @@ public partial class SetGoodsSaleStatusResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("is_success")]
         public bool? IsSuccess { get; set; }
+
 
     }
 

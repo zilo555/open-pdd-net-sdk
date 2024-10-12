@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Goods;
 public partial class UpdateGoodsSkuPrice
 {
-
     /// <summary>
     /// 商品id
     /// </summary>
@@ -43,9 +42,10 @@ public partial class UpdateGoodsSkuPrice
     /// </summary>
     [JsonPropertyName("two_pieces_discount")]
     public int? TwoPiecesDiscount { get; set; }
+
+
     public partial class SkuPriceListModel
     {
-
         /// <summary>
         /// 拼团购买价格（单位分）
         /// </summary>
@@ -69,6 +69,8 @@ public partial class UpdateGoodsSkuPrice
         /// </summary>
         [JsonPropertyName("sku_id")]
         public long SkuId { get; set; }
+
+
 
     }
 

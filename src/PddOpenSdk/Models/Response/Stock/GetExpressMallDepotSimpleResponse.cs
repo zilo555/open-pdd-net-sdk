@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Stock;
-public partial class GetExpressMallDepotSimpleResponse : PddResponseModel
+public partial class GetExpressMallDepotSimpleResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetExpressMallDepotSimpleResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("open_api_response")]
     public List<OpenApiResponseResponse> OpenApiResponse { get; set; }
-    public partial class OpenApiResponseResponse : PddResponseModel
+
+    public partial class OpenApiResponseResponse
     {
 
         /// <summary>
@@ -33,6 +34,7 @@ public partial class GetExpressMallDepotSimpleResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("name")]
         public string Name { get; set; }
+
 
     }
 

@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Goods;
 public partial class GetGoodsSizespecTemplates
 {
-
     /// <summary>
     /// 尺码表分类id，pdd.goods.sizespec.class.get得到
     /// </summary>
@@ -19,6 +18,8 @@ public partial class GetGoodsSizespecTemplates
     /// </summary>
     [JsonPropertyName("offset")]
     public long Offset { get; set; }
+
+
 
 }
 

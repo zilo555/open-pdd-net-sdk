@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ktt;
-public partial class ListKttGoodsQueryResponse : PddResponseModel
+public partial class ListKttGoodsQueryResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class ListKttGoodsQueryResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("ktt_goods_query_list_response")]
     public KttGoodsQueryListResponseResponse KttGoodsQueryListResponse { get; set; }
-    public partial class KttGoodsQueryListResponseResponse : PddResponseModel
+
+    public partial class KttGoodsQueryListResponseResponse
     {
 
         /// <summary>
@@ -21,7 +22,8 @@ public partial class ListKttGoodsQueryResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("total")]
         public long? Total { get; set; }
-        public partial class GoodsListResponse : PddResponseModel
+
+        public partial class GoodsListResponse
         {
 
             /// <summary>
@@ -95,7 +97,8 @@ public partial class ListKttGoodsQueryResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("update_time")]
             public long? UpdateTime { get; set; }
-            public partial class SkuListResponse : PddResponseModel
+
+            public partial class SkuListResponse
             {
 
                 /// <summary>
@@ -169,7 +172,8 @@ public partial class ListKttGoodsQueryResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("total_quantity")]
                 public long? TotalQuantity { get; set; }
-                public partial class SpecListResponse : PddResponseModel
+
+                public partial class SpecListResponse
                 {
 
                     /// <summary>
@@ -189,6 +193,7 @@ public partial class ListKttGoodsQueryResponse : PddResponseModel
                     /// </summary>
                     [JsonPropertyName("spec_id")]
                     public long? SpecId { get; set; }
+
 
                 }
 

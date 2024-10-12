@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Promotion;
-public partial class GetPromotionMerchantCouponListResponse : PddResponseModel
+public partial class GetPromotionMerchantCouponListResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetPromotionMerchantCouponListResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("merchant_coupon_batch_list_response")]
     public MerchantCouponBatchListResponseResponse MerchantCouponBatchListResponse { get; set; }
-    public partial class MerchantCouponBatchListResponseResponse : PddResponseModel
+
+    public partial class MerchantCouponBatchListResponseResponse
     {
 
         /// <summary>
@@ -21,7 +22,8 @@ public partial class GetPromotionMerchantCouponListResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("coupon_batch_list")]
         public List<CouponBatchListResponse> CouponBatchList { get; set; }
-        public partial class CouponBatchListResponse : PddResponseModel
+
+        public partial class CouponBatchListResponse
         {
 
             /// <summary>
@@ -143,6 +145,7 @@ public partial class GetPromotionMerchantCouponListResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("created_at")]
             public long? CreatedAt { get; set; }
+
 
         }
 

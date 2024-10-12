@@ -1,15 +1,15 @@
 namespace PddOpenSdk.Models.Request.Util;
 public partial class BatchOpenKmsEncrypt
 {
-
     /// <summary>
     /// 要加密的数据列表, 列表大小不超过100
     /// </summary>
     [JsonPropertyName("data_list")]
     public List<DataListModel> DataList { get; set; }
+
+
     public partial class DataListModel
     {
-
         /// <summary>
         /// 明文数据
         /// </summary>
@@ -27,6 +27,8 @@ public partial class BatchOpenKmsEncrypt
         /// </summary>
         [JsonPropertyName("type")]
         public string Type { get; set; }
+
+
 
     }
 

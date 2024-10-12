@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.DdkTools;
-public partial class BindDdkOauthPidMediaidResponse : PddResponseModel
+public partial class BindDdkOauthPidMediaidResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class BindDdkOauthPidMediaidResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("p_id_bind_response")]
     public PIdBindResponseResponse PIdBindResponse { get; set; }
-    public partial class PIdBindResponseResponse : PddResponseModel
+
+    public partial class PIdBindResponseResponse
     {
 
         /// <summary>
@@ -15,7 +16,8 @@ public partial class BindDdkOauthPidMediaidResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("result")]
         public ResultResponse Result { get; set; }
-        public partial class ResultResponse : PddResponseModel
+
+        public partial class ResultResponse
         {
 
             /// <summary>
@@ -29,6 +31,7 @@ public partial class BindDdkOauthPidMediaidResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("result")]
             public bool? Result { get; set; }
+
 
         }
 

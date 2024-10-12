@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ticket;
-public partial class QueryTicketGoodsResponse : PddResponseModel
+public partial class QueryTicketGoodsResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class QueryTicketGoodsResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("goods_detail_get_response")]
     public GoodsDetailGetResponseResponse GoodsDetailGetResponse { get; set; }
-    public partial class GoodsDetailGetResponseResponse : PddResponseModel
+
+    public partial class GoodsDetailGetResponseResponse
     {
 
         /// <summary>
@@ -99,7 +100,8 @@ public partial class QueryTicketGoodsResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("sku_type")]
         public int? SkuType { get; set; }
-        public partial class CarouselVideoResponse : PddResponseModel
+
+        public partial class CarouselVideoResponse
         {
 
             /// <summary>
@@ -114,8 +116,9 @@ public partial class QueryTicketGoodsResponse : PddResponseModel
             [JsonPropertyName("video_url")]
             public string VideoUrl { get; set; }
 
+
         }
-        public partial class GoodsPropertiesResponse : PddResponseModel
+        public partial class GoodsPropertiesResponse
         {
 
             /// <summary>
@@ -154,8 +157,9 @@ public partial class QueryTicketGoodsResponse : PddResponseModel
             [JsonPropertyName("vid")]
             public long? Vid { get; set; }
 
+
         }
-        public partial class SkuListResponse : PddResponseModel
+        public partial class SkuListResponse
         {
 
             /// <summary>
@@ -229,7 +233,8 @@ public partial class QueryTicketGoodsResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("thumb_url")]
             public string ThumbUrl { get; set; }
-            public partial class ChildSkusResponse : PddResponseModel
+
+            public partial class ChildSkusResponse
             {
 
                 /// <summary>
@@ -274,8 +279,9 @@ public partial class QueryTicketGoodsResponse : PddResponseModel
                 [JsonPropertyName("sku_id")]
                 public long? SkuId { get; set; }
 
+
             }
-            public partial class SpecResponse : PddResponseModel
+            public partial class SpecResponse
             {
 
                 /// <summary>
@@ -301,6 +307,7 @@ public partial class QueryTicketGoodsResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("spec_name")]
                 public string SpecName { get; set; }
+
 
             }
 

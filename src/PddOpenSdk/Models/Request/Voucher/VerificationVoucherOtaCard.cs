@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Voucher;
 public partial class VerificationVoucherOtaCard
 {
-
     /// <summary>
     /// 待核销的券码
     /// </summary>
@@ -25,6 +24,8 @@ public partial class VerificationVoucherOtaCard
     /// </summary>
     [JsonPropertyName("order_sn")]
     public string OrderSn { get; set; }
+
+
 
 }
 

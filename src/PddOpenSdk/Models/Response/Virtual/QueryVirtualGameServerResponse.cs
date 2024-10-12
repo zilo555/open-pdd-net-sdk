@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Virtual;
-public partial class QueryVirtualGameServerResponse : PddResponseModel
+public partial class QueryVirtualGameServerResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class QueryVirtualGameServerResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("game_server_query_response")]
     public GameServerQueryResponseResponse GameServerQueryResponse { get; set; }
-    public partial class GameServerQueryResponseResponse : PddResponseModel
+
+    public partial class GameServerQueryResponseResponse
     {
 
         /// <summary>
@@ -33,7 +34,8 @@ public partial class QueryVirtualGameServerResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("item_list")]
         public List<ItemListResponse> ItemList { get; set; }
-        public partial class ItemListResponse : PddResponseModel
+
+        public partial class ItemListResponse
         {
 
             /// <summary>
@@ -59,7 +61,8 @@ public partial class QueryVirtualGameServerResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("type")]
             public int? Type { get; set; }
-            public partial class ChildrenResponse : PddResponseModel
+
+            public partial class ChildrenResponse
             {
 
                 /// <summary>
@@ -79,6 +82,7 @@ public partial class QueryVirtualGameServerResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("type")]
                 public int? Type { get; set; }
+
 
             }
 

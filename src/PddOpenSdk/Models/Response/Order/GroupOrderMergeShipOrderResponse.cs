@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Order;
-public partial class GroupOrderMergeShipOrderResponse : PddResponseModel
+public partial class GroupOrderMergeShipOrderResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GroupOrderMergeShipOrderResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("merge_ship_order_group_response")]
     public MergeShipOrderGroupResponseResponse MergeShipOrderGroupResponse { get; set; }
-    public partial class MergeShipOrderGroupResponseResponse : PddResponseModel
+
+    public partial class MergeShipOrderGroupResponseResponse
     {
 
         /// <summary>
@@ -15,7 +16,8 @@ public partial class GroupOrderMergeShipOrderResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("order_group_list")]
         public List<OrderGroupListResponse> OrderGroupList { get; set; }
-        public partial class OrderGroupListResponse : PddResponseModel
+
+        public partial class OrderGroupListResponse
         {
 
             /// <summary>
@@ -23,6 +25,7 @@ public partial class GroupOrderMergeShipOrderResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("order_sn_list")]
             public List<string> OrderSnList { get; set; }
+
 
         }
 

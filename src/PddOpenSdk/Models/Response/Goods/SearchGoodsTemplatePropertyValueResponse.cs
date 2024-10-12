@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Goods;
-public partial class SearchGoodsTemplatePropertyValueResponse : PddResponseModel
+public partial class SearchGoodsTemplatePropertyValueResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class SearchGoodsTemplatePropertyValueResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("goods_template_prop_val_search_response")]
     public GoodsTemplatePropValSearchResponseResponse GoodsTemplatePropValSearchResponse { get; set; }
-    public partial class GoodsTemplatePropValSearchResponseResponse : PddResponseModel
+
+    public partial class GoodsTemplatePropValSearchResponseResponse
     {
 
         /// <summary>
@@ -15,7 +16,8 @@ public partial class SearchGoodsTemplatePropertyValueResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("list")]
         public List<ListResponse> List { get; set; }
-        public partial class ListResponse : PddResponseModel
+
+        public partial class ListResponse
         {
 
             /// <summary>
@@ -29,6 +31,7 @@ public partial class SearchGoodsTemplatePropertyValueResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("vid")]
             public long? Vid { get; set; }
+
 
         }
 

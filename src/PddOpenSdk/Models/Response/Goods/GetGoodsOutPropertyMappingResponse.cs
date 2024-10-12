@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Goods;
-public partial class GetGoodsOutPropertyMappingResponse : PddResponseModel
+public partial class GetGoodsOutPropertyMappingResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetGoodsOutPropertyMappingResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("out_property_mapping_get_response")]
     public OutPropertyMappingGetResponseResponse OutPropertyMappingGetResponse { get; set; }
-    public partial class OutPropertyMappingGetResponseResponse : PddResponseModel
+
+    public partial class OutPropertyMappingGetResponseResponse
     {
 
         /// <summary>
@@ -15,7 +16,8 @@ public partial class GetGoodsOutPropertyMappingResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("property")]
         public List<PropertyResponse> Property { get; set; }
-        public partial class PropertyResponse : PddResponseModel
+
+        public partial class PropertyResponse
         {
 
             /// <summary>
@@ -53,6 +55,7 @@ public partial class GetGoodsOutPropertyMappingResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("ref_property_name")]
             public string RefPropertyName { get; set; }
+
 
         }
 

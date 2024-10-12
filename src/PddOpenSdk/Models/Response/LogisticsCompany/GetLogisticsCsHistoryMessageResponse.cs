@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.LogisticsCompany;
-public partial class GetLogisticsCsHistoryMessageResponse : PddResponseModel
+public partial class GetLogisticsCsHistoryMessageResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetLogisticsCsHistoryMessageResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("logistics_cs_history_message_get_response")]
     public LogisticsCsHistoryMessageGetResponseResponse LogisticsCsHistoryMessageGetResponse { get; set; }
-    public partial class LogisticsCsHistoryMessageGetResponseResponse : PddResponseModel
+
+    public partial class LogisticsCsHistoryMessageGetResponseResponse
     {
 
         /// <summary>
@@ -15,7 +16,8 @@ public partial class GetLogisticsCsHistoryMessageResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("message_infos")]
         public List<MessageInfosResponse> MessageInfos { get; set; }
-        public partial class MessageInfosResponse : PddResponseModel
+
+        public partial class MessageInfosResponse
         {
 
             /// <summary>
@@ -41,6 +43,7 @@ public partial class GetLogisticsCsHistoryMessageResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("text")]
             public string Text { get; set; }
+
 
         }
 

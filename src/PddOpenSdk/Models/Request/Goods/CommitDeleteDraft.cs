@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Goods;
 public partial class CommitDeleteDraft
 {
-
     /// <summary>
     /// 草稿id
     /// </summary>
@@ -13,6 +12,8 @@ public partial class CommitDeleteDraft
     /// </summary>
     [JsonPropertyName("goods_id")]
     public long GoodsId { get; set; }
+
+
 
 }
 

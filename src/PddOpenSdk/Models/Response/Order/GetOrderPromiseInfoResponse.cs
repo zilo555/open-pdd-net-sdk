@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Order;
-public partial class GetOrderPromiseInfoResponse : PddResponseModel
+public partial class GetOrderPromiseInfoResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetOrderPromiseInfoResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("promise_info_get_response")]
     public PromiseInfoGetResponseResponse PromiseInfoGetResponse { get; set; }
-    public partial class PromiseInfoGetResponseResponse : PddResponseModel
+
+    public partial class PromiseInfoGetResponseResponse
     {
 
         /// <summary>
@@ -15,7 +16,8 @@ public partial class GetOrderPromiseInfoResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("promise_info")]
         public PromiseInfoResponse PromiseInfo { get; set; }
-        public partial class PromiseInfoResponse : PddResponseModel
+
+        public partial class PromiseInfoResponse
         {
 
             /// <summary>
@@ -83,7 +85,8 @@ public partial class GetOrderPromiseInfoResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("updated_at")]
             public string UpdatedAt { get; set; }
-            public partial class DetailInfoResponse : PddResponseModel
+
+            public partial class DetailInfoResponse
             {
 
                 /// <summary>
@@ -98,8 +101,9 @@ public partial class GetOrderPromiseInfoResponse : PddResponseModel
                 [JsonPropertyName("$value")]
                 public string Value { get; set; }
 
+
             }
-            public partial class ExtraInfoResponse : PddResponseModel
+            public partial class ExtraInfoResponse
             {
 
                 /// <summary>
@@ -113,6 +117,7 @@ public partial class GetOrderPromiseInfoResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("$value")]
                 public string Value { get; set; }
+
 
             }
 

@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.WayBill;
-public partial class PrintCloudResponse : PddResponseModel
+public partial class PrintCloudResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class PrintCloudResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("cloud_print_response")]
     public CloudPrintResponseResponse CloudPrintResponse { get; set; }
-    public partial class CloudPrintResponseResponse : PddResponseModel
+
+    public partial class CloudPrintResponseResponse
     {
 
         /// <summary>
@@ -33,7 +34,8 @@ public partial class PrintCloudResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("success")]
         public bool? Success { get; set; }
-        public partial class ResultResponse : PddResponseModel
+
+        public partial class ResultResponse
         {
 
             /// <summary>
@@ -41,7 +43,8 @@ public partial class PrintCloudResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("print_result_list")]
             public List<PrintResultListResponse> PrintResultList { get; set; }
-            public partial class PrintResultListResponse : PddResponseModel
+
+            public partial class PrintResultListResponse
             {
 
                 /// <summary>
@@ -67,6 +70,7 @@ public partial class PrintCloudResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("result")]
                 public bool? Result { get; set; }
+
 
             }
 

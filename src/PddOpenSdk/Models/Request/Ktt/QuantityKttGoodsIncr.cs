@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Ktt;
 public partial class QuantityKttGoodsIncr
 {
-
     /// <summary>
     /// goods ID
     /// </summary>
@@ -25,6 +24,8 @@ public partial class QuantityKttGoodsIncr
     /// </summary>
     [JsonPropertyName("sku_id")]
     public long SkuId { get; set; }
+
+
 
 }
 

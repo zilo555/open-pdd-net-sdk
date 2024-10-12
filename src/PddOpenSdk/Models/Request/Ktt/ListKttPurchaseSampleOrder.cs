@@ -1,15 +1,15 @@
 namespace PddOpenSdk.Models.Request.Ktt;
 public partial class ListKttPurchaseSampleOrder
 {
-
     /// <summary>
     /// 请求信息
     /// </summary>
     [JsonPropertyName("request")]
     public RequestModel Request { get; set; }
+
+
     public partial class RequestModel
     {
-
         /// <summary>
         /// -1-未发起售后 1-待团长退货 10-待供货商处理 11-已退货，待供货商处理 20-退款中 30-退款成功 31-已撤销 32-已驳回
         /// </summary>
@@ -51,6 +51,8 @@ public partial class ListKttPurchaseSampleOrder
         /// </summary>
         [JsonPropertyName("start_updated_time")]
         public string StartUpdatedTime { get; set; }
+
+
 
     }
 

@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Ddk;
 public partial class QueryDdkCashgiftData
 {
-
     /// <summary>
     /// 礼金ID，支持根据礼金ID查询
     /// </summary>
@@ -31,6 +30,8 @@ public partial class QueryDdkCashgiftData
     /// </summary>
     [JsonPropertyName("start_time")]
     public long? StartTime { get; set; }
+
+
 
 }
 

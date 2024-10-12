@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Ticket;
 public partial class UploadTicketGoods
 {
-
     /// <summary>
     /// 商品轮播图，按次序上传，图片格式支持JPEG/JPG/PNG， 图片尺寸长宽比1：1且尺寸不低于480px，图片大小最高1MB。先通过pdd.goods.image.upload上传图片
     /// </summary>
@@ -109,9 +108,10 @@ public partial class UploadTicketGoods
     /// </summary>
     [JsonPropertyName("sync_goods_operate")]
     public int? SyncGoodsOperate { get; set; }
+
+
     public partial class CarouselVideoModel
     {
-
         /// <summary>
         /// 轮播视频id
         /// </summary>
@@ -124,10 +124,11 @@ public partial class UploadTicketGoods
         [JsonPropertyName("video_url")]
         public string VideoUrl { get; set; }
 
+
+
     }
     public partial class GoodsPropertiesModel
     {
-
         /// <summary>
         /// 父规格id，仅对于销售属性入参
         /// </summary>
@@ -164,10 +165,11 @@ public partial class UploadTicketGoods
         [JsonPropertyName("vid")]
         public long? Vid { get; set; }
 
+
+
     }
     public partial class SkuListModel
     {
-
         /// <summary>
         /// 仅当sku_type为日历库存时入参。若父sku多于10个，需要通过pdd.goods.child.sku.edit接口分批维护。
         /// </summary>
@@ -227,9 +229,10 @@ public partial class UploadTicketGoods
         /// </summary>
         [JsonPropertyName("thumb_url")]
         public string ThumbUrl { get; set; }
+
+
         public partial class ChildSkusModel
         {
-
             /// <summary>
             /// 日期。格式：2020-06-01。每个sku最多支持180天。
             /// </summary>
@@ -253,6 +256,8 @@ public partial class UploadTicketGoods
             /// </summary>
             [JsonPropertyName("single_price")]
             public long? SinglePrice { get; set; }
+
+
 
         }
 

@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Promotion;
 public partial class CancelPromotionLimitedActivity
 {
-
     /// <summary>
     /// 活动id
     /// </summary>
@@ -13,6 +12,8 @@ public partial class CancelPromotionLimitedActivity
     /// </summary>
     [JsonPropertyName("goods_id")]
     public long GoodsId { get; set; }
+
+
 
 }
 

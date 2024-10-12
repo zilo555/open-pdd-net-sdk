@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.DdkTools;
-public partial class GenDdkOauthGoodsZsUnitUrlResponse : PddResponseModel
+public partial class GenDdkOauthGoodsZsUnitUrlResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GenDdkOauthGoodsZsUnitUrlResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("goods_zs_unit_generate_response")]
     public GoodsZsUnitGenerateResponseResponse GoodsZsUnitGenerateResponse { get; set; }
-    public partial class GoodsZsUnitGenerateResponseResponse : PddResponseModel
+
+    public partial class GoodsZsUnitGenerateResponseResponse
     {
 
         /// <summary>
@@ -63,6 +64,19 @@ public partial class GenDdkOauthGoodsZsUnitUrlResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("url")]
         public string Url { get; set; }
+
+        /// <summary>
+        /// 微信小程序longLink
+        /// </summary>
+        [JsonPropertyName("weixin_long_link")]
+        public string WeixinLongLink { get; set; }
+
+        /// <summary>
+        /// 微信小程序shortLink
+        /// </summary>
+        [JsonPropertyName("weixin_short_link")]
+        public string WeixinShortLink { get; set; }
+
 
     }
 

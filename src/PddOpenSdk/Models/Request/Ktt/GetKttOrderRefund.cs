@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Ktt;
 public partial class GetKttOrderRefund
 {
-
     /// <summary>
     /// 父单号
     /// </summary>
@@ -19,6 +18,8 @@ public partial class GetKttOrderRefund
     /// </summary>
     [JsonPropertyName("page_size")]
     public int PageSize { get; set; }
+
+
 
 }
 

@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.DdkTools;
 public partial class GetDdkOauthGoodsRecommend
 {
-
     /// <summary>
     /// 活动商品标记数组，例：[4,7]，4-秒杀，7-百亿补贴，10851-千万补贴，11879-千万神券，10913-招商礼金商品，31-品牌黑标，10564-精选爆品-官方直推爆款，10584-精选爆品-团长推荐，24-品牌高佣，其他的值请忽略
     /// </summary>
@@ -67,6 +66,31 @@ public partial class GetDdkOauthGoodsRecommend
     /// </summary>
     [JsonPropertyName("pid")]
     public string Pid { get; set; }
+
+    /// <summary>
+    /// 风控参数
+    /// </summary>
+    [JsonPropertyName("risk_params")]
+    public Dictionary<string, object> RiskParams { get; set; }
+
+
+    public partial class RiskParamsModel
+    {
+        /// <summary>
+        /// 风控参数key
+        /// </summary>
+        [JsonPropertyName("$key")]
+        public string Key { get; set; }
+
+        /// <summary>
+        /// 风控参数value
+        /// </summary>
+        [JsonPropertyName("$value")]
+        public string Value { get; set; }
+
+
+
+    }
 
 }
 

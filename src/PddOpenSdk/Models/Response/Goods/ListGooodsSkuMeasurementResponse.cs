@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Goods;
-public partial class ListGooodsSkuMeasurementResponse : PddResponseModel
+public partial class ListGooodsSkuMeasurementResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class ListGooodsSkuMeasurementResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("gooods_sku_measurement_list_response")]
     public GooodsSkuMeasurementListResponseResponse GooodsSkuMeasurementListResponse { get; set; }
-    public partial class GooodsSkuMeasurementListResponseResponse : PddResponseModel
+
+    public partial class GooodsSkuMeasurementListResponseResponse
     {
 
         /// <summary>
@@ -15,7 +16,8 @@ public partial class ListGooodsSkuMeasurementResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("measurement_list")]
         public List<MeasurementListResponse> MeasurementList { get; set; }
-        public partial class MeasurementListResponse : PddResponseModel
+
+        public partial class MeasurementListResponse
         {
 
             /// <summary>
@@ -29,6 +31,7 @@ public partial class ListGooodsSkuMeasurementResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("desc")]
             public string Desc { get; set; }
+
 
         }
 

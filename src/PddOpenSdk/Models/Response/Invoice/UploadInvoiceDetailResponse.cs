@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Invoice;
-public partial class UploadInvoiceDetailResponse : PddResponseModel
+public partial class UploadInvoiceDetailResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class UploadInvoiceDetailResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("invoice_detail_upload_response")]
     public InvoiceDetailUploadResponseResponse InvoiceDetailUploadResponse { get; set; }
-    public partial class InvoiceDetailUploadResponseResponse : PddResponseModel
+
+    public partial class InvoiceDetailUploadResponseResponse
     {
 
         /// <summary>
@@ -15,6 +16,7 @@ public partial class UploadInvoiceDetailResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("serial_no")]
         public string SerialNo { get; set; }
+
 
     }
 

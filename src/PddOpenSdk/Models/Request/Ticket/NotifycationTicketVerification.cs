@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Ticket;
 public partial class NotifycationTicketVerification
 {
-
     /// <summary>
     /// 拼多多制票号
     /// </summary>
@@ -13,6 +12,8 @@ public partial class NotifycationTicketVerification
     /// </summary>
     [JsonPropertyName("verify_time")]
     public long VerifyTime { get; set; }
+
+
 
 }
 

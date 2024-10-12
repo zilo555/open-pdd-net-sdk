@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Logistics;
-public partial class GetLogisticsOrdertraceResponse : PddResponseModel
+public partial class GetLogisticsOrdertraceResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetLogisticsOrdertraceResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("logistics_ordertrace_get_resposne")]
     public LogisticsOrdertraceGetResposneResponse LogisticsOrdertraceGetResposne { get; set; }
-    public partial class LogisticsOrdertraceGetResposneResponse : PddResponseModel
+
+    public partial class LogisticsOrdertraceGetResposneResponse
     {
 
         /// <summary>
@@ -15,7 +16,8 @@ public partial class GetLogisticsOrdertraceResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("trace_list")]
         public List<TraceListResponse> TraceList { get; set; }
-        public partial class TraceListResponse : PddResponseModel
+
+        public partial class TraceListResponse
         {
 
             /// <summary>
@@ -53,6 +55,7 @@ public partial class GetLogisticsOrdertraceResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("time")]
             public string Time { get; set; }
+
 
         }
 

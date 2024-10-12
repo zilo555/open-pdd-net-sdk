@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Order;
 public partial class UpdateOrderNote
 {
-
     /// <summary>
     /// 订单备注
     /// </summary>
@@ -25,6 +24,8 @@ public partial class UpdateOrderNote
     /// </summary>
     [JsonPropertyName("order_sn")]
     public string OrderSn { get; set; }
+
+
 
 }
 

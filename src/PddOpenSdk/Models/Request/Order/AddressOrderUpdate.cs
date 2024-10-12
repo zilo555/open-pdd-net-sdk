@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Order;
 public partial class AddressOrderUpdate
 {
-
     /// <summary>
     /// 收件详细地址
     /// </summary>
@@ -61,6 +60,8 @@ public partial class AddressOrderUpdate
     /// </summary>
     [JsonPropertyName("town_id")]
     public int TownId { get; set; }
+
+
 
 }
 

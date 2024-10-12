@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Ktt;
 public partial class VerifyKttOrderVoucher
 {
-
     /// <summary>
     /// 操作唯一键
     /// </summary>
@@ -61,9 +60,10 @@ public partial class VerifyKttOrderVoucher
     /// </summary>
     [JsonPropertyName("voucher_id")]
     public string VoucherId { get; set; }
+
+
     public partial class VerificationStoreModel
     {
-
         /// <summary>
         /// 门店编号
         /// </summary>
@@ -105,6 +105,8 @@ public partial class VerifyKttOrderVoucher
         /// </summary>
         [JsonPropertyName("store_province")]
         public string StoreProvince { get; set; }
+
+
 
     }
 

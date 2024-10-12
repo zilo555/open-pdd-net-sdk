@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Invoice;
 public partial class QueryEinvoiceInfo
 {
-
     /// <summary>
     /// 最后更新时间结束时间的时间戳，指格林威治时间 1970 年 01 月 01 日 00 时 00 分 00 秒(北京时间 1970 年 01 月 01 日 08 时 00 分 00 秒)起至现在的总秒数。开始时间结束时间间距不超过1小时。不能查询最近5分钟内的数据。开区间，返回数据不包含end_time
     /// </summary>
@@ -31,6 +30,8 @@ public partial class QueryEinvoiceInfo
     /// </summary>
     [JsonPropertyName("start_time")]
     public long StartTime { get; set; }
+
+
 
 }
 

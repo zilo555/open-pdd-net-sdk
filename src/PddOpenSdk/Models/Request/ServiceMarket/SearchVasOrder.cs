@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.ServiceMarket;
 public partial class SearchVasOrder
 {
-
     /// <summary>
     /// 创建时间结束，UNIX时间戳（ms 级别），默认为当前时间，支持最大范围为7天。
     /// </summary>
@@ -67,6 +66,8 @@ public partial class SearchVasOrder
     /// </summary>
     [JsonPropertyName("refund_status")]
     public int? RefundStatus { get; set; }
+
+
 
 }
 

@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Ktt;
 public partial class CreateKttOrderLogistic
 {
-
     /// <summary>
     /// 物流公司编码
     /// </summary>
@@ -31,6 +30,8 @@ public partial class CreateKttOrderLogistic
     /// </summary>
     [JsonPropertyName("waybillNo")]
     public string WaybillNo { get; set; }
+
+
 
 }
 

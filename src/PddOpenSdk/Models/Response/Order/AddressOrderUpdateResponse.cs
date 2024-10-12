@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Order;
-public partial class AddressOrderUpdateResponse : PddResponseModel
+public partial class AddressOrderUpdateResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class AddressOrderUpdateResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("response")]
     public ResponseResponse Response { get; set; }
-    public partial class ResponseResponse : PddResponseModel
+
+    public partial class ResponseResponse
     {
 
         /// <summary>
@@ -33,7 +34,8 @@ public partial class AddressOrderUpdateResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("errorMsg")]
         public string ErrorMsg { get; set; }
-        public partial class ResultResponse : PddResponseModel
+
+        public partial class ResultResponse
         {
 
             /// <summary>
@@ -47,6 +49,7 @@ public partial class AddressOrderUpdateResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("order_sn")]
             public string OrderSn { get; set; }
+
 
         }
 

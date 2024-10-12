@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Pmc;
-public partial class QueryPmcAccrueResponse : PddResponseModel
+public partial class QueryPmcAccrueResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class QueryPmcAccrueResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("pmc_user_get_response")]
     public PmcUserGetResponseResponse PmcUserGetResponse { get; set; }
-    public partial class PmcUserGetResponseResponse : PddResponseModel
+
+    public partial class PmcUserGetResponseResponse
     {
 
         /// <summary>
@@ -15,6 +16,7 @@ public partial class QueryPmcAccrueResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("number")]
         public long? Number { get; set; }
+
 
     }
 

@@ -1,15 +1,15 @@
 namespace PddOpenSdk.Models.Request.Stock;
 public partial class QueryStockWareWarehouse
 {
-
     /// <summary>
     /// 请求对象
     /// </summary>
     [JsonPropertyName("request")]
     public RequestModel Request { get; set; }
+
+
     public partial class RequestModel
     {
-
         /// <summary>
         /// 当前页数
         /// </summary>
@@ -27,6 +27,8 @@ public partial class QueryStockWareWarehouse
         /// </summary>
         [JsonPropertyName("ware_sn_list")]
         public List<string> WareSnList { get; set; }
+
+
 
     }
 

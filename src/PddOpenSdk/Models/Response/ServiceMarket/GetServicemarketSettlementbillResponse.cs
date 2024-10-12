@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.ServiceMarket;
-public partial class GetServicemarketSettlementbillResponse : PddResponseModel
+public partial class GetServicemarketSettlementbillResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetServicemarketSettlementbillResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("settlement_bill_search_response")]
     public SettlementBillSearchResponseResponse SettlementBillSearchResponse { get; set; }
-    public partial class SettlementBillSearchResponseResponse : PddResponseModel
+
+    public partial class SettlementBillSearchResponseResponse
     {
 
         /// <summary>
@@ -21,7 +22,8 @@ public partial class GetServicemarketSettlementbillResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("total_count")]
         public int? TotalCount { get; set; }
-        public partial class DataResponse : PddResponseModel
+
+        public partial class DataResponse
         {
 
             /// <summary>
@@ -65,6 +67,7 @@ public partial class GetServicemarketSettlementbillResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("order_type")]
             public int? OrderType { get; set; }
+
 
         }
 

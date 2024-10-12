@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ktt;
-public partial class PagequeryKttUserSiteResponse : PddResponseModel
+public partial class PagequeryKttUserSiteResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class PagequeryKttUserSiteResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("ktt_user_site_list_response")]
     public KttUserSiteListResponseResponse KttUserSiteListResponse { get; set; }
-    public partial class KttUserSiteListResponseResponse : PddResponseModel
+
+    public partial class KttUserSiteListResponseResponse
     {
 
         /// <summary>
@@ -21,7 +22,8 @@ public partial class PagequeryKttUserSiteResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("total")]
         public long? Total { get; set; }
-        public partial class SelfSiteInfoListResponse : PddResponseModel
+
+        public partial class SelfSiteInfoListResponse
         {
 
             /// <summary>
@@ -95,6 +97,7 @@ public partial class PagequeryKttUserSiteResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("site_no")]
             public string SiteNo { get; set; }
+
 
         }
 

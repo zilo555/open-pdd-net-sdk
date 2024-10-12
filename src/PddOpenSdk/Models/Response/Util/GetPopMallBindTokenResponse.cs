@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Util;
-public partial class GetPopMallBindTokenResponse : PddResponseModel
+public partial class GetPopMallBindTokenResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetPopMallBindTokenResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("pop_auth_token_create_response")]
     public PopAuthTokenCreateResponseResponse PopAuthTokenCreateResponse { get; set; }
-    public partial class PopAuthTokenCreateResponseResponse : PddResponseModel
+
+    public partial class PopAuthTokenCreateResponseResponse
     {
 
         /// <summary>
@@ -111,6 +112,7 @@ public partial class GetPopMallBindTokenResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("w2_expires_in")]
         public int? W2ExpiresIn { get; set; }
+
 
     }
 

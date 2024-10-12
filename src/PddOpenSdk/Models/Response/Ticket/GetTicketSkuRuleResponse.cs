@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ticket;
-public partial class GetTicketSkuRuleResponse : PddResponseModel
+public partial class GetTicketSkuRuleResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetTicketSkuRuleResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("response")]
     public ResponseResponse Response { get; set; }
-    public partial class ResponseResponse : PddResponseModel
+
+    public partial class ResponseResponse
     {
 
         /// <summary>
@@ -75,7 +76,8 @@ public partial class GetTicketSkuRuleResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("valid_limitation")]
         public ValidLimitationResponse ValidLimitation { get; set; }
-        public partial class BookerInfoLimitationResponse : PddResponseModel
+
+        public partial class BookerInfoLimitationResponse
         {
 
             /// <summary>
@@ -90,8 +92,9 @@ public partial class GetTicketSkuRuleResponse : PddResponseModel
             [JsonPropertyName("mobile")]
             public int? Mobile { get; set; }
 
+
         }
-        public partial class BookingNoticeResponse : PddResponseModel
+        public partial class BookingNoticeResponse
         {
 
             /// <summary>
@@ -153,7 +156,8 @@ public partial class GetTicketSkuRuleResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("ticket_time")]
             public List<TicketTimeResponse> TicketTime { get; set; }
-            public partial class EnterTimeResponse : PddResponseModel
+
+            public partial class EnterTimeResponse
             {
 
                 /// <summary>
@@ -174,8 +178,9 @@ public partial class GetTicketSkuRuleResponse : PddResponseModel
                 [JsonPropertyName("start_at")]
                 public string StartAt { get; set; }
 
+
             }
-            public partial class TicketTimeResponse : PddResponseModel
+            public partial class TicketTimeResponse
             {
 
                 /// <summary>
@@ -196,10 +201,11 @@ public partial class GetTicketSkuRuleResponse : PddResponseModel
                 [JsonPropertyName("start_at")]
                 public string StartAt { get; set; }
 
+
             }
 
         }
-        public partial class OrderLimitationResponse : PddResponseModel
+        public partial class OrderLimitationResponse
         {
 
             /// <summary>
@@ -226,8 +232,9 @@ public partial class GetTicketSkuRuleResponse : PddResponseModel
             [JsonPropertyName("limit_num")]
             public int? LimitNum { get; set; }
 
+
         }
-        public partial class ProviderContactInfoResponse : PddResponseModel
+        public partial class ProviderContactInfoResponse
         {
 
             /// <summary>
@@ -247,7 +254,8 @@ public partial class GetTicketSkuRuleResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("provider_telephone")]
             public string ProviderTelephone { get; set; }
-            public partial class ProviderBusinessHourResponse : PddResponseModel
+
+            public partial class ProviderBusinessHourResponse
             {
 
                 /// <summary>
@@ -268,10 +276,11 @@ public partial class GetTicketSkuRuleResponse : PddResponseModel
                 [JsonPropertyName("time_info")]
                 public string TimeInfo { get; set; }
 
+
             }
 
         }
-        public partial class RefundLimitationsResponse : PddResponseModel
+        public partial class RefundLimitationsResponse
         {
 
             /// <summary>
@@ -285,7 +294,8 @@ public partial class GetTicketSkuRuleResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("refund_rules")]
             public List<RefundRulesResponse> RefundRules { get; set; }
-            public partial class RefundRulesResponse : PddResponseModel
+
+            public partial class RefundRulesResponse
             {
 
                 /// <summary>
@@ -312,10 +322,11 @@ public partial class GetTicketSkuRuleResponse : PddResponseModel
                 [JsonPropertyName("type")]
                 public int? Type { get; set; }
 
+
             }
 
         }
-        public partial class TravelerInfoLimitationResponse : PddResponseModel
+        public partial class TravelerInfoLimitationResponse
         {
 
             /// <summary>
@@ -336,8 +347,9 @@ public partial class GetTicketSkuRuleResponse : PddResponseModel
             [JsonPropertyName("traveler_required")]
             public int? TravelerRequired { get; set; }
 
+
         }
-        public partial class ValidLimitationResponse : PddResponseModel
+        public partial class ValidLimitationResponse
         {
 
             /// <summary>
@@ -363,6 +375,7 @@ public partial class GetTicketSkuRuleResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("time_type")]
             public int? TimeType { get; set; }
+
 
         }
 

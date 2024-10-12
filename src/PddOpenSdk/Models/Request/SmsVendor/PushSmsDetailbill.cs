@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.SmsVendor;
 public partial class PushSmsDetailbill
 {
-
     /// <summary>
     /// cmpp账号名
     /// </summary>
@@ -25,9 +24,10 @@ public partial class PushSmsDetailbill
     /// </summary>
     [JsonPropertyName("details")]
     public List<DetailsModel> Details { get; set; }
+
+
     public partial class DetailsModel
     {
-
         /// <summary>
         /// 短信下发时间(yyyy-MM-dd HH:mm:ss)
         /// </summary>
@@ -51,6 +51,8 @@ public partial class PushSmsDetailbill
         /// </summary>
         [JsonPropertyName("submit_time")]
         public string SubmitTime { get; set; }
+
+
 
     }
 

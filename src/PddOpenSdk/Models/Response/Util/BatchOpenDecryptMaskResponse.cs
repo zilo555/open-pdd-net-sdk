@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Util;
-public partial class BatchOpenDecryptMaskResponse : PddResponseModel
+public partial class BatchOpenDecryptMaskResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class BatchOpenDecryptMaskResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("open_decrypt_mask_batch_response")]
     public OpenDecryptMaskBatchResponseResponse OpenDecryptMaskBatchResponse { get; set; }
-    public partial class OpenDecryptMaskBatchResponseResponse : PddResponseModel
+
+    public partial class OpenDecryptMaskBatchResponseResponse
     {
 
         /// <summary>
@@ -15,7 +16,8 @@ public partial class BatchOpenDecryptMaskResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("data_decrypt_list")]
         public List<DataDecryptListResponse> DataDecryptList { get; set; }
-        public partial class DataDecryptListResponse : PddResponseModel
+
+        public partial class DataDecryptListResponse
         {
 
             /// <summary>
@@ -53,6 +55,7 @@ public partial class BatchOpenDecryptMaskResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("error_msg")]
             public string ErrorMsg { get; set; }
+
 
         }
 

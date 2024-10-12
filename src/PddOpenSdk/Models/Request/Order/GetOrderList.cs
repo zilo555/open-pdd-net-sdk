@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Order;
 public partial class GetOrderList
 {
-
     /// <summary>
     /// 必填，成交时间结束时间的时间戳，指格林威治时间 1970 年 01 月 01 日 00 时 00 分 00 秒(北京时间 1970 年 01 月 01 日 08 时 00 分 00 秒)起至现在的总秒数 PS：开始时间结束时间间距不超过 24 小时
     /// </summary>
@@ -49,6 +48,8 @@ public partial class GetOrderList
     /// </summary>
     [JsonPropertyName("use_has_next")]
     public bool? UseHasNext { get; set; }
+
+
 
 }
 

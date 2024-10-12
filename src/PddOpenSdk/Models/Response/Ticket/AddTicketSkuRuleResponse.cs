@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ticket;
-public partial class AddTicketSkuRuleResponse : PddResponseModel
+public partial class AddTicketSkuRuleResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class AddTicketSkuRuleResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("response")]
     public ResponseResponse Response { get; set; }
-    public partial class ResponseResponse : PddResponseModel
+
+    public partial class ResponseResponse
     {
 
         /// <summary>
@@ -21,6 +22,7 @@ public partial class AddTicketSkuRuleResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("rule_version")]
         public string RuleVersion { get; set; }
+
 
     }
 

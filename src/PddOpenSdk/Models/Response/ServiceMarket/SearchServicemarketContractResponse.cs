@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.ServiceMarket;
-public partial class SearchServicemarketContractResponse : PddResponseModel
+public partial class SearchServicemarketContractResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class SearchServicemarketContractResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("servicemarket_contract_search_response")]
     public ServicemarketContractSearchResponseResponse ServicemarketContractSearchResponse { get; set; }
-    public partial class ServicemarketContractSearchResponseResponse : PddResponseModel
+
+    public partial class ServicemarketContractSearchResponseResponse
     {
 
         /// <summary>
@@ -33,7 +34,8 @@ public partial class SearchServicemarketContractResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("startAt")]
         public long? StartAt { get; set; }
-        public partial class SpecValueResponse : PddResponseModel
+
+        public partial class SpecValueResponse
         {
 
             /// <summary>
@@ -41,7 +43,8 @@ public partial class SearchServicemarketContractResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("specValueList")]
             public List<SpecValueListResponse> SpecValueList { get; set; }
-            public partial class SpecValueListResponse : PddResponseModel
+
+            public partial class SpecValueListResponse
             {
 
                 /// <summary>
@@ -67,6 +70,7 @@ public partial class SearchServicemarketContractResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("timeLengthValue")]
                 public long? TimeLengthValue { get; set; }
+
 
             }
 

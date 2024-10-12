@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.LogisticsCompany;
 public partial class SubLogisticsCoTrack
 {
-
     /// <summary>
     /// 快递公司伙伴ID
     /// </summary>
@@ -13,6 +12,8 @@ public partial class SubLogisticsCoTrack
     /// </summary>
     [JsonPropertyName("data")]
     public string Data { get; set; }
+
+
 
 }
 

@@ -1,15 +1,15 @@
 namespace PddOpenSdk.Models.Request.LogisticsCompany;
 public partial class InfoServiceMailCheckWeight
 {
-
     /// <summary>
     /// 请求参数
     /// </summary>
     [JsonPropertyName("request")]
     public RequestModel Request { get; set; }
+
+
     public partial class RequestModel
     {
-
         /// <summary>
         /// 物流环节首发或到达省中心称重，单位克
         /// </summary>
@@ -45,6 +45,8 @@ public partial class InfoServiceMailCheckWeight
         /// </summary>
         [JsonPropertyName("volume")]
         public int? Volume { get; set; }
+
+
 
     }
 

@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Pmc;
-public partial class CancelPmcUserResponse : PddResponseModel
+public partial class CancelPmcUserResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class CancelPmcUserResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("tmc_user_cancel_response")]
     public TmcUserCancelResponseResponse TmcUserCancelResponse { get; set; }
-    public partial class TmcUserCancelResponseResponse : PddResponseModel
+
+    public partial class TmcUserCancelResponseResponse
     {
 
         /// <summary>
@@ -15,6 +16,7 @@ public partial class CancelPmcUserResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("is_success")]
         public bool? IsSuccess { get; set; }
+
 
     }
 

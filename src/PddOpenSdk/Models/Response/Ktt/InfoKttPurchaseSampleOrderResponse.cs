@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ktt;
-public partial class InfoKttPurchaseSampleOrderResponse : PddResponseModel
+public partial class InfoKttPurchaseSampleOrderResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class InfoKttPurchaseSampleOrderResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("response")]
     public ResponseResponse Response { get; set; }
-    public partial class ResponseResponse : PddResponseModel
+
+    public partial class ResponseResponse
     {
 
         /// <summary>
@@ -33,7 +34,8 @@ public partial class InfoKttPurchaseSampleOrderResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("success")]
         public bool? Success { get; set; }
-        public partial class ResultResponse : PddResponseModel
+
+        public partial class ResultResponse
         {
 
             /// <summary>
@@ -137,7 +139,8 @@ public partial class InfoKttPurchaseSampleOrderResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("updated_at")]
             public long? UpdatedAt { get; set; }
-            public partial class ActivityUserInfoResponse : PddResponseModel
+
+            public partial class ActivityUserInfoResponse
             {
 
                 /// <summary>
@@ -158,8 +161,9 @@ public partial class InfoKttPurchaseSampleOrderResponse : PddResponseModel
                 [JsonPropertyName("remark")]
                 public string Remark { get; set; }
 
+
             }
-            public partial class AddressInfoResponse : PddResponseModel
+            public partial class AddressInfoResponse
             {
 
                 /// <summary>
@@ -198,8 +202,9 @@ public partial class InfoKttPurchaseSampleOrderResponse : PddResponseModel
                 [JsonPropertyName("shipping_address")]
                 public string ShippingAddress { get; set; }
 
+
             }
-            public partial class AfterSaleInfoResponse : PddResponseModel
+            public partial class AfterSaleInfoResponse
             {
 
                 /// <summary>
@@ -262,8 +267,9 @@ public partial class InfoKttPurchaseSampleOrderResponse : PddResponseModel
                 [JsonPropertyName("supplier_cancel_number")]
                 public int? SupplierCancelNumber { get; set; }
 
+
             }
-            public partial class OrderItemListResponse : PddResponseModel
+            public partial class OrderItemListResponse
             {
 
                 /// <summary>
@@ -313,7 +319,8 @@ public partial class InfoKttPurchaseSampleOrderResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("spec_list")]
                 public List<SpecListResponse> SpecList { get; set; }
-                public partial class SpecListResponse : PddResponseModel
+
+                public partial class SpecListResponse
                 {
 
                     /// <summary>
@@ -328,10 +335,11 @@ public partial class InfoKttPurchaseSampleOrderResponse : PddResponseModel
                     [JsonPropertyName("parent_name")]
                     public string ParentName { get; set; }
 
+
                 }
 
             }
-            public partial class TraceInfoListResponse : PddResponseModel
+            public partial class TraceInfoListResponse
             {
 
                 /// <summary>
@@ -345,6 +353,7 @@ public partial class InfoKttPurchaseSampleOrderResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("track_no")]
                 public string TrackNo { get; set; }
+
 
             }
 

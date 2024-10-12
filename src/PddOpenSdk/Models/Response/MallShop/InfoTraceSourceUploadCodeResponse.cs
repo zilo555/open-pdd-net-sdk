@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.MallShop;
-public partial class InfoTraceSourceUploadCodeResponse : PddResponseModel
+public partial class InfoTraceSourceUploadCodeResponse
 {
 
     /// <summary>
@@ -7,6 +7,7 @@ public partial class InfoTraceSourceUploadCodeResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("status")]
     public int? Status { get; set; }
+
 
 }
 

@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Voucher;
-public partial class VerificationVoucherOtaCardPrepareResponse : PddResponseModel
+public partial class VerificationVoucherOtaCardPrepareResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class VerificationVoucherOtaCardPrepareResponse : PddResponseMode
     /// </summary>
     [JsonPropertyName("response")]
     public ResponseResponse Response { get; set; }
-    public partial class ResponseResponse : PddResponseModel
+
+    public partial class ResponseResponse
     {
 
         /// <summary>
@@ -33,7 +34,8 @@ public partial class VerificationVoucherOtaCardPrepareResponse : PddResponseMode
         /// </summary>
         [JsonPropertyName("success")]
         public bool? Success { get; set; }
-        public partial class ResultResponse : PddResponseModel
+
+        public partial class ResultResponse
         {
 
             /// <summary>
@@ -53,7 +55,8 @@ public partial class VerificationVoucherOtaCardPrepareResponse : PddResponseMode
             /// </summary>
             [JsonPropertyName("order_vo")]
             public OrderVoResponse OrderVo { get; set; }
-            public partial class CardVoResponse : PddResponseModel
+
+            public partial class CardVoResponse
             {
 
                 /// <summary>
@@ -98,8 +101,9 @@ public partial class VerificationVoucherOtaCardPrepareResponse : PddResponseMode
                 [JsonPropertyName("total_times")]
                 public int? TotalTimes { get; set; }
 
+
             }
-            public partial class OrderGoodsVoResponse : PddResponseModel
+            public partial class OrderGoodsVoResponse
             {
 
                 /// <summary>
@@ -132,8 +136,9 @@ public partial class VerificationVoucherOtaCardPrepareResponse : PddResponseMode
                 [JsonPropertyName("spec")]
                 public string Spec { get; set; }
 
+
             }
-            public partial class OrderVoResponse : PddResponseModel
+            public partial class OrderVoResponse
             {
 
                 /// <summary>
@@ -147,6 +152,7 @@ public partial class VerificationVoucherOtaCardPrepareResponse : PddResponseMode
                 /// </summary>
                 [JsonPropertyName("order_sn")]
                 public string OrderSn { get; set; }
+
 
             }
 

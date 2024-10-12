@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Ticket;
 public partial class EditTicketSkuRule
 {
-
     /// <summary>
     /// 下单人信息设置
     /// </summary>
@@ -67,9 +66,10 @@ public partial class EditTicketSkuRule
     /// </summary>
     [JsonPropertyName("valid_limitation")]
     public ValidLimitationModel ValidLimitation { get; set; }
+
+
     public partial class BookerInfoLimitationModel
     {
-
         /// <summary>
         /// 需要下单人信息
         /// </summary>
@@ -82,10 +82,11 @@ public partial class EditTicketSkuRule
         [JsonPropertyName("mobile")]
         public int? Mobile { get; set; }
 
+
+
     }
     public partial class BookingNoticeModel
     {
-
         /// <summary>
         /// 入园地址
         /// </summary>
@@ -145,9 +146,10 @@ public partial class EditTicketSkuRule
         /// </summary>
         [JsonPropertyName("ticket_time")]
         public List<TicketTimeModel> TicketTime { get; set; }
+
+
         public partial class EnterTimeModel
         {
-
             /// <summary>
             /// 备注
             /// </summary>
@@ -166,10 +168,11 @@ public partial class EditTicketSkuRule
             [JsonPropertyName("start_at")]
             public string StartAt { get; set; }
 
+
+
         }
         public partial class TicketTimeModel
         {
-
             /// <summary>
             /// 备注
             /// </summary>
@@ -188,12 +191,13 @@ public partial class EditTicketSkuRule
             [JsonPropertyName("start_at")]
             public string StartAt { get; set; }
 
+
+
         }
 
     }
     public partial class OrderLimitationModel
     {
-
         /// <summary>
         /// 周期长度
         /// </summary>
@@ -218,10 +222,11 @@ public partial class EditTicketSkuRule
         [JsonPropertyName("limit_num")]
         public int? LimitNum { get; set; }
 
+
+
     }
     public partial class ProviderContactInfoModel
     {
-
         /// <summary>
         /// 服务时间
         /// </summary>
@@ -239,9 +244,10 @@ public partial class EditTicketSkuRule
         /// </summary>
         [JsonPropertyName("provider_telephone")]
         public string ProviderTelephone { get; set; }
+
+
         public partial class ProviderBusinessHourModel
         {
-
             /// <summary>
             /// 结束时间
             /// </summary>
@@ -260,12 +266,13 @@ public partial class EditTicketSkuRule
             [JsonPropertyName("time_info")]
             public string TimeInfo { get; set; }
 
+
+
         }
 
     }
     public partial class RefundLimitationsModel
     {
-
         /// <summary>
         /// 是否可退
         /// </summary>
@@ -277,9 +284,10 @@ public partial class EditTicketSkuRule
         /// </summary>
         [JsonPropertyName("refund_rules")]
         public List<RefundRulesModel> RefundRules { get; set; }
+
+
         public partial class RefundRulesModel
         {
-
             /// <summary>
             /// 游玩日 0 点提前 或之后分钟数
             /// </summary>
@@ -304,12 +312,13 @@ public partial class EditTicketSkuRule
             [JsonPropertyName("type")]
             public int Type { get; set; }
 
+
+
         }
 
     }
     public partial class TravelerInfoLimitationModel
     {
-
         /// <summary>
         /// 游玩人证件
         /// </summary>
@@ -328,10 +337,11 @@ public partial class EditTicketSkuRule
         [JsonPropertyName("traveler_required")]
         public int TravelerRequired { get; set; }
 
+
+
     }
     public partial class ValidLimitationModel
     {
-
         /// <summary>
         /// 天数内有效
         /// </summary>
@@ -355,6 +365,8 @@ public partial class EditTicketSkuRule
         /// </summary>
         [JsonPropertyName("time_type")]
         public int TimeType { get; set; }
+
+
 
     }
 

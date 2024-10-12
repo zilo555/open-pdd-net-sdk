@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Mall;
-public partial class GetMallInfoStoreResponse : PddResponseModel
+public partial class GetMallInfoStoreResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetMallInfoStoreResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("res")]
     public ResResponse Res { get; set; }
-    public partial class ResResponse : PddResponseModel
+
+    public partial class ResResponse
     {
 
         /// <summary>
@@ -15,7 +16,8 @@ public partial class GetMallInfoStoreResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("mallStoreVOList")]
         public List<MallStoreVOListResponse> MallStoreVOList { get; set; }
-        public partial class MallStoreVOListResponse : PddResponseModel
+
+        public partial class MallStoreVOListResponse
         {
 
             /// <summary>
@@ -83,6 +85,7 @@ public partial class GetMallInfoStoreResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("store_number")]
             public string StoreNumber { get; set; }
+
 
         }
 

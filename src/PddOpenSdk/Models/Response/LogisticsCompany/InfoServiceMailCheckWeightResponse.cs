@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.LogisticsCompany;
-public partial class InfoServiceMailCheckWeightResponse : PddResponseModel
+public partial class InfoServiceMailCheckWeightResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class InfoServiceMailCheckWeightResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("response")]
     public ResponseResponse Response { get; set; }
-    public partial class ResponseResponse : PddResponseModel
+
+    public partial class ResponseResponse
     {
 
         /// <summary>
@@ -27,6 +28,7 @@ public partial class InfoServiceMailCheckWeightResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("flag")]
         public bool? Flag { get; set; }
+
 
     }
 

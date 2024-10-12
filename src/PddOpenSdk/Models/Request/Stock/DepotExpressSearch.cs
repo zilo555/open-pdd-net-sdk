@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Stock;
 public partial class DepotExpressSearch
 {
-
     /// <summary>
     /// 仓库编码
     /// </summary>
@@ -25,6 +24,8 @@ public partial class DepotExpressSearch
     /// </summary>
     [JsonPropertyName("start")]
     public int Start { get; set; }
+
+
 
 }
 

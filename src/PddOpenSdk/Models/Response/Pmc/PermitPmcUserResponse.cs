@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Pmc;
-public partial class PermitPmcUserResponse : PddResponseModel
+public partial class PermitPmcUserResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class PermitPmcUserResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("pmc_user_permit_response")]
     public PmcUserPermitResponseResponse PmcUserPermitResponse { get; set; }
-    public partial class PmcUserPermitResponseResponse : PddResponseModel
+
+    public partial class PmcUserPermitResponseResponse
     {
 
         /// <summary>
@@ -15,6 +16,7 @@ public partial class PermitPmcUserResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("is_success")]
         public bool? IsSuccess { get; set; }
+
 
     }
 

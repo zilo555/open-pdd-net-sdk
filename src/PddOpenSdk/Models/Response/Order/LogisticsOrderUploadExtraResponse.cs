@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Order;
-public partial class LogisticsOrderUploadExtraResponse : PddResponseModel
+public partial class LogisticsOrderUploadExtraResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class LogisticsOrderUploadExtraResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("upload_extra_logistics_response")]
     public UploadExtraLogisticsResponseResponse UploadExtraLogisticsResponse { get; set; }
-    public partial class UploadExtraLogisticsResponseResponse : PddResponseModel
+
+    public partial class UploadExtraLogisticsResponseResponse
     {
 
         /// <summary>
@@ -15,6 +16,7 @@ public partial class LogisticsOrderUploadExtraResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("success")]
         public bool? Success { get; set; }
+
 
     }
 

@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Voucher;
-public partial class VerificationVoucherVirtualCardResponse : PddResponseModel
+public partial class VerificationVoucherVirtualCardResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class VerificationVoucherVirtualCardResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("voucher_voucher_info_verify_response")]
     public VoucherVoucherInfoVerifyResponseResponse VoucherVoucherInfoVerifyResponse { get; set; }
-    public partial class VoucherVoucherInfoVerifyResponseResponse : PddResponseModel
+
+    public partial class VoucherVoucherInfoVerifyResponseResponse
     {
 
         /// <summary>
@@ -39,7 +40,8 @@ public partial class VerificationVoucherVirtualCardResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("voucher_list")]
         public List<VoucherListResponse> VoucherList { get; set; }
-        public partial class VoucherListResponse : PddResponseModel
+
+        public partial class VoucherListResponse
         {
 
             /// <summary>
@@ -77,6 +79,7 @@ public partial class VerificationVoucherVirtualCardResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("verification_at")]
             public long? VerificationAt { get; set; }
+
 
         }
 

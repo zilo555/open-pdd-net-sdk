@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ktt;
-public partial class QuantityKttGoodsIncrResponse : PddResponseModel
+public partial class QuantityKttGoodsIncrResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class QuantityKttGoodsIncrResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("ktt_goods_incr_quantity_response")]
     public KttGoodsIncrQuantityResponseResponse KttGoodsIncrQuantityResponse { get; set; }
-    public partial class KttGoodsIncrQuantityResponseResponse : PddResponseModel
+
+    public partial class KttGoodsIncrQuantityResponseResponse
     {
 
         /// <summary>
@@ -15,6 +16,7 @@ public partial class QuantityKttGoodsIncrResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("success")]
         public bool? Success { get; set; }
+
 
     }
 

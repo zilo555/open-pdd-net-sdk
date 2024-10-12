@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Ktt;
 public partial class SyncKttOrderVoucher
 {
-
     /// <summary>
     /// 父订单号
     /// </summary>
@@ -19,9 +18,10 @@ public partial class SyncKttOrderVoucher
     /// </summary>
     [JsonPropertyName("voucher_list")]
     public List<VoucherListModel> VoucherList { get; set; }
+
+
     public partial class VoucherListModel
     {
-
         /// <summary>
         /// 过期时间（格式：yyyy-MM-dd HH:mm:ss）
         /// </summary>
@@ -45,6 +45,8 @@ public partial class SyncKttOrderVoucher
         /// </summary>
         [JsonPropertyName("voucher_sn")]
         public string VoucherSn { get; set; }
+
+
 
     }
 

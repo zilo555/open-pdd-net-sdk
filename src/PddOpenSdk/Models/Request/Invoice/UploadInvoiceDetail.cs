@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Invoice;
 public partial class UploadInvoiceDetail
 {
-
     /// <summary>
     /// 申请流水号
     /// </summary>
@@ -157,9 +156,10 @@ public partial class UploadInvoiceDetail
     /// </summary>
     [JsonPropertyName("tax_rate")]
     public int TaxRate { get; set; }
+
+
     public partial class InvoiceItemListModel
     {
-
         /// <summary>
         /// 开票金额 单位:分
         /// </summary>
@@ -195,6 +195,8 @@ public partial class UploadInvoiceDetail
         /// </summary>
         [JsonPropertyName("original_invoice_no")]
         public string OriginalInvoiceNo { get; set; }
+
+
 
     }
 

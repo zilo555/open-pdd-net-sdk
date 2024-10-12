@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Ktt;
 public partial class ListKttAfterSalesIncrement
 {
-
     /// <summary>
     /// 结束的更新时间，毫秒时间戳，结束时间戳-启始时间戳应小于24小时
     /// </summary>
@@ -31,6 +30,8 @@ public partial class ListKttAfterSalesIncrement
     /// </summary>
     [JsonPropertyName("start_updated_at")]
     public long StartUpdatedAt { get; set; }
+
+
 
 }
 

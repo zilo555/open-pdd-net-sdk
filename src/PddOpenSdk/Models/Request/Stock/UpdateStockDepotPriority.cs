@@ -1,15 +1,15 @@
 namespace PddOpenSdk.Models.Request.Stock;
 public partial class UpdateStockDepotPriority
 {
-
     /// <summary>
     /// 示例：[{"depot_id":1,"province_id":12,"city_id":34,"district_id":56,"priority":5}]
     /// </summary>
     [JsonPropertyName("priority_list")]
     public List<PriorityListModel> PriorityList { get; set; }
+
+
     public partial class PriorityListModel
     {
-
         /// <summary>
         /// 优先级 范围是1 - 999
         /// </summary>
@@ -39,6 +39,8 @@ public partial class UpdateStockDepotPriority
         /// </summary>
         [JsonPropertyName("depot_id")]
         public long DepotId { get; set; }
+
+
 
     }
 

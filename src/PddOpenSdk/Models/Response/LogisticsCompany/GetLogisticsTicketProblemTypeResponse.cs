@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.LogisticsCompany;
-public partial class GetLogisticsTicketProblemTypeResponse : PddResponseModel
+public partial class GetLogisticsTicketProblemTypeResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetLogisticsTicketProblemTypeResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("logistics_problem_type_get_response")]
     public LogisticsProblemTypeGetResponseResponse LogisticsProblemTypeGetResponse { get; set; }
-    public partial class LogisticsProblemTypeGetResponseResponse : PddResponseModel
+
+    public partial class LogisticsProblemTypeGetResponseResponse
     {
 
         /// <summary>
@@ -15,7 +16,8 @@ public partial class GetLogisticsTicketProblemTypeResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("logistics_problem_type_list")]
         public List<LogisticsProblemTypeListResponse> LogisticsProblemTypeList { get; set; }
-        public partial class LogisticsProblemTypeListResponse : PddResponseModel
+
+        public partial class LogisticsProblemTypeListResponse
         {
 
             /// <summary>
@@ -29,6 +31,7 @@ public partial class GetLogisticsTicketProblemTypeResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("type_desc")]
             public string TypeDesc { get; set; }
+
 
         }
 

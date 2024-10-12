@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Order;
-public partial class OrderOrderSearchResponse : PddResponseModel
+public partial class OrderOrderSearchResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class OrderOrderSearchResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("search_order_response")]
     public SearchOrderResponseResponse SearchOrderResponse { get; set; }
-    public partial class SearchOrderResponseResponse : PddResponseModel
+
+    public partial class SearchOrderResponseResponse
     {
 
         /// <summary>
@@ -15,6 +16,7 @@ public partial class OrderOrderSearchResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("order_sn_list")]
         public List<string> OrderSnList { get; set; }
+
 
     }
 

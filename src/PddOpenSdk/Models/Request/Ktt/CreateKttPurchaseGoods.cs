@@ -1,23 +1,24 @@
 namespace PddOpenSdk.Models.Request.Ktt;
 public partial class CreateKttPurchaseGoods
 {
-
     /// <summary>
     /// 入参请求
     /// </summary>
     [JsonPropertyName("request")]
     public RequestModel Request { get; set; }
+
+
     public partial class RequestModel
     {
-
         /// <summary>
         /// 商品创建信息
         /// </summary>
         [JsonPropertyName("goods_create_info")]
         public GoodsCreateInfoModel GoodsCreateInfo { get; set; }
+
+
         public partial class GoodsCreateInfoModel
         {
-
             /// <summary>
             /// 类目ID
             /// </summary>
@@ -65,9 +66,10 @@ public partial class CreateKttPurchaseGoods
             /// </summary>
             [JsonPropertyName("video_urls")]
             public List<string> VideoUrls { get; set; }
+
+
             public partial class GoodsPropertyInfoModel
             {
-
                 /// <summary>
                 /// 属性名，不能超过10个字
                 /// </summary>
@@ -80,10 +82,11 @@ public partial class CreateKttPurchaseGoods
                 [JsonPropertyName("values")]
                 public List<string> Values { get; set; }
 
+
+
             }
             public partial class SkuListModel
             {
-
                 /// <summary>
                 /// sku货号，不能超过30个字
                 /// </summary>
@@ -125,9 +128,10 @@ public partial class CreateKttPurchaseGoods
                 /// </summary>
                 [JsonPropertyName("total_quantity")]
                 public long? TotalQuantity { get; set; }
+
+
                 public partial class SpecListModel
                 {
-
                     /// <summary>
                     /// 规格名，如红色，最多30个字
                     /// </summary>
@@ -145,6 +149,8 @@ public partial class CreateKttPurchaseGoods
                     /// </summary>
                     [JsonPropertyName("spec_id")]
                     public long SpecId { get; set; }
+
+
 
                 }
 

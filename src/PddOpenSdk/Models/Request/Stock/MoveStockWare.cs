@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Stock;
 public partial class MoveStockWare
 {
-
     /// <summary>
     /// 
     /// </summary>
@@ -13,9 +12,10 @@ public partial class MoveStockWare
     /// </summary>
     [JsonPropertyName("stock_move_record_action_dto_list")]
     public List<StockMoveRecordActionDtoListModel> StockMoveRecordActionDtoList { get; set; }
+
+
     public partial class StockMoveOrderActionDtoModel
     {
-
         /// <summary>
         /// 调整方向。1, "入库"；2, "出库"；3, "库存同步"
         /// </summary>
@@ -52,10 +52,11 @@ public partial class MoveStockWare
         [JsonPropertyName("move_order_sn")]
         public string MoveOrderSn { get; set; }
 
+
+
     }
     public partial class StockMoveRecordActionDtoListModel
     {
-
         /// <summary>
         /// 备注
         /// </summary>
@@ -73,6 +74,8 @@ public partial class MoveStockWare
         /// </summary>
         [JsonPropertyName("ware_sn")]
         public string WareSn { get; set; }
+
+
 
     }
 

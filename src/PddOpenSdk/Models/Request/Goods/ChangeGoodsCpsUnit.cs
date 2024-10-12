@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Goods;
 public partial class ChangeGoodsCpsUnit
 {
-
     /// <summary>
     /// 优惠券结束时间
     /// </summary>
@@ -61,6 +60,8 @@ public partial class ChangeGoodsCpsUnit
     /// </summary>
     [JsonPropertyName("duration")]
     public int? Duration { get; set; }
+
+
 
 }
 

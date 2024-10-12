@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Voucher;
-public partial class AddVoucherVirtualCardBatchResponse : PddResponseModel
+public partial class AddVoucherVirtualCardBatchResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class AddVoucherVirtualCardBatchResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("response")]
     public ResponseResponse Response { get; set; }
-    public partial class ResponseResponse : PddResponseModel
+
+    public partial class ResponseResponse
     {
 
         /// <summary>
@@ -27,7 +28,8 @@ public partial class AddVoucherVirtualCardBatchResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("result")]
         public ResultResponse Result { get; set; }
-        public partial class ResultResponse : PddResponseModel
+
+        public partial class ResultResponse
         {
 
             /// <summary>
@@ -53,6 +55,7 @@ public partial class AddVoucherVirtualCardBatchResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("totalNum")]
             public int? TotalNum { get; set; }
+
 
         }
 

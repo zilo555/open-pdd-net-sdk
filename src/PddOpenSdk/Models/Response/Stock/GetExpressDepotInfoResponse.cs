@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Stock;
-public partial class GetExpressDepotInfoResponse : PddResponseModel
+public partial class GetExpressDepotInfoResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetExpressDepotInfoResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("open_api_response")]
     public OpenApiResponseResponse OpenApiResponse { get; set; }
-    public partial class OpenApiResponseResponse : PddResponseModel
+
+    public partial class OpenApiResponseResponse
     {
 
         /// <summary>
@@ -99,7 +100,8 @@ public partial class GetExpressDepotInfoResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("zip")]
         public string Zip { get; set; }
-        public partial class OtherRegionResponse : PddResponseModel
+
+        public partial class OtherRegionResponse
         {
 
             /// <summary>
@@ -113,7 +115,8 @@ public partial class GetExpressDepotInfoResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("$value")]
             public ValueResponse Value { get; set; }
-            public partial class ValueResponse : PddResponseModel
+
+            public partial class ValueResponse
             {
 
                 /// <summary>
@@ -127,7 +130,8 @@ public partial class GetExpressDepotInfoResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("district")]
                 public Dictionary<string, object> District { get; set; }
-                public partial class DistrictResponse : PddResponseModel
+
+                public partial class DistrictResponse
                 {
 
                     /// <summary>
@@ -142,12 +146,13 @@ public partial class GetExpressDepotInfoResponse : PddResponseModel
                     [JsonPropertyName("$value")]
                     public List<int?> Value { get; set; }
 
+
                 }
 
             }
 
         }
-        public partial class RegionResponse : PddResponseModel
+        public partial class RegionResponse
         {
 
             /// <summary>
@@ -161,7 +166,8 @@ public partial class GetExpressDepotInfoResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("$value")]
             public ValueResponse Value { get; set; }
-            public partial class ValueResponse : PddResponseModel
+
+            public partial class ValueResponse
             {
 
                 /// <summary>
@@ -175,7 +181,8 @@ public partial class GetExpressDepotInfoResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("district")]
                 public Dictionary<string, object> District { get; set; }
-                public partial class DistrictResponse : PddResponseModel
+
+                public partial class DistrictResponse
                 {
 
                     /// <summary>
@@ -189,6 +196,7 @@ public partial class GetExpressDepotInfoResponse : PddResponseModel
                     /// </summary>
                     [JsonPropertyName("$value")]
                     public List<string> Value { get; set; }
+
 
                 }
 

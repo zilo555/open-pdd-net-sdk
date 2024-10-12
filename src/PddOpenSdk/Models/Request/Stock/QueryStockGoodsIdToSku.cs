@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Stock;
 public partial class QueryStockGoodsIdToSku
 {
-
     /// <summary>
     /// 商品id
     /// </summary>
@@ -19,6 +18,8 @@ public partial class QueryStockGoodsIdToSku
     /// </summary>
     [JsonPropertyName("ware_id")]
     public long? WareId { get; set; }
+
+
 
 }
 

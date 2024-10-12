@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Mall;
 public partial class NopoiMallInfoStoreUpdatePost
 {
-
     /// <summary>
     /// 门店营业状态
     /// </summary>
@@ -91,6 +90,8 @@ public partial class NopoiMallInfoStoreUpdatePost
     /// </summary>
     [JsonPropertyName("trade_type")]
     public int TradeType { get; set; }
+
+
 
 }
 

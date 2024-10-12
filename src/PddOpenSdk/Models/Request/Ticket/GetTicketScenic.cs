@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Ticket;
 public partial class GetTicketScenic
 {
-
     /// <summary>
     /// 城市编码
     /// </summary>
@@ -25,6 +24,8 @@ public partial class GetTicketScenic
     /// </summary>
     [JsonPropertyName("scenic_name")]
     public string ScenicName { get; set; }
+
+
 
 }
 

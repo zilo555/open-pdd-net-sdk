@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Oversea;
-public partial class GetOverseaClearanceResponse : PddResponseModel
+public partial class GetOverseaClearanceResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetOverseaClearanceResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("clearance_response")]
     public ClearanceResponseResponse ClearanceResponse { get; set; }
-    public partial class ClearanceResponseResponse : PddResponseModel
+
+    public partial class ClearanceResponseResponse
     {
 
         /// <summary>
@@ -45,6 +46,7 @@ public partial class GetOverseaClearanceResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("order_sn")]
         public string OrderSn { get; set; }
+
 
     }
 

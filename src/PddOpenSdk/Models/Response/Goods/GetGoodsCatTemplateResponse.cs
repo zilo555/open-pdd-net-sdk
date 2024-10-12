@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Goods;
-public partial class GetGoodsCatTemplateResponse : PddResponseModel
+public partial class GetGoodsCatTemplateResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetGoodsCatTemplateResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("open_api_response")]
     public OpenApiResponseResponse OpenApiResponse { get; set; }
-    public partial class OpenApiResponseResponse : PddResponseModel
+
+    public partial class OpenApiResponseResponse
     {
 
         /// <summary>
@@ -51,7 +52,8 @@ public partial class GetGoodsCatTemplateResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("single_spec_value_num")]
         public long? SingleSpecValueNum { get; set; }
-        public partial class PropertiesResponse : PddResponseModel
+
+        public partial class PropertiesResponse
         {
 
             /// <summary>
@@ -209,7 +211,8 @@ public partial class GetGoodsCatTemplateResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("value_unit")]
             public string ValueUnit { get; set; }
-            public partial class ValuesResponse : PddResponseModel
+
+            public partial class ValuesResponse
             {
 
                 /// <summary>
@@ -253,7 +256,8 @@ public partial class GetGoodsCatTemplateResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("vid")]
                 public long? Vid { get; set; }
-                public partial class GroupResponse : PddResponseModel
+
+                public partial class GroupResponse
                 {
 
                     /// <summary>
@@ -267,6 +271,7 @@ public partial class GetGoodsCatTemplateResponse : PddResponseModel
                     /// </summary>
                     [JsonPropertyName("name")]
                     public string Name { get; set; }
+
 
                 }
 

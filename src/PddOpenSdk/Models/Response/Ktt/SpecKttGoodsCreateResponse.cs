@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ktt;
-public partial class SpecKttGoodsCreateResponse : PddResponseModel
+public partial class SpecKttGoodsCreateResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class SpecKttGoodsCreateResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("response")]
     public ResponseResponse Response { get; set; }
-    public partial class ResponseResponse : PddResponseModel
+
+    public partial class ResponseResponse
     {
 
         /// <summary>
@@ -21,7 +22,8 @@ public partial class SpecKttGoodsCreateResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("success")]
         public bool? Success { get; set; }
-        public partial class SpecMapResponse : PddResponseModel
+
+        public partial class SpecMapResponse
         {
 
             /// <summary>
@@ -35,7 +37,8 @@ public partial class SpecKttGoodsCreateResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("$value")]
             public List<ValueResponse> Value { get; set; }
-            public partial class ValueResponse : PddResponseModel
+
+            public partial class ValueResponse
             {
 
                 /// <summary>
@@ -55,6 +58,7 @@ public partial class SpecKttGoodsCreateResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("spec_id")]
                 public long? SpecId { get; set; }
+
 
             }
 

@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Ktt;
 public partial class DeleteKttOrderLogistic
 {
-
     /// <summary>
     /// 订单号
     /// </summary>
@@ -19,6 +18,8 @@ public partial class DeleteKttOrderLogistic
     /// </summary>
     [JsonPropertyName("waybillNo")]
     public string WaybillNo { get; set; }
+
+
 
 }
 

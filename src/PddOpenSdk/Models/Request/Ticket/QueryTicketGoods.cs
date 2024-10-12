@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Ticket;
 public partial class QueryTicketGoods
 {
-
     /// <summary>
     /// 草稿id，入参草稿id时，表示查询该草稿的信息
     /// </summary>
@@ -13,6 +12,8 @@ public partial class QueryTicketGoods
     /// </summary>
     [JsonPropertyName("goods_id")]
     public long GoodsId { get; set; }
+
+
 
 }
 

@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Stock;
-public partial class MoveStockWareResponse : PddResponseModel
+public partial class MoveStockWareResponse
 {
 
     /// <summary>
@@ -7,6 +7,7 @@ public partial class MoveStockWareResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("open_api_response")]
     public long? OpenApiResponse { get; set; }
+
 
 }
 

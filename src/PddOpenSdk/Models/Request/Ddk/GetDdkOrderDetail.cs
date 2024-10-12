@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Ddk;
 public partial class GetDdkOrderDetail
 {
-
     /// <summary>
     /// 订单号
     /// </summary>
@@ -13,6 +12,8 @@ public partial class GetDdkOrderDetail
     /// </summary>
     [JsonPropertyName("query_order_type")]
     public int? QueryOrderType { get; set; }
+
+
 
 }
 

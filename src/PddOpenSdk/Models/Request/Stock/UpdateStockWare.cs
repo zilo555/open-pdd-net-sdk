@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Stock;
 public partial class UpdateStockWare
 {
-
     /// <summary>
     /// 货品id
     /// </summary>
@@ -109,9 +108,10 @@ public partial class UpdateStockWare
     /// </summary>
     [JsonPropertyName("packing")]
     public string Packing { get; set; }
+
+
     public partial class WareInfosModel
     {
-
         /// <summary>
         /// 子货品id
         /// </summary>
@@ -123,6 +123,8 @@ public partial class UpdateStockWare
         /// </summary>
         [JsonPropertyName("ware_quantity")]
         public int WareQuantity { get; set; }
+
+
 
     }
 

@@ -1,15 +1,15 @@
 namespace PddOpenSdk.Models.Request.Ktt;
 public partial class InfoKttPurchaseSupplierGoods
 {
-
     /// <summary>
     /// 列表请求信息
     /// </summary>
     [JsonPropertyName("request")]
     public RequestModel Request { get; set; }
+
+
     public partial class RequestModel
     {
-
         /// <summary>
         /// 商品前台状态 1：在售中 2：已下架 3：发布中 4：已驳回 5：未发布
         /// </summary>
@@ -33,6 +33,8 @@ public partial class InfoKttPurchaseSupplierGoods
         /// </summary>
         [JsonPropertyName("page_size")]
         public int PageSize { get; set; }
+
+
 
     }
 

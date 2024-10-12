@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Promotion;
-public partial class GetPromotionLimitedDiscountListResponse : PddResponseModel
+public partial class GetPromotionLimitedDiscountListResponse
 {
 
     /// <summary>
@@ -37,7 +37,8 @@ public partial class GetPromotionLimitedDiscountListResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("record_sum")]
     public long? RecordSum { get; set; }
-    public partial class OpenGoodsActivityListResponse : PddResponseModel
+
+    public partial class OpenGoodsActivityListResponse
     {
 
         /// <summary>
@@ -105,7 +106,8 @@ public partial class GetPromotionLimitedDiscountListResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("status")]
         public int? Status { get; set; }
-        public partial class PriceInfoResponse : PddResponseModel
+
+        public partial class PriceInfoResponse
         {
 
             /// <summary>
@@ -161,7 +163,8 @@ public partial class GetPromotionLimitedDiscountListResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("user_activity_limit")]
             public long? UserActivityLimit { get; set; }
-            public partial class OpenSkuPricesResponse : PddResponseModel
+
+            public partial class OpenSkuPricesResponse
             {
 
                 /// <summary>
@@ -193,6 +196,7 @@ public partial class GetPromotionLimitedDiscountListResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("sku_name")]
                 public string SkuName { get; set; }
+
 
             }
 

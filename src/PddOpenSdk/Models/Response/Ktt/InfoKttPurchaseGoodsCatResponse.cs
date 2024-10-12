@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ktt;
-public partial class InfoKttPurchaseGoodsCatResponse : PddResponseModel
+public partial class InfoKttPurchaseGoodsCatResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class InfoKttPurchaseGoodsCatResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("response")]
     public ResponseResponse Response { get; set; }
-    public partial class ResponseResponse : PddResponseModel
+
+    public partial class ResponseResponse
     {
 
         /// <summary>
@@ -33,7 +34,8 @@ public partial class InfoKttPurchaseGoodsCatResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("success")]
         public bool? Success { get; set; }
-        public partial class ResultResponse : PddResponseModel
+
+        public partial class ResultResponse
         {
 
             /// <summary>
@@ -41,7 +43,8 @@ public partial class InfoKttPurchaseGoodsCatResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("category_list")]
             public List<CategoryListResponse> CategoryList { get; set; }
-            public partial class CategoryListResponse : PddResponseModel
+
+            public partial class CategoryListResponse
             {
 
                 /// <summary>
@@ -67,7 +70,8 @@ public partial class InfoKttPurchaseGoodsCatResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("remark")]
                 public string Remark { get; set; }
-                public partial class GoodsPropertyListResponse : PddResponseModel
+
+                public partial class GoodsPropertyListResponse
                 {
 
                     /// <summary>
@@ -87,6 +91,7 @@ public partial class InfoKttPurchaseGoodsCatResponse : PddResponseModel
                     /// </summary>
                     [JsonPropertyName("values")]
                     public List<string> Values { get; set; }
+
 
                 }
 

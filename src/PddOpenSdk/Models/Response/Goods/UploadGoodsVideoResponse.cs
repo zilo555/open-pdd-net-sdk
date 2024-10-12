@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Goods;
-public partial class UploadGoodsVideoResponse : PddResponseModel
+public partial class UploadGoodsVideoResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class UploadGoodsVideoResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("goods_video_upload_response")]
     public GoodsVideoUploadResponseResponse GoodsVideoUploadResponse { get; set; }
-    public partial class GoodsVideoUploadResponseResponse : PddResponseModel
+
+    public partial class GoodsVideoUploadResponseResponse
     {
 
         /// <summary>
@@ -27,6 +28,7 @@ public partial class UploadGoodsVideoResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("status")]
         public int? Status { get; set; }
+
 
     }
 

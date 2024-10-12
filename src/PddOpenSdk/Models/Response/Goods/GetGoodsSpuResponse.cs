@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Goods;
-public partial class GetGoodsSpuResponse : PddResponseModel
+public partial class GetGoodsSpuResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetGoodsSpuResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("spu_get_response")]
     public SpuGetResponseResponse SpuGetResponse { get; set; }
-    public partial class SpuGetResponseResponse : PddResponseModel
+
+    public partial class SpuGetResponseResponse
     {
 
         /// <summary>
@@ -63,7 +64,8 @@ public partial class GetGoodsSpuResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("spu_name")]
         public string SpuName { get; set; }
-        public partial class BindPropResponse : PddResponseModel
+
+        public partial class BindPropResponse
         {
 
             /// <summary>
@@ -96,8 +98,9 @@ public partial class GetGoodsSpuResponse : PddResponseModel
             [JsonPropertyName("vid")]
             public long? Vid { get; set; }
 
+
         }
-        public partial class KeyPropResponse : PddResponseModel
+        public partial class KeyPropResponse
         {
 
             /// <summary>
@@ -130,8 +133,9 @@ public partial class GetGoodsSpuResponse : PddResponseModel
             [JsonPropertyName("vid")]
             public long? Vid { get; set; }
 
+
         }
-        public partial class SalePropResponse : PddResponseModel
+        public partial class SalePropResponse
         {
 
             /// <summary>
@@ -181,6 +185,7 @@ public partial class GetGoodsSpuResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("vid")]
             public long? Vid { get; set; }
+
 
         }
 

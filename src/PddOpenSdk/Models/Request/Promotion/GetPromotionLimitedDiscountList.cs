@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Promotion;
 public partial class GetPromotionLimitedDiscountList
 {
-
     /// <summary>
     /// 支持多个活动类型的查询。3-限量折扣；12-限时折扣。
     /// </summary>
@@ -43,6 +42,8 @@ public partial class GetPromotionLimitedDiscountList
     /// </summary>
     [JsonPropertyName("status_list")]
     public List<int> StatusList { get; set; }
+
+
 
 }
 

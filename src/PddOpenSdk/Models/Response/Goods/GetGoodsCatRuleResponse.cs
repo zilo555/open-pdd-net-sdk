@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Goods;
-public partial class GetGoodsCatRuleResponse : PddResponseModel
+public partial class GetGoodsCatRuleResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetGoodsCatRuleResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("cat_rule_get_response")]
     public CatRuleGetResponseResponse CatRuleGetResponse { get; set; }
-    public partial class CatRuleGetResponseResponse : PddResponseModel
+
+    public partial class CatRuleGetResponseResponse
     {
 
         /// <summary>
@@ -39,7 +40,8 @@ public partial class GetGoodsCatRuleResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("two_pieces_discount_rule")]
         public TwoPiecesDiscountRuleResponse TwoPiecesDiscountRule { get; set; }
-        public partial class GoodsPropertiesRuleResponse : PddResponseModel
+
+        public partial class GoodsPropertiesRuleResponse
         {
 
             /// <summary>
@@ -59,7 +61,8 @@ public partial class GetGoodsCatRuleResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("properties")]
             public List<PropertiesResponse> Properties { get; set; }
-            public partial class PropertiesResponse : PddResponseModel
+
+            public partial class PropertiesResponse
             {
 
                 /// <summary>
@@ -175,7 +178,8 @@ public partial class GetGoodsCatRuleResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("values")]
                 public List<ValuesResponse> Values { get; set; }
-                public partial class ShowConditionResponse : PddResponseModel
+
+                public partial class ShowConditionResponse
                 {
 
                     /// <summary>
@@ -190,8 +194,9 @@ public partial class GetGoodsCatRuleResponse : PddResponseModel
                     [JsonPropertyName("parent_vids")]
                     public List<long?> ParentVids { get; set; }
 
+
                 }
-                public partial class ValuesResponse : PddResponseModel
+                public partial class ValuesResponse
                 {
 
                     /// <summary>
@@ -229,7 +234,8 @@ public partial class GetGoodsCatRuleResponse : PddResponseModel
                     /// </summary>
                     [JsonPropertyName("vid")]
                     public long? Vid { get; set; }
-                    public partial class GroupResponse : PddResponseModel
+
+                    public partial class GroupResponse
                     {
 
                         /// <summary>
@@ -244,6 +250,7 @@ public partial class GetGoodsCatRuleResponse : PddResponseModel
                         [JsonPropertyName("name")]
                         public string Name { get; set; }
 
+
                     }
 
                 }
@@ -251,7 +258,7 @@ public partial class GetGoodsCatRuleResponse : PddResponseModel
             }
 
         }
-        public partial class GoodsServiceRuleResponse : PddResponseModel
+        public partial class GoodsServiceRuleResponse
         {
 
             /// <summary>
@@ -265,7 +272,8 @@ public partial class GetGoodsCatRuleResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("goods_type_list")]
             public List<int?> GoodsTypeList { get; set; }
-            public partial class GoodsServiceRuleMapResponse : PddResponseModel
+
+            public partial class GoodsServiceRuleMapResponse
             {
 
                 /// <summary>
@@ -279,7 +287,8 @@ public partial class GetGoodsCatRuleResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("$value")]
                 public ValueResponse Value { get; set; }
-                public partial class ValueResponse : PddResponseModel
+
+                public partial class ValueResponse
                 {
 
                     /// <summary>
@@ -336,12 +345,19 @@ public partial class GetGoodsCatRuleResponse : PddResponseModel
                     [JsonPropertyName("zhi_huan_bu_xiu_rule")]
                     public int? ZhiHuanBuXiuRule { get; set; }
 
+                    /// <summary>
+                    /// 保密发货：0不可选、1可选
+                    /// </summary>
+                    [JsonPropertyName("privacy_delivery_rule")]
+                    public int? PrivacyDeliveryRule { get; set; }
+
+
                 }
 
             }
 
         }
-        public partial class GoodsSkuRuleResponse : PddResponseModel
+        public partial class GoodsSkuRuleResponse
         {
 
             /// <summary>
@@ -356,8 +372,9 @@ public partial class GetGoodsCatRuleResponse : PddResponseModel
             [JsonPropertyName("spec_num_limit")]
             public int? SpecNumLimit { get; set; }
 
+
         }
-        public partial class SpuRuleResponse : PddResponseModel
+        public partial class SpuRuleResponse
         {
 
             /// <summary>
@@ -371,7 +388,8 @@ public partial class GetGoodsCatRuleResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("key_prop")]
             public List<KeyPropResponse> KeyProp { get; set; }
-            public partial class KeyPropResponse : PddResponseModel
+
+            public partial class KeyPropResponse
             {
 
                 /// <summary>
@@ -386,10 +404,11 @@ public partial class GetGoodsCatRuleResponse : PddResponseModel
                 [JsonPropertyName("ref_pid")]
                 public long? RefPid { get; set; }
 
+
             }
 
         }
-        public partial class TwoPiecesDiscountRuleResponse : PddResponseModel
+        public partial class TwoPiecesDiscountRuleResponse
         {
 
             /// <summary>
@@ -415,6 +434,7 @@ public partial class GetGoodsCatRuleResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("recommend_two_pieces_discount")]
             public int? RecommendTwoPiecesDiscount { get; set; }
+
 
         }
 

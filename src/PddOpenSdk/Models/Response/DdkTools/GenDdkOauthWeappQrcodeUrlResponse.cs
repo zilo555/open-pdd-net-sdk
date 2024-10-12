@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.DdkTools;
-public partial class GenDdkOauthWeappQrcodeUrlResponse : PddResponseModel
+public partial class GenDdkOauthWeappQrcodeUrlResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GenDdkOauthWeappQrcodeUrlResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("weapp_qrcode_generate_response")]
     public WeappQrcodeGenerateResponseResponse WeappQrcodeGenerateResponse { get; set; }
-    public partial class WeappQrcodeGenerateResponseResponse : PddResponseModel
+
+    public partial class WeappQrcodeGenerateResponseResponse
     {
 
         /// <summary>
@@ -15,6 +16,7 @@ public partial class GenDdkOauthWeappQrcodeUrlResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("url")]
         public string Url { get; set; }
+
 
     }
 

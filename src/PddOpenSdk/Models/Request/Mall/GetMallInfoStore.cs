@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Mall;
 public partial class GetMallInfoStore
 {
-
     /// <summary>
     /// 市
     /// </summary>
@@ -49,6 +48,8 @@ public partial class GetMallInfoStore
     /// </summary>
     [JsonPropertyName("store_number")]
     public string StoreNumber { get; set; }
+
+
 
 }
 

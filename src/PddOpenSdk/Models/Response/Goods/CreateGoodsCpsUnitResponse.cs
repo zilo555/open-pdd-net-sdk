@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Goods;
-public partial class CreateGoodsCpsUnitResponse : PddResponseModel
+public partial class CreateGoodsCpsUnitResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class CreateGoodsCpsUnitResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("failed_vos")]
     public List<FailedVosResponse> FailedVos { get; set; }
-    public partial class FailedVosResponse : PddResponseModel
+
+    public partial class FailedVosResponse
     {
 
         /// <summary>
@@ -21,6 +22,7 @@ public partial class CreateGoodsCpsUnitResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("reason")]
         public string Reason { get; set; }
+
 
     }
 

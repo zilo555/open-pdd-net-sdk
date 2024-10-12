@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Invoice;
 public partial class QueryInvoiceApplication
 {
-
     /// <summary>
     /// 订单号；订单号和申请时间必填其一
     /// </summary>
@@ -43,6 +42,8 @@ public partial class QueryInvoiceApplication
     /// </summary>
     [JsonPropertyName("update_start_time")]
     public long? UpdateStartTime { get; set; }
+
+
 
 }
 

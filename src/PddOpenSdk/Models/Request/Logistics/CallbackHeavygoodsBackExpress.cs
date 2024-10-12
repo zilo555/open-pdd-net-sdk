@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Logistics;
 public partial class CallbackHeavygoodsBackExpress
 {
-
     /// <summary>
     /// 包裹回退原因
     /// </summary>
@@ -19,6 +18,8 @@ public partial class CallbackHeavygoodsBackExpress
     /// </summary>
     [JsonPropertyName("trck_no")]
     public string TrckNo { get; set; }
+
+
 
 }
 

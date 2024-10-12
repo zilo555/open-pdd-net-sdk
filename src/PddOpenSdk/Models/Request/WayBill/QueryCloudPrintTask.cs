@@ -1,15 +1,15 @@
 namespace PddOpenSdk.Models.Request.WayBill;
 public partial class QueryCloudPrintTask
 {
-
     /// <summary>
     /// 云打印任务查询请求
     /// </summary>
     [JsonPropertyName("cloud_print_task_query")]
     public CloudPrintTaskQueryModel CloudPrintTaskQuery { get; set; }
+
+
     public partial class CloudPrintTaskQueryModel
     {
-
         /// <summary>
         /// 打印序号，非必填，填了则只查询列表内的任务
         /// </summary>
@@ -33,6 +33,8 @@ public partial class QueryCloudPrintTask
         /// </summary>
         [JsonPropertyName("share_code")]
         public string ShareCode { get; set; }
+
+
 
     }
 

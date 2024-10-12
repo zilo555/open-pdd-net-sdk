@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Oversea;
-public partial class NotifyOverseaDeclarationFailResponse : PddResponseModel
+public partial class NotifyOverseaDeclarationFailResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class NotifyOverseaDeclarationFailResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("notify_exceeded_response")]
     public NotifyExceededResponseResponse NotifyExceededResponse { get; set; }
-    public partial class NotifyExceededResponseResponse : PddResponseModel
+
+    public partial class NotifyExceededResponseResponse
     {
 
         /// <summary>
@@ -15,6 +16,7 @@ public partial class NotifyOverseaDeclarationFailResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("result")]
         public bool? Result { get; set; }
+
 
     }
 

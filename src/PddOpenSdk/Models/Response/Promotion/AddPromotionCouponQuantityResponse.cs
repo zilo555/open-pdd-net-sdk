@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Promotion;
-public partial class AddPromotionCouponQuantityResponse : PddResponseModel
+public partial class AddPromotionCouponQuantityResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class AddPromotionCouponQuantityResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("coupon_quantity_add_response")]
     public CouponQuantityAddResponseResponse CouponQuantityAddResponse { get; set; }
-    public partial class CouponQuantityAddResponseResponse : PddResponseModel
+
+    public partial class CouponQuantityAddResponseResponse
     {
 
         /// <summary>
@@ -15,6 +16,7 @@ public partial class AddPromotionCouponQuantityResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("is_success")]
         public bool? IsSuccess { get; set; }
+
 
     }
 

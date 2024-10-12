@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.WayBill;
-public partial class SearchWaybillResponse : PddResponseModel
+public partial class SearchWaybillResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class SearchWaybillResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("pdd_waybill_search_response")]
     public PddWaybillSearchResponseResponse PddWaybillSearchResponse { get; set; }
-    public partial class PddWaybillSearchResponseResponse : PddResponseModel
+
+    public partial class PddWaybillSearchResponseResponse
     {
 
         /// <summary>
@@ -15,7 +16,8 @@ public partial class SearchWaybillResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("waybill_apply_subscription_cols")]
         public List<WaybillApplySubscriptionColsResponse> WaybillApplySubscriptionCols { get; set; }
-        public partial class WaybillApplySubscriptionColsResponse : PddResponseModel
+
+        public partial class WaybillApplySubscriptionColsResponse
         {
 
             /// <summary>
@@ -35,7 +37,8 @@ public partial class SearchWaybillResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("wp_type")]
             public int? WpType { get; set; }
-            public partial class BranchAccountColsResponse : PddResponseModel
+
+            public partial class BranchAccountColsResponse
             {
 
                 /// <summary>
@@ -91,7 +94,8 @@ public partial class SearchWaybillResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("vas_account_cols")]
                 public List<VasAccountColsResponse> VasAccountCols { get; set; }
-                public partial class ServiceInfoColsResponse : PddResponseModel
+
+                public partial class ServiceInfoColsResponse
                 {
 
                     /// <summary>
@@ -123,7 +127,8 @@ public partial class SearchWaybillResponse : PddResponseModel
                     /// </summary>
                     [JsonPropertyName("service_name")]
                     public string ServiceName { get; set; }
-                    public partial class ServiceAttributesResponse : PddResponseModel
+
+                    public partial class ServiceAttributesResponse
                     {
 
                         /// <summary>
@@ -150,10 +155,11 @@ public partial class SearchWaybillResponse : PddResponseModel
                         [JsonPropertyName("type_desc")]
                         public string TypeDesc { get; set; }
 
+
                     }
 
                 }
-                public partial class ShippAddressColsResponse : PddResponseModel
+                public partial class ShippAddressColsResponse
                 {
 
                     /// <summary>
@@ -186,8 +192,9 @@ public partial class SearchWaybillResponse : PddResponseModel
                     [JsonPropertyName("country")]
                     public string Country { get; set; }
 
+
                 }
-                public partial class VasAccountColsResponse : PddResponseModel
+                public partial class VasAccountColsResponse
                 {
 
                     /// <summary>
@@ -219,6 +226,7 @@ public partial class SearchWaybillResponse : PddResponseModel
                     /// </summary>
                     [JsonPropertyName("recycled_quantity")]
                     public long? RecycledQuantity { get; set; }
+
 
                 }
 

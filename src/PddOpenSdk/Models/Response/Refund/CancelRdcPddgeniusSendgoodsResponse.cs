@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Refund;
-public partial class CancelRdcPddgeniusSendgoodsResponse : PddResponseModel
+public partial class CancelRdcPddgeniusSendgoodsResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class CancelRdcPddgeniusSendgoodsResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("rdc_pddgenius_sendgoods_cancel_response")]
     public RdcPddgeniusSendgoodsCancelResponseResponse RdcPddgeniusSendgoodsCancelResponse { get; set; }
-    public partial class RdcPddgeniusSendgoodsCancelResponseResponse : PddResponseModel
+
+    public partial class RdcPddgeniusSendgoodsCancelResponseResponse
     {
 
         /// <summary>
@@ -15,7 +16,8 @@ public partial class CancelRdcPddgeniusSendgoodsResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("result")]
         public ResultResponse Result { get; set; }
-        public partial class ResultResponse : PddResponseModel
+
+        public partial class ResultResponse
         {
 
             /// <summary>
@@ -23,7 +25,8 @@ public partial class CancelRdcPddgeniusSendgoodsResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("result_data")]
             public ResultDataResponse ResultData { get; set; }
-            public partial class ResultDataResponse : PddResponseModel
+
+            public partial class ResultDataResponse
             {
 
                 /// <summary>
@@ -31,6 +34,7 @@ public partial class CancelRdcPddgeniusSendgoodsResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("refund_id")]
                 public long? RefundId { get; set; }
+
 
             }
 

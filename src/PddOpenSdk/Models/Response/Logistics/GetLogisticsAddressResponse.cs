@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Logistics;
-public partial class GetLogisticsAddressResponse : PddResponseModel
+public partial class GetLogisticsAddressResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetLogisticsAddressResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("logistics_address_get_response")]
     public LogisticsAddressGetResponseResponse LogisticsAddressGetResponse { get; set; }
-    public partial class LogisticsAddressGetResponseResponse : PddResponseModel
+
+    public partial class LogisticsAddressGetResponseResponse
     {
 
         /// <summary>
@@ -15,7 +16,8 @@ public partial class GetLogisticsAddressResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("logistics_address_list")]
         public List<LogisticsAddressListResponse> LogisticsAddressList { get; set; }
-        public partial class LogisticsAddressListResponse : PddResponseModel
+
+        public partial class LogisticsAddressListResponse
         {
 
             /// <summary>
@@ -53,6 +55,7 @@ public partial class GetLogisticsAddressResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("region_type")]
             public int? RegionType { get; set; }
+
 
         }
 

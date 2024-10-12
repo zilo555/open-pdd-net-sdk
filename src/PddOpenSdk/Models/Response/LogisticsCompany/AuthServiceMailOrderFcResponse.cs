@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.LogisticsCompany;
-public partial class AuthServiceMailOrderFcResponse : PddResponseModel
+public partial class AuthServiceMailOrderFcResponse
 {
 
     /// <summary>
@@ -13,6 +13,7 @@ public partial class AuthServiceMailOrderFcResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("expires_in")]
     public int? ExpiresIn { get; set; }
+
 
 }
 

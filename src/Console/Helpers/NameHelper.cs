@@ -5,11 +5,6 @@ namespace Console.Helpers;
 /// </summary>
 public class NameHelper
 {
-    public static string GetClassName(string name)
-    {
-        return default;
-    }
-
     /// <summary>
     /// 获取属性名称
     /// </summary>
@@ -31,7 +26,10 @@ public class NameHelper
         //name = name.ToLower();
         type = type.ToLower();
         // 名称转为Pascal命名
-        name = Function.ToPascalCase(name.Replace("_", " "))?.Replace(" ", "")?.Replace("$", "");
+        name = Function.ToPascalCase(
+            name.Replace("_", " "))
+            .Replace(" ", "")
+            .Replace("$", "");
 
         // 是否为数组
         if (type.Contains("[]"))

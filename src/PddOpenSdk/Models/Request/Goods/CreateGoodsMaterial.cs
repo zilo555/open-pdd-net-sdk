@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Goods;
 public partial class CreateGoodsMaterial
 {
-
     /// <summary>
     /// 素材内容（一般为图片链接）
     /// </summary>
@@ -25,6 +24,8 @@ public partial class CreateGoodsMaterial
     /// </summary>
     [JsonPropertyName("material_type")]
     public int MaterialType { get; set; }
+
+
 
 }
 

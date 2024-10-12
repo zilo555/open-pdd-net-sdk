@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Refund;
-public partial class GetRefundInformationResponse : PddResponseModel
+public partial class GetRefundInformationResponse
 {
 
     /// <summary>
@@ -7,6 +7,7 @@ public partial class GetRefundInformationResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("after_sales_reason")]
     public string AfterSalesReason { get; set; }
+
     /// <summary>
     /// 售后状态 0：无售后 2：买家申请退款，待商家处理 3：退货退款，待商家处理 4：商家同意退款，退款中 5：平台同意退款，退款中 6：驳回退款，待买家处理 7：已同意退货退款,待用户发货 8：平台处理中 9：平台拒绝退款，退款关闭 10：退款成功 11：买家撤销 12：买家逾期未处理，退款失败 13：买家逾期，超过有效期 14：换货补寄待商家处理 15：换货补寄待用户处理 16：换货补寄成功 17：换货补寄失败 18：换货补寄待用户确认完成 21：待商家同意维修 22：待用户确认发货 24：维修关闭 25：维修成功 27：待用户确认收货 31：已同意拒收退款，待用户拒收 32：补寄待商家发货 33：待商家召回
     /// </summary>
@@ -137,7 +138,7 @@ public partial class GetRefundInformationResponse : PddResponseModel
     /// 商品规格ID
     /// </summary>
     [JsonPropertyName("sku_id")]
-    public long SkuId { get; set; }
+    public string SkuId { get; set; }
 
     /// <summary>
     /// 极速退款标志位 1：极速退款，0：非极速退款
@@ -149,14 +150,27 @@ public partial class GetRefundInformationResponse : PddResponseModel
     /// 更新时间
     /// </summary>
     [JsonPropertyName("updated_time")]
-    public long UpdatedTime { get; set; }
+    public string UpdatedTime { get; set; }
 
     /// <summary>
     /// 0-未勾选 1-消费者选择的收货状态为未收到货 2-消费者选择的收货状态为已收到货
     /// </summary>
     [JsonPropertyName("user_shipping_status")]
     public string UserShippingStatus { get; set; }
-    public partial class ExchangeShippingDetailResponse : PddResponseModel
+
+    /// <summary>
+    /// 部分售后类型：0：无意义、1：件数/件、2：比例/%；注意只有退货退款类型才有意义
+    /// </summary>
+    [JsonPropertyName("part_after_sales_type")]
+    public int? PartAfterSalesType { get; set; }
+
+    /// <summary>
+    /// 部分售后件数/比例；注意只有退货退款类型才有意义
+    /// </summary>
+    [JsonPropertyName("part_after_sales_value")]
+    public int? PartAfterSalesValue { get; set; }
+
+    public partial class ExchangeShippingDetailResponse
     {
 
         /// <summary>
@@ -178,7 +192,7 @@ public partial class GetRefundInformationResponse : PddResponseModel
         public string ExchangeGoodsName { get; set; }
 
         /// <summary>
-        /// 换货发货的物品数量
+        /// 申请换货的物品数量
         /// </summary>
         [JsonPropertyName("exchange_goods_number")]
         public int? ExchangeGoodsNumber { get; set; }
@@ -278,6 +292,7 @@ public partial class GetRefundInformationResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("sku_id_exchange")]
         public string SkuIdExchange { get; set; }
+
 
     }
 

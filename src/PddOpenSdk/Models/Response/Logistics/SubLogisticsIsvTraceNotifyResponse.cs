@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Logistics;
-public partial class SubLogisticsIsvTraceNotifyResponse : PddResponseModel
+public partial class SubLogisticsIsvTraceNotifyResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class SubLogisticsIsvTraceNotifyResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("logistics_isv_trace_notify_sub")]
     public LogisticsIsvTraceNotifySubResponse LogisticsIsvTraceNotifySub { get; set; }
-    public partial class LogisticsIsvTraceNotifySubResponse : PddResponseModel
+
+    public partial class LogisticsIsvTraceNotifySubResponse
     {
 
         /// <summary>
@@ -15,6 +16,7 @@ public partial class SubLogisticsIsvTraceNotifyResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("is_success")]
         public bool? IsSuccess { get; set; }
+
 
     }
 

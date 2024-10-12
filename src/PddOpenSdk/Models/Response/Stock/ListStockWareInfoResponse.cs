@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Stock;
-public partial class ListStockWareInfoResponse : PddResponseModel
+public partial class ListStockWareInfoResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class ListStockWareInfoResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("stock_ware_info_list_response")]
     public StockWareInfoListResponseResponse StockWareInfoListResponse { get; set; }
-    public partial class StockWareInfoListResponseResponse : PddResponseModel
+
+    public partial class StockWareInfoListResponseResponse
     {
 
         /// <summary>
@@ -15,7 +16,8 @@ public partial class ListStockWareInfoResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("ware_list")]
         public List<WareListResponse> WareList { get; set; }
-        public partial class WareListResponse : PddResponseModel
+
+        public partial class WareListResponse
         {
 
             /// <summary>
@@ -35,6 +37,7 @@ public partial class ListStockWareInfoResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("is_deleted")]
             public bool? IsDeleted { get; set; }
+
 
         }
 

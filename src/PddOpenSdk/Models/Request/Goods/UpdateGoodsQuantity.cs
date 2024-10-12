@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Goods;
 public partial class UpdateGoodsQuantity
 {
-
     /// <summary>
     /// 商品id
     /// </summary>
@@ -31,6 +30,8 @@ public partial class UpdateGoodsQuantity
     /// </summary>
     [JsonPropertyName("update_type")]
     public int? UpdateType { get; set; }
+
+
 
 }
 

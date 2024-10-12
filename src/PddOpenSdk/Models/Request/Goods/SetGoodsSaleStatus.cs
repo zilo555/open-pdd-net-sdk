@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Goods;
 public partial class SetGoodsSaleStatus
 {
-
     /// <summary>
     /// 拼多多商品id
     /// </summary>
@@ -13,6 +12,8 @@ public partial class SetGoodsSaleStatus
     /// </summary>
     [JsonPropertyName("is_onsale")]
     public int IsOnsale { get; set; }
+
+
 
 }
 

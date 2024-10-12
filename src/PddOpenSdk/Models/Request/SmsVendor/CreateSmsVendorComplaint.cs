@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.SmsVendor;
 public partial class CreateSmsVendorComplaint
 {
-
     /// <summary>
     /// cmpp账号名
     /// </summary>
@@ -49,6 +48,8 @@ public partial class CreateSmsVendorComplaint
     /// </summary>
     [JsonPropertyName("sms_content")]
     public string SmsContent { get; set; }
+
+
 
 }
 

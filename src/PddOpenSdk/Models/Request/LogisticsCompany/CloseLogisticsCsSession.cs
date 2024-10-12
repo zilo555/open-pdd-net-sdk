@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.LogisticsCompany;
 public partial class CloseLogisticsCsSession
 {
-
     /// <summary>
     /// pdd会话id
     /// </summary>
@@ -19,6 +18,8 @@ public partial class CloseLogisticsCsSession
     /// </summary>
     [JsonPropertyName("action_time")]
     public string ActionTime { get; set; }
+
+
 
 }
 

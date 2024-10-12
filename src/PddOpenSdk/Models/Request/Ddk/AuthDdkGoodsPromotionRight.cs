@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Ddk;
 public partial class AuthDdkGoodsPromotionRight
 {
-
     /// <summary>
     /// 推广商品视频素材url
     /// </summary>
@@ -49,6 +48,8 @@ public partial class AuthDdkGoodsPromotionRight
     /// </summary>
     [JsonPropertyName("thumb_pic_url")]
     public List<string> ThumbPicUrl { get; set; }
+
+
 
 }
 

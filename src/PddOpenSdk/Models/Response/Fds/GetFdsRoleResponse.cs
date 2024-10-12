@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Fds;
-public partial class GetFdsRoleResponse : PddResponseModel
+public partial class GetFdsRoleResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetFdsRoleResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("pdd_fds_role_get_response")]
     public PddFdsRoleGetResponseResponse PddFdsRoleGetResponse { get; set; }
-    public partial class PddFdsRoleGetResponseResponse : PddResponseModel
+
+    public partial class PddFdsRoleGetResponseResponse
     {
 
         /// <summary>
@@ -15,6 +16,7 @@ public partial class GetFdsRoleResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("mall_role")]
         public int? MallRole { get; set; }
+
 
     }
 

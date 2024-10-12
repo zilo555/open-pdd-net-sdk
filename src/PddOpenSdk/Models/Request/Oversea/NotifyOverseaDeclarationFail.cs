@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Oversea;
 public partial class NotifyOverseaDeclarationFail
 {
-
     /// <summary>
     /// 1-超过购买额度，2-清关异常（如重量超标、退运、扣留等）
     /// </summary>
@@ -13,6 +12,8 @@ public partial class NotifyOverseaDeclarationFail
     /// </summary>
     [JsonPropertyName("order_sn")]
     public string OrderSn { get; set; }
+
+
 
 }
 

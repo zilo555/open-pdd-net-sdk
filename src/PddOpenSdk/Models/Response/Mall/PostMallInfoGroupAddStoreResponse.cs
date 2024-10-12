@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Mall;
-public partial class PostMallInfoGroupAddStoreResponse : PddResponseModel
+public partial class PostMallInfoGroupAddStoreResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class PostMallInfoGroupAddStoreResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("mall_info_group_add_store_post_response")]
     public MallInfoGroupAddStorePostResponseResponse MallInfoGroupAddStorePostResponse { get; set; }
-    public partial class MallInfoGroupAddStorePostResponseResponse : PddResponseModel
+
+    public partial class MallInfoGroupAddStorePostResponseResponse
     {
 
         /// <summary>
@@ -15,6 +16,7 @@ public partial class PostMallInfoGroupAddStoreResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("is_success")]
         public bool? IsSuccess { get; set; }
+
 
     }
 

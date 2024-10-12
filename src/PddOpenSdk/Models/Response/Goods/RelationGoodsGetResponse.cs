@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Goods;
-public partial class RelationGoodsGetResponse : PddResponseModel
+public partial class RelationGoodsGetResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class RelationGoodsGetResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("query_goods_relation_response")]
     public List<QueryGoodsRelationResponseResponse> QueryGoodsRelationResponse { get; set; }
-    public partial class QueryGoodsRelationResponseResponse : PddResponseModel
+
+    public partial class QueryGoodsRelationResponseResponse
     {
 
         /// <summary>
@@ -21,6 +22,7 @@ public partial class RelationGoodsGetResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("pdd_goods_id")]
         public long? PddGoodsId { get; set; }
+
 
     }
 

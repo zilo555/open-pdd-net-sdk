@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Mall;
-public partial class NopoiMallInfoStoreUpdatePostResponse : PddResponseModel
+public partial class NopoiMallInfoStoreUpdatePostResponse
 {
 
     /// <summary>
@@ -7,6 +7,7 @@ public partial class NopoiMallInfoStoreUpdatePostResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("res")]
     public string Res { get; set; }
+
 
 }
 

@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Ddk;
 public partial class GenerateDdkGoodsPromotionUrl
 {
-
     /// <summary>
     /// 多多礼金ID
     /// </summary>
@@ -75,6 +74,12 @@ public partial class GenerateDdkGoodsPromotionUrl
     public bool? GenerateWeixinCode { get; set; }
 
     /// <summary>
+    /// 支持拼接特殊参数的商品生链参数列表。生链优先级：goods_gen_url_param_list > goods_sign_list，两者按优先级选其一。
+    /// </summary>
+    [JsonPropertyName("goods_gen_url_param_list")]
+    public List<GoodsGenUrlParamListModel> GoodsGenUrlParamList { get; set; }
+
+    /// <summary>
     /// 商品goodsSign列表，例如：["c9r2omogKFFAc7WBwvbZU1ikIb16_J3CTa8HNN"]，支持批量生链。goodsSign是加密后的goodsId, goodsId已下线，请使用goodsSign来替代。使用说明：https://jinbao.pinduoduo.com/qa-system?questionId=252
     /// </summary>
     [JsonPropertyName("goods_sign_list")]
@@ -105,10 +110,70 @@ public partial class GenerateDdkGoodsPromotionUrl
     public string SearchId { get; set; }
 
     /// <summary>
+    /// 特殊参数
+    /// </summary>
+    [JsonPropertyName("special_params")]
+    public Dictionary<string, object> SpecialParams { get; set; }
+
+    /// <summary>
+    /// 生成商品链接类型 0-默认 1-百补相似品列表
+    /// </summary>
+    [JsonPropertyName("url_type")]
+    public int? UrlType { get; set; }
+
+    /// <summary>
     /// 招商多多客ID
     /// </summary>
     [JsonPropertyName("zs_duo_id")]
     public long? ZsDuoId { get; set; }
+
+    /// <summary>
+    /// 是否生成小程序schema长链
+    /// </summary>
+    [JsonPropertyName("generate_we_app_long_link")]
+    public bool? GenerateWeAppLongLink { get; set; }
+
+
+    public partial class GoodsGenUrlParamListModel
+    {
+        /// <summary>
+        /// 商品goodsSign，支持通过goodsSign查询商品。goodsSign是加密后的goodsId, goodsId已下线，请使用goodsSign来替代。使用说明：https://jinbao.pinduoduo.com/qa-system?questionId=252
+        /// </summary>
+        [JsonPropertyName("goods_sign")]
+        public string GoodsSign { get; set; }
+
+        /// <summary>
+        /// 需要在链接上拼接的skuIdCode列表，skuIdCode为skuId密文，由订单详情接口pdd.ddk.order.detail.get返回。要求拥有sku权限否则不生效，作用同sku_id_list，且与sku_id_list独立。此列表传入n个skuIdCode，则针对该goodsSign生成n个拼接sku_id=xxx(skuIdCode)的链接。若列表为空或者skuIdCode无效则返回普通链接
+        /// </summary>
+        [JsonPropertyName("sku_id_code_list")]
+        public List<string> SkuIdCodeList { get; set; }
+
+        /// <summary>
+        /// 需要在链接上拼接的skuId列表，要求拥有sku权限否则不生效。拼接sku_id的链接在点击跳转商详时，自动选中对应的sku。此列表传入n个skuId，则针对该goodsSign生成n个拼接sku_id链接。若列表为空或着skuId无效（null，非正）则返回普通链接。
+        /// </summary>
+        [JsonPropertyName("sku_id_list")]
+        public List<long?> SkuIdList { get; set; }
+
+
+
+    }
+    public partial class SpecialParamsModel
+    {
+        /// <summary>
+        /// 特殊参数key
+        /// </summary>
+        [JsonPropertyName("$key")]
+        public string Key { get; set; }
+
+        /// <summary>
+        /// 特殊参数value
+        /// </summary>
+        [JsonPropertyName("$value")]
+        public string Value { get; set; }
+
+
+
+    }
 
 }
 

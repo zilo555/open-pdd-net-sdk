@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Mall;
-public partial class PostMallInfoGroupDeleteResponse : PddResponseModel
+public partial class PostMallInfoGroupDeleteResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class PostMallInfoGroupDeleteResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("response")]
     public ResponseResponse Response { get; set; }
-    public partial class ResponseResponse : PddResponseModel
+
+    public partial class ResponseResponse
     {
 
         /// <summary>
@@ -15,6 +16,7 @@ public partial class PostMallInfoGroupDeleteResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("result")]
         public bool? Result { get; set; }
+
 
     }
 

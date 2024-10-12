@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Goods;
 public partial class UpdateGoodsLogisticsSerTemplate
 {
-
     /// <summary>
     /// 分类目基础价格配置,入参为string，[{ "cat_id4": 1, "cat_id3": 2, "list": [{ "limit_type": 1, "value": 1, "content": [{ "price": 1, "max_pro": 1, "min_pro": 1 }] }] }]
     /// </summary>
@@ -37,9 +36,10 @@ public partial class UpdateGoodsLogisticsSerTemplate
     /// </summary>
     [JsonPropertyName("template_type")]
     public int TemplateType { get; set; }
+
+
     public partial class CatListModel
     {
-
         /// <summary>
         /// 三级类目id
         /// </summary>
@@ -57,9 +57,10 @@ public partial class UpdateGoodsLogisticsSerTemplate
         /// </summary>
         [JsonPropertyName("list")]
         public List<ListModel> List { get; set; }
+
+
         public partial class ListModel
         {
-
             /// <summary>
             /// 按属性收取费用时配置的内容：按属性限价时设置；按件限价时不用传，value和content必须设置一个
             /// </summary>
@@ -77,9 +78,10 @@ public partial class UpdateGoodsLogisticsSerTemplate
             /// </summary>
             [JsonPropertyName("value")]
             public long? Value { get; set; }
+
+
             public partial class ContentModel
             {
-
                 /// <summary>
                 /// 属性区间大值，-1表示"其他"示例：要配置区间"100-200"的费用，则maxPro输入"200"要配置区间"其他"的费用，则maxPro输入"-1"备注：表示长度时单位为：mm
                 /// </summary>
@@ -98,6 +100,8 @@ public partial class UpdateGoodsLogisticsSerTemplate
                 [JsonPropertyName("price")]
                 public long Price { get; set; }
 
+
+
             }
 
         }
@@ -105,7 +109,6 @@ public partial class UpdateGoodsLogisticsSerTemplate
     }
     public partial class ServiceAreaListModel
     {
-
         /// <summary>
         /// 市id，如果是全省选中，则市id为0
         /// </summary>
@@ -129,6 +132,8 @@ public partial class UpdateGoodsLogisticsSerTemplate
         /// </summary>
         [JsonPropertyName("value")]
         public int? Value { get; set; }
+
+
 
     }
 

@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.DdkTools;
 public partial class QueryDdkOauthMemberAuthority
 {
-
     /// <summary>
     /// 推广位id
     /// </summary>
@@ -13,6 +12,8 @@ public partial class QueryDdkOauthMemberAuthority
     /// </summary>
     [JsonPropertyName("custom_parameters")]
     public string CustomParameters { get; set; }
+
+
 
 }
 

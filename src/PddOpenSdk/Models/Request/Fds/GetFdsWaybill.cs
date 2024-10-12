@@ -1,15 +1,15 @@
 namespace PddOpenSdk.Models.Request.Fds;
 public partial class GetFdsWaybill
 {
-
     /// <summary>
     /// 入参信息
     /// </summary>
     [JsonPropertyName("param_fds_waybill_get_request")]
     public ParamFdsWaybillGetRequestModel ParamFdsWaybillGetRequest { get; set; }
+
+
     public partial class ParamFdsWaybillGetRequestModel
     {
-
         /// <summary>
         /// 发货人信息
         /// </summary>
@@ -27,9 +27,10 @@ public partial class GetFdsWaybill
         /// </summary>
         [JsonPropertyName("wp_code")]
         public string WpCode { get; set; }
+
+
         public partial class SenderModel
         {
-
             /// <summary>
             /// 发货地址，需要入参与 search 接口中的发货人地址信息一致
             /// </summary>
@@ -53,9 +54,10 @@ public partial class GetFdsWaybill
             /// </summary>
             [JsonPropertyName("phone")]
             public string Phone { get; set; }
+
+
             public partial class AddressModel
             {
-
                 /// <summary>
                 /// 市
                 /// </summary>
@@ -92,12 +94,13 @@ public partial class GetFdsWaybill
                 [JsonPropertyName("town")]
                 public string Town { get; set; }
 
+
+
             }
 
         }
         public partial class TradeOrderInfoDtosModel
         {
-
             /// <summary>
             /// 物流服务内容链接
             /// </summary>
@@ -133,9 +136,10 @@ public partial class GetFdsWaybill
             /// </summary>
             [JsonPropertyName("user_id")]
             public long UserId { get; set; }
+
+
             public partial class OrderInfoModel
             {
-
                 /// <summary>
                 /// 订单渠道平台编码
                 /// </summary>
@@ -147,9 +151,10 @@ public partial class GetFdsWaybill
                 /// </summary>
                 [JsonPropertyName("trade_order_list")]
                 public List<TradeOrderListModel> TradeOrderList { get; set; }
+
+
                 public partial class TradeOrderListModel
                 {
-
                     /// <summary>
                     /// 代打店铺id
                     /// </summary>
@@ -162,12 +167,13 @@ public partial class GetFdsWaybill
                     [JsonPropertyName("order_mask_sn")]
                     public string OrderMaskSn { get; set; }
 
+
+
                 }
 
             }
             public partial class PackageInfoModel
             {
-
                 /// <summary>
                 /// 快运货品描述
                 /// </summary>
@@ -209,9 +215,10 @@ public partial class GetFdsWaybill
                 /// </summary>
                 [JsonPropertyName("weight")]
                 public int? Weight { get; set; }
+
+
                 public partial class ItemsModel
                 {
-
                     /// <summary>
                     /// 数量
                     /// </summary>
@@ -223,6 +230,8 @@ public partial class GetFdsWaybill
                     /// </summary>
                     [JsonPropertyName("name")]
                     public string Name { get; set; }
+
+
 
                 }
 

@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Goods;
-public partial class GetGoodsAdvicePriceResponse : PddResponseModel
+public partial class GetGoodsAdvicePriceResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetGoodsAdvicePriceResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("goods_advice_price_get_response")]
     public GoodsAdvicePriceGetResponseResponse GoodsAdvicePriceGetResponse { get; set; }
-    public partial class GoodsAdvicePriceGetResponseResponse : PddResponseModel
+
+    public partial class GoodsAdvicePriceGetResponseResponse
     {
 
         /// <summary>
@@ -21,7 +22,8 @@ public partial class GetGoodsAdvicePriceResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("total")]
         public int? Total { get; set; }
-        public partial class AdvicePriceListResponse : PddResponseModel
+
+        public partial class AdvicePriceListResponse
         {
 
             /// <summary>
@@ -59,6 +61,7 @@ public partial class GetGoodsAdvicePriceResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("sku_name")]
             public string SkuName { get; set; }
+
 
         }
 

@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Goods;
 public partial class GetGoodsSpecId
 {
-
     /// <summary>
     /// 拼多多标准规格ID，可以通过pdd.goods.spec.get接口获取
     /// </summary>
@@ -13,6 +12,8 @@ public partial class GetGoodsSpecId
     /// </summary>
     [JsonPropertyName("spec_name")]
     public string SpecName { get; set; }
+
+
 
 }
 

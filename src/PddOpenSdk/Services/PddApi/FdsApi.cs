@@ -1,4 +1,3 @@
-
 using PddOpenSdk.Models.Request.Fds;
 using PddOpenSdk.Models.Response.Fds;
 namespace PddOpenSdk.Services.PddApi;
@@ -10,6 +9,7 @@ public class FdsApi : PddCommonApi
     /// <summary>
     /// 订单详情
     /// </summary>
+
     public async Task<GetFdsOrderResponse> GetFdsOrderAsync(GetFdsOrder getFdsOrder)
     {
         var result = await PostAsync<GetFdsOrder, GetFdsOrderResponse>("pdd.fds.order.get", getFdsOrder);
@@ -19,6 +19,7 @@ public class FdsApi : PddCommonApi
     /// <summary>
     /// 根据更新时间查询订单列表
     /// </summary>
+
     public async Task<GetFdsOrderListResponse> GetFdsOrderListAsync(GetFdsOrderList getFdsOrderList)
     {
         var result = await PostAsync<GetFdsOrderList, GetFdsOrderListResponse>("pdd.fds.order.list.get", getFdsOrderList);
@@ -28,6 +29,7 @@ public class FdsApi : PddCommonApi
     /// <summary>
     /// 查询店铺身份
     /// </summary>
+
     public async Task<GetFdsRoleResponse> GetFdsRoleAsync(GetFdsRole getFdsRole)
     {
         var result = await PostAsync<GetFdsRole, GetFdsRoleResponse>("pdd.fds.role.get", getFdsRole);
@@ -37,6 +39,7 @@ public class FdsApi : PddCommonApi
     /// <summary>
     /// 电子面单取消回传
     /// </summary>
+
     public async Task<CancelFdsWaybillResponse> CancelFdsWaybillAsync(CancelFdsWaybill cancelFdsWaybill)
     {
         var result = await PostAsync<CancelFdsWaybill, CancelFdsWaybillResponse>("pdd.fds.waybill.cancel", cancelFdsWaybill);
@@ -46,6 +49,7 @@ public class FdsApi : PddCommonApi
     /// <summary>
     /// 电子面单取号
     /// </summary>
+
     public async Task<GetFdsWaybillResponse> GetFdsWaybillAsync(GetFdsWaybill getFdsWaybill)
     {
         var result = await PostAsync<GetFdsWaybill, GetFdsWaybillResponse>("pdd.fds.waybill.get", getFdsWaybill);
@@ -55,6 +59,7 @@ public class FdsApi : PddCommonApi
     /// <summary>
     /// 电子面单回传
     /// </summary>
+
     public async Task<ReturnFdsWaybillResponse> ReturnFdsWaybillAsync(ReturnFdsWaybill returnFdsWaybill)
     {
         var result = await PostAsync<ReturnFdsWaybill, ReturnFdsWaybillResponse>("pdd.fds.waybill.return", returnFdsWaybill);
@@ -64,6 +69,7 @@ public class FdsApi : PddCommonApi
     /// <summary>
     /// 电子面单回传额外运单号
     /// </summary>
+
     public async Task<SlaveFdsWaybillReturnResponse> SlaveFdsWaybillReturnAsync(SlaveFdsWaybillReturn slaveFdsWaybillReturn)
     {
         var result = await PostAsync<SlaveFdsWaybillReturn, SlaveFdsWaybillReturnResponse>("pdd.fds.waybill.return.slave", slaveFdsWaybillReturn);

@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Promotion;
-public partial class CreatePromotionLimitedActivityResponse : PddResponseModel
+public partial class CreatePromotionLimitedActivityResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class CreatePromotionLimitedActivityResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("result_list")]
     public List<ResultListResponse> ResultList { get; set; }
-    public partial class ResultListResponse : PddResponseModel
+
+    public partial class ResultListResponse
     {
 
         /// <summary>
@@ -27,6 +28,7 @@ public partial class CreatePromotionLimitedActivityResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("status")]
         public int? Status { get; set; }
+
 
     }
 

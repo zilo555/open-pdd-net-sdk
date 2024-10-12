@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.WayBill;
-public partial class BindCloudPrinterResponse : PddResponseModel
+public partial class BindCloudPrinterResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class BindCloudPrinterResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("cloud_printer_bind_response")]
     public CloudPrinterBindResponseResponse CloudPrinterBindResponse { get; set; }
-    public partial class CloudPrinterBindResponseResponse : PddResponseModel
+
+    public partial class CloudPrinterBindResponseResponse
     {
 
         /// <summary>
@@ -33,7 +34,8 @@ public partial class BindCloudPrinterResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("success")]
         public bool? Success { get; set; }
-        public partial class ResultResponse : PddResponseModel
+
+        public partial class ResultResponse
         {
 
             /// <summary>
@@ -47,6 +49,7 @@ public partial class BindCloudPrinterResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("shareCode")]
             public string ShareCode { get; set; }
+
 
         }
 

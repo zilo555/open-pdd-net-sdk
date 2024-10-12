@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Ddk;
 public partial class GenerateDdkGoodsPid
 {
-
     /// <summary>
     /// 要生成的推广位数量，默认为10，范围为：1~100
     /// </summary>
@@ -19,6 +18,8 @@ public partial class GenerateDdkGoodsPid
     /// </summary>
     [JsonPropertyName("media_id")]
     public long? MediaId { get; set; }
+
+
 
 }
 

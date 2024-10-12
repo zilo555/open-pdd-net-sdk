@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Ddk;
 public partial class BindDdkPidMediaid
 {
-
     /// <summary>
     /// 媒体id
     /// </summary>
@@ -13,6 +12,8 @@ public partial class BindDdkPidMediaid
     /// </summary>
     [JsonPropertyName("pid_list")]
     public List<string> PidList { get; set; }
+
+
 
 }
 

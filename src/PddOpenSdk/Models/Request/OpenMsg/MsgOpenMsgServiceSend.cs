@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.OpenMsg;
 public partial class MsgOpenMsgServiceSend
 {
-
     /// <summary>
     /// 业务请求唯一标识
     /// </summary>
@@ -37,9 +36,10 @@ public partial class MsgOpenMsgServiceSend
     /// </summary>
     [JsonPropertyName("template_param")]
     public Dictionary<string, object> TemplateParam { get; set; }
+
+
     public partial class TemplateParamModel
     {
-
         /// <summary>
         /// 模板变量名
         /// </summary>
@@ -51,6 +51,8 @@ public partial class MsgOpenMsgServiceSend
         /// </summary>
         [JsonPropertyName("$value")]
         public string Value { get; set; }
+
+
 
     }
 

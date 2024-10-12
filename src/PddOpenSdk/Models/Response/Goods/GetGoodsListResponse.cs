@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Goods;
-public partial class GetGoodsListResponse : PddResponseModel
+public partial class GetGoodsListResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetGoodsListResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("goods_list_get_response")]
     public GoodsListGetResponseResponse GoodsListGetResponse { get; set; }
-    public partial class GoodsListGetResponseResponse : PddResponseModel
+
+    public partial class GoodsListGetResponseResponse
     {
 
         /// <summary>
@@ -21,7 +22,8 @@ public partial class GetGoodsListResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("total_count")]
         public int? TotalCount { get; set; }
-        public partial class GoodsListResponse : PddResponseModel
+
+        public partial class GoodsListResponse
         {
 
             /// <summary>
@@ -83,7 +85,8 @@ public partial class GetGoodsListResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("thumb_url")]
             public string ThumbUrl { get; set; }
-            public partial class SkuListResponse : PddResponseModel
+
+            public partial class SkuListResponse
             {
 
                 /// <summary>
@@ -133,7 +136,8 @@ public partial class GetGoodsListResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("spec_details")]
                 public List<SpecDetailsResponse> SpecDetails { get; set; }
-                public partial class SpecDetailsResponse : PddResponseModel
+
+                public partial class SpecDetailsResponse
                 {
 
                     /// <summary>
@@ -165,6 +169,7 @@ public partial class GetGoodsListResponse : PddResponseModel
                     /// </summary>
                     [JsonPropertyName("spec_note")]
                     public string SpecNote { get; set; }
+
 
                 }
 

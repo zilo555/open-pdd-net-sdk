@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Stock;
 public partial class InfoExpressChangeDepot
 {
-
     /// <summary>
     /// 仓库id
     /// </summary>
@@ -67,6 +66,8 @@ public partial class InfoExpressChangeDepot
     /// </summary>
     [JsonPropertyName("depot_region")]
     public string DepotRegion { get; set; }
+
+
 
 }
 

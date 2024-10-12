@@ -1,15 +1,15 @@
 namespace PddOpenSdk.Models.Request.Refund;
 public partial class UpdateNextoneLogisticsWarehouse
 {
-
     /// <summary>
     /// request
     /// </summary>
     [JsonPropertyName("request")]
     public RequestModel Request { get; set; }
+
+
     public partial class RequestModel
     {
-
         /// <summary>
         /// 售后id
         /// </summary>
@@ -45,6 +45,8 @@ public partial class UpdateNextoneLogisticsWarehouse
         /// </summary>
         [JsonPropertyName("warehouse_status")]
         public int WarehouseStatus { get; set; }
+
+
 
     }
 

@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Order;
-public partial class GetOrderVirtualInformationResponse : PddResponseModel
+public partial class GetOrderVirtualInformationResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetOrderVirtualInformationResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("order_virtual_information_response")]
     public OrderVirtualInformationResponseResponse OrderVirtualInformationResponse { get; set; }
-    public partial class OrderVirtualInformationResponseResponse : PddResponseModel
+
+    public partial class OrderVirtualInformationResponseResponse
     {
 
         /// <summary>
@@ -39,6 +40,7 @@ public partial class GetOrderVirtualInformationResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("order_sn")]
         public string OrderSn { get; set; }
+
 
     }
 

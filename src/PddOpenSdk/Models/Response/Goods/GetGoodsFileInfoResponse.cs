@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Goods;
-public partial class GetGoodsFileInfoResponse : PddResponseModel
+public partial class GetGoodsFileInfoResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetGoodsFileInfoResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("goods_file_info_response")]
     public GoodsFileInfoResponseResponse GoodsFileInfoResponse { get; set; }
-    public partial class GoodsFileInfoResponseResponse : PddResponseModel
+
+    public partial class GoodsFileInfoResponseResponse
     {
 
         /// <summary>
@@ -15,7 +16,8 @@ public partial class GetGoodsFileInfoResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("list")]
         public List<ListResponse> List { get; set; }
-        public partial class ListResponse : PddResponseModel
+
+        public partial class ListResponse
         {
 
             /// <summary>
@@ -35,6 +37,7 @@ public partial class GetGoodsFileInfoResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("url")]
             public string Url { get; set; }
+
 
         }
 

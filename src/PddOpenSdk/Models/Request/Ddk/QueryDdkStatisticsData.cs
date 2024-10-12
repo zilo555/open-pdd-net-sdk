@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Ddk;
 public partial class QueryDdkStatisticsData
 {
-
     /// <summary>
     /// 分页数，默认值: 1
     /// </summary>
@@ -31,6 +30,8 @@ public partial class QueryDdkStatisticsData
     /// </summary>
     [JsonPropertyName("time")]
     public string Time { get; set; }
+
+
 
 }
 

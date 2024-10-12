@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Goods;
-public partial class QueryGoodsCpsMallUnitResponse : PddResponseModel
+public partial class QueryGoodsCpsMallUnitResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class QueryGoodsCpsMallUnitResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("goods_cps_mall_unit_query_response")]
     public GoodsCpsMallUnitQueryResponseResponse GoodsCpsMallUnitQueryResponse { get; set; }
-    public partial class GoodsCpsMallUnitQueryResponseResponse : PddResponseModel
+
+    public partial class GoodsCpsMallUnitQueryResponseResponse
     {
 
         /// <summary>
@@ -45,6 +46,7 @@ public partial class QueryGoodsCpsMallUnitResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("status_to_be_day")]
         public string StatusToBeDay { get; set; }
+
 
     }
 

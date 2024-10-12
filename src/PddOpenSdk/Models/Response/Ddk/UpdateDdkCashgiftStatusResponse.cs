@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ddk;
-public partial class UpdateDdkCashgiftStatusResponse : PddResponseModel
+public partial class UpdateDdkCashgiftStatusResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class UpdateDdkCashgiftStatusResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("update_cashgift_response")]
     public UpdateCashgiftResponseResponse UpdateCashgiftResponse { get; set; }
-    public partial class UpdateCashgiftResponseResponse : PddResponseModel
+
+    public partial class UpdateCashgiftResponseResponse
     {
 
         /// <summary>
@@ -15,6 +16,7 @@ public partial class UpdateDdkCashgiftStatusResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("cash_gift_id")]
         public long? CashGiftId { get; set; }
+
 
     }
 

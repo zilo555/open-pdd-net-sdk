@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Goods;
-public partial class GetGoodsOptResponse : PddResponseModel
+public partial class GetGoodsOptResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetGoodsOptResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("goods_opt_get_response")]
     public GoodsOptGetResponseResponse GoodsOptGetResponse { get; set; }
-    public partial class GoodsOptGetResponseResponse : PddResponseModel
+
+    public partial class GoodsOptGetResponseResponse
     {
 
         /// <summary>
@@ -15,7 +16,8 @@ public partial class GetGoodsOptResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("goods_opt_list")]
         public List<GoodsOptListResponse> GoodsOptList { get; set; }
-        public partial class GoodsOptListResponse : PddResponseModel
+
+        public partial class GoodsOptListResponse
         {
 
             /// <summary>
@@ -41,6 +43,7 @@ public partial class GetGoodsOptResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("parent_opt_id")]
             public long? ParentOptId { get; set; }
+
 
         }
 

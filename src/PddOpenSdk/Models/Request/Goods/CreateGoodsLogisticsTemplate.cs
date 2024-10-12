@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Goods;
 public partial class CreateGoodsLogisticsTemplate
 {
-
     /// <summary>
     /// 非包邮模版列表
     /// </summary>
@@ -43,9 +42,10 @@ public partial class CreateGoodsLogisticsTemplate
     /// </summary>
     [JsonPropertyName("district_id")]
     public int DistrictId { get; set; }
+
+
     public partial class CostTemplateListModel
     {
-
         /// <summary>
         /// 首件
         /// </summary>
@@ -99,26 +99,30 @@ public partial class CreateGoodsLogisticsTemplate
         /// </summary>
         [JsonPropertyName("cost_province_list")]
         public List<CostProvinceListModel> CostProvinceList { get; set; }
+
+
         public partial class CostProvinceListModel
         {
-
             /// <summary>
             /// 省份ID
             /// </summary>
             [JsonPropertyName("province_id")]
             public int ProvinceId { get; set; }
 
+
+
         }
 
     }
     public partial class FreeProvinceListModel
     {
-
         /// <summary>
         /// 省份ID
         /// </summary>
         [JsonPropertyName("province_id")]
         public int ProvinceId { get; set; }
+
+
 
     }
 

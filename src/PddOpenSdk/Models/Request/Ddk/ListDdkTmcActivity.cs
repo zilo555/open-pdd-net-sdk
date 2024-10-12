@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Ddk;
 public partial class ListDdkTmcActivity
 {
-
     /// <summary>
     /// 页码 从1开始
     /// </summary>
@@ -25,6 +24,8 @@ public partial class ListDdkTmcActivity
     /// </summary>
     [JsonPropertyName("start_time_upper")]
     public string StartTimeUpper { get; set; }
+
+
 
 }
 

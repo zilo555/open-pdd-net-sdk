@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ktt;
-public partial class ReplaceKttPurchaseOrderLogisticResponse : PddResponseModel
+public partial class ReplaceKttPurchaseOrderLogisticResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class ReplaceKttPurchaseOrderLogisticResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("ktt_purchase_order_logistics_replace_response")]
     public KttPurchaseOrderLogisticsReplaceResponseResponse KttPurchaseOrderLogisticsReplaceResponse { get; set; }
-    public partial class KttPurchaseOrderLogisticsReplaceResponseResponse : PddResponseModel
+
+    public partial class KttPurchaseOrderLogisticsReplaceResponseResponse
     {
 
         /// <summary>
@@ -33,7 +34,8 @@ public partial class ReplaceKttPurchaseOrderLogisticResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("success")]
         public bool? Success { get; set; }
-        public partial class ResultResponse : PddResponseModel
+
+        public partial class ResultResponse
         {
 
             /// <summary>
@@ -41,6 +43,7 @@ public partial class ReplaceKttPurchaseOrderLogisticResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("is_all_success")]
             public bool? IsAllSuccess { get; set; }
+
 
         }
 

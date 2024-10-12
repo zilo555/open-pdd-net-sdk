@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Goods;
-public partial class GetGoodsCountryResponse : PddResponseModel
+public partial class GetGoodsCountryResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetGoodsCountryResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("goods_country_get_response")]
     public GoodsCountryGetResponseResponse GoodsCountryGetResponse { get; set; }
-    public partial class GoodsCountryGetResponseResponse : PddResponseModel
+
+    public partial class GoodsCountryGetResponseResponse
     {
 
         /// <summary>
@@ -15,7 +16,8 @@ public partial class GetGoodsCountryResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("country_list")]
         public List<CountryListResponse> CountryList { get; set; }
-        public partial class CountryListResponse : PddResponseModel
+
+        public partial class CountryListResponse
         {
 
             /// <summary>
@@ -29,6 +31,7 @@ public partial class GetGoodsCountryResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("country_name")]
             public string CountryName { get; set; }
+
 
         }
 

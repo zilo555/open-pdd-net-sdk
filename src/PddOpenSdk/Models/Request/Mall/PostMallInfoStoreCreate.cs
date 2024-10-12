@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Mall;
 public partial class PostMallInfoStoreCreate
 {
-
     /// <summary>
     /// 门店营业状态
     /// </summary>
@@ -85,6 +84,8 @@ public partial class PostMallInfoStoreCreate
     /// </summary>
     [JsonPropertyName("trade_type")]
     public int TradeType { get; set; }
+
+
 
 }
 

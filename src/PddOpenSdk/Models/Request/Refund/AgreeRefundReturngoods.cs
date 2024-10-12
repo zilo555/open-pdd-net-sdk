@@ -1,15 +1,15 @@
 namespace PddOpenSdk.Models.Request.Refund;
 public partial class AgreeRefundReturngoods
 {
-
     /// <summary>
     /// 请求入参
     /// </summary>
     [JsonPropertyName("request")]
     public RequestModel Request { get; set; }
+
+
     public partial class RequestModel
     {
-
         /// <summary>
         /// 售后id
         /// </summary>
@@ -33,6 +33,8 @@ public partial class AgreeRefundReturngoods
         /// </summary>
         [JsonPropertyName("return_address_id")]
         public string ReturnAddressId { get; set; }
+
+
 
     }
 

@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Ktt;
 public partial class ListKttGoodsQuery
 {
-
     /// <summary>
     /// 团号（团号和创建时间只能传一个）
     /// </summary>
@@ -43,6 +42,8 @@ public partial class ListKttGoodsQuery
     /// </summary>
     [JsonPropertyName("create_time_start")]
     public long? CreateTimeStart { get; set; }
+
+
 
 }
 

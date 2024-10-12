@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ticket;
-public partial class UploadTicketGoodsResponse : PddResponseModel
+public partial class UploadTicketGoodsResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class UploadTicketGoodsResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("goods_upload_response")]
     public GoodsUploadResponseResponse GoodsUploadResponse { get; set; }
-    public partial class GoodsUploadResponseResponse : PddResponseModel
+
+    public partial class GoodsUploadResponseResponse
     {
 
         /// <summary>
@@ -21,6 +22,7 @@ public partial class UploadTicketGoodsResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("goods_id")]
         public long? GoodsId { get; set; }
+
 
     }
 

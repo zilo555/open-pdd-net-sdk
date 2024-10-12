@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Goods;
-public partial class DeleteGoodsLogisticsSerTemplateResponse : PddResponseModel
+public partial class DeleteGoodsLogisticsSerTemplateResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class DeleteGoodsLogisticsSerTemplateResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("goods_logistics_ser_template_delete_response")]
     public GoodsLogisticsSerTemplateDeleteResponseResponse GoodsLogisticsSerTemplateDeleteResponse { get; set; }
-    public partial class GoodsLogisticsSerTemplateDeleteResponseResponse : PddResponseModel
+
+    public partial class GoodsLogisticsSerTemplateDeleteResponseResponse
     {
 
         /// <summary>
@@ -15,6 +16,7 @@ public partial class DeleteGoodsLogisticsSerTemplateResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("is_success")]
         public bool? IsSuccess { get; set; }
+
 
     }
 

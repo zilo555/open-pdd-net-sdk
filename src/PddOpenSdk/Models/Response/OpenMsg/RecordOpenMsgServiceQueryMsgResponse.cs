@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.OpenMsg;
-public partial class RecordOpenMsgServiceQueryMsgResponse : PddResponseModel
+public partial class RecordOpenMsgServiceQueryMsgResponse
 {
 
     /// <summary>
@@ -31,7 +31,8 @@ public partial class RecordOpenMsgServiceQueryMsgResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("total_count")]
     public int? TotalCount { get; set; }
-    public partial class SmsSendDetailsResponse : PddResponseModel
+
+    public partial class SmsSendDetailsResponse
     {
 
         /// <summary>
@@ -81,6 +82,7 @@ public partial class RecordOpenMsgServiceQueryMsgResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("template_code")]
         public long? TemplateCode { get; set; }
+
 
     }
 

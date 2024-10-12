@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.OpenMsg;
 public partial class RecordOpenMsgServiceQueryMsg
 {
-
     /// <summary>
     /// 短信发送流水
     /// </summary>
@@ -31,6 +30,8 @@ public partial class RecordOpenMsgServiceQueryMsg
     /// </summary>
     [JsonPropertyName("send_date")]
     public string SendDate { get; set; }
+
+
 
 }
 

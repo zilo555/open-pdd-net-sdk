@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Order;
-public partial class GetOrderNumberListIncrementResponse : PddResponseModel
+public partial class GetOrderNumberListIncrementResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetOrderNumberListIncrementResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("order_sn_increment_get_response")]
     public OrderSnIncrementGetResponseResponse OrderSnIncrementGetResponse { get; set; }
-    public partial class OrderSnIncrementGetResponseResponse : PddResponseModel
+
+    public partial class OrderSnIncrementGetResponseResponse
     {
 
         /// <summary>
@@ -27,7 +28,8 @@ public partial class GetOrderNumberListIncrementResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("total_count")]
         public int? TotalCount { get; set; }
-        public partial class OrderSnListResponse : PddResponseModel
+
+        public partial class OrderSnListResponse
         {
 
             /// <summary>
@@ -331,7 +333,7 @@ public partial class GetOrderNumberListIncrementResponse : PddResponseModel
             public int? OrderStatus { get; set; }
 
             /// <summary>
-            /// 订单标签列表，no_trace_delivery=无痕发货，only_support_replace=只换不修，duoduo_wholesale=多多批发，return_freight_payer=退货包运费，free_sf=顺丰包邮，support_nationwide_warranty=全国联保，self_contained=门店自提，delivery_one_day=当日发货，oversea_tracing=全球购溯源，distributional_sale=分销订单，open_in_festival=不打烊，region_black_delay_shipping=发货时间可延迟，same_city_distribution=同城配送，has_subsidy_postage=补贴运费红包，has_sf_express_service=顺丰加价，community_group=小区团购，has_ship_additional=加运费发顺丰，ship_additional_order=加运费补差价订单，conso_order=集运订单，allergy_refund=过敏包退，professional_appraisal=专业鉴定，ship_hold=暂停发货，home_delivery_door=送货上门，direct_mail_activity=直邮活动，local_depot=本地仓订单
+            /// 订单标签列表，no_trace_delivery=无痕发货，only_support_replace=只换不修，duoduo_wholesale=多多批发，return_freight_payer=退货包运费，free_sf=顺丰包邮，support_nationwide_warranty=全国联保，self_contained=门店自提，delivery_one_day=当日发货，oversea_tracing=全球购溯源，distributional_sale=分销订单，open_in_festival=不打烊，region_black_delay_shipping=发货时间可延迟，same_city_distribution=同城配送，has_subsidy_postage=补贴运费红包，has_sf_express_service=顺丰加价，community_group=小区团购，has_ship_additional=加运费发顺丰，ship_additional_order=加运费补差价订单，conso_order=集运订单，allergy_refund=过敏包退，professional_appraisal=专业鉴定，ship_hold=暂停发货，home_delivery_door=送货上门，direct_mail_activity=直邮活动，local_depot=本地仓订单，，trade_in_national_subsidy=以旧换新·国家补贴
             /// </summary>
             [JsonPropertyName("order_tag_list")]
             public List<OrderTagListResponse> OrderTagList { get; set; }
@@ -565,6 +567,12 @@ public partial class GetOrderNumberListIncrementResponse : PddResponseModel
             public string TrackingNumber { get; set; }
 
             /// <summary>
+            /// 以旧换新国家补贴金额，单位：元
+            /// </summary>
+            [JsonPropertyName("trade_in_national_subsidy_amount")]
+            public double? TradeInNationalSubsidyAmount { get; set; }
+
+            /// <summary>
             /// 订单类型：0-普通订单、1-定金订单
             /// </summary>
             [JsonPropertyName("trade_type")]
@@ -593,7 +601,8 @@ public partial class GetOrderNumberListIncrementResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("yyps_time")]
             public string YypsTime { get; set; }
-            public partial class CardInfoListResponse : PddResponseModel
+
+            public partial class CardInfoListResponse
             {
 
                 /// <summary>
@@ -608,8 +617,9 @@ public partial class GetOrderNumberListIncrementResponse : PddResponseModel
                 [JsonPropertyName("mask_password")]
                 public string MaskPassword { get; set; }
 
+
             }
-            public partial class ConsolidateInfoResponse : PddResponseModel
+            public partial class ConsolidateInfoResponse
             {
 
                 /// <summary>
@@ -618,8 +628,9 @@ public partial class GetOrderNumberListIncrementResponse : PddResponseModel
                 [JsonPropertyName("consolidate_type")]
                 public int? ConsolidateType { get; set; }
 
+
             }
-            public partial class ExtraDeliveryListResponse : PddResponseModel
+            public partial class ExtraDeliveryListResponse
             {
 
                 /// <summary>
@@ -634,8 +645,9 @@ public partial class GetOrderNumberListIncrementResponse : PddResponseModel
                 [JsonPropertyName("tracking_number")]
                 public string TrackingNumber { get; set; }
 
+
             }
-            public partial class GiftDeliveryListResponse : PddResponseModel
+            public partial class GiftDeliveryListResponse
             {
 
                 /// <summary>
@@ -650,8 +662,9 @@ public partial class GetOrderNumberListIncrementResponse : PddResponseModel
                 [JsonPropertyName("tracking_number")]
                 public string TrackingNumber { get; set; }
 
+
             }
-            public partial class GiftListResponse : PddResponseModel
+            public partial class GiftListResponse
             {
 
                 /// <summary>
@@ -708,8 +721,9 @@ public partial class GetOrderNumberListIncrementResponse : PddResponseModel
                 [JsonPropertyName("sku_id")]
                 public long? SkuId { get; set; }
 
+
             }
-            public partial class ItemListResponse : PddResponseModel
+            public partial class ItemListResponse
             {
 
                 /// <summary>
@@ -766,8 +780,9 @@ public partial class GetOrderNumberListIncrementResponse : PddResponseModel
                 [JsonPropertyName("sku_id")]
                 public long? SkuId { get; set; }
 
+
             }
-            public partial class OrderDepotInfoResponse : PddResponseModel
+            public partial class OrderDepotInfoResponse
             {
 
                 /// <summary>
@@ -823,7 +838,8 @@ public partial class GetOrderNumberListIncrementResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("ware_type")]
                 public int? WareType { get; set; }
-                public partial class WareSubInfoListResponse : PddResponseModel
+
+                public partial class WareSubInfoListResponse
                 {
 
                     /// <summary>
@@ -850,10 +866,11 @@ public partial class GetOrderNumberListIncrementResponse : PddResponseModel
                     [JsonPropertyName("ware_sn")]
                     public string WareSn { get; set; }
 
+
                 }
 
             }
-            public partial class OrderTagListResponse : PddResponseModel
+            public partial class OrderTagListResponse
             {
 
                 /// <summary>
@@ -868,8 +885,9 @@ public partial class GetOrderNumberListIncrementResponse : PddResponseModel
                 [JsonPropertyName("value")]
                 public int? Value { get; set; }
 
+
             }
-            public partial class PromotionDetailListResponse : PddResponseModel
+            public partial class PromotionDetailListResponse
             {
 
                 /// <summary>
@@ -884,8 +902,9 @@ public partial class GetOrderNumberListIncrementResponse : PddResponseModel
                 [JsonPropertyName("promotion_type")]
                 public int? PromotionType { get; set; }
 
+
             }
-            public partial class ResendDeliveryListResponse : PddResponseModel
+            public partial class ResendDeliveryListResponse
             {
 
                 /// <summary>
@@ -900,8 +919,9 @@ public partial class GetOrderNumberListIncrementResponse : PddResponseModel
                 [JsonPropertyName("tracking_number")]
                 public string TrackingNumber { get; set; }
 
+
             }
-            public partial class ServiceFeeDetailResponse : PddResponseModel
+            public partial class ServiceFeeDetailResponse
             {
 
                 /// <summary>
@@ -916,8 +936,9 @@ public partial class GetOrderNumberListIncrementResponse : PddResponseModel
                 [JsonPropertyName("service_name")]
                 public string ServiceName { get; set; }
 
+
             }
-            public partial class StepOrderInfoResponse : PddResponseModel
+            public partial class StepOrderInfoResponse
             {
 
                 /// <summary>
@@ -943,6 +964,7 @@ public partial class GetOrderNumberListIncrementResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("step_trade_status")]
                 public int? StepTradeStatus { get; set; }
+
 
             }
 

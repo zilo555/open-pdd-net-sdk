@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Promotion;
 public partial class CreatePromotionHomeCoupon
 {
-
     /// <summary>
     /// 描述
     /// </summary>
@@ -43,6 +42,8 @@ public partial class CreatePromotionHomeCoupon
     /// </summary>
     [JsonPropertyName("user_limit")]
     public long UserLimit { get; set; }
+
+
 
 }
 

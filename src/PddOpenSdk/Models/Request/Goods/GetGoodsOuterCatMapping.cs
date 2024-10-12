@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Goods;
 public partial class GetGoodsOuterCatMapping
 {
-
     /// <summary>
     /// 外部叶子类目id
     /// </summary>
@@ -19,6 +18,8 @@ public partial class GetGoodsOuterCatMapping
     /// </summary>
     [JsonPropertyName("outer_goods_name")]
     public string OuterGoodsName { get; set; }
+
+
 
 }
 

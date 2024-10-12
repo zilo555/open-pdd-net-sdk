@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Goods;
 public partial class GetGoodsOutPropertyMapping
 {
-
     /// <summary>
     /// 拼多多叶子类目id
     /// </summary>
@@ -19,6 +18,8 @@ public partial class GetGoodsOutPropertyMapping
     /// </summary>
     [JsonPropertyName("out_property_value_name")]
     public string OutPropertyValueName { get; set; }
+
+
 
 }
 

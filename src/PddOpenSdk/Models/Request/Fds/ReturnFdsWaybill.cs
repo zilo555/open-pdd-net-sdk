@@ -1,15 +1,15 @@
 namespace PddOpenSdk.Models.Request.Fds;
 public partial class ReturnFdsWaybill
 {
-
     /// <summary>
     /// 入参信息
     /// </summary>
     [JsonPropertyName("param_fds_waybill_return_request")]
     public ParamFdsWaybillReturnRequestModel ParamFdsWaybillReturnRequest { get; set; }
+
+
     public partial class ParamFdsWaybillReturnRequestModel
     {
-
         /// <summary>
         /// 代打店铺id
         /// </summary>
@@ -33,6 +33,8 @@ public partial class ReturnFdsWaybill
         /// </summary>
         [JsonPropertyName("wp_code")]
         public string WpCode { get; set; }
+
+
 
     }
 

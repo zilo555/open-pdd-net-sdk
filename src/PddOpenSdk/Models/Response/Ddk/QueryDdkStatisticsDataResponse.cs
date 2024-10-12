@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ddk;
-public partial class QueryDdkStatisticsDataResponse : PddResponseModel
+public partial class QueryDdkStatisticsDataResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class QueryDdkStatisticsDataResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("statistics_data_response")]
     public StatisticsDataResponseResponse StatisticsDataResponse { get; set; }
-    public partial class StatisticsDataResponseResponse : PddResponseModel
+
+    public partial class StatisticsDataResponseResponse
     {
 
         /// <summary>
@@ -15,7 +16,8 @@ public partial class QueryDdkStatisticsDataResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("data_list")]
         public List<DataListResponse> DataList { get; set; }
-        public partial class DataListResponse : PddResponseModel
+
+        public partial class DataListResponse
         {
 
             /// <summary>
@@ -53,6 +55,7 @@ public partial class QueryDdkStatisticsDataResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("start_time")]
             public string StartTime { get; set; }
+
 
         }
 

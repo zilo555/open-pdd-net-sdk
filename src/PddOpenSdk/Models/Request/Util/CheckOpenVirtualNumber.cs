@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Util;
 public partial class CheckOpenVirtualNumber
 {
-
     /// <summary>
     /// 分机号，非必填，4位数字字符
     /// </summary>
@@ -19,6 +18,8 @@ public partial class CheckOpenVirtualNumber
     /// </summary>
     [JsonPropertyName("virtual_number")]
     public string VirtualNumber { get; set; }
+
+
 
 }
 

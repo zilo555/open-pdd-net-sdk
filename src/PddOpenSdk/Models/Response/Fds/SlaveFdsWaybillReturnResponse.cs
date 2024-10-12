@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Fds;
-public partial class SlaveFdsWaybillReturnResponse : PddResponseModel
+public partial class SlaveFdsWaybillReturnResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class SlaveFdsWaybillReturnResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("pdd_fds_waybill_return_slave_response")]
     public PddFdsWaybillReturnSlaveResponseResponse PddFdsWaybillReturnSlaveResponse { get; set; }
-    public partial class PddFdsWaybillReturnSlaveResponseResponse : PddResponseModel
+
+    public partial class PddFdsWaybillReturnSlaveResponseResponse
     {
 
         /// <summary>
@@ -15,6 +16,7 @@ public partial class SlaveFdsWaybillReturnResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("result")]
         public bool? Result { get; set; }
+
 
     }
 

@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.ServiceMarket;
-public partial class SearchVasOrderResponse : PddResponseModel
+public partial class SearchVasOrderResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class SearchVasOrderResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("vas_order_search_response")]
     public VasOrderSearchResponseResponse VasOrderSearchResponse { get; set; }
-    public partial class VasOrderSearchResponseResponse : PddResponseModel
+
+    public partial class VasOrderSearchResponseResponse
     {
 
         /// <summary>
@@ -21,7 +22,8 @@ public partial class SearchVasOrderResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("totalCount")]
         public int? TotalCount { get; set; }
-        public partial class OrdersResponse : PddResponseModel
+
+        public partial class OrdersResponse
         {
 
             /// <summary>
@@ -113,6 +115,7 @@ public partial class SearchVasOrderResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("mall_name")]
             public string MallName { get; set; }
+
 
         }
 

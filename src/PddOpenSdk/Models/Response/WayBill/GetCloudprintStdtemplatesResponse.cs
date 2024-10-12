@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.WayBill;
-public partial class GetCloudprintStdtemplatesResponse : PddResponseModel
+public partial class GetCloudprintStdtemplatesResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetCloudprintStdtemplatesResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("pdd_cloudprint_stdtemplates_get_response")]
     public PddCloudprintStdtemplatesGetResponseResponse PddCloudprintStdtemplatesGetResponse { get; set; }
-    public partial class PddCloudprintStdtemplatesGetResponseResponse : PddResponseModel
+
+    public partial class PddCloudprintStdtemplatesGetResponseResponse
     {
 
         /// <summary>
@@ -15,7 +16,8 @@ public partial class GetCloudprintStdtemplatesResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("result")]
         public ResultResponse Result { get; set; }
-        public partial class ResultResponse : PddResponseModel
+
+        public partial class ResultResponse
         {
 
             /// <summary>
@@ -23,7 +25,8 @@ public partial class GetCloudprintStdtemplatesResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("datas")]
             public List<DatasResponse> Datas { get; set; }
-            public partial class DatasResponse : PddResponseModel
+
+            public partial class DatasResponse
             {
 
                 /// <summary>
@@ -37,7 +40,8 @@ public partial class GetCloudprintStdtemplatesResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("wp_code")]
                 public string WpCode { get; set; }
-                public partial class StandardTemplatesResponse : PddResponseModel
+
+                public partial class StandardTemplatesResponse
                 {
 
                     /// <summary>
@@ -63,6 +67,7 @@ public partial class GetCloudprintStdtemplatesResponse : PddResponseModel
                     /// </summary>
                     [JsonPropertyName("standard_waybill_type")]
                     public int? StandardWaybillType { get; set; }
+
 
                 }
 

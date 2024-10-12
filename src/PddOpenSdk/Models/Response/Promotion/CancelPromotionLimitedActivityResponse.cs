@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Promotion;
-public partial class CancelPromotionLimitedActivityResponse : PddResponseModel
+public partial class CancelPromotionLimitedActivityResponse
 {
 
     /// <summary>
@@ -7,6 +7,7 @@ public partial class CancelPromotionLimitedActivityResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("result")]
     public bool? Result { get; set; }
+
 
 }
 

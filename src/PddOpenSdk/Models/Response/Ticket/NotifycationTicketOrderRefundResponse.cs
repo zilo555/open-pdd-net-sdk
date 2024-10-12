@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ticket;
-public partial class NotifycationTicketOrderRefundResponse : PddResponseModel
+public partial class NotifycationTicketOrderRefundResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class NotifycationTicketOrderRefundResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("response")]
     public ResponseResponse Response { get; set; }
-    public partial class ResponseResponse : PddResponseModel
+
+    public partial class ResponseResponse
     {
 
         /// <summary>
@@ -15,6 +16,7 @@ public partial class NotifycationTicketOrderRefundResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("success")]
         public bool? Success { get; set; }
+
 
     }
 

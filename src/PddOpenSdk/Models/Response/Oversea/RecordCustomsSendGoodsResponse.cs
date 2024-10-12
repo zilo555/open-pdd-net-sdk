@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Oversea;
-public partial class RecordCustomsSendGoodsResponse : PddResponseModel
+public partial class RecordCustomsSendGoodsResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class RecordCustomsSendGoodsResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("response")]
     public ResponseResponse Response { get; set; }
-    public partial class ResponseResponse : PddResponseModel
+
+    public partial class ResponseResponse
     {
 
         /// <summary>
@@ -33,6 +34,7 @@ public partial class RecordCustomsSendGoodsResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("success")]
         public bool? Success { get; set; }
+
 
     }
 

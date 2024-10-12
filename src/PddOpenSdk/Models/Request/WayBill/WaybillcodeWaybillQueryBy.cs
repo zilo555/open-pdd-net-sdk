@@ -1,15 +1,15 @@
 namespace PddOpenSdk.Models.Request.WayBill;
 public partial class WaybillcodeWaybillQueryBy
 {
-
     /// <summary>
     /// 系统自动生成
     /// </summary>
     [JsonPropertyName("param_list")]
     public List<ParamListModel> ParamList { get; set; }
+
+
     public partial class ParamListModel
     {
-
         /// <summary>
         /// 请求id
         /// </summary>
@@ -27,6 +27,8 @@ public partial class WaybillcodeWaybillQueryBy
         /// </summary>
         [JsonPropertyName("wp_code")]
         public string WpCode { get; set; }
+
+
 
     }
 

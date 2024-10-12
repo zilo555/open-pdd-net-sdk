@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Mall;
 public partial class PostMallInfoGroupQuery
 {
-
     /// <summary>
     /// 第几页
     /// </summary>
@@ -13,6 +12,8 @@ public partial class PostMallInfoGroupQuery
     /// </summary>
     [JsonPropertyName("page_size")]
     public int PageSize { get; set; }
+
+
 
 }
 

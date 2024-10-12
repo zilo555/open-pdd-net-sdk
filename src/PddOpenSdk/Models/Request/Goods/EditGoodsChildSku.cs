@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Goods;
 public partial class EditGoodsChildSku
 {
-
     /// <summary>
     /// 草稿id（未填写则新建一条商品草稿）
     /// </summary>
@@ -25,9 +24,10 @@ public partial class EditGoodsChildSku
     /// </summary>
     [JsonPropertyName("sync_goods_operate")]
     public int? SyncGoodsOperate { get; set; }
+
+
     public partial class SkusModel
     {
-
         /// <summary>
         /// 日历库存商品子sku信息列表
         /// </summary>
@@ -51,9 +51,10 @@ public partial class EditGoodsChildSku
         /// </summary>
         [JsonPropertyName("sku_id")]
         public long? SkuId { get; set; }
+
+
         public partial class ChildSkusModel
         {
-
             /// <summary>
             /// 售卖日期（“yyyy-MM-dd”）
             /// </summary>
@@ -77,6 +78,8 @@ public partial class EditGoodsChildSku
             /// </summary>
             [JsonPropertyName("single_price")]
             public long SinglePrice { get; set; }
+
+
 
         }
 

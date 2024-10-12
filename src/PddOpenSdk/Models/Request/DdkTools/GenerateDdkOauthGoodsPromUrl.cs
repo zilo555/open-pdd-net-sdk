@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.DdkTools;
 public partial class GenerateDdkOauthGoodsPromUrl
 {
-
     /// <summary>
     /// 多多礼金ID
     /// </summary>
@@ -93,10 +92,47 @@ public partial class GenerateDdkOauthGoodsPromUrl
     public string SearchId { get; set; }
 
     /// <summary>
+    /// 特殊参数
+    /// </summary>
+    [JsonPropertyName("special_params")]
+    public Dictionary<string, object> SpecialParams { get; set; }
+
+    /// <summary>
+    /// 生成商品链接类型 0-默认 1-百补相似品列表
+    /// </summary>
+    [JsonPropertyName("url_type")]
+    public int? UrlType { get; set; }
+
+    /// <summary>
     /// 招商多多客ID
     /// </summary>
     [JsonPropertyName("zs_duo_id")]
     public long? ZsDuoId { get; set; }
+
+    /// <summary>
+    /// 是否生成小程序schema长链
+    /// </summary>
+    [JsonPropertyName("generate_we_app_long_link")]
+    public bool? GenerateWeAppLongLink { get; set; }
+
+
+    public partial class SpecialParamsModel
+    {
+        /// <summary>
+        /// 特殊参数key
+        /// </summary>
+        [JsonPropertyName("$key")]
+        public string Key { get; set; }
+
+        /// <summary>
+        /// 特殊参数value
+        /// </summary>
+        [JsonPropertyName("$value")]
+        public string Value { get; set; }
+
+
+
+    }
 
 }
 

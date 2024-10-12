@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Util;
-public partial class CheckOpenVirtualNumberResponse : PddResponseModel
+public partial class CheckOpenVirtualNumberResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class CheckOpenVirtualNumberResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("open_virtual_number_check_response")]
     public OpenVirtualNumberCheckResponseResponse OpenVirtualNumberCheckResponse { get; set; }
-    public partial class OpenVirtualNumberCheckResponseResponse : PddResponseModel
+
+    public partial class OpenVirtualNumberCheckResponseResponse
     {
 
         /// <summary>
@@ -15,7 +16,8 @@ public partial class CheckOpenVirtualNumberResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("result")]
         public ResultResponse Result { get; set; }
-        public partial class ResultResponse : PddResponseModel
+
+        public partial class ResultResponse
         {
 
             /// <summary>
@@ -47,6 +49,7 @@ public partial class CheckOpenVirtualNumberResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("virtual")]
             public bool? Virtual { get; set; }
+
 
         }
 

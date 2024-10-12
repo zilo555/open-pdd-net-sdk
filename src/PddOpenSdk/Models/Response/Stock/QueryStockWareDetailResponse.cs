@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Stock;
-public partial class QueryStockWareDetailResponse : PddResponseModel
+public partial class QueryStockWareDetailResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class QueryStockWareDetailResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("open_api_response")]
     public OpenApiResponseResponse OpenApiResponse { get; set; }
-    public partial class OpenApiResponseResponse : PddResponseModel
+
+    public partial class OpenApiResponseResponse
     {
 
         /// <summary>
@@ -141,7 +142,8 @@ public partial class QueryStockWareDetailResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("width")]
         public int? Width { get; set; }
-        public partial class WareInfosResponse : PddResponseModel
+
+        public partial class WareInfosResponse
         {
 
             /// <summary>
@@ -168,8 +170,9 @@ public partial class QueryStockWareDetailResponse : PddResponseModel
             [JsonPropertyName("ware_sn")]
             public string WareSn { get; set; }
 
+
         }
-        public partial class WareSkusResponse : PddResponseModel
+        public partial class WareSkusResponse
         {
 
             /// <summary>
@@ -207,7 +210,8 @@ public partial class QueryStockWareDetailResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("ware_id")]
             public long? WareId { get; set; }
-            public partial class SpecsResponse : PddResponseModel
+
+            public partial class SpecsResponse
             {
 
                 /// <summary>
@@ -227,6 +231,7 @@ public partial class QueryStockWareDetailResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("spec_value")]
                 public string SpecValue { get; set; }
+
 
             }
 

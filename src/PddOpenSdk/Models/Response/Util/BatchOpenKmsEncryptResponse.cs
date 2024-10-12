@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Util;
-public partial class BatchOpenKmsEncryptResponse : PddResponseModel
+public partial class BatchOpenKmsEncryptResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class BatchOpenKmsEncryptResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("open_kms_encrypt_batch_response")]
     public OpenKmsEncryptBatchResponseResponse OpenKmsEncryptBatchResponse { get; set; }
-    public partial class OpenKmsEncryptBatchResponseResponse : PddResponseModel
+
+    public partial class OpenKmsEncryptBatchResponseResponse
     {
 
         /// <summary>
@@ -15,7 +16,8 @@ public partial class BatchOpenKmsEncryptResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("data_encrypt_list")]
         public List<DataEncryptListResponse> DataEncryptList { get; set; }
-        public partial class DataEncryptListResponse : PddResponseModel
+
+        public partial class DataEncryptListResponse
         {
 
             /// <summary>
@@ -47,6 +49,7 @@ public partial class BatchOpenKmsEncryptResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("type")]
             public string Type { get; set; }
+
 
         }
 

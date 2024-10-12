@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Util;
 public partial class ReportPopMallBindRelation
 {
-
     /// <summary>
     /// 关联时间
     /// </summary>
@@ -37,6 +36,8 @@ public partial class ReportPopMallBindRelation
     /// </summary>
     [JsonPropertyName("mall_list")]
     public List<long?> MallList { get; set; }
+
+
 
 }
 

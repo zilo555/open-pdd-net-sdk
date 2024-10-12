@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Goods;
-public partial class GetGoodsSizespecClassResponse : PddResponseModel
+public partial class GetGoodsSizespecClassResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetGoodsSizespecClassResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("response")]
     public ResponseResponse Response { get; set; }
-    public partial class ResponseResponse : PddResponseModel
+
+    public partial class ResponseResponse
     {
 
         /// <summary>
@@ -33,7 +34,8 @@ public partial class GetGoodsSizespecClassResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("success")]
         public bool? Success { get; set; }
-        public partial class ResultResponse : PddResponseModel
+
+        public partial class ResultResponse
         {
 
             /// <summary>
@@ -53,7 +55,8 @@ public partial class GetGoodsSizespecClassResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("name")]
             public string Name { get; set; }
-            public partial class ChildrenResponse : PddResponseModel
+
+            public partial class ChildrenResponse
             {
 
                 /// <summary>
@@ -67,6 +70,7 @@ public partial class GetGoodsSizespecClassResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("name")]
                 public string Name { get; set; }
+
 
             }
 

@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.LogisticsCompany;
 public partial class StartLogisticsCsSession
 {
-
     /// <summary>
     /// pdd会话id
     /// </summary>
@@ -67,6 +66,8 @@ public partial class StartLogisticsCsSession
     /// </summary>
     [JsonPropertyName("queue_address")]
     public string QueueAddress { get; set; }
+
+
 
 }
 

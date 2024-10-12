@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Goods;
-public partial class GetGoodsCommitDetailResponse : PddResponseModel
+public partial class GetGoodsCommitDetailResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetGoodsCommitDetailResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("goods_commit_detail_response")]
     public GoodsCommitDetailResponseResponse GoodsCommitDetailResponse { get; set; }
-    public partial class GoodsCommitDetailResponseResponse : PddResponseModel
+
+    public partial class GoodsCommitDetailResponseResponse
     {
 
         /// <summary>
@@ -369,7 +370,14 @@ public partial class GetGoodsCommitDetailResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("zhi_huan_bu_xiu")]
         public int? ZhiHuanBuXiu { get; set; }
-        public partial class CarouselVideoResponse : PddResponseModel
+
+        /// <summary>
+        /// 保密发货，0：不支持，1：支持
+        /// </summary>
+        [JsonPropertyName("privacy_delivery")]
+        public int? PrivacyDelivery { get; set; }
+
+        public partial class CarouselVideoResponse
         {
 
             /// <summary>
@@ -384,8 +392,9 @@ public partial class GetGoodsCommitDetailResponse : PddResponseModel
             [JsonPropertyName("video_url")]
             public string VideoUrl { get; set; }
 
+
         }
-        public partial class ElecGoodsAttributesResponse : PddResponseModel
+        public partial class ElecGoodsAttributesResponse
         {
 
             /// <summary>
@@ -412,39 +421,10 @@ public partial class GetGoodsCommitDetailResponse : PddResponseModel
             [JsonPropertyName("time_type")]
             public int? TimeType { get; set; }
 
+
         }
-        public partial class GoodsPropertyListResponse : PddResponseModel
+        public partial class GoodsPropertyListResponse
         {
-
-            /// <summary>
-            /// 属性单位
-            /// </summary>
-            [JsonPropertyName("punit")]
-            public string Punit { get; set; }
-
-            /// <summary>
-            /// 引用属性id
-            /// </summary>
-            [JsonPropertyName("ref_pid")]
-            public long? RefPid { get; set; }
-
-            /// <summary>
-            /// 模板属性Id
-            /// </summary>
-            [JsonPropertyName("template_pid")]
-            public long? TemplatePid { get; set; }
-
-            /// <summary>
-            /// 基础属性值Id
-            /// </summary>
-            [JsonPropertyName("vid")]
-            public long? Vid { get; set; }
-
-            /// <summary>
-            /// 基础属性值
-            /// </summary>
-            [JsonPropertyName("vvalue")]
-            public string Vvalue { get; set; }
 
             /// <summary>
             /// 属性值分组ID
@@ -471,13 +451,44 @@ public partial class GetGoodsCommitDetailResponse : PddResponseModel
             public long? ParentSpecId { get; set; }
 
             /// <summary>
+            /// 属性单位
+            /// </summary>
+            [JsonPropertyName("punit")]
+            public string Punit { get; set; }
+
+            /// <summary>
+            /// 引用属性id
+            /// </summary>
+            [JsonPropertyName("ref_pid")]
+            public long? RefPid { get; set; }
+
+            /// <summary>
             /// 规格ID
             /// </summary>
             [JsonPropertyName("spec_id")]
             public long? SpecId { get; set; }
 
+            /// <summary>
+            /// 模板属性Id
+            /// </summary>
+            [JsonPropertyName("template_pid")]
+            public long? TemplatePid { get; set; }
+
+            /// <summary>
+            /// 基础属性值Id
+            /// </summary>
+            [JsonPropertyName("vid")]
+            public long? Vid { get; set; }
+
+            /// <summary>
+            /// 基础属性值
+            /// </summary>
+            [JsonPropertyName("vvalue")]
+            public string Vvalue { get; set; }
+
+
         }
-        public partial class GoodsTradeAttrResponse : PddResponseModel
+        public partial class GoodsTradeAttrResponse
         {
 
             /// <summary>
@@ -492,8 +503,9 @@ public partial class GetGoodsCommitDetailResponse : PddResponseModel
             [JsonPropertyName("life_span")]
             public int? LifeSpan { get; set; }
 
+
         }
-        public partial class GoodsTravelAttrResponse : PddResponseModel
+        public partial class GoodsTravelAttrResponse
         {
 
             /// <summary>
@@ -508,8 +520,9 @@ public partial class GetGoodsCommitDetailResponse : PddResponseModel
             [JsonPropertyName("type")]
             public int? Type { get; set; }
 
+
         }
-        public partial class OverseaGoodsResponse : PddResponseModel
+        public partial class OverseaGoodsResponse
         {
 
             /// <summary>
@@ -542,8 +555,9 @@ public partial class GetGoodsCommitDetailResponse : PddResponseModel
             [JsonPropertyName("value_added_tax_rate")]
             public int? ValueAddedTaxRate { get; set; }
 
+
         }
-        public partial class SkuListResponse : PddResponseModel
+        public partial class SkuListResponse
         {
 
             /// <summary>
@@ -635,7 +649,8 @@ public partial class GetGoodsCommitDetailResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("weight")]
             public long? Weight { get; set; }
-            public partial class OverseaSkuResponse : PddResponseModel
+
+            public partial class OverseaSkuResponse
             {
 
                 /// <summary>
@@ -656,8 +671,9 @@ public partial class GetGoodsCommitDetailResponse : PddResponseModel
                 [JsonPropertyName("taxation")]
                 public int? Taxation { get; set; }
 
+
             }
-            public partial class SkuPropertyListResponse : PddResponseModel
+            public partial class SkuPropertyListResponse
             {
 
                 /// <summary>
@@ -684,8 +700,9 @@ public partial class GetGoodsCommitDetailResponse : PddResponseModel
                 [JsonPropertyName("vid")]
                 public long? Vid { get; set; }
 
+
             }
-            public partial class SpecResponse : PddResponseModel
+            public partial class SpecResponse
             {
 
                 /// <summary>
@@ -717,6 +734,7 @@ public partial class GetGoodsCommitDetailResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("spec_note")]
                 public string SpecNote { get; set; }
+
 
             }
 

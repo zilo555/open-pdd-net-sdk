@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ddk;
-public partial class QueryDdkCashgiftDataResponse : PddResponseModel
+public partial class QueryDdkCashgiftDataResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class QueryDdkCashgiftDataResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("cashgift_data_response")]
     public CashgiftDataResponseResponse CashgiftDataResponse { get; set; }
-    public partial class CashgiftDataResponseResponse : PddResponseModel
+
+    public partial class CashgiftDataResponseResponse
     {
 
         /// <summary>
@@ -27,7 +28,8 @@ public partial class QueryDdkCashgiftDataResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("total")]
         public int? Total { get; set; }
-        public partial class ListResponse : PddResponseModel
+
+        public partial class ListResponse
         {
 
             /// <summary>
@@ -119,7 +121,8 @@ public partial class QueryDdkCashgiftDataResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("status")]
             public int? Status { get; set; }
-            public partial class GoodsInfoListResponse : PddResponseModel
+
+            public partial class GoodsInfoListResponse
             {
 
                 /// <summary>
@@ -151,6 +154,7 @@ public partial class QueryDdkCashgiftDataResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("rate")]
                 public int? Rate { get; set; }
+
 
             }
 

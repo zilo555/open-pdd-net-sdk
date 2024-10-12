@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Ddk;
 public partial class GenerateDdkRpPromUrl
 {
-
     /// <summary>
     /// 初始金额（单位分），有效金额枚举值：300、500、700、1100和1600，默认300
     /// </summary>
@@ -9,7 +8,7 @@ public partial class GenerateDdkRpPromUrl
     public long? Amount { get; set; }
 
     /// <summary>
-    /// 营销工具类型，必填：-1-活动列表，0-红包(需申请推广权限)，2–新人红包，3-刮刮卡，5-员工内购，10-生成绑定备案链接，12-砸金蛋，14-千万补贴B端页面，15-充值中心B端页面，16-千万补贴C端页面，17-千万补贴投票页面，23-超级红包，24-礼金全场N折活动B端页面，27-带货赢千万，28-满减券活动B端页面，29-满减券活动C端页面，30-免单B端页面，31-免单C端页面，32-转盘得现金B端页面，33-转盘得现金C端页面，34-千万神券C端页面，35-千万神券B端页面，36-爆品日历B端页面，37-超级红包B端推品页，39-母婴馆C端页面，40-母婴馆B端页面，41-限时折扣B端页面，42-超级红包9.9C端活动页
+    /// 营销工具类型，必填：-1-活动列表，0-红包(需申请推广权限)，2–新人红包，3-刮刮卡，5-员工内购，10-生成绑定备案链接，12-砸金蛋，14-千万补贴B端页面，15-充值中心B端页面，16-千万补贴C端页面，17-千万补贴投票页面，23-超级红包，24-礼金全场N折活动B端页面，27-带货赢千万，30-免单B端页面，31-免单C端页面，32-转盘得现金B端页面，33-转盘得现金C端页面，34-千万神券C端页面，35-千万神券B端页面，36-爆品日历B端页面，37-超级红包B端推品页，39-母婴馆C端页面，40-母婴馆B端页面，41-限时折扣B端页面，42-超级红包9.9C端活动页 45-大促会场集合B端页面 46-大促会场集合C端页面 47-类目排位赛B端页面 48-惊喜价B端页面 49-惊喜价C端页面
     /// </summary>
     [JsonPropertyName("channel_type")]
     public int? ChannelType { get; set; }
@@ -25,6 +24,12 @@ public partial class GenerateDdkRpPromUrl
     /// </summary>
     [JsonPropertyName("diy_one_yuan_param")]
     public DiyOneYuanParamModel DiyOneYuanParam { get; set; }
+
+    /// <summary>
+    /// 大促会场集合页参数
+    /// </summary>
+    [JsonPropertyName("diy_promotion_act_collection_param")]
+    public DiyPromotionActCollectionParamModel DiyPromotionActCollectionParam { get; set; }
 
     /// <summary>
     /// 红包自定义参数，json格式
@@ -97,19 +102,32 @@ public partial class GenerateDdkRpPromUrl
     /// </summary>
     [JsonPropertyName("zs_duo_id")]
     public long? ZsDuoId { get; set; }
+
+
     public partial class DiyOneYuanParamModel
     {
-
         /// <summary>
         /// 商品goodsSign，支持通过goodsSign查询商品。goodsSign是加密后的goodsId, goodsId已下线，请使用goodsSign来替代。使用说明：https://jinbao.pinduoduo.com/qa-system?questionId=252
         /// </summary>
         [JsonPropertyName("goods_sign")]
         public string GoodsSign { get; set; }
 
+
+
+    }
+    public partial class DiyPromotionActCollectionParamModel
+    {
+        /// <summary>
+        /// 集合id 不传默认使用最新的大促会场集合
+        /// </summary>
+        [JsonPropertyName("collection_id")]
+        public long? CollectionId { get; set; }
+
+
+
     }
     public partial class DiyRedPacketParamModel
     {
-
         /// <summary>
         /// 红包金额列表，200、300、500、1000、2000，单位分。红包金额和红包抵后价设置只能二选一，默认设置了红包金额会忽略红包抵后价设置
         /// </summary>
@@ -139,9 +157,10 @@ public partial class GenerateDdkRpPromUrl
         /// </summary>
         [JsonPropertyName("range_items")]
         public List<RangeItemsModel> RangeItems { get; set; }
+
+
         public partial class RangeItemsModel
         {
-
             /// <summary>
             /// 区间的开始值
             /// </summary>
@@ -160,22 +179,30 @@ public partial class GenerateDdkRpPromUrl
             [JsonPropertyName("range_to")]
             public long? RangeTo { get; set; }
 
+
+
         }
 
     }
     public partial class DiySpRedPacketParamModel
     {
-
         /// <summary>
         /// 商品goodsSign，支持通过goodsSign置顶落地页商品。使用说明：https://jinbao.pinduoduo.com/qa-system?questionId=252
         /// </summary>
         [JsonPropertyName("goods_sign")]
         public string GoodsSign { get; set; }
 
+        /// <summary>
+        /// 商品skuId密文，支持自动选中对应sku
+        /// </summary>
+        [JsonPropertyName("sku_id_code")]
+        public string SkuIdCode { get; set; }
+
+
+
     }
     public partial class ExtParamsModel
     {
-
         /// <summary>
         /// 扩展参数Key
         /// </summary>
@@ -188,10 +215,11 @@ public partial class GenerateDdkRpPromUrl
         [JsonPropertyName("$value")]
         public string Value { get; set; }
 
+
+
     }
     public partial class TmccParamModel
     {
-
         /// <summary>
         /// 置顶商品的goodsSign列表
         /// </summary>
@@ -203,6 +231,8 @@ public partial class GenerateDdkRpPromUrl
         /// </summary>
         [JsonPropertyName("tmc_config_id")]
         public long? TmcConfigId { get; set; }
+
+
 
     }
 

@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Promotion;
 public partial class GetPromotionLimitedQualifiedGoods
 {
-
     /// <summary>
     /// 商品id列表
     /// </summary>
@@ -25,6 +24,8 @@ public partial class GetPromotionLimitedQualifiedGoods
     /// </summary>
     [JsonPropertyName("page_size")]
     public int? PageSize { get; set; }
+
+
 
 }
 

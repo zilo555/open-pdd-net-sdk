@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Stock;
-public partial class DepotExpressSearchResponse : PddResponseModel
+public partial class DepotExpressSearchResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class DepotExpressSearchResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("open_api_response")]
     public OpenApiResponseResponse OpenApiResponse { get; set; }
-    public partial class OpenApiResponseResponse : PddResponseModel
+
+    public partial class OpenApiResponseResponse
     {
 
         /// <summary>
@@ -21,7 +22,8 @@ public partial class DepotExpressSearchResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("depot_list")]
         public List<DepotListResponse> DepotList { get; set; }
-        public partial class DepotListResponse : PddResponseModel
+
+        public partial class DepotListResponse
         {
 
             /// <summary>
@@ -107,7 +109,8 @@ public partial class DepotExpressSearchResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("zip")]
             public string Zip { get; set; }
-            public partial class ProvinceMapResponse : PddResponseModel
+
+            public partial class ProvinceMapResponse
             {
 
                 /// <summary>
@@ -121,6 +124,7 @@ public partial class DepotExpressSearchResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("value")]
                 public string Value { get; set; }
+
 
             }
 

@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Ddk;
 public partial class QueryDdkPromotionGoods
 {
-
     /// <summary>
     /// 商品id
     /// </summary>
@@ -43,6 +42,8 @@ public partial class QueryDdkPromotionGoods
     /// </summary>
     [JsonPropertyName("update_start_time")]
     public long? UpdateStartTime { get; set; }
+
+
 
 }
 

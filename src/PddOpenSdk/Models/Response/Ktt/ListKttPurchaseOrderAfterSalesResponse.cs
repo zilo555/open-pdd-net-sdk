@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ktt;
-public partial class ListKttPurchaseOrderAfterSalesResponse : PddResponseModel
+public partial class ListKttPurchaseOrderAfterSalesResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class ListKttPurchaseOrderAfterSalesResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("ktt_purchase_order_after_sales_list_response")]
     public KttPurchaseOrderAfterSalesListResponseResponse KttPurchaseOrderAfterSalesListResponse { get; set; }
-    public partial class KttPurchaseOrderAfterSalesListResponseResponse : PddResponseModel
+
+    public partial class KttPurchaseOrderAfterSalesListResponseResponse
     {
 
         /// <summary>
@@ -33,7 +34,8 @@ public partial class ListKttPurchaseOrderAfterSalesResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("success")]
         public bool? Success { get; set; }
-        public partial class ResultResponse : PddResponseModel
+
+        public partial class ResultResponse
         {
 
             /// <summary>
@@ -47,7 +49,8 @@ public partial class ListKttPurchaseOrderAfterSalesResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("total_count")]
             public int? TotalCount { get; set; }
-            public partial class AfterSalesListResponse : PddResponseModel
+
+            public partial class AfterSalesListResponse
             {
 
                 /// <summary>
@@ -139,7 +142,8 @@ public partial class ListKttPurchaseOrderAfterSalesResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("updated_at")]
                 public long? UpdatedAt { get; set; }
-                public partial class LogisticsListResponse : PddResponseModel
+
+                public partial class LogisticsListResponse
                 {
 
                     /// <summary>
@@ -154,8 +158,9 @@ public partial class ListKttPurchaseOrderAfterSalesResponse : PddResponseModel
                     [JsonPropertyName("track_no")]
                     public string TrackNo { get; set; }
 
+
                 }
-                public partial class SubItemListResponse : PddResponseModel
+                public partial class SubItemListResponse
                 {
 
                     /// <summary>
@@ -175,6 +180,7 @@ public partial class ListKttPurchaseOrderAfterSalesResponse : PddResponseModel
                     /// </summary>
                     [JsonPropertyName("refund_goods_amount")]
                     public long? RefundGoodsAmount { get; set; }
+
 
                 }
 

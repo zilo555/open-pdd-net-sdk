@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Logistics;
 public partial class GetLogisticsOrdertrace
 {
-
     /// <summary>
     /// 1
     /// </summary>
@@ -13,6 +12,8 @@ public partial class GetLogisticsOrdertrace
     /// </summary>
     [JsonPropertyName("mail_no")]
     public string MailNo { get; set; }
+
+
 
 }
 

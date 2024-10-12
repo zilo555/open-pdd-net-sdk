@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Ticket;
 public partial class NotifycationTicketOrderRefund
 {
-
     /// <summary>
     /// 拼多多制票号
     /// </summary>
@@ -31,6 +30,8 @@ public partial class NotifycationTicketOrderRefund
     /// </summary>
     [JsonPropertyName("status")]
     public int Status { get; set; }
+
+
 
 }
 

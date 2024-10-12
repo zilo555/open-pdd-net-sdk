@@ -1,23 +1,24 @@
 namespace PddOpenSdk.Models.Request.Oversea;
 public partial class RecordCustomsSendGoods
 {
-
     /// <summary>
     /// 上传备案商品请求
     /// </summary>
     [JsonPropertyName("request")]
     public RequestModel Request { get; set; }
+
+
     public partial class RequestModel
     {
-
         /// <summary>
         /// 备案商品列表
         /// </summary>
         [JsonPropertyName("goods_list")]
         public List<GoodsListModel> GoodsList { get; set; }
+
+
         public partial class GoodsListModel
         {
-
             /// <summary>
             /// 条形码
             /// </summary>
@@ -269,6 +270,8 @@ public partial class RecordCustomsSendGoods
             /// </summary>
             [JsonPropertyName("wrap_type")]
             public string WrapType { get; set; }
+
+
 
         }
 

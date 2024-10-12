@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Goods;
-public partial class UploadGoodsFilespaceImageResponse : PddResponseModel
+public partial class UploadGoodsFilespaceImageResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class UploadGoodsFilespaceImageResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("goods_filespace_image_upload_response")]
     public GoodsFilespaceImageUploadResponseResponse GoodsFilespaceImageUploadResponse { get; set; }
-    public partial class GoodsFilespaceImageUploadResponseResponse : PddResponseModel
+
+    public partial class GoodsFilespaceImageUploadResponseResponse
     {
 
         /// <summary>
@@ -21,6 +22,7 @@ public partial class UploadGoodsFilespaceImageResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("url")]
         public string Url { get; set; }
+
 
     }
 

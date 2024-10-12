@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Ddk;
 public partial class QueryDdkGoodsPid
 {
-
     /// <summary>
     /// 返回的页数
     /// </summary>
@@ -25,6 +24,8 @@ public partial class QueryDdkGoodsPid
     /// </summary>
     [JsonPropertyName("status")]
     public int? Status { get; set; }
+
+
 
 }
 

@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Mall;
-public partial class RegisterQrpayPayeeResponse : PddResponseModel
+public partial class RegisterQrpayPayeeResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class RegisterQrpayPayeeResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("qrpay_payee_register_response")]
     public QrpayPayeeRegisterResponseResponse QrpayPayeeRegisterResponse { get; set; }
-    public partial class QrpayPayeeRegisterResponseResponse : PddResponseModel
+
+    public partial class QrpayPayeeRegisterResponseResponse
     {
 
         /// <summary>
@@ -15,7 +16,8 @@ public partial class RegisterQrpayPayeeResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("payee_result_list")]
         public List<PayeeResultListResponse> PayeeResultList { get; set; }
-        public partial class PayeeResultListResponse : PddResponseModel
+
+        public partial class PayeeResultListResponse
         {
 
             /// <summary>
@@ -41,6 +43,7 @@ public partial class RegisterQrpayPayeeResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("qr_pay_page_url")]
             public string QrPayPageUrl { get; set; }
+
 
         }
 

@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ddk;
-public partial class ParseDdkUrlShortResponse : PddResponseModel
+public partial class ParseDdkUrlShortResponse
 {
 
     /// <summary>
@@ -7,6 +7,7 @@ public partial class ParseDdkUrlShortResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("url")]
     public string Url { get; set; }
+
 
 }
 

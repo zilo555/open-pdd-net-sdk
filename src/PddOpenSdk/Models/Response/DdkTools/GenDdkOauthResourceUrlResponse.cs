@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.DdkTools;
-public partial class GenDdkOauthResourceUrlResponse : PddResponseModel
+public partial class GenDdkOauthResourceUrlResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GenDdkOauthResourceUrlResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("resource_url_response")]
     public ResourceUrlResponseResponse ResourceUrlResponse { get; set; }
-    public partial class ResourceUrlResponseResponse : PddResponseModel
+
+    public partial class ResourceUrlResponseResponse
     {
 
         /// <summary>
@@ -33,7 +34,8 @@ public partial class GenDdkOauthResourceUrlResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("we_app_info")]
         public WeAppInfoResponse WeAppInfo { get; set; }
-        public partial class MultiUrlListResponse : PddResponseModel
+
+        public partial class MultiUrlListResponse
         {
 
             /// <summary>
@@ -48,8 +50,9 @@ public partial class GenDdkOauthResourceUrlResponse : PddResponseModel
             [JsonPropertyName("url")]
             public string Url { get; set; }
 
+
         }
-        public partial class SingleUrlListResponse : PddResponseModel
+        public partial class SingleUrlListResponse
         {
 
             /// <summary>
@@ -64,8 +67,9 @@ public partial class GenDdkOauthResourceUrlResponse : PddResponseModel
             [JsonPropertyName("url")]
             public string Url { get; set; }
 
+
         }
-        public partial class WeAppInfoResponse : PddResponseModel
+        public partial class WeAppInfoResponse
         {
 
             /// <summary>
@@ -115,6 +119,7 @@ public partial class GenDdkOauthResourceUrlResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("we_app_icon_url")]
             public string WeAppIconUrl { get; set; }
+
 
         }
 

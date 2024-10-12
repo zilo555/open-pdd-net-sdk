@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Util;
-public partial class RefreshPopAuthTokenResponse : PddResponseModel
+public partial class RefreshPopAuthTokenResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class RefreshPopAuthTokenResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("pop_auth_token_refresh_response")]
     public PopAuthTokenRefreshResponseResponse PopAuthTokenRefreshResponse { get; set; }
-    public partial class PopAuthTokenRefreshResponseResponse : PddResponseModel
+
+    public partial class PopAuthTokenRefreshResponseResponse
     {
 
         /// <summary>
@@ -111,6 +112,7 @@ public partial class RefreshPopAuthTokenResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("w2_expires_in")]
         public int? W2ExpiresIn { get; set; }
+
 
     }
 

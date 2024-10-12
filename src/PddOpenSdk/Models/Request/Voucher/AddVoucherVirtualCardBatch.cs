@@ -1,15 +1,15 @@
 namespace PddOpenSdk.Models.Request.Voucher;
 public partial class AddVoucherVirtualCardBatch
 {
-
     /// <summary>
     /// 业务数据
     /// </summary>
     [JsonPropertyName("data")]
     public DataModel Data { get; set; }
+
+
     public partial class DataModel
     {
-
         /// <summary>
         /// 充值地址
         /// </summary>
@@ -33,9 +33,10 @@ public partial class AddVoucherVirtualCardBatch
         /// </summary>
         [JsonPropertyName("skuId")]
         public long SkuId { get; set; }
+
+
         public partial class DataListModel
         {
-
             /// <summary>
             /// 卡密卡号，商家卡密必填
             /// </summary>
@@ -47,6 +48,8 @@ public partial class AddVoucherVirtualCardBatch
             /// </summary>
             [JsonPropertyName("encryptPassword")]
             public string EncryptPassword { get; set; }
+
+
 
         }
 

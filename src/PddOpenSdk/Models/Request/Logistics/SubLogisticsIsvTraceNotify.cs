@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Logistics;
 public partial class SubLogisticsIsvTraceNotify
 {
-
     /// <summary>
     /// 快递公司编码
     /// </summary>
@@ -19,6 +18,8 @@ public partial class SubLogisticsIsvTraceNotify
     /// </summary>
     [JsonPropertyName("track_no")]
     public string TrackNo { get; set; }
+
+
 
 }
 

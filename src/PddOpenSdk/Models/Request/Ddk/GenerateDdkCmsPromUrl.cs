@@ -1,12 +1,17 @@
 namespace PddOpenSdk.Models.Request.Ddk;
 public partial class GenerateDdkCmsPromUrl
 {
-
     /// <summary>
-    /// 0, "1.9包邮"；1, "今日爆款"； 2, "品牌清仓"； 4,"PC端专属商城(已下线，会生成默认商城链接)"；不传值为默认商城
+    /// 0, "1.9包邮"；1, "今日爆款"； 2, "品牌清仓"； 4,"PC端专属商城(已下线，会生成默认商城链接)"；7，"跨境商城"; 不传值为默认商城
     /// </summary>
     [JsonPropertyName("channel_type")]
     public int? ChannelType { get; set; }
+
+    /// <summary>
+    /// 国家和地区代码，生成跨境商城时有效
+    /// </summary>
+    [JsonPropertyName("country_region_code")]
+    public int? CountryRegionCode { get; set; }
 
     /// <summary>
     /// 自定义参数，为链接打上自定义标签；自定义参数最长限制64个字节；格式为：  {"uid":"11111","sid":"22222"} ，其中 uid 用户唯一标识，可自行加密后传入，每个用户仅且对应一个标识，必填； sid 上下文信息标识，例如sessionId等，非必填。该json字符串中也可以加入其他自定义的key。（如果使用GET请求，请使用URLEncode处理参数）
@@ -45,6 +50,12 @@ public partial class GenerateDdkCmsPromUrl
     public string Keyword { get; set; }
 
     /// <summary>
+    /// 语言代码，生成跨境商城时有效
+    /// </summary>
+    [JsonPropertyName("language_code")]
+    public string LanguageCode { get; set; }
+
+    /// <summary>
     /// 单人团多人团标志。true-多人团，false-单人团 默认false
     /// </summary>
     [JsonPropertyName("multi_group")]
@@ -55,6 +66,8 @@ public partial class GenerateDdkCmsPromUrl
     /// </summary>
     [JsonPropertyName("p_id_list")]
     public List<string> PIdList { get; set; }
+
+
 
 }
 

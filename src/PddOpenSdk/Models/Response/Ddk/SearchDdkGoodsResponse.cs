@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ddk;
-public partial class SearchDdkGoodsResponse : PddResponseModel
+public partial class SearchDdkGoodsResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class SearchDdkGoodsResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("goods_search_response")]
     public GoodsSearchResponseResponse GoodsSearchResponse { get; set; }
-    public partial class GoodsSearchResponseResponse : PddResponseModel
+
+    public partial class GoodsSearchResponseResponse
     {
 
         /// <summary>
@@ -33,7 +34,8 @@ public partial class SearchDdkGoodsResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("total_count")]
         public int? TotalCount { get; set; }
-        public partial class GoodsListResponse : PddResponseModel
+
+        public partial class GoodsListResponse
         {
 
             /// <summary>
@@ -223,6 +225,12 @@ public partial class SearchDdkGoodsResponse : PddResponseModel
             public bool? HasMaterial { get; set; }
 
             /// <summary>
+            /// 是否多人团
+            /// </summary>
+            [JsonPropertyName("is_multi_group")]
+            public bool? IsMultiGroup { get; set; }
+
+            /// <summary>
             /// 物流分
             /// </summary>
             [JsonPropertyName("lgst_txt")]
@@ -397,6 +405,12 @@ public partial class SearchDdkGoodsResponse : PddResponseModel
             public int? SubsidyDuoAmountTenMillion { get; set; }
 
             /// <summary>
+            /// 补贴活动类型：0-无补贴，1-千万补贴，4-千万神券，6-佣金翻倍
+            /// </summary>
+            [JsonPropertyName("subsidy_goods_type")]
+            public int? SubsidyGoodsType { get; set; }
+
+            /// <summary>
             /// 优惠标签列表，包括："X元券","比全网低X元","服务费","精选素材","近30天低价","同款低价","同款好评","同款热销","旗舰店","一降到底","招商优选","商家优选","好价再降X元","全站销量XX","实时热销榜第X名","实时好评榜第X名","额外补X元"等
             /// </summary>
             [JsonPropertyName("unified_tags")]
@@ -408,11 +422,6 @@ public partial class SearchDdkGoodsResponse : PddResponseModel
             [JsonPropertyName("zs_duo_id")]
             public long? ZsDuoId { get; set; }
 
-            /// <summary>
-            /// 补贴活动类型：0-无补贴，1-千万补贴，4-千万神券，6-佣金翻倍
-            /// </summary>
-            [JsonPropertyName("subsidy_goods_type")]
-            public int? SubsidyGoodsType { get; set; }
 
         }
 

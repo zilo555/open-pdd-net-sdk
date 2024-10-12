@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ktt;
-public partial class ListKttGroupQueryResponse : PddResponseModel
+public partial class ListKttGroupQueryResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class ListKttGroupQueryResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("ktt_group_query_list_response")]
     public KttGroupQueryListResponseResponse KttGroupQueryListResponse { get; set; }
-    public partial class KttGroupQueryListResponseResponse : PddResponseModel
+
+    public partial class KttGroupQueryListResponseResponse
     {
 
         /// <summary>
@@ -21,7 +22,8 @@ public partial class ListKttGroupQueryResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("total")]
         public long? Total { get; set; }
-        public partial class ActivityListResponse : PddResponseModel
+
+        public partial class ActivityListResponse
         {
 
             /// <summary>
@@ -71,6 +73,7 @@ public partial class ListKttGroupQueryResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("update_time")]
             public long? UpdateTime { get; set; }
+
 
         }
 

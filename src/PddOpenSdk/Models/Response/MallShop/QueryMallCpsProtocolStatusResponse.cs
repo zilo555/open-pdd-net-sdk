@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.MallShop;
-public partial class QueryMallCpsProtocolStatusResponse : PddResponseModel
+public partial class QueryMallCpsProtocolStatusResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class QueryMallCpsProtocolStatusResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("mall_cps_protocol_status_query_response")]
     public MallCpsProtocolStatusQueryResponseResponse MallCpsProtocolStatusQueryResponse { get; set; }
-    public partial class MallCpsProtocolStatusQueryResponseResponse : PddResponseModel
+
+    public partial class MallCpsProtocolStatusQueryResponseResponse
     {
 
         /// <summary>
@@ -15,6 +16,7 @@ public partial class QueryMallCpsProtocolStatusResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("status")]
         public bool? Status { get; set; }
+
 
     }
 

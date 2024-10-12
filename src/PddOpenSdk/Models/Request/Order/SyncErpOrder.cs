@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Order;
 public partial class SyncErpOrder
 {
-
     /// <summary>
     /// 物流公司编码
     /// </summary>
@@ -25,6 +24,8 @@ public partial class SyncErpOrder
     /// </summary>
     [JsonPropertyName("waybill_no")]
     public string WaybillNo { get; set; }
+
+
 
 }
 

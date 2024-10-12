@@ -1,15 +1,15 @@
 namespace PddOpenSdk.Models.Request.Fds;
 public partial class CancelFdsWaybill
 {
-
     /// <summary>
     /// 入参信息
     /// </summary>
     [JsonPropertyName("pdd_fds_waybill_cancel_request")]
     public PddFdsWaybillCancelRequestModel PddFdsWaybillCancelRequest { get; set; }
+
+
     public partial class PddFdsWaybillCancelRequestModel
     {
-
         /// <summary>
         /// 代打店铺id
         /// </summary>
@@ -33,6 +33,8 @@ public partial class CancelFdsWaybill
         /// </summary>
         [JsonPropertyName("wp_code")]
         public string WpCode { get; set; }
+
+
 
     }
 

@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Voucher;
 public partial class SendVoucherVoucherInfo
 {
-
     /// <summary>
     /// 订单号
     /// </summary>
@@ -19,9 +18,10 @@ public partial class SendVoucherVoucherInfo
     /// </summary>
     [JsonPropertyName("voucher_list")]
     public List<VoucherListModel> VoucherList { get; set; }
+
+
     public partial class VoucherListModel
     {
-
         /// <summary>
         /// 卡券ID
         /// </summary>
@@ -33,6 +33,8 @@ public partial class SendVoucherVoucherInfo
         /// </summary>
         [JsonPropertyName("voucher_no")]
         public string VoucherNo { get; set; }
+
+
 
     }
 

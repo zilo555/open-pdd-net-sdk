@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.ServiceMarket;
 public partial class GetServicemarketTradelist
 {
-
     /// <summary>
     /// 查询起始时间，精确到秒，起止时间间隔最大31天
     /// </summary>
@@ -37,6 +36,8 @@ public partial class GetServicemarketTradelist
     /// </summary>
     [JsonPropertyName("service_order_sn")]
     public string ServiceOrderSn { get; set; }
+
+
 
 }
 

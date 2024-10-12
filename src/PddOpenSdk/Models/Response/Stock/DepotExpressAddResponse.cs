@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Stock;
-public partial class DepotExpressAddResponse : PddResponseModel
+public partial class DepotExpressAddResponse
 {
 
     /// <summary>
@@ -7,6 +7,7 @@ public partial class DepotExpressAddResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("open_api_response")]
     public string OpenApiResponse { get; set; }
+
 
 }
 

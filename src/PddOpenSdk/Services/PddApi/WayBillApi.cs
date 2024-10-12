@@ -1,4 +1,3 @@
-
 using PddOpenSdk.Models.Request.WayBill;
 using PddOpenSdk.Models.Response.WayBill;
 namespace PddOpenSdk.Services.PddApi;
@@ -10,6 +9,7 @@ public class WayBillApi : PddCommonApi
     /// <summary>
     /// 云打印
     /// </summary>
+
     public async Task<PrintCloudResponse> PrintCloudAsync(PrintCloud printCloud)
     {
         var result = await PostAsync<PrintCloud, PrintCloudResponse>("pdd.cloud.print", printCloud);
@@ -19,6 +19,7 @@ public class WayBillApi : PddCommonApi
     /// <summary>
     /// 云打印任务查询
     /// </summary>
+
     public async Task<QueryCloudPrintTaskResponse> QueryCloudPrintTaskAsync(QueryCloudPrintTask queryCloudPrintTask)
     {
         var result = await PostAsync<QueryCloudPrintTask, QueryCloudPrintTaskResponse>("pdd.cloud.print.task.query", queryCloudPrintTask);
@@ -28,6 +29,7 @@ public class WayBillApi : PddCommonApi
     /// <summary>
     /// 云打印验证码
     /// </summary>
+
     public async Task<CodeCloudPrintVerifyResponse> CodeCloudPrintVerifyAsync(CodeCloudPrintVerify codeCloudPrintVerify)
     {
         var result = await PostAsync<CodeCloudPrintVerify, CodeCloudPrintVerifyResponse>("pdd.cloud.print.verify.code", codeCloudPrintVerify);
@@ -37,6 +39,7 @@ public class WayBillApi : PddCommonApi
     /// <summary>
     /// 云打印机绑定
     /// </summary>
+
     public async Task<BindCloudPrinterResponse> BindCloudPrinterAsync(BindCloudPrinter bindCloudPrinter)
     {
         var result = await PostAsync<BindCloudPrinter, BindCloudPrinterResponse>("pdd.cloud.printer.bind", bindCloudPrinter);
@@ -46,6 +49,7 @@ public class WayBillApi : PddCommonApi
     /// <summary>
     /// 云打印机设置
     /// </summary>
+
     public async Task<SettingCloudPrinterResponse> SettingCloudPrinterAsync(SettingCloudPrinter settingCloudPrinter)
     {
         var result = await PostAsync<SettingCloudPrinter, SettingCloudPrinterResponse>("pdd.cloud.printer.setting", settingCloudPrinter);
@@ -55,6 +59,7 @@ public class WayBillApi : PddCommonApi
     /// <summary>
     /// 云打印机状态查询
     /// </summary>
+
     public async Task<QueryCloudPrinterStatusResponse> QueryCloudPrinterStatusAsync(QueryCloudPrinterStatus queryCloudPrinterStatus)
     {
         var result = await PostAsync<QueryCloudPrinterStatus, QueryCloudPrinterStatusResponse>("pdd.cloud.printer.status.query", queryCloudPrinterStatus);
@@ -64,6 +69,7 @@ public class WayBillApi : PddCommonApi
     /// <summary>
     /// 获取商家的自定义区模板信息
     /// </summary>
+
     public async Task<GetCloudprintCustomaresResponse> GetCloudprintCustomaresAsync(GetCloudprintCustomares getCloudprintCustomares)
     {
         var result = await PostAsync<GetCloudprintCustomares, GetCloudprintCustomaresResponse>("pdd.cloudprint.customares.get", getCloudprintCustomares);
@@ -73,6 +79,7 @@ public class WayBillApi : PddCommonApi
     /// <summary>
     /// 获取所有标准电子面单模板
     /// </summary>
+
     public async Task<GetCloudprintStdtemplatesResponse> GetCloudprintStdtemplatesAsync(GetCloudprintStdtemplates getCloudprintStdtemplates)
     {
         var result = await PostAsync<GetCloudprintStdtemplates, GetCloudprintStdtemplatesResponse>("pdd.cloudprint.stdtemplates.get", getCloudprintStdtemplates);
@@ -82,6 +89,7 @@ public class WayBillApi : PddCommonApi
     /// <summary>
     /// 商家取消获取的电子面单号
     /// </summary>
+
     public async Task<CancelWaybillResponse> CancelWaybillAsync(CancelWaybill cancelWaybill)
     {
         var result = await PostAsync<CancelWaybill, CancelWaybillResponse>("pdd.waybill.cancel", cancelWaybill);
@@ -91,6 +99,7 @@ public class WayBillApi : PddCommonApi
     /// <summary>
     /// 电子面单云打印接口
     /// </summary>
+
     public async Task<GetWaybillResponse> GetWaybillAsync(GetWaybill getWaybill)
     {
         var result = await PostAsync<GetWaybill, GetWaybillResponse>("pdd.waybill.get", getWaybill);
@@ -100,6 +109,7 @@ public class WayBillApi : PddCommonApi
     /// <summary>
     /// 通过面单号查询面单信息
     /// </summary>
+
     public async Task<WaybillcodeWaybillQueryByResponse> WaybillcodeWaybillQueryByAsync(WaybillcodeWaybillQueryBy waybillcodeWaybillQueryBy)
     {
         var result = await PostAsync<WaybillcodeWaybillQueryBy, WaybillcodeWaybillQueryByResponse>("pdd.waybill.query.by.waybillcode", waybillcodeWaybillQueryBy);
@@ -109,6 +119,7 @@ public class WayBillApi : PddCommonApi
     /// <summary>
     /// 查询面单服务订购及面单使用情况
     /// </summary>
+
     public async Task<SearchWaybillResponse> SearchWaybillAsync(SearchWaybill searchWaybill)
     {
         var result = await PostAsync<SearchWaybill, SearchWaybillResponse>("pdd.waybill.search", searchWaybill);
@@ -118,6 +129,7 @@ public class WayBillApi : PddCommonApi
     /// <summary>
     /// 电子面单云打印更新接口
     /// </summary>
+
     public async Task<UpdateWaybillResponse> UpdateWaybillAsync(UpdateWaybill updateWaybill)
     {
         var result = await PostAsync<UpdateWaybill, UpdateWaybillResponse>("pdd.waybill.update", updateWaybill);

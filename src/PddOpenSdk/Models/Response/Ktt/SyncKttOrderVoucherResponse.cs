@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ktt;
-public partial class SyncKttOrderVoucherResponse : PddResponseModel
+public partial class SyncKttOrderVoucherResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class SyncKttOrderVoucherResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("response")]
     public ResponseResponse Response { get; set; }
-    public partial class ResponseResponse : PddResponseModel
+
+    public partial class ResponseResponse
     {
 
         /// <summary>
@@ -33,7 +34,8 @@ public partial class SyncKttOrderVoucherResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("success")]
         public bool? Success { get; set; }
-        public partial class ResultResponse : PddResponseModel
+
+        public partial class ResultResponse
         {
 
             /// <summary>
@@ -47,6 +49,7 @@ public partial class SyncKttOrderVoucherResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("updated_number")]
             public int? UpdatedNumber { get; set; }
+
 
         }
 

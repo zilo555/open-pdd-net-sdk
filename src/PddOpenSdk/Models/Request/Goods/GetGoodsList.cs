@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Goods;
 public partial class GetGoodsList
 {
-
     /// <summary>
     /// 模版id
     /// </summary>
@@ -55,6 +54,8 @@ public partial class GetGoodsList
     /// </summary>
     [JsonPropertyName("page_size")]
     public int? PageSize { get; set; }
+
+
 
 }
 

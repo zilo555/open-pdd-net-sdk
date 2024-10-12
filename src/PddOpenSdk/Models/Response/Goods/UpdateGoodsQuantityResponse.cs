@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Goods;
-public partial class UpdateGoodsQuantityResponse : PddResponseModel
+public partial class UpdateGoodsQuantityResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class UpdateGoodsQuantityResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("goods_quantity_update_response")]
     public GoodsQuantityUpdateResponseResponse GoodsQuantityUpdateResponse { get; set; }
-    public partial class GoodsQuantityUpdateResponseResponse : PddResponseModel
+
+    public partial class GoodsQuantityUpdateResponseResponse
     {
 
         /// <summary>
@@ -15,6 +16,7 @@ public partial class UpdateGoodsQuantityResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("is_success")]
         public bool? IsSuccess { get; set; }
+
 
     }
 

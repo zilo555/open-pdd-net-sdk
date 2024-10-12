@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ktt;
-public partial class CommissionKttHelpSellQueryResponse : PddResponseModel
+public partial class CommissionKttHelpSellQueryResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class CommissionKttHelpSellQueryResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("response")]
     public ResponseResponse Response { get; set; }
-    public partial class ResponseResponse : PddResponseModel
+
+    public partial class ResponseResponse
     {
 
         /// <summary>
@@ -33,7 +34,8 @@ public partial class CommissionKttHelpSellQueryResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("success")]
         public bool? Success { get; set; }
-        public partial class ResultResponse : PddResponseModel
+
+        public partial class ResultResponse
         {
 
             /// <summary>
@@ -41,7 +43,8 @@ public partial class CommissionKttHelpSellQueryResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("parent_order_commission_list")]
             public List<ParentOrderCommissionListResponse> ParentOrderCommissionList { get; set; }
-            public partial class ParentOrderCommissionListResponse : PddResponseModel
+
+            public partial class ParentOrderCommissionListResponse
             {
 
                 /// <summary>
@@ -55,7 +58,8 @@ public partial class CommissionKttHelpSellQueryResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("parent_order_sn")]
                 public string ParentOrderSn { get; set; }
-                public partial class OrderCommissionListResponse : PddResponseModel
+
+                public partial class OrderCommissionListResponse
                 {
 
                     /// <summary>
@@ -75,6 +79,7 @@ public partial class CommissionKttHelpSellQueryResponse : PddResponseModel
                     /// </summary>
                     [JsonPropertyName("order_sn")]
                     public string OrderSn { get; set; }
+
 
                 }
 

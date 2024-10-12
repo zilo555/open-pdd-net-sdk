@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.WayBill;
-public partial class WaybillcodeWaybillQueryByResponse : PddResponseModel
+public partial class WaybillcodeWaybillQueryByResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class WaybillcodeWaybillQueryByResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("pdd_waybill_query_by_waybillcode_response")]
     public PddWaybillQueryByWaybillcodeResponseResponse PddWaybillQueryByWaybillcodeResponse { get; set; }
-    public partial class PddWaybillQueryByWaybillcodeResponseResponse : PddResponseModel
+
+    public partial class PddWaybillQueryByWaybillcodeResponseResponse
     {
 
         /// <summary>
@@ -15,7 +16,8 @@ public partial class WaybillcodeWaybillQueryByResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("modules")]
         public List<ModulesResponse> Modules { get; set; }
-        public partial class ModulesResponse : PddResponseModel
+
+        public partial class ModulesResponse
         {
 
             /// <summary>
@@ -23,7 +25,8 @@ public partial class WaybillcodeWaybillQueryByResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("waybill_cloud_print_response")]
             public WaybillCloudPrintResponseResponse WaybillCloudPrintResponse { get; set; }
-            public partial class WaybillCloudPrintResponseResponse : PddResponseModel
+
+            public partial class WaybillCloudPrintResponseResponse
             {
 
                 /// <summary>
@@ -43,6 +46,7 @@ public partial class WaybillcodeWaybillQueryByResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("waybill_code")]
                 public string WaybillCode { get; set; }
+
 
             }
 

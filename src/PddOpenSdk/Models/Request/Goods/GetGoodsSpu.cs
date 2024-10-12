@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Goods;
 public partial class GetGoodsSpu
 {
-
     /// <summary>
     /// 标品所在的类目ID
     /// </summary>
@@ -13,9 +12,10 @@ public partial class GetGoodsSpu
     /// </summary>
     [JsonPropertyName("key_prop")]
     public List<KeyPropModel> KeyProp { get; set; }
+
+
     public partial class KeyPropModel
     {
-
         /// <summary>
         /// 引用属性ID
         /// </summary>
@@ -39,6 +39,8 @@ public partial class GetGoodsSpu
         /// </summary>
         [JsonPropertyName("vid")]
         public long? Vid { get; set; }
+
+
 
     }
 

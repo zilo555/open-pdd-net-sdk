@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Refund;
-public partial class GetRefundListIncrementResponse : PddResponseModel
+public partial class GetRefundListIncrementResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetRefundListIncrementResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("refund_increment_get_response")]
     public RefundIncrementGetResponseResponse RefundIncrementGetResponse { get; set; }
-    public partial class RefundIncrementGetResponseResponse : PddResponseModel
+
+    public partial class RefundIncrementGetResponseResponse
     {
 
         /// <summary>
@@ -21,7 +22,8 @@ public partial class GetRefundListIncrementResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("total_count")]
         public int? TotalCount { get; set; }
-        public partial class RefundListResponse : PddResponseModel
+
+        public partial class RefundListResponse
         {
 
             /// <summary>
@@ -179,6 +181,7 @@ public partial class GetRefundListIncrementResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("user_shipping_status")]
             public string UserShippingStatus { get; set; }
+
 
         }
 

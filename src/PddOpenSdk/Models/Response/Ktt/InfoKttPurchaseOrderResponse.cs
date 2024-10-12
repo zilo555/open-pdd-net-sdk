@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ktt;
-public partial class InfoKttPurchaseOrderResponse : PddResponseModel
+public partial class InfoKttPurchaseOrderResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class InfoKttPurchaseOrderResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("ktt_purchase_order_info_response")]
     public KttPurchaseOrderInfoResponseResponse KttPurchaseOrderInfoResponse { get; set; }
-    public partial class KttPurchaseOrderInfoResponseResponse : PddResponseModel
+
+    public partial class KttPurchaseOrderInfoResponseResponse
     {
 
         /// <summary>
@@ -33,7 +34,8 @@ public partial class InfoKttPurchaseOrderResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("success")]
         public bool? Success { get; set; }
-        public partial class ResultResponse : PddResponseModel
+
+        public partial class ResultResponse
         {
 
             /// <summary>
@@ -215,7 +217,8 @@ public partial class InfoKttPurchaseOrderResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("updated_at")]
             public long? UpdatedAt { get; set; }
-            public partial class CustomItemListResponse : PddResponseModel
+
+            public partial class CustomItemListResponse
             {
 
                 /// <summary>
@@ -230,8 +233,9 @@ public partial class InfoKttPurchaseOrderResponse : PddResponseModel
                 [JsonPropertyName("value")]
                 public string Value { get; set; }
 
+
             }
-            public partial class GiftOrderListResponse : PddResponseModel
+            public partial class GiftOrderListResponse
             {
 
                 /// <summary>
@@ -258,8 +262,9 @@ public partial class InfoKttPurchaseOrderResponse : PddResponseModel
                 [JsonPropertyName("host_sub_order_sn")]
                 public string HostSubOrderSn { get; set; }
 
+
             }
-            public partial class LogisticsListResponse : PddResponseModel
+            public partial class LogisticsListResponse
             {
 
                 /// <summary>
@@ -280,8 +285,9 @@ public partial class InfoKttPurchaseOrderResponse : PddResponseModel
                 [JsonPropertyName("sub_order_sn_list")]
                 public List<string> SubOrderSnList { get; set; }
 
+
             }
-            public partial class SubOrderListResponse : PddResponseModel
+            public partial class SubOrderListResponse
             {
 
                 /// <summary>
@@ -361,6 +367,7 @@ public partial class InfoKttPurchaseOrderResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("sub_order_sn")]
                 public string SubOrderSn { get; set; }
+
 
             }
 

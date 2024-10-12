@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Order;
-public partial class SyncErpOrderResponse : PddResponseModel
+public partial class SyncErpOrderResponse
 {
 
     /// <summary>
@@ -25,6 +25,7 @@ public partial class SyncErpOrderResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("success")]
     public bool? Success { get; set; }
+
 
 }
 

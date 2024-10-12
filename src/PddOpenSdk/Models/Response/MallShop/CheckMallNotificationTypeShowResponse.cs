@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.MallShop;
-public partial class CheckMallNotificationTypeShowResponse : PddResponseModel
+public partial class CheckMallNotificationTypeShowResponse
 {
 
     /// <summary>
@@ -7,6 +7,7 @@ public partial class CheckMallNotificationTypeShowResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("result")]
     public bool? Result { get; set; }
+
 
 }
 

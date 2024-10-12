@@ -1,15 +1,15 @@
 namespace PddOpenSdk.Models.Request.Voucher;
 public partial class SyncVoucherRealtimeVerify
 {
-
     /// <summary>
     /// 请求入参
     /// </summary>
     [JsonPropertyName("request")]
     public RequestModel Request { get; set; }
+
+
     public partial class RequestModel
     {
-
         /// <summary>
         /// 订单号
         /// </summary>
@@ -51,6 +51,8 @@ public partial class SyncVoucherRealtimeVerify
         /// </summary>
         [JsonPropertyName("out_voucher_id")]
         public string OutVoucherId { get; set; }
+
+
 
     }
 

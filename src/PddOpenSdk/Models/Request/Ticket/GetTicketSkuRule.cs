@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Ticket;
 public partial class GetTicketSkuRule
 {
-
     /// <summary>
     /// 商户履约规则 id
     /// </summary>
@@ -13,6 +12,8 @@ public partial class GetTicketSkuRule
     /// </summary>
     [JsonPropertyName("rule_id")]
     public string RuleId { get; set; }
+
+
 
 }
 

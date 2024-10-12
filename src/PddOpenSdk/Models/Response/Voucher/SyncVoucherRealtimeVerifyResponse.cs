@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Voucher;
-public partial class SyncVoucherRealtimeVerifyResponse : PddResponseModel
+public partial class SyncVoucherRealtimeVerifyResponse
 {
 
     /// <summary>
@@ -13,6 +13,7 @@ public partial class SyncVoucherRealtimeVerifyResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("message")]
     public string Message { get; set; }
+
 
 }
 

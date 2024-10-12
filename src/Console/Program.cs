@@ -1,4 +1,3 @@
-using Console;
 using Console.Helpers;
 
 namespace Sample;

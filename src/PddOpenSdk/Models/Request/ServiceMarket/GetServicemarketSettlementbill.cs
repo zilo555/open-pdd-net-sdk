@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.ServiceMarket;
 public partial class GetServicemarketSettlementbill
 {
-
     /// <summary>
     /// 分页页码，最大不能超过1000
     /// </summary>
@@ -25,6 +24,8 @@ public partial class GetServicemarketSettlementbill
     /// </summary>
     [JsonPropertyName("settle_month")]
     public string SettleMonth { get; set; }
+
+
 
 }
 

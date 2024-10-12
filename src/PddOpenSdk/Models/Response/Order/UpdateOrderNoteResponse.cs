@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Order;
-public partial class UpdateOrderNoteResponse : PddResponseModel
+public partial class UpdateOrderNoteResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class UpdateOrderNoteResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("response")]
     public ResponseResponse Response { get; set; }
-    public partial class ResponseResponse : PddResponseModel
+
+    public partial class ResponseResponse
     {
 
         /// <summary>
@@ -27,6 +28,7 @@ public partial class UpdateOrderNoteResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("error_msg")]
         public string ErrorMsg { get; set; }
+
 
     }
 

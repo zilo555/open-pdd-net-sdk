@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Util;
-public partial class GetPopMallBindTicketResponse : PddResponseModel
+public partial class GetPopMallBindTicketResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetPopMallBindTicketResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("response")]
     public ResponseResponse Response { get; set; }
-    public partial class ResponseResponse : PddResponseModel
+
+    public partial class ResponseResponse
     {
 
         /// <summary>
@@ -15,6 +16,7 @@ public partial class GetPopMallBindTicketResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("ticket")]
         public string Ticket { get; set; }
+
 
     }
 

@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Stock;
 public partial class CreateStockWare
 {
-
     /// <summary>
     /// 类型 0:单独货品。1:组合货品
     /// </summary>
@@ -103,9 +102,10 @@ public partial class CreateStockWare
     /// </summary>
     [JsonPropertyName("packing")]
     public string Packing { get; set; }
+
+
     public partial class WareInfosModel
     {
-
         /// <summary>
         /// 
         /// </summary>
@@ -117,6 +117,8 @@ public partial class CreateStockWare
         /// </summary>
         [JsonPropertyName("ware_id")]
         public long WareId { get; set; }
+
+
 
     }
 

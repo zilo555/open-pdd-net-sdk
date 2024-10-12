@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Promotion;
 public partial class CreatePromotionGoodsCoupon
 {
-
     /// <summary>
     /// 描述
     /// </summary>
@@ -43,6 +42,8 @@ public partial class CreatePromotionGoodsCoupon
     /// </summary>
     [JsonPropertyName("goods_id")]
     public long GoodsId { get; set; }
+
+
 
 }
 

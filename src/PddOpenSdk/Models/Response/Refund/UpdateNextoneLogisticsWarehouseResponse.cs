@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Refund;
-public partial class UpdateNextoneLogisticsWarehouseResponse : PddResponseModel
+public partial class UpdateNextoneLogisticsWarehouseResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class UpdateNextoneLogisticsWarehouseResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("response")]
     public ResponseResponse Response { get; set; }
-    public partial class ResponseResponse : PddResponseModel
+
+    public partial class ResponseResponse
     {
 
         /// <summary>
@@ -15,7 +16,8 @@ public partial class UpdateNextoneLogisticsWarehouseResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("result")]
         public ResultResponse Result { get; set; }
-        public partial class ResultResponse : PddResponseModel
+
+        public partial class ResultResponse
         {
 
             /// <summary>
@@ -29,6 +31,7 @@ public partial class UpdateNextoneLogisticsWarehouseResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("order_sn")]
             public string OrderSn { get; set; }
+
 
         }
 

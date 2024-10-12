@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Refund;
 public partial class GetRefundInformation
 {
-
     /// <summary>
     /// 售后单id
     /// </summary>
@@ -13,6 +12,8 @@ public partial class GetRefundInformation
     /// </summary>
     [JsonPropertyName("order_sn")]
     public string OrderSn { get; set; }
+
+
 
 }
 

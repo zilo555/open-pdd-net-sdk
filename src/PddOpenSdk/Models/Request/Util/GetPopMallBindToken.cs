@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Util;
 public partial class GetPopMallBindToken
 {
-
     /// <summary>
     /// 被关联店铺的关联code
     /// </summary>
@@ -19,6 +18,8 @@ public partial class GetPopMallBindToken
     /// </summary>
     [JsonPropertyName("mall_list")]
     public List<long?> MallList { get; set; }
+
+
 
 }
 

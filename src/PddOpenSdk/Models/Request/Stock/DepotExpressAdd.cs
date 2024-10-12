@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Stock;
 public partial class DepotExpressAdd
 {
-
     /// <summary>
     /// 联系人姓名
     /// </summary>
@@ -67,9 +66,10 @@ public partial class DepotExpressAdd
     /// </summary>
     [JsonPropertyName("zip_code")]
     public string ZipCode { get; set; }
+
+
     public partial class DepotRegionModel
     {
-
         /// <summary>
         /// 省份id
         /// </summary>
@@ -81,9 +81,10 @@ public partial class DepotExpressAdd
         /// </summary>
         [JsonPropertyName("value")]
         public Dictionary<string, object> Value { get; set; }
+
+
         public partial class ValueModel
         {
-
             /// <summary>
             /// 城市id
             /// </summary>
@@ -95,6 +96,8 @@ public partial class DepotExpressAdd
             /// </summary>
             [JsonPropertyName("value")]
             public List<string> Value { get; set; }
+
+
 
         }
 

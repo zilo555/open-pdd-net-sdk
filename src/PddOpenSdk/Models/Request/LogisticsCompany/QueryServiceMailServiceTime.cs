@@ -1,15 +1,15 @@
 namespace PddOpenSdk.Models.Request.LogisticsCompany;
 public partial class QueryServiceMailServiceTime
 {
-
     /// <summary>
     /// 请求参数
     /// </summary>
     [JsonPropertyName("request")]
     public RequestModel Request { get; set; }
+
+
     public partial class RequestModel
     {
-
         /// <summary>
         /// 省名称
         /// </summary>
@@ -75,6 +75,8 @@ public partial class QueryServiceMailServiceTime
         /// </summary>
         [JsonPropertyName("attributes")]
         public string Attributes { get; set; }
+
+
 
     }
 

@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.ServiceMarket;
-public partial class GetServicemarketTradelistResponse : PddResponseModel
+public partial class GetServicemarketTradelistResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetServicemarketTradelistResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("mall_balance_flow_search_response")]
     public MallBalanceFlowSearchResponseResponse MallBalanceFlowSearchResponse { get; set; }
-    public partial class MallBalanceFlowSearchResponseResponse : PddResponseModel
+
+    public partial class MallBalanceFlowSearchResponseResponse
     {
 
         /// <summary>
@@ -21,7 +22,8 @@ public partial class GetServicemarketTradelistResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("total_count")]
         public int? TotalCount { get; set; }
-        public partial class DataResponse : PddResponseModel
+
+        public partial class DataResponse
         {
 
             /// <summary>
@@ -59,6 +61,7 @@ public partial class GetServicemarketTradelistResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("trade_note")]
             public string TradeNote { get; set; }
+
 
         }
 

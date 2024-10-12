@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Util;
 public partial class GetPopMallBindTicket
 {
-
     /// <summary>
     /// 三方应用的用户id
     /// </summary>
@@ -13,6 +12,8 @@ public partial class GetPopMallBindTicket
     /// </summary>
     [JsonPropertyName("mall_list")]
     public List<long?> MallList { get; set; }
+
+
 
 }
 

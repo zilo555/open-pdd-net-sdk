@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.WayBill;
-public partial class UpdateWaybillResponse : PddResponseModel
+public partial class UpdateWaybillResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class UpdateWaybillResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("pdd_waybill_update_response")]
     public PddWaybillUpdateResponseResponse PddWaybillUpdateResponse { get; set; }
-    public partial class PddWaybillUpdateResponseResponse : PddResponseModel
+
+    public partial class PddWaybillUpdateResponseResponse
     {
 
         /// <summary>
@@ -21,6 +22,7 @@ public partial class UpdateWaybillResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("waybill_code")]
         public string WaybillCode { get; set; }
+
 
     }
 

@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Refund;
-public partial class CheckRefundStatusResponse : PddResponseModel
+public partial class CheckRefundStatusResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class CheckRefundStatusResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("refund_status_check_response")]
     public RefundStatusCheckResponseResponse RefundStatusCheckResponse { get; set; }
-    public partial class RefundStatusCheckResponseResponse : PddResponseModel
+
+    public partial class RefundStatusCheckResponseResponse
     {
 
         /// <summary>
@@ -15,7 +16,8 @@ public partial class CheckRefundStatusResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("order_sns_exists_refund")]
         public List<OrderSnsExistsRefundResponse> OrderSnsExistsRefund { get; set; }
-        public partial class OrderSnsExistsRefundResponse : PddResponseModel
+
+        public partial class OrderSnsExistsRefundResponse
         {
 
             /// <summary>
@@ -23,6 +25,7 @@ public partial class CheckRefundStatusResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("order_sn")]
             public string OrderSn { get; set; }
+
 
         }
 

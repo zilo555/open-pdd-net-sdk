@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Goods;
 public partial class GetGoodsCatRule
 {
-
     /// <summary>
     /// 类目id
     /// </summary>
@@ -13,6 +12,8 @@ public partial class GetGoodsCatRule
     /// </summary>
     [JsonPropertyName("goods_id")]
     public long? GoodsId { get; set; }
+
+
 
 }
 

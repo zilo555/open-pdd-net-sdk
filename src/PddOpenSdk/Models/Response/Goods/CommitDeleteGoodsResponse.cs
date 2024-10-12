@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Goods;
-public partial class CommitDeleteGoodsResponse : PddResponseModel
+public partial class CommitDeleteGoodsResponse
 {
 
     /// <summary>
@@ -7,6 +7,7 @@ public partial class CommitDeleteGoodsResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("open_api_response")]
     public bool? OpenApiResponse { get; set; }
+
 
 }
 

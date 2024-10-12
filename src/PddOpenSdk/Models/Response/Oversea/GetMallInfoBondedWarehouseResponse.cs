@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Oversea;
-public partial class GetMallInfoBondedWarehouseResponse : PddResponseModel
+public partial class GetMallInfoBondedWarehouseResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetMallInfoBondedWarehouseResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("mall_info_bonded_warehouse_get_response")]
     public MallInfoBondedWarehouseGetResponseResponse MallInfoBondedWarehouseGetResponse { get; set; }
-    public partial class MallInfoBondedWarehouseGetResponseResponse : PddResponseModel
+
+    public partial class MallInfoBondedWarehouseGetResponseResponse
     {
 
         /// <summary>
@@ -15,7 +16,8 @@ public partial class GetMallInfoBondedWarehouseResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("info_list")]
         public List<InfoListResponse> InfoList { get; set; }
-        public partial class InfoListResponse : PddResponseModel
+
+        public partial class InfoListResponse
         {
 
             /// <summary>
@@ -41,6 +43,7 @@ public partial class GetMallInfoBondedWarehouseResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("customs_declaration_location")]
             public string CustomsDeclarationLocation { get; set; }
+
 
         }
 

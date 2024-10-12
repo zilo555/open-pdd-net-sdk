@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Goods;
-public partial class GetGoodsCommitListResponse : PddResponseModel
+public partial class GetGoodsCommitListResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetGoodsCommitListResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("goods_commit_list_get_response")]
     public GoodsCommitListGetResponseResponse GoodsCommitListGetResponse { get; set; }
-    public partial class GoodsCommitListGetResponseResponse : PddResponseModel
+
+    public partial class GoodsCommitListGetResponseResponse
     {
 
         /// <summary>
@@ -21,7 +22,8 @@ public partial class GetGoodsCommitListResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("total")]
         public long? Total { get; set; }
-        public partial class ListResponse : PddResponseModel
+
+        public partial class ListResponse
         {
 
             /// <summary>
@@ -77,6 +79,7 @@ public partial class GetGoodsCommitListResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("submit_time")]
             public int? SubmitTime { get; set; }
+
 
         }
 

@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Goods;
-public partial class DeleteGoodsMaterialResponse : PddResponseModel
+public partial class DeleteGoodsMaterialResponse
 {
 
     /// <summary>
@@ -25,6 +25,7 @@ public partial class DeleteGoodsMaterialResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("success")]
     public bool? Success { get; set; }
+
 
 }
 

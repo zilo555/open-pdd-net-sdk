@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Fds;
-public partial class CancelFdsWaybillResponse : PddResponseModel
+public partial class CancelFdsWaybillResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class CancelFdsWaybillResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("pdd_fds_waybill_cancel_response")]
     public PddFdsWaybillCancelResponseResponse PddFdsWaybillCancelResponse { get; set; }
-    public partial class PddFdsWaybillCancelResponseResponse : PddResponseModel
+
+    public partial class PddFdsWaybillCancelResponseResponse
     {
 
         /// <summary>
@@ -15,6 +16,7 @@ public partial class CancelFdsWaybillResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("return_result")]
         public bool? ReturnResult { get; set; }
+
 
     }
 

@@ -1,15 +1,15 @@
 namespace PddOpenSdk.Models.Request.Fds;
 public partial class SlaveFdsWaybillReturn
 {
-
     /// <summary>
     /// 回传从运单号请求
     /// </summary>
     [JsonPropertyName("request")]
     public RequestModel Request { get; set; }
+
+
     public partial class RequestModel
     {
-
         /// <summary>
         /// 代打店铺id
         /// </summary>
@@ -33,6 +33,8 @@ public partial class SlaveFdsWaybillReturn
         /// </summary>
         [JsonPropertyName("wp_code")]
         public string WpCode { get; set; }
+
+
 
     }
 

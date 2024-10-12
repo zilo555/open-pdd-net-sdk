@@ -1,4 +1,3 @@
-
 using PddOpenSdk.Models.Request.Logistics;
 using PddOpenSdk.Models.Response.Logistics;
 namespace PddOpenSdk.Services.PddApi;
@@ -10,6 +9,7 @@ public class LogisticsApi : PddCommonApi
     /// <summary>
     /// 获取集运DWS设备采集数据
     /// </summary>
+
     public async Task<GetConsoDwsDataResponse> GetConsoDwsDataAsync(GetConsoDwsData getConsoDwsData)
     {
         var result = await PostAsync<GetConsoDwsData, GetConsoDwsDataResponse>("pdd.conso.dws.data.get", getConsoDwsData);
@@ -17,8 +17,19 @@ public class LogisticsApi : PddCommonApi
     }
 
     /// <summary>
+    /// 集运图片上传接口
+    /// </summary>
+
+    public async Task<UploadConsoImgResponse> UploadConsoImgAsync(UploadConsoImg uploadConsoImg)
+    {
+        var result = await PostFileAsync<UploadConsoImg, UploadConsoImgResponse>("pdd.conso.img.upload", uploadConsoImg);
+        return result;
+    }
+
+    /// <summary>
     /// 重抛逆向运单回传
     /// </summary>
+
     public async Task<CallbackHeavygoodsBackExpressResponse> CallbackHeavygoodsBackExpressAsync(CallbackHeavygoodsBackExpress callbackHeavygoodsBackExpress)
     {
         var result = await PostAsync<CallbackHeavygoodsBackExpress, CallbackHeavygoodsBackExpressResponse>("pdd.heavygoods.back.express.callback", callbackHeavygoodsBackExpress);
@@ -28,6 +39,7 @@ public class LogisticsApi : PddCommonApi
     /// <summary>
     /// 获取拼多多标准地址库
     /// </summary>
+
     public async Task<GetLogisticsAddressResponse> GetLogisticsAddressAsync(GetLogisticsAddress getLogisticsAddress)
     {
         var result = await PostAsync<GetLogisticsAddress, GetLogisticsAddressResponse>("pdd.logistics.address.get", getLogisticsAddress);
@@ -37,6 +49,7 @@ public class LogisticsApi : PddCommonApi
     /// <summary>
     /// 获取可发货快递接口
     /// </summary>
+
     public async Task<RecommendLogisticsAvailableCompanyResponse> RecommendLogisticsAvailableCompanyAsync(RecommendLogisticsAvailableCompany recommendLogisticsAvailableCompany)
     {
         var result = await PostAsync<RecommendLogisticsAvailableCompany, RecommendLogisticsAvailableCompanyResponse>("pdd.logistics.available.company.recommend", recommendLogisticsAvailableCompany);
@@ -46,6 +59,7 @@ public class LogisticsApi : PddCommonApi
     /// <summary>
     /// 快递公司查看接口
     /// </summary>
+
     public async Task<GetLogisticsCompaniesResponse> GetLogisticsCompaniesAsync(GetLogisticsCompanies getLogisticsCompanies)
     {
         var result = await PostAsync<GetLogisticsCompanies, GetLogisticsCompaniesResponse>("pdd.logistics.companies.get", getLogisticsCompanies);
@@ -55,6 +69,7 @@ public class LogisticsApi : PddCommonApi
     /// <summary>
     /// ISV物流轨迹推送消息订阅接口
     /// </summary>
+
     public async Task<SubLogisticsIsvTraceNotifyResponse> SubLogisticsIsvTraceNotifyAsync(SubLogisticsIsvTraceNotify subLogisticsIsvTraceNotify)
     {
         var result = await PostAsync<SubLogisticsIsvTraceNotify, SubLogisticsIsvTraceNotifyResponse>("pdd.logistics.isv.trace.notify.sub", subLogisticsIsvTraceNotify);
@@ -64,6 +79,7 @@ public class LogisticsApi : PddCommonApi
     /// <summary>
     /// 订单发货通知接口
     /// </summary>
+
     public async Task<SendLogisticsOnlineResponse> SendLogisticsOnlineAsync(SendLogisticsOnline sendLogisticsOnline)
     {
         var result = await PostAsync<SendLogisticsOnline, SendLogisticsOnlineResponse>("pdd.logistics.online.send", sendLogisticsOnline);
@@ -73,6 +89,7 @@ public class LogisticsApi : PddCommonApi
     /// <summary>
     /// 轨迹查询接口
     /// </summary>
+
     public async Task<GetLogisticsOrdertraceResponse> GetLogisticsOrdertraceAsync(GetLogisticsOrdertrace getLogisticsOrdertrace)
     {
         var result = await PostAsync<GetLogisticsOrdertrace, GetLogisticsOrdertraceResponse>("pdd.logistics.ordertrace.get", getLogisticsOrdertrace);
@@ -82,6 +99,7 @@ public class LogisticsApi : PddCommonApi
     /// <summary>
     /// 末端三段轨迹回传
     /// </summary>
+
     public async Task<SyncTailExpressTraceResponse> SyncTailExpressTraceAsync(SyncTailExpressTrace syncTailExpressTrace)
     {
         var result = await PostAsync<SyncTailExpressTrace, SyncTailExpressTraceResponse>("pdd.tail.express.trace.sync", syncTailExpressTrace);

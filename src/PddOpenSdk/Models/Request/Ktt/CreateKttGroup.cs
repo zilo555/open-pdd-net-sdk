@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Ktt;
 public partial class CreateKttGroup
 {
-
     /// <summary>
     /// 结束时间戳，毫秒级，不能比开始时间早，不能比当前时间早
     /// </summary>
@@ -37,9 +36,10 @@ public partial class CreateKttGroup
     /// </summary>
     [JsonPropertyName("title")]
     public string Title { get; set; }
+
+
     public partial class GoodsListModel
     {
-
         /// <summary>
         /// 分类名
         /// </summary>
@@ -81,9 +81,10 @@ public partial class CreateKttGroup
         /// </summary>
         [JsonPropertyName("sku_list")]
         public List<SkuListModel> SkuList { get; set; }
+
+
         public partial class SkuListModel
         {
-
             /// <summary>
             /// 外部商品编码，不超过32位
             /// </summary>
@@ -119,6 +120,8 @@ public partial class CreateKttGroup
             /// </summary>
             [JsonPropertyName("total_quantity")]
             public long TotalQuantity { get; set; }
+
+
 
         }
 

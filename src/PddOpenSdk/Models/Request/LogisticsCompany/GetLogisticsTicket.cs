@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.LogisticsCompany;
 public partial class GetLogisticsTicket
 {
-
     /// <summary>
     /// 必填，最后更新时间结束时间的时间戳，指格林威治时间 1970 年 01 月 01 日 00 时 00 分 00 秒(北京时间 1970 年 01 月 01 日 08 时 00 分 00 秒)起至现在的总秒数 PS：开始时间结束时间间距不超过 30 分钟。示例：1523763012。
     /// </summary>
@@ -25,6 +24,8 @@ public partial class GetLogisticsTicket
     /// </summary>
     [JsonPropertyName("start_updated_at")]
     public long StartUpdatedAt { get; set; }
+
+
 
 }
 

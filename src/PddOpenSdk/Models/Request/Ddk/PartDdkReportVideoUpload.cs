@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Ddk;
 public partial class PartDdkReportVideoUpload
 {
-
     /// <summary>
     /// 当前分片的文件流
     /// </summary>
@@ -19,6 +18,8 @@ public partial class PartDdkReportVideoUpload
     /// </summary>
     [JsonPropertyName("upload_sign")]
     public string UploadSign { get; set; }
+
+
 
 }
 

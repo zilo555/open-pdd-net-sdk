@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Goods;
 public partial class GetGoodsSkus
 {
-
     /// <summary>
     /// 商品Id
     /// </summary>
@@ -13,6 +12,8 @@ public partial class GetGoodsSkus
     /// </summary>
     [JsonPropertyName("sku_id")]
     public long SkuId { get; set; }
+
+
 
 }
 

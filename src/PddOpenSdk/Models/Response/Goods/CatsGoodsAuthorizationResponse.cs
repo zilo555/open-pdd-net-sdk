@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Goods;
-public partial class CatsGoodsAuthorizationResponse : PddResponseModel
+public partial class CatsGoodsAuthorizationResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class CatsGoodsAuthorizationResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("goods_auth_cats_get_response")]
     public GoodsAuthCatsGetResponseResponse GoodsAuthCatsGetResponse { get; set; }
-    public partial class GoodsAuthCatsGetResponseResponse : PddResponseModel
+
+    public partial class GoodsAuthCatsGetResponseResponse
     {
 
         /// <summary>
@@ -15,7 +16,8 @@ public partial class CatsGoodsAuthorizationResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("goods_cats_list")]
         public List<GoodsCatsListResponse> GoodsCatsList { get; set; }
-        public partial class GoodsCatsListResponse : PddResponseModel
+
+        public partial class GoodsCatsListResponse
         {
 
             /// <summary>
@@ -35,6 +37,7 @@ public partial class CatsGoodsAuthorizationResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("leaf")]
             public bool? Leaf { get; set; }
+
 
         }
 

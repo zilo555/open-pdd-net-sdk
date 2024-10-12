@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.MallShop;
 public partial class InfoTraceSourceUploadPlan
 {
-
     /// <summary>
     /// 到港日期
     /// </summary>
@@ -127,9 +126,10 @@ public partial class InfoTraceSourceUploadPlan
     /// </summary>
     [JsonPropertyName("warehouse_name")]
     public string WarehouseName { get; set; }
+
+
     public partial class GoodsModel
     {
-
         /// <summary>
         /// 防伪溯源码粘贴数量
         /// </summary>
@@ -195,6 +195,8 @@ public partial class InfoTraceSourceUploadPlan
         /// </summary>
         [JsonPropertyName("start_serial_no")]
         public string StartSerialNo { get; set; }
+
+
 
     }
 

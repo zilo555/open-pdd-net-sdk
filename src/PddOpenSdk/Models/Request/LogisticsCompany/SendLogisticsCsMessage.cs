@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.LogisticsCompany;
 public partial class SendLogisticsCsMessage
 {
-
     /// <summary>
     /// pdd会话id
     /// </summary>
@@ -43,6 +42,8 @@ public partial class SendLogisticsCsMessage
     /// </summary>
     [JsonPropertyName("preview")]
     public string Preview { get; set; }
+
+
 
 }
 

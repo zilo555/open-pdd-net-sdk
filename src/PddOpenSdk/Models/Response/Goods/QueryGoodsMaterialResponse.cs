@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Goods;
-public partial class QueryGoodsMaterialResponse : PddResponseModel
+public partial class QueryGoodsMaterialResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class QueryGoodsMaterialResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("material_list")]
     public List<MaterialListResponse> MaterialList { get; set; }
-    public partial class MaterialListResponse : PddResponseModel
+
+    public partial class MaterialListResponse
     {
 
         /// <summary>
@@ -57,6 +58,7 @@ public partial class QueryGoodsMaterialResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("type")]
         public int? Type { get; set; }
+
 
     }
 

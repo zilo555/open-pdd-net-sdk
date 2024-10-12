@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.DdkTools;
-public partial class GenerateDdkOauthRpPromUrlResponse : PddResponseModel
+public partial class GenerateDdkOauthRpPromUrlResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GenerateDdkOauthRpPromUrlResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("rp_promotion_url_generate_response")]
     public RpPromotionUrlGenerateResponseResponse RpPromotionUrlGenerateResponse { get; set; }
-    public partial class RpPromotionUrlGenerateResponseResponse : PddResponseModel
+
+    public partial class RpPromotionUrlGenerateResponseResponse
     {
 
         /// <summary>
@@ -21,7 +22,8 @@ public partial class GenerateDdkOauthRpPromUrlResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("url_list")]
         public List<UrlListResponse> UrlList { get; set; }
-        public partial class ResourceListResponse : PddResponseModel
+
+        public partial class ResourceListResponse
         {
 
             /// <summary>
@@ -36,8 +38,9 @@ public partial class GenerateDdkOauthRpPromUrlResponse : PddResponseModel
             [JsonPropertyName("url")]
             public string Url { get; set; }
 
+
         }
-        public partial class UrlListResponse : PddResponseModel
+        public partial class UrlListResponse
         {
 
             /// <summary>
@@ -111,7 +114,14 @@ public partial class GenerateDdkOauthRpPromUrlResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("we_app_info")]
             public WeAppInfoResponse WeAppInfo { get; set; }
-            public partial class QqAppInfoResponse : PddResponseModel
+
+            /// <summary>
+            /// 微信shortLink，该字段支持超红c端活动页、超红二合一、b端推品页，单个渠道每天生成的shortLink数量有限，请合理生成shortLink链接
+            /// </summary>
+            [JsonPropertyName("weixin_short_link")]
+            public string WeixinShortLink { get; set; }
+
+            public partial class QqAppInfoResponse
             {
 
                 /// <summary>
@@ -162,8 +172,9 @@ public partial class GenerateDdkOauthRpPromUrlResponse : PddResponseModel
                 [JsonPropertyName("user_name")]
                 public string UserName { get; set; }
 
+
             }
-            public partial class WeAppInfoResponse : PddResponseModel
+            public partial class WeAppInfoResponse
             {
 
                 /// <summary>
@@ -213,6 +224,7 @@ public partial class GenerateDdkOauthRpPromUrlResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("we_app_icon_url")]
                 public string WeAppIconUrl { get; set; }
+
 
             }
 

@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Invoice;
-public partial class QueryEinvoiceInfoResponse : PddResponseModel
+public partial class QueryEinvoiceInfoResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class QueryEinvoiceInfoResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("einvoice_info_query_response")]
     public EinvoiceInfoQueryResponseResponse EinvoiceInfoQueryResponse { get; set; }
-    public partial class EinvoiceInfoQueryResponseResponse : PddResponseModel
+
+    public partial class EinvoiceInfoQueryResponseResponse
     {
 
         /// <summary>
@@ -15,7 +16,8 @@ public partial class QueryEinvoiceInfoResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("invoice_info_list")]
         public List<InvoiceInfoListResponse> InvoiceInfoList { get; set; }
-        public partial class InvoiceInfoListResponse : PddResponseModel
+
+        public partial class InvoiceInfoListResponse
         {
 
             /// <summary>
@@ -191,7 +193,8 @@ public partial class QueryEinvoiceInfoResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("total_tax_amount")]
             public long? TotalTaxAmount { get; set; }
-            public partial class InvoiceItemListResponse : PddResponseModel
+
+            public partial class InvoiceItemListResponse
             {
 
                 /// <summary>
@@ -259,6 +262,7 @@ public partial class QueryEinvoiceInfoResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("zero_tax_rate_flag")]
                 public int? ZeroTaxRateFlag { get; set; }
+
 
             }
 

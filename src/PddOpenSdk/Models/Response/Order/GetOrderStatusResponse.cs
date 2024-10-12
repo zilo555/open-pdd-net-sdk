@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Order;
-public partial class GetOrderStatusResponse : PddResponseModel
+public partial class GetOrderStatusResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetOrderStatusResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("order_status_get_response")]
     public OrderStatusGetResponseResponse OrderStatusGetResponse { get; set; }
-    public partial class OrderStatusGetResponseResponse : PddResponseModel
+
+    public partial class OrderStatusGetResponseResponse
     {
 
         /// <summary>
@@ -15,7 +16,8 @@ public partial class GetOrderStatusResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("order_status_list")]
         public List<OrderStatusListResponse> OrderStatusList { get; set; }
-        public partial class OrderStatusListResponse : PddResponseModel
+
+        public partial class OrderStatusListResponse
         {
 
             /// <summary>
@@ -35,6 +37,7 @@ public partial class GetOrderStatusResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("refund_status")]
             public int? RefundStatus { get; set; }
+
 
         }
 

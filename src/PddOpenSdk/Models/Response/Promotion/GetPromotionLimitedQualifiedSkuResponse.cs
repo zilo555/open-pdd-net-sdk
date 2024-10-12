@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Promotion;
-public partial class GetPromotionLimitedQualifiedSkuResponse : PddResponseModel
+public partial class GetPromotionLimitedQualifiedSkuResponse
 {
 
     /// <summary>
@@ -13,7 +13,8 @@ public partial class GetPromotionLimitedQualifiedSkuResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("valid_sku_list")]
     public List<ValidSkuListResponse> ValidSkuList { get; set; }
-    public partial class InValidSkuListResponse : PddResponseModel
+
+    public partial class InValidSkuListResponse
     {
 
         /// <summary>
@@ -39,9 +40,10 @@ public partial class GetPromotionLimitedQualifiedSkuResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("valid_status")]
         public int? ValidStatus { get; set; }
+
 
     }
-    public partial class ValidSkuListResponse : PddResponseModel
+    public partial class ValidSkuListResponse
     {
 
         /// <summary>
@@ -67,6 +69,7 @@ public partial class GetPromotionLimitedQualifiedSkuResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("valid_status")]
         public int? ValidStatus { get; set; }
+
 
     }
 

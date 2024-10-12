@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.MallShop;
 public partial class InfoTraceSourceQueryGoods
 {
-
     /// <summary>
     /// 请求方法
     /// </summary>
@@ -13,9 +12,10 @@ public partial class InfoTraceSourceQueryGoods
     /// </summary>
     [JsonPropertyName("params")]
     public ParamsModel Params { get; set; }
+
+
     public partial class ParamsModel
     {
-
         /// <summary>
         /// 接口调用账号（由平台分配）
         /// </summary>
@@ -39,6 +39,8 @@ public partial class InfoTraceSourceQueryGoods
         /// </summary>
         [JsonPropertyName("id")]
         public string Id { get; set; }
+
+
 
     }
 

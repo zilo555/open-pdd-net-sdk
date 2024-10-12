@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Util;
-public partial class GetTimeResponse : PddResponseModel
+public partial class GetTimeResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetTimeResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("time_get_response")]
     public TimeGetResponseResponse TimeGetResponse { get; set; }
-    public partial class TimeGetResponseResponse : PddResponseModel
+
+    public partial class TimeGetResponseResponse
     {
 
         /// <summary>
@@ -15,6 +16,7 @@ public partial class GetTimeResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("time")]
         public string Time { get; set; }
+
 
     }
 

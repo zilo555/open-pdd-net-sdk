@@ -1,4 +1,3 @@
-
 using PddOpenSdk.Models.Request.SmsVendor;
 using PddOpenSdk.Models.Response.SmsVendor;
 namespace PddOpenSdk.Services.PddApi;
@@ -10,6 +9,7 @@ public class SmsVendorApi : PddCommonApi
     /// <summary>
     /// 短信明细回执
     /// </summary>
+
     public async Task<PushSmsDetailbillResponse> PushSmsDetailbillAsync(PushSmsDetailbill pushSmsDetailbill)
     {
         var result = await PostAsync<PushSmsDetailbill, PushSmsDetailbillResponse>("pdd.sms.detailbill.push", pushSmsDetailbill);
@@ -19,6 +19,7 @@ public class SmsVendorApi : PddCommonApi
     /// <summary>
     /// 投诉号码上传
     /// </summary>
+
     public async Task<CreateSmsVendorComplaintResponse> CreateSmsVendorComplaintAsync(CreateSmsVendorComplaint createSmsVendorComplaint)
     {
         var result = await PostAsync<CreateSmsVendorComplaint, CreateSmsVendorComplaintResponse>("pdd.sms.vendor.complaint.create", createSmsVendorComplaint);

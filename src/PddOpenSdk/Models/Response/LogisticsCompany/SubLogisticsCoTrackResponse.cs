@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.LogisticsCompany;
-public partial class SubLogisticsCoTrackResponse : PddResponseModel
+public partial class SubLogisticsCoTrackResponse
 {
 
     /// <summary>
@@ -19,6 +19,7 @@ public partial class SubLogisticsCoTrackResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("reason_code")]
     public string ReasonCode { get; set; }
+
 
 }
 

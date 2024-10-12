@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Refund;
-public partial class GetRefundAddressListResponse : PddResponseModel
+public partial class GetRefundAddressListResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetRefundAddressListResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("refund_address_list_get_response")]
     public RefundAddressListGetResponseResponse RefundAddressListGetResponse { get; set; }
-    public partial class RefundAddressListGetResponseResponse : PddResponseModel
+
+    public partial class RefundAddressListGetResponseResponse
     {
 
         /// <summary>
@@ -15,7 +16,8 @@ public partial class GetRefundAddressListResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("refund_address_list")]
         public List<RefundAddressListResponse> RefundAddressList { get; set; }
-        public partial class RefundAddressListResponse : PddResponseModel
+
+        public partial class RefundAddressListResponse
         {
 
             /// <summary>
@@ -113,6 +115,7 @@ public partial class GetRefundAddressListResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("refund_tel")]
             public string RefundTel { get; set; }
+
 
         }
 

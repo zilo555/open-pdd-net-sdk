@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Goods;
 public partial class GetGoodsCommitList
 {
-
     /// <summary>
     /// 草稿状态（0:编辑中,1:审核中,2:审核通过,3:审核驳回）
     /// </summary>
@@ -25,6 +24,8 @@ public partial class GetGoodsCommitList
     /// </summary>
     [JsonPropertyName("page_size")]
     public int PageSize { get; set; }
+
+
 
 }
 

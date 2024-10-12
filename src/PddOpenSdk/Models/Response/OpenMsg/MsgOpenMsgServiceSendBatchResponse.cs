@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.OpenMsg;
-public partial class MsgOpenMsgServiceSendBatchResponse : PddResponseModel
+public partial class MsgOpenMsgServiceSendBatchResponse
 {
 
     /// <summary>
@@ -19,6 +19,7 @@ public partial class MsgOpenMsgServiceSendBatchResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("message")]
     public string Message { get; set; }
+
 
 }
 

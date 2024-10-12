@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Goods;
 public partial class GetGoodsCommitDetail
 {
-
     /// <summary>
     /// 提交申请的序列id
     /// </summary>
@@ -13,6 +12,8 @@ public partial class GetGoodsCommitDetail
     /// </summary>
     [JsonPropertyName("goods_id")]
     public long GoodsId { get; set; }
+
+
 
 }
 

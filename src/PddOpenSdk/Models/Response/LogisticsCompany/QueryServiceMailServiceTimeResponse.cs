@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.LogisticsCompany;
-public partial class QueryServiceMailServiceTimeResponse : PddResponseModel
+public partial class QueryServiceMailServiceTimeResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class QueryServiceMailServiceTimeResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("response")]
     public ResponseResponse Response { get; set; }
-    public partial class ResponseResponse : PddResponseModel
+
+    public partial class ResponseResponse
     {
 
         /// <summary>
@@ -39,7 +40,8 @@ public partial class QueryServiceMailServiceTimeResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("serviceOptions")]
         public ServiceOptionsResponse ServiceOptions { get; set; }
-        public partial class ServiceTimesResponse : PddResponseModel
+
+        public partial class ServiceTimesResponse
         {
 
             /// <summary>
@@ -60,8 +62,9 @@ public partial class QueryServiceMailServiceTimeResponse : PddResponseModel
             [JsonPropertyName("serviceDate")]
             public string ServiceDate { get; set; }
 
+
         }
-        public partial class ServiceOptionsResponse : PddResponseModel
+        public partial class ServiceOptionsResponse
         {
 
             /// <summary>
@@ -75,6 +78,7 @@ public partial class QueryServiceMailServiceTimeResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("canReceivce")]
             public bool? CanReceivce { get; set; }
+
 
         }
 

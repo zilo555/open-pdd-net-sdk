@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Promotion;
-public partial class GetPromotionLimitedQualifiedGoodsResponse : PddResponseModel
+public partial class GetPromotionLimitedQualifiedGoodsResponse
 {
 
     /// <summary>
@@ -13,7 +13,8 @@ public partial class GetPromotionLimitedQualifiedGoodsResponse : PddResponseMode
     /// </summary>
     [JsonPropertyName("total")]
     public long? Total { get; set; }
-    public partial class GoodsListResponse : PddResponseModel
+
+    public partial class GoodsListResponse
     {
 
         /// <summary>
@@ -21,6 +22,7 @@ public partial class GetPromotionLimitedQualifiedGoodsResponse : PddResponseMode
         /// </summary>
         [JsonPropertyName("goods_id")]
         public long? GoodsId { get; set; }
+
 
     }
 

@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Stock;
-public partial class QueryStockWareWarehouseResponse : PddResponseModel
+public partial class QueryStockWareWarehouseResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class QueryStockWareWarehouseResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("result")]
     public ResultResponse Result { get; set; }
-    public partial class ResultResponse : PddResponseModel
+
+    public partial class ResultResponse
     {
 
         /// <summary>
@@ -21,7 +22,8 @@ public partial class QueryStockWareWarehouseResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("ware_sn_warehouse_info")]
         public Dictionary<string, object> WareSnWarehouseInfo { get; set; }
-        public partial class WareSnWarehouseInfoResponse : PddResponseModel
+
+        public partial class WareSnWarehouseInfoResponse
         {
 
             /// <summary>
@@ -35,7 +37,8 @@ public partial class QueryStockWareWarehouseResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("$value")]
             public List<ValueResponse> Value { get; set; }
-            public partial class ValueResponse : PddResponseModel
+
+            public partial class ValueResponse
             {
 
                 /// <summary>
@@ -55,6 +58,7 @@ public partial class QueryStockWareWarehouseResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("warehouse_sn")]
                 public string WarehouseSn { get; set; }
+
 
             }
 

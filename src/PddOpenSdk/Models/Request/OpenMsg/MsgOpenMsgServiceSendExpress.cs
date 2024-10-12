@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.OpenMsg;
 public partial class MsgOpenMsgServiceSendExpress
 {
-
     /// <summary>
     /// 业务请求唯一标识
     /// </summary>
@@ -43,9 +42,10 @@ public partial class MsgOpenMsgServiceSendExpress
     /// </summary>
     [JsonPropertyName("wp_code")]
     public string WpCode { get; set; }
+
+
     public partial class TemplateParamJsonModel
     {
-
         /// <summary>
         /// 模板变量key
         /// </summary>
@@ -57,6 +57,8 @@ public partial class MsgOpenMsgServiceSendExpress
         /// </summary>
         [JsonPropertyName("$value")]
         public string Value { get; set; }
+
+
 
     }
 

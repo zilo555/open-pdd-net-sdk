@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Voucher;
 public partial class VerificationVoucherVirtualCard
 {
-
     /// <summary>
     /// 拼多多订单号
     /// </summary>
@@ -13,9 +12,10 @@ public partial class VerificationVoucherVirtualCard
     /// </summary>
     [JsonPropertyName("voucher_data_list")]
     public List<VoucherDataListModel> VoucherDataList { get; set; }
+
+
     public partial class VoucherDataListModel
     {
-
         /// <summary>
         /// 流水号
         /// </summary>
@@ -39,6 +39,8 @@ public partial class VerificationVoucherVirtualCard
         /// </summary>
         [JsonPropertyName("voucher_no")]
         public string VoucherNo { get; set; }
+
+
 
     }
 

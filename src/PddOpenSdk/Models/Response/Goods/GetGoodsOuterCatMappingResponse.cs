@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Goods;
-public partial class GetGoodsOuterCatMappingResponse : PddResponseModel
+public partial class GetGoodsOuterCatMappingResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetGoodsOuterCatMappingResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("outer_cat_mapping_get_response")]
     public OuterCatMappingGetResponseResponse OuterCatMappingGetResponse { get; set; }
-    public partial class OuterCatMappingGetResponseResponse : PddResponseModel
+
+    public partial class OuterCatMappingGetResponseResponse
     {
 
         /// <summary>
@@ -33,6 +34,7 @@ public partial class GetGoodsOuterCatMappingResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("cat_id4")]
         public long? CatId4 { get; set; }
+
 
     }
 

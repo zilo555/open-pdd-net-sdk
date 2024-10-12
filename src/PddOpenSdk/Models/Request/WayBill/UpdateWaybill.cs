@@ -1,15 +1,15 @@
 namespace PddOpenSdk.Models.Request.WayBill;
 public partial class UpdateWaybill
 {
-
     /// <summary>
     /// param_waybill_cloud_print_update_request
     /// </summary>
     [JsonPropertyName("param_waybill_cloud_print_update_request")]
     public ParamWaybillCloudPrintUpdateRequestModel ParamWaybillCloudPrintUpdateRequest { get; set; }
+
+
     public partial class ParamWaybillCloudPrintUpdateRequestModel
     {
-
         /// <summary>
         /// 请求表示id
         /// </summary>
@@ -51,9 +51,10 @@ public partial class UpdateWaybill
         /// </summary>
         [JsonPropertyName("wp_code")]
         public string WpCode { get; set; }
+
+
         public partial class PackageInfoModel
         {
-
             /// <summary>
             /// 商品
             /// </summary>
@@ -71,9 +72,10 @@ public partial class UpdateWaybill
             /// </summary>
             [JsonPropertyName("weight")]
             public int? Weight { get; set; }
+
+
             public partial class ItemsModel
             {
-
                 /// <summary>
                 /// 数量
                 /// </summary>
@@ -86,12 +88,13 @@ public partial class UpdateWaybill
                 [JsonPropertyName("name")]
                 public string Name { get; set; }
 
+
+
             }
 
         }
         public partial class RecipientModel
         {
-
             /// <summary>
             /// 地址
             /// </summary>
@@ -115,9 +118,10 @@ public partial class UpdateWaybill
             /// </summary>
             [JsonPropertyName("phone")]
             public string Phone { get; set; }
+
+
             public partial class AddressModel
             {
-
                 /// <summary>
                 /// 城市
                 /// </summary>
@@ -154,12 +158,13 @@ public partial class UpdateWaybill
                 [JsonPropertyName("town")]
                 public string Town { get; set; }
 
+
+
             }
 
         }
         public partial class SenderModel
         {
-
             /// <summary>
             /// 手机号码
             /// </summary>
@@ -177,6 +182,8 @@ public partial class UpdateWaybill
             /// </summary>
             [JsonPropertyName("phone")]
             public string Phone { get; set; }
+
+
 
         }
 

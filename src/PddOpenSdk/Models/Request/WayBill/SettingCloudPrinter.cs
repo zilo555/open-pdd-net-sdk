@@ -1,15 +1,15 @@
 namespace PddOpenSdk.Models.Request.WayBill;
 public partial class SettingCloudPrinter
 {
-
     /// <summary>
     /// 开平请求基类
     /// </summary>
     [JsonPropertyName("request")]
     public RequestModel Request { get; set; }
+
+
     public partial class RequestModel
     {
-
         /// <summary>
         /// 打印浓度（1-淡，2-正常，3-浓）
         /// </summary>
@@ -27,6 +27,8 @@ public partial class SettingCloudPrinter
         /// </summary>
         [JsonPropertyName("share_code")]
         public string ShareCode { get; set; }
+
+
 
     }
 

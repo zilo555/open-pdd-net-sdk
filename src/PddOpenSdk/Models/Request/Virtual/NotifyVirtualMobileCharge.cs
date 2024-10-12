@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Virtual;
 public partial class NotifyVirtualMobileCharge
 {
-
     /// <summary>
     /// 直充附加信息对象数组
     /// </summary>
@@ -31,9 +30,10 @@ public partial class NotifyVirtualMobileCharge
     /// </summary>
     [JsonPropertyName("status")]
     public string Status { get; set; }
+
+
     public partial class ChargeCertiModel
     {
-
         /// <summary>
         /// 直充充值金额（单位：分）
         /// </summary>
@@ -75,6 +75,8 @@ public partial class NotifyVirtualMobileCharge
         /// </summary>
         [JsonPropertyName("merchant_outer_id")]
         public string MerchantOuterId { get; set; }
+
+
 
     }
 

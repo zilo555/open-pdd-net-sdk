@@ -1,13 +1,14 @@
 namespace PddOpenSdk.Models.Response.Ktt;
-public partial class InfoKttPurchaseSupplierGoodsResponse : PddResponseModel
+public partial class InfoKttPurchaseSupplierGoodsResponse
 {
 
     /// <summary>
     /// 
     /// </summary>
     [JsonPropertyName("response")]
-    public InfoKttPurchaseSupplierGoodsResponseResponse Response { get; set; }
-    public partial class InfoKttPurchaseSupplierGoodsResponseResponse : PddResponseModel
+    public ResponseResponse Response { get; set; }
+
+    public partial class ResponseResponse
     {
 
         /// <summary>
@@ -26,14 +27,15 @@ public partial class InfoKttPurchaseSupplierGoodsResponse : PddResponseModel
         /// 
         /// </summary>
         [JsonPropertyName("result")]
-        public InfoKttPurchaseSupplierGoodsResult Result { get; set; }
+        public ResultResponse Result { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [JsonPropertyName("success")]
         public bool? Success { get; set; }
-        public partial class InfoKttPurchaseSupplierGoodsResult : PddResponseModel
+
+        public partial class ResultResponse
         {
 
             /// <summary>
@@ -47,7 +49,8 @@ public partial class InfoKttPurchaseSupplierGoodsResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("total")]
             public int? Total { get; set; }
-            public partial class ResultResponse : PddResponseModel
+
+            public partial class InnerResultResponse
             {
 
                 /// <summary>
@@ -157,7 +160,8 @@ public partial class InfoKttPurchaseSupplierGoodsResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("visible_user_info_list")]
                 public List<VisibleUserInfoListResponse> VisibleUserInfoList { get; set; }
-                public partial class BrandInfoResponse : PddResponseModel
+
+                public partial class BrandInfoResponse
                 {
 
                     /// <summary>
@@ -178,8 +182,9 @@ public partial class InfoKttPurchaseSupplierGoodsResponse : PddResponseModel
                     [JsonPropertyName("brand_sn")]
                     public string BrandSn { get; set; }
 
+
                 }
-                public partial class CategoryInfoResponse : PddResponseModel
+                public partial class CategoryInfoResponse
                 {
 
                     /// <summary>
@@ -199,7 +204,8 @@ public partial class InfoKttPurchaseSupplierGoodsResponse : PddResponseModel
                     /// </summary>
                     [JsonPropertyName("default_property_info")]
                     public List<DefaultPropertyInfoResponse> DefaultPropertyInfo { get; set; }
-                    public partial class DefaultPropertyInfoResponse : PddResponseModel
+
+                    public partial class DefaultPropertyInfoResponse
                     {
 
                         /// <summary>
@@ -220,10 +226,11 @@ public partial class InfoKttPurchaseSupplierGoodsResponse : PddResponseModel
                         [JsonPropertyName("values")]
                         public List<string> Values { get; set; }
 
+
                     }
 
                 }
-                public partial class DetailGalleryResponse : PddResponseModel
+                public partial class DetailGalleryResponse
                 {
 
                     /// <summary>
@@ -244,8 +251,9 @@ public partial class InfoKttPurchaseSupplierGoodsResponse : PddResponseModel
                     [JsonPropertyName("url")]
                     public string Url { get; set; }
 
+
                 }
-                public partial class ExclusivePriceUserInfoListResponse : PddResponseModel
+                public partial class ExclusivePriceUserInfoListResponse
                 {
 
                     /// <summary>
@@ -266,8 +274,9 @@ public partial class InfoKttPurchaseSupplierGoodsResponse : PddResponseModel
                     [JsonPropertyName("user_no")]
                     public string UserNo { get; set; }
 
+
                 }
-                public partial class GoodsPropertyInfoResponse : PddResponseModel
+                public partial class GoodsPropertyInfoResponse
                 {
 
                     /// <summary>
@@ -288,8 +297,9 @@ public partial class InfoKttPurchaseSupplierGoodsResponse : PddResponseModel
                     [JsonPropertyName("values")]
                     public List<string> Values { get; set; }
 
+
                 }
-                public partial class SkuListResponse : PddResponseModel
+                public partial class SkuListResponse
                 {
 
                     /// <summary>
@@ -363,7 +373,8 @@ public partial class InfoKttPurchaseSupplierGoodsResponse : PddResponseModel
                     /// </summary>
                     [JsonPropertyName("total_quantity")]
                     public long? TotalQuantity { get; set; }
-                    public partial class SpecListResponse : PddResponseModel
+
+                    public partial class SpecListResponse
                     {
 
                         /// <summary>
@@ -384,10 +395,11 @@ public partial class InfoKttPurchaseSupplierGoodsResponse : PddResponseModel
                         [JsonPropertyName("spec_id")]
                         public long? SpecId { get; set; }
 
+
                     }
 
                 }
-                public partial class VideoInfoResponse : PddResponseModel
+                public partial class VideoInfoResponse
                 {
 
                     /// <summary>
@@ -408,8 +420,9 @@ public partial class InfoKttPurchaseSupplierGoodsResponse : PddResponseModel
                     [JsonPropertyName("url")]
                     public string Url { get; set; }
 
+
                 }
-                public partial class VisibleUserInfoListResponse : PddResponseModel
+                public partial class VisibleUserInfoListResponse
                 {
 
                     /// <summary>
@@ -429,6 +442,7 @@ public partial class InfoKttPurchaseSupplierGoodsResponse : PddResponseModel
                     /// </summary>
                     [JsonPropertyName("user_no")]
                     public string UserNo { get; set; }
+
 
                 }
 

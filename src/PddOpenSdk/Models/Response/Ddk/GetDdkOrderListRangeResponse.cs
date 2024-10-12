@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ddk;
-public partial class GetDdkOrderListRangeResponse : PddResponseModel
+public partial class GetDdkOrderListRangeResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetDdkOrderListRangeResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("order_list_get_response")]
     public OrderListGetResponseResponse OrderListGetResponse { get; set; }
-    public partial class OrderListGetResponseResponse : PddResponseModel
+
+    public partial class OrderListGetResponseResponse
     {
 
         /// <summary>
@@ -21,7 +22,8 @@ public partial class GetDdkOrderListRangeResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("order_list")]
         public List<OrderListResponse> OrderList { get; set; }
-        public partial class OrderListResponse : PddResponseModel
+
+        public partial class OrderListResponse
         {
 
             /// <summary>
@@ -319,7 +321,7 @@ public partial class GetDdkOrderListRangeResponse : PddResponseModel
             public string SubsidyOrderRemark { get; set; }
 
             /// <summary>
-            /// 订单补贴类型：0-非补贴订单，1-千万补贴，2-社群补贴，3-多多星选，4-品牌优选，5-千万神券
+            /// 订单补贴类型：0-非补贴订单，1-千万补贴，2-社群补贴，3-多多星选，4-品牌优选，5-千万神券 6-QQ小世界 7-新商家补贴 8-拼团享多多 9-超级红包 10-超红大额券
             /// </summary>
             [JsonPropertyName("subsidy_type")]
             public int? SubsidyType { get; set; }
@@ -335,6 +337,7 @@ public partial class GetDdkOrderListRangeResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("zs_duo_id")]
             public long? ZsDuoId { get; set; }
+
 
         }
 

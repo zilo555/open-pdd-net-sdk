@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.DdkTools;
 public partial class GenerateDdkOauthGoodsPid
 {
-
     /// <summary>
     /// 媒体id
     /// </summary>
@@ -19,6 +18,8 @@ public partial class GenerateDdkOauthGoodsPid
     /// </summary>
     [JsonPropertyName("p_id_name_list")]
     public List<string> PIdNameList { get; set; }
+
+
 
 }
 

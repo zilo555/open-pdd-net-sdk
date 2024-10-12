@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ddk;
-public partial class ListDdkTmcActivityResponse : PddResponseModel
+public partial class ListDdkTmcActivityResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class ListDdkTmcActivityResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("tmc_aty_list_response")]
     public TmcAtyListResponseResponse TmcAtyListResponse { get; set; }
-    public partial class TmcAtyListResponseResponse : PddResponseModel
+
+    public partial class TmcAtyListResponseResponse
     {
 
         /// <summary>
@@ -33,7 +34,8 @@ public partial class ListDdkTmcActivityResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("total")]
         public int? Total { get; set; }
-        public partial class TmcAtyVoListResponse : PddResponseModel
+
+        public partial class TmcAtyVoListResponse
         {
 
             /// <summary>
@@ -65,6 +67,7 @@ public partial class ListDdkTmcActivityResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("type")]
             public int? Type { get; set; }
+
 
         }
 

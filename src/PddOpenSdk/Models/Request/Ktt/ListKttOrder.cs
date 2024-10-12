@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Ktt;
 public partial class ListKttOrder
 {
-
     /// <summary>
     /// 团号
     /// </summary>
@@ -55,6 +54,8 @@ public partial class ListKttOrder
     /// </summary>
     [JsonPropertyName("verification_status")]
     public int? VerificationStatus { get; set; }
+
+
 
 }
 

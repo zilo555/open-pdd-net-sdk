@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Logistics;
-public partial class CallbackHeavygoodsBackExpressResponse : PddResponseModel
+public partial class CallbackHeavygoodsBackExpressResponse
 {
 
     /// <summary>
@@ -25,6 +25,7 @@ public partial class CallbackHeavygoodsBackExpressResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("success")]
     public bool? Success { get; set; }
+
 
 }
 

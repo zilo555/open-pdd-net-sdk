@@ -1,15 +1,15 @@
 namespace PddOpenSdk.Models.Request.Logistics;
 public partial class SyncTailExpressTrace
 {
-
     /// <summary>
     /// 轨迹信息
     /// </summary>
     [JsonPropertyName("request")]
     public RequestModel Request { get; set; }
+
+
     public partial class RequestModel
     {
-
         /// <summary>
         /// 地址
         /// </summary>
@@ -99,6 +99,8 @@ public partial class SyncTailExpressTrace
         /// </summary>
         [JsonPropertyName("trackingOrderNo")]
         public string TrackingOrderNo { get; set; }
+
+
 
     }
 

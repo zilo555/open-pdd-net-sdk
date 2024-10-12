@@ -1,4 +1,3 @@
-
 using PddOpenSdk.Models.Request.Util;
 using PddOpenSdk.Models.Response.Util;
 namespace PddOpenSdk.Services.PddApi;
@@ -10,6 +9,7 @@ public class UtilApi : PddCommonApi
     /// <summary>
     /// 批量数据解密接口
     /// </summary>
+
     public async Task<BatchOpenDecryptResponse> BatchOpenDecryptAsync(BatchOpenDecrypt batchOpenDecrypt)
     {
         var result = await PostAsync<BatchOpenDecrypt, BatchOpenDecryptResponse>("pdd.open.decrypt.batch", batchOpenDecrypt);
@@ -19,6 +19,7 @@ public class UtilApi : PddCommonApi
     /// <summary>
     /// 批量数据解密脱敏接口
     /// </summary>
+
     public async Task<BatchOpenDecryptMaskResponse> BatchOpenDecryptMaskAsync(BatchOpenDecryptMask batchOpenDecryptMask)
     {
         var result = await PostAsync<BatchOpenDecryptMask, BatchOpenDecryptMaskResponse>("pdd.open.decrypt.mask.batch", batchOpenDecryptMask);
@@ -28,6 +29,7 @@ public class UtilApi : PddCommonApi
     /// <summary>
     /// 批量加密
     /// </summary>
+
     public async Task<BatchOpenKmsEncryptResponse> BatchOpenKmsEncryptAsync(BatchOpenKmsEncrypt batchOpenKmsEncrypt)
     {
         var result = await PostAsync<BatchOpenKmsEncrypt, BatchOpenKmsEncryptResponse>("pdd.open.kms.encrypt.batch", batchOpenKmsEncrypt);
@@ -35,17 +37,9 @@ public class UtilApi : PddCommonApi
     }
 
     /// <summary>
-    /// 获取搜索索引
-    /// </summary>
-    public async Task<BatchOpenKmsSearchResponse> BatchOpenKmsSearchAsync(BatchOpenKmsSearch batchOpenKmsSearch)
-    {
-        var result = await PostAsync<BatchOpenKmsSearch, BatchOpenKmsSearchResponse>("pdd.open.kms.search.batch", batchOpenKmsSearch);
-        return result;
-    }
-
-    /// <summary>
     /// 虚拟号查询接口
     /// </summary>
+
     public async Task<CheckOpenVirtualNumberResponse> CheckOpenVirtualNumberAsync(CheckOpenVirtualNumber checkOpenVirtualNumber)
     {
         var result = await PostAsync<CheckOpenVirtualNumber, CheckOpenVirtualNumberResponse>("pdd.open.virtual.number.check", checkOpenVirtualNumber);
@@ -55,6 +49,7 @@ public class UtilApi : PddCommonApi
     /// <summary>
     /// 获取Access Token
     /// </summary>
+
     public async Task<CreatePopAuthTokenResponse> CreatePopAuthTokenAsync(CreatePopAuthToken createPopAuthToken)
     {
         var result = await PostAsync<CreatePopAuthToken, CreatePopAuthTokenResponse>("pdd.pop.auth.token.create", createPopAuthToken);
@@ -64,6 +59,7 @@ public class UtilApi : PddCommonApi
     /// <summary>
     /// 刷新Access Token
     /// </summary>
+
     public async Task<RefreshPopAuthTokenResponse> RefreshPopAuthTokenAsync(RefreshPopAuthToken refreshPopAuthToken)
     {
         var result = await PostAsync<RefreshPopAuthToken, RefreshPopAuthTokenResponse>("pdd.pop.auth.token.refresh", refreshPopAuthToken);
@@ -73,6 +69,7 @@ public class UtilApi : PddCommonApi
     /// <summary>
     /// 店铺关联关系上报
     /// </summary>
+
     public async Task<ReportPopMallBindRelationResponse> ReportPopMallBindRelationAsync(ReportPopMallBindRelation reportPopMallBindRelation)
     {
         var result = await PostAsync<ReportPopMallBindRelation, ReportPopMallBindRelationResponse>("pdd.pop.mall.bind.relation.report", reportPopMallBindRelation);
@@ -82,6 +79,7 @@ public class UtilApi : PddCommonApi
     /// <summary>
     /// 获取店铺关联ticket
     /// </summary>
+
     public async Task<GetPopMallBindTicketResponse> GetPopMallBindTicketAsync(GetPopMallBindTicket getPopMallBindTicket)
     {
         var result = await PostAsync<GetPopMallBindTicket, GetPopMallBindTicketResponse>("pdd.pop.mall.bind.ticket.get", getPopMallBindTicket);
@@ -91,6 +89,7 @@ public class UtilApi : PddCommonApi
     /// <summary>
     /// 获取被关联店铺Access Token
     /// </summary>
+
     public async Task<GetPopMallBindTokenResponse> GetPopMallBindTokenAsync(GetPopMallBindToken getPopMallBindToken)
     {
         var result = await PostAsync<GetPopMallBindToken, GetPopMallBindTokenResponse>("pdd.pop.mall.bind.token.get", getPopMallBindToken);
@@ -100,6 +99,7 @@ public class UtilApi : PddCommonApi
     /// <summary>
     /// 获取拼多多系统时间
     /// </summary>
+
     public async Task<GetTimeResponse> GetTimeAsync(GetTime getTime)
     {
         var result = await PostAsync<GetTime, GetTimeResponse>("pdd.time.get", getTime);

@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ddk;
-public partial class CompleteDdkReportVideoUploadPartResponse : PddResponseModel
+public partial class CompleteDdkReportVideoUploadPartResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class CompleteDdkReportVideoUploadPartResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("response")]
     public ResponseResponse Response { get; set; }
-    public partial class ResponseResponse : PddResponseModel
+
+    public partial class ResponseResponse
     {
 
         /// <summary>
@@ -15,6 +16,7 @@ public partial class CompleteDdkReportVideoUploadPartResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("url")]
         public string Url { get; set; }
+
 
     }
 

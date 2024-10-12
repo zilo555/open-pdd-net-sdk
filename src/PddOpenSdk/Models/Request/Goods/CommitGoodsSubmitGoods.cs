@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Goods;
 public partial class CommitGoodsSubmitGoods
 {
-
     /// <summary>
     /// 是否自动补充标品属性
     /// </summary>
@@ -361,9 +360,10 @@ public partial class CommitGoodsSubmitGoods
     /// </summary>
     [JsonPropertyName("zhi_huan_bu_xiu")]
     public int? ZhiHuanBuXiu { get; set; }
+
+
     public partial class CarouselVideoModel
     {
-
         /// <summary>
         /// 商品视频id
         /// </summary>
@@ -376,10 +376,11 @@ public partial class CommitGoodsSubmitGoods
         [JsonPropertyName("video_url")]
         public string VideoUrl { get; set; }
 
+
+
     }
     public partial class ElecGoodsAttributesModel
     {
-
         /// <summary>
         /// 开始时间（timeType=1时必填表示核销的开始时间）（精确到毫秒）
         /// </summary>
@@ -404,10 +405,11 @@ public partial class CommitGoodsSubmitGoods
         [JsonPropertyName("time_type")]
         public int? TimeType { get; set; }
 
+
+
     }
     public partial class GoodsPropertiesModel
     {
-
         /// <summary>
         /// 组id，非销售属性不用传
         /// </summary>
@@ -468,10 +470,11 @@ public partial class CommitGoodsSubmitGoods
         [JsonPropertyName("vid")]
         public long? Vid { get; set; }
 
+
+
     }
     public partial class GoodsTradeAttrModel
     {
-
         /// <summary>
         /// 提前预定天数，默认为0表示当天可预定
         /// </summary>
@@ -489,21 +492,23 @@ public partial class CommitGoodsSubmitGoods
         /// </summary>
         [JsonPropertyName("life_span")]
         public int? LifeSpan { get; set; }
+
+
         public partial class BookingNotesModel
         {
-
             /// <summary>
             /// 预定须知图片地址
             /// </summary>
             [JsonPropertyName("url")]
             public string Url { get; set; }
 
+
+
         }
 
     }
     public partial class GoodsTravelAttrModel
     {
-
         /// <summary>
         /// 出行人是否必填（默认是）
         /// </summary>
@@ -516,10 +521,11 @@ public partial class CommitGoodsSubmitGoods
         [JsonPropertyName("type")]
         public int? Type { get; set; }
 
+
+
     }
     public partial class OverseaGoodsModel
     {
-
         /// <summary>
         /// 保税仓唯一标识
         /// </summary>
@@ -550,10 +556,11 @@ public partial class CommitGoodsSubmitGoods
         [JsonPropertyName("value_added_tax_rate")]
         public int? ValueAddedTaxRate { get; set; }
 
+
+
     }
     public partial class SkuListModel
     {
-
         /// <summary>
         /// sku上架状态，0-已下架，1-上架中
         /// </summary>
@@ -637,9 +644,10 @@ public partial class CommitGoodsSubmitGoods
         /// </summary>
         [JsonPropertyName("weight")]
         public long? Weight { get; set; }
+
+
         public partial class OverseaSkuModel
         {
-
             /// <summary>
             /// 计量单位编码，从接口pdd.gooods.sku.measurement.list获取code
             /// </summary>
@@ -658,10 +666,11 @@ public partial class CommitGoodsSubmitGoods
             [JsonPropertyName("taxation")]
             public int? Taxation { get; set; }
 
+
+
         }
         public partial class SkuPropertiesModel
         {
-
             /// <summary>
             /// 属性单位
             /// </summary>
@@ -685,6 +694,8 @@ public partial class CommitGoodsSubmitGoods
             /// </summary>
             [JsonPropertyName("vid")]
             public long? Vid { get; set; }
+
+
 
         }
 

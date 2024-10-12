@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Goods;
-public partial class QueryGoodsCpsUnitResponse : PddResponseModel
+public partial class QueryGoodsCpsUnitResponse
 {
 
     /// <summary>
@@ -55,7 +55,8 @@ public partial class QueryGoodsCpsUnitResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("unit_id")]
     public long? UnitId { get; set; }
-    public partial class CouponVoResponse : PddResponseModel
+
+    public partial class CouponVoResponse
     {
 
         /// <summary>
@@ -93,6 +94,7 @@ public partial class QueryGoodsCpsUnitResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("remain_quantity")]
         public long? RemainQuantity { get; set; }
+
 
     }
 

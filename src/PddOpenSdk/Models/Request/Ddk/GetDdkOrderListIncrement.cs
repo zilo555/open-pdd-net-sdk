@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Ddk;
 public partial class GetDdkOrderListIncrement
 {
-
     /// <summary>
     /// 是否为礼金订单，查询礼金订单时，订单类型不填（默认推广订单）。
     /// </summary>
@@ -43,6 +42,8 @@ public partial class GetDdkOrderListIncrement
     /// </summary>
     [JsonPropertyName("start_update_time")]
     public long StartUpdateTime { get; set; }
+
+
 
 }
 

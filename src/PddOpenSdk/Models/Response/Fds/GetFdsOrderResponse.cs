@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Fds;
-public partial class GetFdsOrderResponse : PddResponseModel
+public partial class GetFdsOrderResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetFdsOrderResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("pdd_fds_order_get_response")]
     public PddFdsOrderGetResponseResponse PddFdsOrderGetResponse { get; set; }
-    public partial class PddFdsOrderGetResponseResponse : PddResponseModel
+
+    public partial class PddFdsOrderGetResponseResponse
     {
 
         /// <summary>
@@ -123,6 +124,7 @@ public partial class GetFdsOrderResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("after_sales_status")]
         public int? AfterSalesStatus { get; set; }
+
 
     }
 

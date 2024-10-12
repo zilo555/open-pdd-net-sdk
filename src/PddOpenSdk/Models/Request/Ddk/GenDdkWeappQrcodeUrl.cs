@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Ddk;
 public partial class GenDdkWeappQrcodeUrl
 {
-
     /// <summary>
     /// 多多礼金ID
     /// </summary>
@@ -37,6 +36,8 @@ public partial class GenDdkWeappQrcodeUrl
     /// </summary>
     [JsonPropertyName("zs_duo_id")]
     public long? ZsDuoId { get; set; }
+
+
 
 }
 

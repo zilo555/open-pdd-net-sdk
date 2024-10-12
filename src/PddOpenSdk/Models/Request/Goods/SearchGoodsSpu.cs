@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Goods;
 public partial class SearchGoodsSpu
 {
-
     /// <summary>
     /// 类目ID，可以是一二三四级类目，在该类目下进行搜索。
     /// </summary>
@@ -19,9 +18,10 @@ public partial class SearchGoodsSpu
     /// </summary>
     [JsonPropertyName("spu_name")]
     public string SpuName { get; set; }
+
+
     public partial class KeyPropModel
     {
-
         /// <summary>
         /// 关键属性的引用属性ID，需要从pdd.cat.rule.get中获取。
         /// </summary>
@@ -45,6 +45,8 @@ public partial class SearchGoodsSpu
         /// </summary>
         [JsonPropertyName("vid")]
         public long? Vid { get; set; }
+
+
 
     }
 

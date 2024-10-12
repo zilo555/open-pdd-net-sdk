@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Goods;
-public partial class GetGoodsSizespecMetaResponse : PddResponseModel
+public partial class GetGoodsSizespecMetaResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetGoodsSizespecMetaResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("response")]
     public ResponseResponse Response { get; set; }
-    public partial class ResponseResponse : PddResponseModel
+
+    public partial class ResponseResponse
     {
 
         /// <summary>
@@ -33,7 +34,8 @@ public partial class GetGoodsSizespecMetaResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("success")]
         public bool? Success { get; set; }
-        public partial class ResultResponse : PddResponseModel
+
+        public partial class ResultResponse
         {
 
             /// <summary>
@@ -53,7 +55,8 @@ public partial class GetGoodsSizespecMetaResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("groups")]
             public List<GroupsResponse> Groups { get; set; }
-            public partial class ElementsResponse : PddResponseModel
+
+            public partial class ElementsResponse
             {
 
                 /// <summary>
@@ -67,9 +70,10 @@ public partial class GetGoodsSizespecMetaResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("name")]
                 public string Name { get; set; }
+
 
             }
-            public partial class GroupsResponse : PddResponseModel
+            public partial class GroupsResponse
             {
 
                 /// <summary>
@@ -83,6 +87,7 @@ public partial class GetGoodsSizespecMetaResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("name")]
                 public string Name { get; set; }
+
 
             }
 

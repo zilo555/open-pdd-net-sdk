@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.SmsVendor;
-public partial class PushSmsDetailbillResponse : PddResponseModel
+public partial class PushSmsDetailbillResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class PushSmsDetailbillResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("sms_detailbill_push_resposne")]
     public SmsDetailbillPushResposneResponse SmsDetailbillPushResposne { get; set; }
-    public partial class SmsDetailbillPushResposneResponse : PddResponseModel
+
+    public partial class SmsDetailbillPushResposneResponse
     {
 
         /// <summary>
@@ -15,6 +16,7 @@ public partial class PushSmsDetailbillResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("success")]
         public bool? Success { get; set; }
+
 
     }
 

@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.LogisticsCompany;
-public partial class StartLogisticsCsSessionResponse : PddResponseModel
+public partial class StartLogisticsCsSessionResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class StartLogisticsCsSessionResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("logistics_cs_session_start_response")]
     public LogisticsCsSessionStartResponseResponse LogisticsCsSessionStartResponse { get; set; }
-    public partial class LogisticsCsSessionStartResponseResponse : PddResponseModel
+
+    public partial class LogisticsCsSessionStartResponseResponse
     {
 
         /// <summary>
@@ -15,6 +16,7 @@ public partial class StartLogisticsCsSessionResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("is_success")]
         public bool? IsSuccess { get; set; }
+
 
     }
 

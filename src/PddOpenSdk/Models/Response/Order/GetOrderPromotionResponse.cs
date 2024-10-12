@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Order;
-public partial class GetOrderPromotionResponse : PddResponseModel
+public partial class GetOrderPromotionResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetOrderPromotionResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("order_promotion_get_response")]
     public OrderPromotionGetResponseResponse OrderPromotionGetResponse { get; set; }
-    public partial class OrderPromotionGetResponseResponse : PddResponseModel
+
+    public partial class OrderPromotionGetResponseResponse
     {
 
         /// <summary>
@@ -15,7 +16,8 @@ public partial class GetOrderPromotionResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("order_promotion_list")]
         public List<OrderPromotionListResponse> OrderPromotionList { get; set; }
-        public partial class OrderPromotionListResponse : PddResponseModel
+
+        public partial class OrderPromotionListResponse
         {
 
             /// <summary>
@@ -29,7 +31,8 @@ public partial class GetOrderPromotionResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("seller_discount_details")]
             public List<SellerDiscountDetailsResponse> SellerDiscountDetails { get; set; }
-            public partial class SellerDiscountDetailsResponse : PddResponseModel
+
+            public partial class SellerDiscountDetailsResponse
             {
 
                 /// <summary>
@@ -43,6 +46,7 @@ public partial class GetOrderPromotionResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("discount_desc")]
                 public string DiscountDesc { get; set; }
+
 
             }
 

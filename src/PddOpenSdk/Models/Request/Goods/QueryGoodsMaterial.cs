@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Goods;
 public partial class QueryGoodsMaterial
 {
-
     /// <summary>
     /// 商品id列表
     /// </summary>
@@ -13,6 +12,8 @@ public partial class QueryGoodsMaterial
     /// </summary>
     [JsonPropertyName("type_list")]
     public List<long> TypeList { get; set; }
+
+
 
 }
 

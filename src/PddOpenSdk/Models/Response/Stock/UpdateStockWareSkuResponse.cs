@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Stock;
-public partial class UpdateStockWareSkuResponse : PddResponseModel
+public partial class UpdateStockWareSkuResponse
 {
 
     /// <summary>
@@ -7,6 +7,7 @@ public partial class UpdateStockWareSkuResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("open_api_response")]
     public bool? OpenApiResponse { get; set; }
+
 
 }
 

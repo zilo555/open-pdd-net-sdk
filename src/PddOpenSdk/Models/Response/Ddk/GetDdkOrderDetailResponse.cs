@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ddk;
-public partial class GetDdkOrderDetailResponse : PddResponseModel
+public partial class GetDdkOrderDetailResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetDdkOrderDetailResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("order_detail_response")]
     public OrderDetailResponseResponse OrderDetailResponse { get; set; }
-    public partial class OrderDetailResponseResponse : PddResponseModel
+
+    public partial class OrderDetailResponseResponse
     {
 
         /// <summary>
@@ -305,6 +306,12 @@ public partial class GetDdkOrderDetailResponse : PddResponseModel
         public int? ShareRate { get; set; }
 
         /// <summary>
+        /// skuId密文
+        /// </summary>
+        [JsonPropertyName("sku_id_code")]
+        public string SkuIdCode { get; set; }
+
+        /// <summary>
         /// 优势渠道专属商品补贴金额，单位为分。针对优质渠道的补贴活动，指定优势渠道可通过推广该商品获取相应补贴。补贴活动入口：[进宝网站-官方活动]
         /// </summary>
         [JsonPropertyName("subsidy_amount")]
@@ -329,7 +336,7 @@ public partial class GetDdkOrderDetailResponse : PddResponseModel
         public string SubsidyOrderRemark { get; set; }
 
         /// <summary>
-        /// 订单补贴类型：0-非补贴订单，1-千万补贴，2-社群补贴，3-多多星选，4-品牌优选，5-千万神券
+        /// 订单补贴类型：0-非补贴订单，1-千万补贴，2-社群补贴，3-多多星选，4-品牌优选，5-千万神券 6-QQ小世界 7-新商家补贴 8-拼团享多多 9-超级红包 10-超红大额券
         /// </summary>
         [JsonPropertyName("subsidy_type")]
         public int? SubsidyType { get; set; }
@@ -351,6 +358,7 @@ public partial class GetDdkOrderDetailResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("zs_duo_id")]
         public long? ZsDuoId { get; set; }
+
 
     }
 

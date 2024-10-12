@@ -1,15 +1,15 @@
 namespace PddOpenSdk.Models.Request.Promotion;
 public partial class CreatePromotionLimitedActivity
 {
-
     /// <summary>
     /// 创建请求
     /// </summary>
     [JsonPropertyName("request")]
     public List<RequestModel> Request { get; set; }
+
+
     public partial class RequestModel
     {
-
         /// <summary>
         /// 活动名称
         /// </summary>
@@ -63,9 +63,10 @@ public partial class CreatePromotionLimitedActivity
         /// </summary>
         [JsonPropertyName("user_activity_limit")]
         public long? UserActivityLimit { get; set; }
+
+
         public partial class SkuPriceListModel
         {
-
             /// <summary>
             /// sku活动价格
             /// </summary>
@@ -77,6 +78,8 @@ public partial class CreatePromotionLimitedActivity
             /// </summary>
             [JsonPropertyName("sku_id")]
             public long SkuId { get; set; }
+
+
 
         }
 

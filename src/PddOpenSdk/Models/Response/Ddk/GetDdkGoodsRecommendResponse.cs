@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ddk;
-public partial class GetDdkGoodsRecommendResponse : PddResponseModel
+public partial class GetDdkGoodsRecommendResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetDdkGoodsRecommendResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("goods_basic_detail_response")]
     public GoodsBasicDetailResponseResponse GoodsBasicDetailResponse { get; set; }
-    public partial class GoodsBasicDetailResponseResponse : PddResponseModel
+
+    public partial class GoodsBasicDetailResponseResponse
     {
 
         /// <summary>
@@ -33,7 +34,8 @@ public partial class GetDdkGoodsRecommendResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("total")]
         public int? Total { get; set; }
-        public partial class ListResponse : PddResponseModel
+
+        public partial class ListResponse
         {
 
             /// <summary>
@@ -319,16 +321,17 @@ public partial class GetDdkGoodsRecommendResponse : PddResponseModel
             public int? SubsidyDuoAmountTenMillion { get; set; }
 
             /// <summary>
+            /// 补贴活动类型：0-无补贴，1-千万补贴，4-千万神券，6-佣金翻倍
+            /// </summary>
+            [JsonPropertyName("subsidy_goods_type")]
+            public int? SubsidyGoodsType { get; set; }
+
+            /// <summary>
             /// 优惠标签列表，包括："X元券","比全网低X元","服务费","精选素材","近30天低价","同款低价","同款好评","同款热销","旗舰店","一降到底","招商优选","商家优选","好价再降X元","全站销量XX","实时热销榜第X名","实时好评榜第X名","额外补X元"等
             /// </summary>
             [JsonPropertyName("unified_tags")]
             public List<string> UnifiedTags { get; set; }
 
-            /// <summary>
-            /// 补贴活动类型：0-无补贴，1-千万补贴，4-千万神券，6-佣金翻倍
-            /// </summary>
-            [JsonPropertyName("subsidy_goods_type")]
-            public int? SubsidyGoodsType { get; set; }
 
         }
 

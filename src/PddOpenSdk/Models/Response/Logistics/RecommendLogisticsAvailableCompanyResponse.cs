@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Logistics;
-public partial class RecommendLogisticsAvailableCompanyResponse : PddResponseModel
+public partial class RecommendLogisticsAvailableCompanyResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class RecommendLogisticsAvailableCompanyResponse : PddResponseMod
     /// </summary>
     [JsonPropertyName("response")]
     public ResponseResponse Response { get; set; }
-    public partial class ResponseResponse : PddResponseModel
+
+    public partial class ResponseResponse
     {
 
         /// <summary>
@@ -15,7 +16,8 @@ public partial class RecommendLogisticsAvailableCompanyResponse : PddResponseMod
         /// </summary>
         [JsonPropertyName("result")]
         public List<ResultResponse> Result { get; set; }
-        public partial class ResultResponse : PddResponseModel
+
+        public partial class ResultResponse
         {
 
             /// <summary>
@@ -29,6 +31,7 @@ public partial class RecommendLogisticsAvailableCompanyResponse : PddResponseMod
             /// </summary>
             [JsonPropertyName("company_id")]
             public List<long?> CompanyId { get; set; }
+
 
         }
 

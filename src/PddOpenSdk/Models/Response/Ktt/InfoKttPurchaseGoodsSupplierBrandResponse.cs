@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ktt;
-public partial class InfoKttPurchaseGoodsSupplierBrandResponse : PddResponseModel
+public partial class InfoKttPurchaseGoodsSupplierBrandResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class InfoKttPurchaseGoodsSupplierBrandResponse : PddResponseMode
     /// </summary>
     [JsonPropertyName("response")]
     public ResponseResponse Response { get; set; }
-    public partial class ResponseResponse : PddResponseModel
+
+    public partial class ResponseResponse
     {
 
         /// <summary>
@@ -33,7 +34,8 @@ public partial class InfoKttPurchaseGoodsSupplierBrandResponse : PddResponseMode
         /// </summary>
         [JsonPropertyName("success")]
         public bool? Success { get; set; }
-        public partial class ResultResponse : PddResponseModel
+
+        public partial class ResultResponse
         {
 
             /// <summary>
@@ -41,7 +43,8 @@ public partial class InfoKttPurchaseGoodsSupplierBrandResponse : PddResponseMode
             /// </summary>
             [JsonPropertyName("brand_list")]
             public List<BrandListResponse> BrandList { get; set; }
-            public partial class BrandListResponse : PddResponseModel
+
+            public partial class BrandListResponse
             {
 
                 /// <summary>
@@ -61,6 +64,7 @@ public partial class InfoKttPurchaseGoodsSupplierBrandResponse : PddResponseMode
                 /// </summary>
                 [JsonPropertyName("brand_sn")]
                 public string BrandSn { get; set; }
+
 
             }
 

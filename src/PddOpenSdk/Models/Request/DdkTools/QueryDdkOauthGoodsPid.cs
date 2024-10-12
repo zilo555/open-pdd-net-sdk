@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.DdkTools;
 public partial class QueryDdkOauthGoodsPid
 {
-
     /// <summary>
     /// 返回的页数
     /// </summary>
@@ -19,6 +18,8 @@ public partial class QueryDdkOauthGoodsPid
     /// </summary>
     [JsonPropertyName("pid_list")]
     public List<string> PidList { get; set; }
+
+
 
 }
 

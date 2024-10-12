@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Ktt;
 public partial class ListKttGroupQuery
 {
-
     /// <summary>
     /// 查询终止更新时间（毫秒时间戳，起止时间差不能超过7天）
     /// </summary>
@@ -25,6 +24,8 @@ public partial class ListKttGroupQuery
     /// </summary>
     [JsonPropertyName("start_update_time")]
     public long StartUpdateTime { get; set; }
+
+
 
 }
 

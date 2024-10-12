@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Ddk;
 public partial class UpdateDdkCashgiftStatus
 {
-
     /// <summary>
     /// 多多礼金ID
     /// </summary>
@@ -13,6 +12,8 @@ public partial class UpdateDdkCashgiftStatus
     /// </summary>
     [JsonPropertyName("update_type")]
     public int UpdateType { get; set; }
+
+
 
 }
 

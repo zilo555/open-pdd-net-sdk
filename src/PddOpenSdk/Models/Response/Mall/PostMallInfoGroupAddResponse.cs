@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Mall;
-public partial class PostMallInfoGroupAddResponse : PddResponseModel
+public partial class PostMallInfoGroupAddResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class PostMallInfoGroupAddResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("response")]
     public ResponseResponse Response { get; set; }
-    public partial class ResponseResponse : PddResponseModel
+
+    public partial class ResponseResponse
     {
 
         /// <summary>
@@ -15,6 +16,7 @@ public partial class PostMallInfoGroupAddResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("group_id")]
         public int? GroupId { get; set; }
+
 
     }
 

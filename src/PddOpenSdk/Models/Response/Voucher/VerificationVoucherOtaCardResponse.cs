@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Voucher;
-public partial class VerificationVoucherOtaCardResponse : PddResponseModel
+public partial class VerificationVoucherOtaCardResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class VerificationVoucherOtaCardResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("voucher_ota_card_verification_response")]
     public VoucherOtaCardVerificationResponseResponse VoucherOtaCardVerificationResponse { get; set; }
-    public partial class VoucherOtaCardVerificationResponseResponse : PddResponseModel
+
+    public partial class VoucherOtaCardVerificationResponseResponse
     {
 
         /// <summary>
@@ -33,7 +34,8 @@ public partial class VerificationVoucherOtaCardResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("success")]
         public bool? Success { get; set; }
-        public partial class ResultResponse : PddResponseModel
+
+        public partial class ResultResponse
         {
 
             /// <summary>
@@ -77,6 +79,7 @@ public partial class VerificationVoucherOtaCardResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("verification_time")]
             public string VerificationTime { get; set; }
+
 
         }
 

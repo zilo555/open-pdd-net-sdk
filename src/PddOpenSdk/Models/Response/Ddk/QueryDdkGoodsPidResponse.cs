@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ddk;
-public partial class QueryDdkGoodsPidResponse : PddResponseModel
+public partial class QueryDdkGoodsPidResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class QueryDdkGoodsPidResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("p_id_query_response")]
     public PIdQueryResponseResponse PIdQueryResponse { get; set; }
-    public partial class PIdQueryResponseResponse : PddResponseModel
+
+    public partial class PIdQueryResponseResponse
     {
 
         /// <summary>
@@ -21,7 +22,8 @@ public partial class QueryDdkGoodsPidResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("total_count")]
         public long? TotalCount { get; set; }
-        public partial class PIdListResponse : PddResponseModel
+
+        public partial class PIdListResponse
         {
 
             /// <summary>
@@ -53,6 +55,7 @@ public partial class QueryDdkGoodsPidResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("status")]
             public int? Status { get; set; }
+
 
         }
 

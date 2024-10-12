@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Stock;
 public partial class ListStockDepotPriority
 {
-
     /// <summary>
     /// 省id
     /// </summary>
@@ -37,6 +36,8 @@ public partial class ListStockDepotPriority
     /// </summary>
     [JsonPropertyName("page_num")]
     public int PageNum { get; set; }
+
+
 
 }
 

@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.LogisticsCompany;
 public partial class NotifyLogisticsTicket
 {
-
     /// <summary>
     /// 附件url,示例：["http://testimg.yangkeduo.com/pdd_oms/2018-01-16/411068e948835ae053a86c13f8ebb5ee.jpg"]
     /// </summary>
@@ -69,10 +68,12 @@ public partial class NotifyLogisticsTicket
     public long TicketId { get; set; }
 
     /// <summary>
-    /// 运单号
+    /// 运单号(可为空字符串)
     /// </summary>
     [JsonPropertyName("waybill_no")]
     public string WaybillNo { get; set; }
+
+
 
 }
 

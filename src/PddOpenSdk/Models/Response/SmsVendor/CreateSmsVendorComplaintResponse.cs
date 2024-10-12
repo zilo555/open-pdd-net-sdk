@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.SmsVendor;
-public partial class CreateSmsVendorComplaintResponse : PddResponseModel
+public partial class CreateSmsVendorComplaintResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class CreateSmsVendorComplaintResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("response")]
     public ResponseResponse Response { get; set; }
-    public partial class ResponseResponse : PddResponseModel
+
+    public partial class ResponseResponse
     {
 
         /// <summary>
@@ -27,6 +28,7 @@ public partial class CreateSmsVendorComplaintResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("success")]
         public bool? Success { get; set; }
+
 
     }
 

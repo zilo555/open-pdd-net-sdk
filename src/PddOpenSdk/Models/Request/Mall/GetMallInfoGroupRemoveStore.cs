@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Mall;
 public partial class GetMallInfoGroupRemoveStore
 {
-
     /// <summary>
     /// 店铺ID
     /// </summary>
@@ -13,6 +12,8 @@ public partial class GetMallInfoGroupRemoveStore
     /// </summary>
     [JsonPropertyName("store_id_list")]
     public List<long> StoreIdList { get; set; }
+
+
 
 }
 

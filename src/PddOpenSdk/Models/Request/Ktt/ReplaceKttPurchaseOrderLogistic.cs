@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Ktt;
 public partial class ReplaceKttPurchaseOrderLogistic
 {
-
     /// <summary>
     /// 新物流公司id（与物流公司名两者至少填一）
     /// </summary>
@@ -37,6 +36,8 @@ public partial class ReplaceKttPurchaseOrderLogistic
     /// </summary>
     [JsonPropertyName("sub_order_sn_list")]
     public List<string> SubOrderSnList { get; set; }
+
+
 
 }
 

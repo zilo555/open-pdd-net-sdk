@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Goods;
-public partial class TemplateOneExpressCostResponse : PddResponseModel
+public partial class TemplateOneExpressCostResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class TemplateOneExpressCostResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("one_express_cost_template_response")]
     public OneExpressCostTemplateResponseResponse OneExpressCostTemplateResponse { get; set; }
-    public partial class OneExpressCostTemplateResponseResponse : PddResponseModel
+
+    public partial class OneExpressCostTemplateResponseResponse
     {
 
         /// <summary>
@@ -81,7 +82,8 @@ public partial class TemplateOneExpressCostResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("free_province_list")]
         public List<FreeProvinceListResponse> FreeProvinceList { get; set; }
-        public partial class CostTemplateListResponse : PddResponseModel
+
+        public partial class CostTemplateListResponse
         {
 
             /// <summary>
@@ -137,7 +139,8 @@ public partial class TemplateOneExpressCostResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("have_free_min_amount")]
             public long? HaveFreeMinAmount { get; set; }
-            public partial class CostProvinceListResponse : PddResponseModel
+
+            public partial class CostProvinceListResponse
             {
 
                 /// <summary>
@@ -152,10 +155,11 @@ public partial class TemplateOneExpressCostResponse : PddResponseModel
                 [JsonPropertyName("province_id")]
                 public int? ProvinceId { get; set; }
 
+
             }
 
         }
-        public partial class FreeDeliverHouseAreaListResponse : PddResponseModel
+        public partial class FreeDeliverHouseAreaListResponse
         {
 
             /// <summary>
@@ -194,8 +198,9 @@ public partial class TemplateOneExpressCostResponse : PddResponseModel
             [JsonPropertyName("town")]
             public string Town { get; set; }
 
+
         }
-        public partial class FreeProvinceListResponse : PddResponseModel
+        public partial class FreeProvinceListResponse
         {
 
             /// <summary>
@@ -209,6 +214,7 @@ public partial class TemplateOneExpressCostResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("province")]
             public string Province { get; set; }
+
 
         }
 

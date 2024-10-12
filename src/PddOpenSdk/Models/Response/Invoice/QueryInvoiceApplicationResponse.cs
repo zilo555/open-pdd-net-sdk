@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Invoice;
-public partial class QueryInvoiceApplicationResponse : PddResponseModel
+public partial class QueryInvoiceApplicationResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class QueryInvoiceApplicationResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("invoice_application_query_response")]
     public InvoiceApplicationQueryResponseResponse InvoiceApplicationQueryResponse { get; set; }
-    public partial class InvoiceApplicationQueryResponseResponse : PddResponseModel
+
+    public partial class InvoiceApplicationQueryResponseResponse
     {
 
         /// <summary>
@@ -15,7 +16,8 @@ public partial class QueryInvoiceApplicationResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("invoice_application_list")]
         public List<InvoiceApplicationListResponse> InvoiceApplicationList { get; set; }
-        public partial class InvoiceApplicationListResponse : PddResponseModel
+
+        public partial class InvoiceApplicationListResponse
         {
 
             /// <summary>
@@ -149,6 +151,7 @@ public partial class QueryInvoiceApplicationResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("trigger_status")]
             public int? TriggerStatus { get; set; }
+
 
         }
 

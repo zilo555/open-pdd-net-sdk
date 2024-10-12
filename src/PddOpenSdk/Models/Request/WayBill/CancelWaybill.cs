@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.WayBill;
 public partial class CancelWaybill
 {
-
     /// <summary>
     /// 电子面单号
     /// </summary>
@@ -13,6 +12,8 @@ public partial class CancelWaybill
     /// </summary>
     [JsonPropertyName("wp_code")]
     public string WpCode { get; set; }
+
+
 
 }
 

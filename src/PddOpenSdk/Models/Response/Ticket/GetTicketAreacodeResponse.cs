@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ticket;
-public partial class GetTicketAreacodeResponse : PddResponseModel
+public partial class GetTicketAreacodeResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetTicketAreacodeResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("response")]
     public ResponseResponse Response { get; set; }
-    public partial class ResponseResponse : PddResponseModel
+
+    public partial class ResponseResponse
     {
 
         /// <summary>
@@ -15,7 +16,8 @@ public partial class GetTicketAreacodeResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("area_list")]
         public List<AreaListResponse> AreaList { get; set; }
-        public partial class AreaListResponse : PddResponseModel
+
+        public partial class AreaListResponse
         {
 
             /// <summary>
@@ -41,6 +43,7 @@ public partial class GetTicketAreacodeResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("parent_code")]
             public int? ParentCode { get; set; }
+
 
         }
 

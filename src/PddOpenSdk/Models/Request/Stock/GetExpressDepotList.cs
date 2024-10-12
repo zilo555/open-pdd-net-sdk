@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Stock;
 public partial class GetExpressDepotList
 {
-
     /// <summary>
     /// 分页数据size
     /// </summary>
@@ -13,6 +12,8 @@ public partial class GetExpressDepotList
     /// </summary>
     [JsonPropertyName("start")]
     public long Start { get; set; }
+
+
 
 }
 

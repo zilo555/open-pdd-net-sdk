@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ktt;
-public partial class SingleKttGoodsQueryResponse : PddResponseModel
+public partial class SingleKttGoodsQueryResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class SingleKttGoodsQueryResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("response")]
     public ResponseResponse Response { get; set; }
-    public partial class ResponseResponse : PddResponseModel
+
+    public partial class ResponseResponse
     {
 
         /// <summary>
@@ -21,7 +22,8 @@ public partial class SingleKttGoodsQueryResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("success")]
         public bool? Success { get; set; }
-        public partial class ResultResponse : PddResponseModel
+
+        public partial class ResultResponse
         {
 
             /// <summary>
@@ -89,7 +91,8 @@ public partial class SingleKttGoodsQueryResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("update_time")]
             public long? UpdateTime { get; set; }
-            public partial class SkuListResponse : PddResponseModel
+
+            public partial class SkuListResponse
             {
 
                 /// <summary>
@@ -163,7 +166,8 @@ public partial class SingleKttGoodsQueryResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("total_quantity")]
                 public long? TotalQuantity { get; set; }
-                public partial class SpecListResponse : PddResponseModel
+
+                public partial class SpecListResponse
                 {
 
                     /// <summary>
@@ -183,6 +187,7 @@ public partial class SingleKttGoodsQueryResponse : PddResponseModel
                     /// </summary>
                     [JsonPropertyName("spec_id")]
                     public long? SpecId { get; set; }
+
 
                 }
 

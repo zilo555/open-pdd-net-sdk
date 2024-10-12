@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ktt;
-public partial class ListKttAfterSalesIncrementResponse : PddResponseModel
+public partial class ListKttAfterSalesIncrementResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class ListKttAfterSalesIncrementResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("ktt_after_sales_incermet_list_response")]
     public KttAfterSalesIncermetListResponseResponse KttAfterSalesIncermetListResponse { get; set; }
-    public partial class KttAfterSalesIncermetListResponseResponse : PddResponseModel
+
+    public partial class KttAfterSalesIncermetListResponseResponse
     {
 
         /// <summary>
@@ -21,7 +22,8 @@ public partial class ListKttAfterSalesIncrementResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("list")]
         public List<ListResponse> List { get; set; }
-        public partial class ListResponse : PddResponseModel
+
+        public partial class ListResponse
         {
 
             /// <summary>
@@ -71,7 +73,8 @@ public partial class ListKttAfterSalesIncrementResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("updated_at")]
             public string UpdatedAt { get; set; }
-            public partial class ApplyExtensionResponse : PddResponseModel
+
+            public partial class ApplyExtensionResponse
             {
 
                 /// <summary>
@@ -109,7 +112,8 @@ public partial class ListKttAfterSalesIncrementResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("sub_extensions")]
                 public List<SubExtensionsResponse> SubExtensions { get; set; }
-                public partial class SubExtensionsResponse : PddResponseModel
+
+                public partial class SubExtensionsResponse
                 {
 
                     /// <summary>
@@ -124,10 +128,11 @@ public partial class ListKttAfterSalesIncrementResponse : PddResponseModel
                     [JsonPropertyName("sub_order_sn")]
                     public string SubOrderSn { get; set; }
 
+
                 }
 
             }
-            public partial class ReturnGoodsExtensionResponse : PddResponseModel
+            public partial class ReturnGoodsExtensionResponse
             {
 
                 /// <summary>
@@ -135,7 +140,8 @@ public partial class ListKttAfterSalesIncrementResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("logistics_list")]
                 public List<LogisticsListResponse> LogisticsList { get; set; }
-                public partial class LogisticsListResponse : PddResponseModel
+
+                public partial class LogisticsListResponse
                 {
 
                     /// <summary>
@@ -149,6 +155,7 @@ public partial class ListKttAfterSalesIncrementResponse : PddResponseModel
                     /// </summary>
                     [JsonPropertyName("track_no")]
                     public string TrackNo { get; set; }
+
 
                 }
 

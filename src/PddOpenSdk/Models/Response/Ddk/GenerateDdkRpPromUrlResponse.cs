@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ddk;
-public partial class GenerateDdkRpPromUrlResponse : PddResponseModel
+public partial class GenerateDdkRpPromUrlResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GenerateDdkRpPromUrlResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("rp_promotion_url_generate_response")]
     public RpPromotionUrlGenerateResponseResponse RpPromotionUrlGenerateResponse { get; set; }
-    public partial class RpPromotionUrlGenerateResponseResponse : PddResponseModel
+
+    public partial class RpPromotionUrlGenerateResponseResponse
     {
 
         /// <summary>
@@ -21,7 +22,8 @@ public partial class GenerateDdkRpPromUrlResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("url_list")]
         public List<UrlListResponse> UrlList { get; set; }
-        public partial class ResourceListResponse : PddResponseModel
+
+        public partial class ResourceListResponse
         {
 
             /// <summary>
@@ -36,8 +38,9 @@ public partial class GenerateDdkRpPromUrlResponse : PddResponseModel
             [JsonPropertyName("url")]
             public string Url { get; set; }
 
+
         }
-        public partial class UrlListResponse : PddResponseModel
+        public partial class UrlListResponse
         {
 
             /// <summary>
@@ -117,7 +120,8 @@ public partial class GenerateDdkRpPromUrlResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("weixin_short_link")]
             public string WeixinShortLink { get; set; }
-            public partial class QqAppInfoResponse : PddResponseModel
+
+            public partial class QqAppInfoResponse
             {
 
                 /// <summary>
@@ -168,8 +172,9 @@ public partial class GenerateDdkRpPromUrlResponse : PddResponseModel
                 [JsonPropertyName("user_name")]
                 public string UserName { get; set; }
 
+
             }
-            public partial class WeAppInfoResponse : PddResponseModel
+            public partial class WeAppInfoResponse
             {
 
                 /// <summary>
@@ -219,6 +224,7 @@ public partial class GenerateDdkRpPromUrlResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("we_app_icon_url")]
                 public string WeAppIconUrl { get; set; }
+
 
             }
 

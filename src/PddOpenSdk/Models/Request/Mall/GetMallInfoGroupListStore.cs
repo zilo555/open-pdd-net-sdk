@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Mall;
 public partial class GetMallInfoGroupListStore
 {
-
     /// <summary>
     /// 门店组ID
     /// </summary>
@@ -19,6 +18,8 @@ public partial class GetMallInfoGroupListStore
     /// </summary>
     [JsonPropertyName("page_size")]
     public int PageSize { get; set; }
+
+
 
 }
 

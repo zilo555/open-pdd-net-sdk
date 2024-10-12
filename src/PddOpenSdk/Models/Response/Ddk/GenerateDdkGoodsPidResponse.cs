@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ddk;
-public partial class GenerateDdkGoodsPidResponse : PddResponseModel
+public partial class GenerateDdkGoodsPidResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GenerateDdkGoodsPidResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("p_id_generate_response")]
     public PIdGenerateResponseResponse PIdGenerateResponse { get; set; }
-    public partial class PIdGenerateResponseResponse : PddResponseModel
+
+    public partial class PIdGenerateResponseResponse
     {
 
         /// <summary>
@@ -21,7 +22,8 @@ public partial class GenerateDdkGoodsPidResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("remain_pid_count")]
         public int? RemainPidCount { get; set; }
-        public partial class PIdListResponse : PddResponseModel
+
+        public partial class PIdListResponse
         {
 
             /// <summary>
@@ -47,6 +49,7 @@ public partial class GenerateDdkGoodsPidResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("media_id")]
             public long? MediaId { get; set; }
+
 
         }
 

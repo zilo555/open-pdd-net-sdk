@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Util;
-public partial class BatchOpenDecryptResponse : PddResponseModel
+public partial class BatchOpenDecryptResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class BatchOpenDecryptResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("open_decrypt_batch_response")]
     public OpenDecryptBatchResponseResponse OpenDecryptBatchResponse { get; set; }
-    public partial class OpenDecryptBatchResponseResponse : PddResponseModel
+
+    public partial class OpenDecryptBatchResponseResponse
     {
 
         /// <summary>
@@ -15,7 +16,8 @@ public partial class BatchOpenDecryptResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("data_decrypt_list")]
         public List<DataDecryptListResponse> DataDecryptList { get; set; }
-        public partial class DataDecryptListResponse : PddResponseModel
+
+        public partial class DataDecryptListResponse
         {
 
             /// <summary>
@@ -65,6 +67,7 @@ public partial class BatchOpenDecryptResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("virtual_number_type")]
             public int? VirtualNumberType { get; set; }
+
 
         }
 

@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Ktt;
-public partial class VerifyKttOrderVoucherResponse : PddResponseModel
+public partial class VerifyKttOrderVoucherResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class VerifyKttOrderVoucherResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("response")]
     public ResponseResponse Response { get; set; }
-    public partial class ResponseResponse : PddResponseModel
+
+    public partial class ResponseResponse
     {
 
         /// <summary>
@@ -33,7 +34,8 @@ public partial class VerifyKttOrderVoucherResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("success")]
         public bool? Success { get; set; }
-        public partial class ResultResponse : PddResponseModel
+
+        public partial class ResultResponse
         {
 
             /// <summary>
@@ -53,6 +55,7 @@ public partial class VerifyKttOrderVoucherResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("verified_times")]
             public int? VerifiedTimes { get; set; }
+
 
         }
 

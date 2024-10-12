@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Logistics;
-public partial class GetConsoDwsDataResponse : PddResponseModel
+public partial class GetConsoDwsDataResponse
 {
 
     /// <summary>
@@ -7,8 +7,21 @@ public partial class GetConsoDwsDataResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("response")]
     public ResponseResponse Response { get; set; }
-    public partial class ResponseResponse : PddResponseModel
+
+    public partial class ResponseResponse
     {
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonPropertyName("errorCode")]
+        public int? ErrorCode { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonPropertyName("errorMsg")]
+        public string ErrorMsg { get; set; }
 
         /// <summary>
         /// 
@@ -22,17 +35,6 @@ public partial class GetConsoDwsDataResponse : PddResponseModel
         [JsonPropertyName("success")]
         public bool? Success { get; set; }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        [JsonPropertyName("errorCode")]
-        public int? ErrorCode { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [JsonPropertyName("errorMsg")]
-        public string ErrorMsg { get; set; }
 
     }
 

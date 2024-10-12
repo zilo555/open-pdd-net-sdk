@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.Order;
 public partial class LogisticsOrderUploadExtra
 {
-
     /// <summary>
     /// 订单多包裹发货时使用的其他发货快递信息
     /// </summary>
@@ -19,9 +18,10 @@ public partial class LogisticsOrderUploadExtra
     /// </summary>
     [JsonPropertyName("extra_track_type")]
     public int? ExtraTrackType { get; set; }
+
+
     public partial class ExtraTrackListModel
     {
-
         /// <summary>
         /// 快递公司id
         /// </summary>
@@ -33,6 +33,8 @@ public partial class LogisticsOrderUploadExtra
         /// </summary>
         [JsonPropertyName("tracking_number")]
         public string TrackingNumber { get; set; }
+
+
 
     }
 

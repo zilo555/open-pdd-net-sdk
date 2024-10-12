@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Stock;
-public partial class ListStockWareResponse : PddResponseModel
+public partial class ListStockWareResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class ListStockWareResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("open_api_response")]
     public OpenApiResponseResponse OpenApiResponse { get; set; }
-    public partial class OpenApiResponseResponse : PddResponseModel
+
+    public partial class OpenApiResponseResponse
     {
 
         /// <summary>
@@ -21,7 +22,8 @@ public partial class ListStockWareResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("ware_details")]
         public List<WareDetailsResponse> WareDetails { get; set; }
-        public partial class WareDetailsResponse : PddResponseModel
+
+        public partial class WareDetailsResponse
         {
 
             /// <summary>
@@ -155,7 +157,8 @@ public partial class ListStockWareResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("updated_at")]
             public long? UpdatedAt { get; set; }
-            public partial class WareInfosResponse : PddResponseModel
+
+            public partial class WareInfosResponse
             {
 
                 /// <summary>
@@ -182,8 +185,9 @@ public partial class ListStockWareResponse : PddResponseModel
                 [JsonPropertyName("ware_id")]
                 public long? WareId { get; set; }
 
+
             }
-            public partial class WareSkusResponse : PddResponseModel
+            public partial class WareSkusResponse
             {
 
                 /// <summary>
@@ -221,7 +225,8 @@ public partial class ListStockWareResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("specs")]
                 public List<SpecsResponse> Specs { get; set; }
-                public partial class SpecsResponse : PddResponseModel
+
+                public partial class SpecsResponse
                 {
 
                     /// <summary>
@@ -241,6 +246,7 @@ public partial class ListStockWareResponse : PddResponseModel
                     /// </summary>
                     [JsonPropertyName("spec_id")]
                     public long? SpecId { get; set; }
+
 
                 }
 

@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Order;
-public partial class GetOrderBasicListResponse : PddResponseModel
+public partial class GetOrderBasicListResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetOrderBasicListResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("order_basic_list_get_response")]
     public OrderBasicListGetResponseResponse OrderBasicListGetResponse { get; set; }
-    public partial class OrderBasicListGetResponseResponse : PddResponseModel
+
+    public partial class OrderBasicListGetResponseResponse
     {
 
         /// <summary>
@@ -27,7 +28,8 @@ public partial class GetOrderBasicListResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("total_count")]
         public int? TotalCount { get; set; }
-        public partial class OrderListResponse : PddResponseModel
+
+        public partial class OrderListResponse
         {
 
             /// <summary>
@@ -173,7 +175,8 @@ public partial class GetOrderBasicListResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("updated_at")]
             public string UpdatedAt { get; set; }
-            public partial class ItemListResponse : PddResponseModel
+
+            public partial class ItemListResponse
             {
 
                 /// <summary>
@@ -230,8 +233,9 @@ public partial class GetOrderBasicListResponse : PddResponseModel
                 [JsonPropertyName("sku_id")]
                 public string SkuId { get; set; }
 
+
             }
-            public partial class StepOrderInfoResponse : PddResponseModel
+            public partial class StepOrderInfoResponse
             {
 
                 /// <summary>
@@ -257,6 +261,7 @@ public partial class GetOrderBasicListResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("step_trade_status")]
                 public int? StepTradeStatus { get; set; }
+
 
             }
 

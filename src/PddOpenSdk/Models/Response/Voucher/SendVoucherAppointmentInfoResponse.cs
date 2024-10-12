@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Voucher;
-public partial class SendVoucherAppointmentInfoResponse : PddResponseModel
+public partial class SendVoucherAppointmentInfoResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class SendVoucherAppointmentInfoResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("voucher_appointment_info_send_response")]
     public VoucherAppointmentInfoSendResponseResponse VoucherAppointmentInfoSendResponse { get; set; }
-    public partial class VoucherAppointmentInfoSendResponseResponse : PddResponseModel
+
+    public partial class VoucherAppointmentInfoSendResponseResponse
     {
 
         /// <summary>
@@ -15,6 +16,7 @@ public partial class SendVoucherAppointmentInfoResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("is_success")]
         public bool? IsSuccess { get; set; }
+
 
     }
 

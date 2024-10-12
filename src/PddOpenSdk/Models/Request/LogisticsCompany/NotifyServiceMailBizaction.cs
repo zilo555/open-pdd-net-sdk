@@ -1,15 +1,15 @@
 namespace PddOpenSdk.Models.Request.LogisticsCompany;
 public partial class NotifyServiceMailBizaction
 {
-
     /// <summary>
     /// 请求参数
     /// </summary>
     [JsonPropertyName("request")]
     public RequestModel Request { get; set; }
+
+
     public partial class RequestModel
     {
-
         /// <summary>
         /// 扩展信息，json格式
         /// </summary>
@@ -207,9 +207,10 @@ public partial class NotifyServiceMailBizaction
         /// </summary>
         [JsonPropertyName("width")]
         public int? Width { get; set; }
+
+
         public partial class ConfirmReceiverInfoModel
         {
-
             /// <summary>
             /// 详细地址
             /// </summary>
@@ -257,11 +258,12 @@ public partial class NotifyServiceMailBizaction
             /// </summary>
             [JsonPropertyName("telephone")]
             public string Telephone { get; set; }
+
+
 
         }
         public partial class ConfirmSenderInfoModel
         {
-
             /// <summary>
             /// 详细地址
             /// </summary>
@@ -309,11 +311,12 @@ public partial class NotifyServiceMailBizaction
             /// </summary>
             [JsonPropertyName("telephone")]
             public string Telephone { get; set; }
+
+
 
         }
         public partial class ModifyReceiverInfoModel
         {
-
             /// <summary>
             /// 详细地址
             /// </summary>
@@ -361,6 +364,8 @@ public partial class NotifyServiceMailBizaction
             /// </summary>
             [JsonPropertyName("telephone")]
             public string Telephone { get; set; }
+
+
 
         }
 

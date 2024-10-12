@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.LogisticsCompany;
-public partial class GetLogisticsTicketResponse : PddResponseModel
+public partial class GetLogisticsTicketResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetLogisticsTicketResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("logistics_ticket_get_response")]
     public LogisticsTicketGetResponseResponse LogisticsTicketGetResponse { get; set; }
-    public partial class LogisticsTicketGetResponseResponse : PddResponseModel
+
+    public partial class LogisticsTicketGetResponseResponse
     {
 
         /// <summary>
@@ -21,7 +22,8 @@ public partial class GetLogisticsTicketResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("total_count")]
         public int? TotalCount { get; set; }
-        public partial class LogisticsTicketListResponse : PddResponseModel
+
+        public partial class LogisticsTicketListResponse
         {
 
             /// <summary>
@@ -163,7 +165,7 @@ public partial class GetLogisticsTicketResponse : PddResponseModel
             public int? Source { get; set; }
 
             /// <summary>
-            /// 工单状态， 0:待确认,1:跟进中,2:待回访,3:已完结
+            /// 物流商回复状态，0：待回复，1：已回复
             /// </summary>
             [JsonPropertyName("status")]
             public int? Status { get; set; }
@@ -205,11 +207,24 @@ public partial class GetLogisticsTicketResponse : PddResponseModel
             public int? UrgentType { get; set; }
 
             /// <summary>
-            /// 运单号
+            /// 运单号(可能为空字符串)
             /// </summary>
             [JsonPropertyName("waybill_no")]
             public string WaybillNo { get; set; }
-            public partial class ExpressAttachmentResponse : PddResponseModel
+
+            /// <summary>
+            /// 国家/区域名称(集运物流工单)
+            /// </summary>
+            [JsonPropertyName("area_name")]
+            public string AreaName { get; set; }
+
+            /// <summary>
+            /// 用户投诉时上传的附件
+            /// </summary>
+            [JsonPropertyName("attachment_urls_by_customer")]
+            public List<string> AttachmentUrlsByCustomer { get; set; }
+
+            public partial class ExpressAttachmentResponse
             {
 
                 /// <summary>
@@ -217,6 +232,7 @@ public partial class GetLogisticsTicketResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("url")]
                 public string Url { get; set; }
+
 
             }
 

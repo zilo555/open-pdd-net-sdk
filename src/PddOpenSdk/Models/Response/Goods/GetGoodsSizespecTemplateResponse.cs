@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Goods;
-public partial class GetGoodsSizespecTemplateResponse : PddResponseModel
+public partial class GetGoodsSizespecTemplateResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class GetGoodsSizespecTemplateResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("response")]
     public ResponseResponse Response { get; set; }
-    public partial class ResponseResponse : PddResponseModel
+
+    public partial class ResponseResponse
     {
 
         /// <summary>
@@ -33,7 +34,8 @@ public partial class GetGoodsSizespecTemplateResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("success")]
         public bool? Success { get; set; }
-        public partial class ResultResponse : PddResponseModel
+
+        public partial class ResultResponse
         {
 
             /// <summary>
@@ -101,7 +103,8 @@ public partial class GetGoodsSizespecTemplateResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("used")]
             public long? Used { get; set; }
-            public partial class ContentResponse : PddResponseModel
+
+            public partial class ContentResponse
             {
 
                 /// <summary>
@@ -121,7 +124,8 @@ public partial class GetGoodsSizespecTemplateResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("records")]
                 public List<RecordsResponse> Records { get; set; }
-                public partial class MetaResponse : PddResponseModel
+
+                public partial class MetaResponse
                 {
 
                     /// <summary>
@@ -141,7 +145,8 @@ public partial class GetGoodsSizespecTemplateResponse : PddResponseModel
                     /// </summary>
                     [JsonPropertyName("groups")]
                     public List<GroupsResponse> Groups { get; set; }
-                    public partial class ElementsResponse : PddResponseModel
+
+                    public partial class ElementsResponse
                     {
 
                         /// <summary>
@@ -155,9 +160,10 @@ public partial class GetGoodsSizespecTemplateResponse : PddResponseModel
                         /// </summary>
                         [JsonPropertyName("name")]
                         public string Name { get; set; }
+
 
                     }
-                    public partial class GroupsResponse : PddResponseModel
+                    public partial class GroupsResponse
                     {
 
                         /// <summary>
@@ -171,11 +177,12 @@ public partial class GetGoodsSizespecTemplateResponse : PddResponseModel
                         /// </summary>
                         [JsonPropertyName("name")]
                         public string Name { get; set; }
+
 
                     }
 
                 }
-                public partial class RecordsResponse : PddResponseModel
+                public partial class RecordsResponse
                 {
 
                     /// <summary>
@@ -183,7 +190,8 @@ public partial class GetGoodsSizespecTemplateResponse : PddResponseModel
                     /// </summary>
                     [JsonPropertyName("values")]
                     public Dictionary<string, object> Values { get; set; }
-                    public partial class ValuesResponse : PddResponseModel
+
+                    public partial class ValuesResponse
                     {
 
                         /// <summary>
@@ -197,6 +205,7 @@ public partial class GetGoodsSizespecTemplateResponse : PddResponseModel
                         /// </summary>
                         [JsonPropertyName("$value")]
                         public string Value { get; set; }
+
 
                     }
 

@@ -1,7 +1,6 @@
 namespace PddOpenSdk.Models.Request.DdkTools;
 public partial class GenerateDdkOauthCmsPromUrl
 {
-
     /// <summary>
     /// 0, "1.9包邮"；1, "今日爆款"； 2, "品牌清仓"； 4,"PC端专属商城(已下线,会生成默认商城)"
     /// </summary>
@@ -55,6 +54,8 @@ public partial class GenerateDdkOauthCmsPromUrl
     /// </summary>
     [JsonPropertyName("p_id_list")]
     public List<string> PIdList { get; set; }
+
+
 
 }
 

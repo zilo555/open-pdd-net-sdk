@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.DdkTools;
-public partial class QueryDdkOauthMemberAuthorityResponse : PddResponseModel
+public partial class QueryDdkOauthMemberAuthorityResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class QueryDdkOauthMemberAuthorityResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("authority_query_response")]
     public AuthorityQueryResponseResponse AuthorityQueryResponse { get; set; }
-    public partial class AuthorityQueryResponseResponse : PddResponseModel
+
+    public partial class AuthorityQueryResponseResponse
     {
 
         /// <summary>
@@ -15,6 +16,7 @@ public partial class QueryDdkOauthMemberAuthorityResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("bind")]
         public int? Bind { get; set; }
+
 
     }
 

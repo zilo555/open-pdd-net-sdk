@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Goods;
-public partial class DetailGoodsLogisticsSerTemplateResponse : PddResponseModel
+public partial class DetailGoodsLogisticsSerTemplateResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class DetailGoodsLogisticsSerTemplateResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("goods_logistics_ser_template_detail_response")]
     public GoodsLogisticsSerTemplateDetailResponseResponse GoodsLogisticsSerTemplateDetailResponse { get; set; }
-    public partial class GoodsLogisticsSerTemplateDetailResponseResponse : PddResponseModel
+
+    public partial class GoodsLogisticsSerTemplateDetailResponseResponse
     {
 
         /// <summary>
@@ -51,7 +52,8 @@ public partial class DetailGoodsLogisticsSerTemplateResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("template_type")]
         public int? TemplateType { get; set; }
-        public partial class CatListResponse : PddResponseModel
+
+        public partial class CatListResponse
         {
 
             /// <summary>
@@ -83,7 +85,8 @@ public partial class DetailGoodsLogisticsSerTemplateResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("list")]
             public List<ListResponse> List { get; set; }
-            public partial class ListResponse : PddResponseModel
+
+            public partial class ListResponse
             {
 
                 /// <summary>
@@ -109,7 +112,8 @@ public partial class DetailGoodsLogisticsSerTemplateResponse : PddResponseModel
                 /// </summary>
                 [JsonPropertyName("value")]
                 public long? Value { get; set; }
-                public partial class ContentResponse : PddResponseModel
+
+                public partial class ContentResponse
                 {
 
                     /// <summary>
@@ -130,12 +134,13 @@ public partial class DetailGoodsLogisticsSerTemplateResponse : PddResponseModel
                     [JsonPropertyName("price")]
                     public long? Price { get; set; }
 
+
                 }
 
             }
 
         }
-        public partial class ServiceAreaListResponse : PddResponseModel
+        public partial class ServiceAreaListResponse
         {
 
             /// <summary>
@@ -161,6 +166,7 @@ public partial class DetailGoodsLogisticsSerTemplateResponse : PddResponseModel
             /// </summary>
             [JsonPropertyName("value")]
             public int? Value { get; set; }
+
 
         }
 

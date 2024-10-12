@@ -1,5 +1,5 @@
 namespace PddOpenSdk.Models.Response.Logistics;
-public partial class SendLogisticsOnlineResponse : PddResponseModel
+public partial class SendLogisticsOnlineResponse
 {
 
     /// <summary>
@@ -7,7 +7,8 @@ public partial class SendLogisticsOnlineResponse : PddResponseModel
     /// </summary>
     [JsonPropertyName("logistics_online_send_response")]
     public LogisticsOnlineSendResponseResponse LogisticsOnlineSendResponse { get; set; }
-    public partial class LogisticsOnlineSendResponseResponse : PddResponseModel
+
+    public partial class LogisticsOnlineSendResponseResponse
     {
 
         /// <summary>
@@ -15,6 +16,7 @@ public partial class SendLogisticsOnlineResponse : PddResponseModel
         /// </summary>
         [JsonPropertyName("is_success")]
         public bool? IsSuccess { get; set; }
+
 
     }
 
