@@ -1,11 +1,10 @@
-namespace Console;
+namespace Console.Helpers;
 
 /// <summary>
 /// 类名、参数名等帮助类
 /// </summary>
 public class NameHelper
 {
-
     public static string GetClassName(string name)
     {
         return default;
@@ -27,7 +26,7 @@ public class NameHelper
         }
 
         string attributionName;
-        bool isArray = false;
+        var isArray = false;
 
         //name = name.ToLower();
         type = type.ToLower();

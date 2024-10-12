@@ -1,6 +1,4 @@
-
-
-namespace Console;
+namespace Console.Helpers;
 
 /// <summary>
 /// 拼多多接口获取帮助类
@@ -22,12 +20,12 @@ public class PddApiDocHelper
     /// </summary>
     private readonly string DocInfoUrl = "https://open-api.pinduoduo.com/pop/doc/info/get";
 
-    public List<PddCatInfo> PddCatInfos { get; set; }
-    public List<PddDocInfo> PddDocInfos { get; set; }
+    public List<PddCatInfo> PddCatInfos { get; set; } = [];
+    public List<PddDocInfo> PddDocInfos { get; set; } = [];
     /// <summary>
     /// 目录与类名映射
     /// </summary>
-    public Dictionary<string, string> CatMapClassName = new Dictionary<string, string>();
+    public Dictionary<string, string> CatMapClassName = [];
 
     public PddApiDocHelper()
     {
@@ -62,13 +60,10 @@ public class PddApiDocHelper
         CatMapClassName.Add("48", "Oversea");
         CatMapClassName.Add("49", "Ticket");
         CatMapClassName.Add("50", "Ktt");
-        //CatMapClassName.Add("54", "PictureTool");
-
         // === 待定
         //CatMapClassName.Add("51", "");
-
+        //CatMapClassName.Add("54", "PictureTool");
         // === 以下取消
-        //CatMapClassName.Add("32", "Sms");
         //CatMapClassName.Add("27", "Xinzhi");
 
         #endregion
@@ -88,7 +83,7 @@ public class PddApiDocHelper
             result.Result.Add(new PddCatInfo { Id = 50, Name = "快团团API" }); //新增快团团相关接口
             return result.Result;
         }
-        catch (System.Exception e)
+        catch (Exception e)
         {
             System.Console.WriteLine(e.Message);
             return default;
@@ -149,9 +144,9 @@ public class PddApiDocHelper
             Directory.CreateDirectory(resultPath);
         }
         var docDetail = await GetDocDetailByIdAsync(id);
-        string className = docDetail.ScopeName;
+        var className = docDetail.ScopeName;
         className = className.Split(".")[1] ?? "UnNamed";
-        string methodsContent = BuildRequestMethod(docDetail, className);
+        var methodsContent = BuildRequestMethod(docDetail, className);
         SaveApiClass(className, methodsContent);
     }
     /// <summary>
@@ -160,7 +155,7 @@ public class PddApiDocHelper
     /// <returns></returns>
     public async Task Run(bool isUpdate = false)
     {
-        int totalNumber = 0;
+        var totalNumber = 0;
         PddCatInfos = await GetCatListAsync();
         if (PddCatInfos.Count > 0)
         {
@@ -176,10 +171,11 @@ public class PddApiDocHelper
             }, async (pddCatInfo, token) => {
                 PddDocInfos = await GetApiDocListByCatAsync(pddCatInfo.Id);
                 // 获取映射类名
-                CatMapClassName.TryGetValue(pddCatInfo.Id.ToString(), out string className);
+                CatMapClassName.TryGetValue(pddCatInfo.Id.ToString(), out var className);
+
                 if (PddDocInfos.Count > 0)
                 {
-                    string methodsContent = "";
+                    var methodsContent = "";
                     className ??= "UnNamed";
                     foreach (var pddDocInfo in PddDocInfos)
                     {
@@ -194,12 +190,12 @@ public class PddApiDocHelper
                         }
                         var docDetail = await GetDocDetailByIdAsync(pddDocInfo.Id);
                         methodsContent += BuildRequestMethod(docDetail, className);
-                        System.Console.WriteLine($"[{totalNumber}]" + docDetail.ScopeName + "...Done!");
+                        System.Console.WriteLine($"[{totalNumber}]" + docDetail.ScopeName + "...✅");
                     }
                     SaveApiClass(className, methodsContent);
                 }
             });
-            System.Console.WriteLine("Get All " + totalNumber + " done!");
+            System.Console.WriteLine("Get All " + totalNumber + " Api ✅");
         }
     }
 
@@ -213,30 +209,31 @@ public class PddApiDocHelper
         // 方法命名
         var scopeName = doc.ScopeName.Split('.');
         var methodName = Function.ToPascalCase(scopeName.Last());
-        for (int i = 1; i < scopeName.Length - 1; i++)
+        for (var i = 1; i < scopeName.Length - 1; i++)
         {
             methodName += Function.ToPascalCase(scopeName[i]);
         }
+        var indentBuilder = new IndentBuilder(4);
         // 方法参数
-        string methodComment =
+        var methodComment =
 $@"
-        /// <summary>
-        /// {doc.ApiName}
-        /// </summary>
+/// <summary>
+/// {doc.ApiName}
+/// </summary>
 ";
         string methodParams;
 
         // 创建请求模型类
-        string paramsModelType = methodName;
-        string requestContent = BuildRequestModel(paramsModelType, doc.RequestParamList);
+        var paramsModelType = methodName;
+        var requestContent = BuildRequestModel(paramsModelType, doc.RequestParamList);
         SaveRequestModel(paramsModelType, requestContent, requestClassName);
-        string paramsModelName = methodName.First().ToString().ToLower() + methodName[1..];
+        var paramsModelName = methodName.First().ToString().ToLower() + methodName[1..];
         methodParams = paramsModelType + " " + paramsModelName;
 
         // 创建返回模型类
-        string responseModelName = methodName + "Response";
+        var responseModelName = methodName + "Response";
         // 根据返回示例生成
-        string responseContent = BuildResponseModel(responseModelName, doc.ResponseParamList);
+        var responseContent = BuildResponseModel(responseModelName, doc.ResponseParamList);
         if (string.IsNullOrEmpty(responseContent))
         {
             responseContent = BuildResponseModel(responseModelName, doc.ResponseParamList);
@@ -254,12 +251,13 @@ $@"
         {
             postName = "PostFileAsync";
         }
-        return @$"      {methodComment}public async Task<{responseModelName}> {methodName}Async({methodParams})
-        {{
-            var result = await {postName}<{paramsModelType}, {responseModelName}>(""{doc.ScopeName}"", {paramsModelName});
-            return result;
-        }}
-";
+        indentBuilder.AppendLine(methodComment);
+        indentBuilder.AppendLine($@"public async Task<{responseModelName}> {methodName}Async({methodParams})");
+        indentBuilder.AppendLine("{");
+        indentBuilder.IndentLine($@"var result = await {postName}<{paramsModelType}, {responseModelName}>(""{doc.ScopeName}"", {paramsModelName});");
+        indentBuilder.AppendLine("return result;");
+        indentBuilder.UnIndentLine("}");
+        return indentBuilder.ToString();
     }
 
     /// <summary>
@@ -277,13 +275,15 @@ $@"
         }
         className = className.Replace("$", "");
 
-        string suffix = "Model";
+        var suffix = "Model";
         var currentParamLists = paramLists.Where(p => p.ParentId == parentId).ToList();
-        string content = "";
-        content = Function.AppendLine(content, $"\tpublic partial class {className}");
-        content = Function.AppendLine(content, "\t{");
-        string paramsContent = "";
-        string childClass = "";
+        var indentBuilder = new IndentBuilder();
+
+        indentBuilder.AppendLine($"public partial class {className}");
+        indentBuilder.AppendLine("{");
+
+        var paramsContent = "";
+        var childClass = "";
         foreach (var param in currentParamLists)
         {
             // 对文件属性名进行特殊处理
@@ -302,19 +302,21 @@ $@"
             }
 
             // 参数注释
-            var paramComment =
-$@"
-    /// <summary>
-    /// {param.ParamDesc?.Replace("\n", "; ")}
-    /// </summary>
-    [JsonPropertyName(""{param.ParamName}"")]
-";
-            paramsContent += paramComment + "\t" + attribution;
+            var propertyContent =
+$"""
+/// <summary>
+/// {param.ParamDesc?.Replace("\n", "; ")}
+/// </summary>
+[JsonPropertyName("{param.ParamName}")]
+{attribution}
+
+""";
+            paramsContent += propertyContent;
         }
-        content += paramsContent;
-        content += childClass + Environment.NewLine;
-        content += "\t}" + Environment.NewLine;
-        return content;
+        indentBuilder.IndentLine(paramsContent);
+        indentBuilder.AppendLine(childClass);
+        indentBuilder.UnIndentLine("}");
+        return indentBuilder.ToString();
     }
 
     /// <summary>
@@ -330,13 +332,13 @@ $@"
         {
             return default;
         }
-
         var currentParamLists = paramLists.Where(p => p.ParentId == parentId).ToList();
-        string content = "";
-        content = Function.AppendLine(content, $"\tpublic partial class {className} : PddResponseModel");
-        content = Function.AppendLine(content, "\t{");
-        string paramsContent = "";
-        string childClass = "";
+        var indentBuilder = new IndentBuilder();
+
+        indentBuilder.AppendLine($"public partial class {className}");
+        indentBuilder.AppendLine("{");
+        var paramsContent = "";
+        var childClass = "";
         foreach (var param in currentParamLists)
         {
 
@@ -346,24 +348,27 @@ $@"
             // 如果是对象类型，生成子类模型
             if (param.ChildrenNum > 0)
             {
+                var childClassName = paramName + "Response";
+                if (childClassName == className)
+                {
+                    childClassName = "Inner" + childClassName;
+                }
                 childClass += BuildResponseModel(paramName + "Response", paramLists, (int)param.Id);
             }
             // 参数注释
             var paramComment =
 $@"
-    /// <summary>
-    /// {param.ParamDesc?.Replace(Environment.NewLine, "; ")}
-    /// </summary>
-    [JsonPropertyName(""{param.ParamName}"")]
+/// <summary>
+/// {param.ParamDesc?.Replace(Environment.NewLine, "; ")}
+/// </summary>
+[JsonPropertyName(""{param.ParamName}"")]
 ";
-
             paramsContent += paramComment + attribution;
-            //System.Console.WriteLine(paramType + " " + paramName);
         }
-        content += paramsContent;
-        content += childClass + Environment.NewLine;
-        content += "\t}" + Environment.NewLine;
-        return content;
+        indentBuilder.IndentLine(paramsContent);
+        indentBuilder.AppendLine(childClass);
+        indentBuilder.UnIndentLine("}");
+        return indentBuilder.ToString();
     }
 
     /// <summary>
@@ -391,10 +396,10 @@ $@"
             dir = "." + dir;
         }
 
-        string namespaceBlock = Function.AppendLine("", $"using PddOpenSdk.Models.Request;");
+        var namespaceBlock = Function.AppendLine("", $"using PddOpenSdk.Models.Request;");
         namespaceBlock = Function.AppendLine(namespaceBlock, $"namespace PddOpenSdk.Models.Request{dir};");
         classContent = Function.AppendLine(classContent, namespaceBlock, true);
-        string fileName = className;
+        var fileName = className;
         File.WriteAllText(Path.Combine(resultPath, fileName + ".cs"), classContent);
     }
 
@@ -421,13 +426,14 @@ $@"
             dir = "." + dir;
         }
 
-        string namespaceBlock = Function.AppendLine("", "using PddOpenSdk.Models.Response;");
+        var namespaceBlock = Function.AppendLine("", "using PddOpenSdk.Models.Response;");
         namespaceBlock = Function.AppendLine(namespaceBlock, $"namespace PddOpenSdk.Models.Response{dir};");
         classContent = Function.AppendLine(classContent, namespaceBlock, true);
 
-        string fileName = className;
+        var fileName = className;
         File.WriteAllText(Path.Combine(resultPath, fileName + ".cs"), classContent);
     }
+
     /// <summary>
     /// 保存接口请求类
     /// </summary>
@@ -437,19 +443,21 @@ $@"
         var currentPath = Directory.GetCurrentDirectory();
         var resultPath = Path.Combine(currentPath, "..", "PddOpenSdk", "Services", "PddApi");
 
-        string fileName = Function.ToPascalCase(className) + "Api";
+        var fileName = Function.ToPascalCase(className) + "Api";
         // 处理重复类名的情况
 
-        string content = $@"
-using PddOpenSdk.Models.Request.{Function.ToPascalCase(className)};
-using PddOpenSdk.Models.Response.{Function.ToPascalCase(className)};
-namespace PddOpenSdk.Services.PddApi;
-public class {fileName} : PddCommonApi {{
-    public {fileName}(){{}}
-    public {fileName}(string clientId, string clientSecret, string accessToken): base(clientId, clientSecret, accessToken){{}}
-    {classContent}
-}}
-";
+        var content = $$"""
+            using PddOpenSdk.Models.Request.{{Function.ToPascalCase(className)}};
+            using PddOpenSdk.Models.Response.{{Function.ToPascalCase(className)}};
+            namespace PddOpenSdk.Services.PddApi;
+            public class {{fileName}} : PddCommonApi 
+            {
+                public {{fileName}}(){}
+                public {{fileName}}(string clientId, string clientSecret, string accessToken): base(clientId, clientSecret, accessToken){}
+                {{classContent}}
+            }
+
+            """;
         File.WriteAllText(Path.Combine(resultPath, fileName + ".cs"), content);
 
     }
@@ -462,28 +470,37 @@ public class {fileName} : PddCommonApi {{
         // 1 获取说明注释
         var catList = await GetCatListAsync();
         // 2 构造属性
-        var propsContent = "\t\tpublic AuthApi AuthApi { get; }" + Environment.NewLine;
-        catList.ForEach(cat => {
-            var comment = $"\t\t/// <summary>" + Environment.NewLine
-                + $"\t\t/// {cat.Name}" + Environment.NewLine
-                + "\t\t/// </summary>" + Environment.NewLine;
-            var propName = CatMapClassName.GetValueOrDefault(cat.Id.ToString());
-            if (!string.IsNullOrEmpty(propName))
+        var propsContent = "";
+        var indentBuilder = new IndentBuilder();
+        indentBuilder.IndentLine("public AuthApi AuthApi { get; }");
+        CatMapClassName.ToList().ForEach(cat => {
+            var comment = """
+/// <summary>
+/// {cat.Name}
+/// </summary>
+""";
+            indentBuilder.AppendLine(comment);
+            if (!string.IsNullOrEmpty(cat.Value))
             {
-                var prop = $"\t\tpublic {propName}Api {propName}Api {{ get; }}" + Environment.NewLine;
-                propsContent += comment + prop;
+                var propName = cat.Value;
+                indentBuilder.AppendLine($"public {propName}Api {propName}Api {{ get; }}");
             }
         });
 
+        propsContent = indentBuilder.ToString();
+        indentBuilder.Reset();
+
         // 3 构造构造方法/options/set token
-        string ctorContent = "AuthApi = new AuthApi(_options.ClientId, _options.ClientSecret, _options.AccessToken, _options.CallbackUrl);" + Environment.NewLine;
-        string ctorOptionConent = "AuthApi = new AuthApi(options.ClientId, options.ClientSecret, options.AccessToken, options.CallbackUrl);" + Environment.NewLine;
-        string setTokenContent = "";
+        var ctorContent = "AuthApi = new AuthApi(_options.ClientId, _options.ClientSecret, _options.AccessToken, _options.CallbackUrl);" + Environment.NewLine;
+        var ctorOptionContent = "AuthApi = new AuthApi(options.ClientId, options.ClientSecret, options.AccessToken, options.CallbackUrl);" + Environment.NewLine;
+        var setTokenContent = "";
+
+        var indentSpaces = new string(' ', 8);
         CatMapClassName.ToList().ForEach(cat => {
             var apiName = cat.Value + "Api";
-            ctorContent += "\t\t\t" + apiName + $" = new {apiName}(_options.ClientId, _options.ClientSecret, _options.AccessToken);" + Environment.NewLine;
-            ctorOptionConent += "\t\t\t" + apiName + $" = new {apiName}(options.ClientId, options.ClientSecret, options.AccessToken);" + Environment.NewLine;
-            setTokenContent += "\t\t\t" + apiName + ".AccessToken = accessToken;" + Environment.NewLine;
+            ctorContent += indentSpaces + apiName + $" = new {apiName}(_options.ClientId, _options.ClientSecret, _options.AccessToken);" + Environment.NewLine;
+            ctorOptionContent += indentSpaces + apiName + $" = new {apiName}(options.ClientId, options.ClientSecret, options.AccessToken);" + Environment.NewLine;
+            setTokenContent += indentSpaces + apiName + ".AccessToken = accessToken;" + Environment.NewLine;
         });
         // 4 替换并写入
         var path = Path.Combine(Environment.CurrentDirectory, "PddService.cs.tpl");
@@ -492,7 +509,7 @@ public class {fileName} : PddCommonApi {{
             var tplContent = File.ReadAllText(path);
             tplContent = tplContent.Replace("{{$Properties}}", propsContent)
                 .Replace("{{$Ctor}}", ctorContent)
-                .Replace("{{$CtorOption}}", ctorOptionConent)
+                .Replace("{{$CtorOption}}", ctorOptionContent)
                 .Replace("{{$SetToken}}", setTokenContent);
 
             var currentPath = Directory.GetCurrentDirectory();

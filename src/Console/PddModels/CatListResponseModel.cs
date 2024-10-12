@@ -10,7 +10,7 @@ public partial class CatListResponseModel
     public long ErrorCode { get; set; }
 
     [JsonPropertyName("errorMsg")]
-    public object ErrorMsg { get; set; }
+    public object? ErrorMsg { get; set; }
 
     [JsonPropertyName("result")]
     public CatListResult Result { get; set; }
@@ -25,7 +25,7 @@ public class CatListResult
     public string CatName { get; set; }
 
     [JsonPropertyName("docList")]
-    public List<PddDocInfo> DocList { get; set; }
+    public List<PddDocInfo> DocList { get; set; } = [];
 }
 
 public partial class PddDocInfo

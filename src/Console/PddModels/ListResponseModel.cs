@@ -9,10 +9,10 @@ public partial class ListResponseModel
     public long ErrorCode { get; set; }
 
     [JsonPropertyName("errorMsg")]
-    public object ErrorMsg { get; set; }
+    public object? ErrorMsg { get; set; }
 
     [JsonPropertyName("result")]
-    public List<PddCatInfo> Result { get; set; }
+    public List<PddCatInfo> Result { get; set; } = [];
 }
 
 public class PddCatInfo
@@ -21,5 +21,5 @@ public class PddCatInfo
     public long Id { get; set; }
 
     [JsonPropertyName("name")]
-    public string Name { get; set; }
+    public required string Name { get; set; }
 }

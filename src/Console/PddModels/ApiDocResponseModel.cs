@@ -9,10 +9,10 @@ public class ApiDocResponseModel
     public long ErrorCode { get; set; }
 
     [JsonPropertyName("errorMsg")]
-    public object ErrorMsg { get; set; }
+    public object? ErrorMsg { get; set; }
 
     [JsonPropertyName("result")]
-    public ApiDocDetail Result { get; set; }
+    public ApiDocDetail? Result { get; set; }
 }
 
 public class ApiDocDetail
@@ -39,22 +39,22 @@ public class ApiDocDetail
     public string ResponseCodeExample { get; set; }
 
     [JsonPropertyName("requestParamList")]
-    public List<ParamList> RequestParamList { get; set; }
+    public List<ParamList> RequestParamList { get; set; } = [];
 
     [JsonPropertyName("responseParamList")]
-    public List<ParamList> ResponseParamList { get; set; }
+    public List<ParamList> ResponseParamList { get; set; } = [];
 
     [JsonPropertyName("errorParamList")]
-    public List<ErrorParamList> ErrorParamList { get; set; }
+    public List<ErrorParamList> ErrorParamList { get; set; } = [];
 
     [JsonPropertyName("limiters")]
-    public List<Limiter> Limiters { get; set; }
+    public List<Limiter> Limiters { get; set; } = [];
 
     [JsonPropertyName("permissionsPkgs")]
-    public List<PermissionsPkg> PermissionsPkgs { get; set; }
+    public List<PermissionsPkg> PermissionsPkgs { get; set; } = [];
 
     [JsonPropertyName("sdkDemos")]
-    public List<SdkDemo> SdkDemos { get; set; }
+    public List<SdkDemo> SdkDemos { get; set; } = [];
 }
 
 public partial class ErrorParamList
