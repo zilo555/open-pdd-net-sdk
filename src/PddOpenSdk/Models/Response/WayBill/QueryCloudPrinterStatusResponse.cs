@@ -6,7 +6,7 @@ public partial class QueryCloudPrinterStatusResponse
     /// 
     /// </summary>
     [JsonPropertyName("response")]
-    public ResponseResponse Response { get; set; }
+    public ResponseResponse? Response { get; set; }
 
     public partial class ResponseResponse
     {
@@ -21,13 +21,13 @@ public partial class QueryCloudPrinterStatusResponse
         /// 
         /// </summary>
         [JsonPropertyName("error_msg")]
-        public string ErrorMsg { get; set; }
+        public string? ErrorMsg { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [JsonPropertyName("result")]
-        public ResultResponse Result { get; set; }
+        public ResultResponse? Result { get; set; }
 
         /// <summary>
         /// 
@@ -42,13 +42,13 @@ public partial class QueryCloudPrinterStatusResponse
             /// 打印机id
             /// </summary>
             [JsonPropertyName("printer_id")]
-            public string PrinterId { get; set; }
+            public string? PrinterId { get; set; }
 
             /// <summary>
             /// 信号强度dbm
             /// </summary>
             [JsonPropertyName("signal_strength")]
-            public string SignalStrength { get; set; }
+            public string? SignalStrength { get; set; }
 
             /// <summary>
             /// 信号格度0-5,未查询到为null
@@ -60,7 +60,7 @@ public partial class QueryCloudPrinterStatusResponse
             /// 打印机状态 -1:未知  0:未找到打印机  1:不在线  2:在线
             /// </summary>
             [JsonPropertyName("status")]
-            public string Status { get; set; }
+            public string? Status { get; set; }
 
 
         }

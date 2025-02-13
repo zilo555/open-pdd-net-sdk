@@ -6,7 +6,7 @@ public partial class ListStockWareResponse
     /// response
     /// </summary>
     [JsonPropertyName("open_api_response")]
-    public OpenApiResponseResponse OpenApiResponse { get; set; }
+    public OpenApiResponseResponse? OpenApiResponse { get; set; }
 
     public partial class OpenApiResponseResponse
     {
@@ -21,7 +21,7 @@ public partial class ListStockWareResponse
         /// 货品详情
         /// </summary>
         [JsonPropertyName("ware_details")]
-        public List<WareDetailsResponse> WareDetails { get; set; }
+        public List<WareDetailsResponse?>? WareDetails { get; set; }
 
         public partial class WareDetailsResponse
         {
@@ -42,31 +42,31 @@ public partial class ListStockWareResponse
             /// 组合货品中子货品的关联关系
             /// </summary>
             [JsonPropertyName("ware_infos")]
-            public List<WareInfosResponse> WareInfos { get; set; }
+            public List<WareInfosResponse?>? WareInfos { get; set; }
 
             /// <summary>
             /// 货品sku信息
             /// </summary>
             [JsonPropertyName("ware_skus")]
-            public List<WareSkusResponse> WareSkus { get; set; }
+            public List<WareSkusResponse?>? WareSkus { get; set; }
 
             /// <summary>
             /// 货品编码
             /// </summary>
             [JsonPropertyName("ware_sn")]
-            public string WareSn { get; set; }
+            public string? WareSn { get; set; }
 
             /// <summary>
             /// 货品名称
             /// </summary>
             [JsonPropertyName("ware_name")]
-            public string WareName { get; set; }
+            public string? WareName { get; set; }
 
             /// <summary>
             /// 备注
             /// </summary>
             [JsonPropertyName("note")]
-            public string Note { get; set; }
+            public string? Note { get; set; }
 
             /// <summary>
             /// 高低值服务，0低，1高
@@ -132,13 +132,13 @@ public partial class ListStockWareResponse
             /// 颜色
             /// </summary>
             [JsonPropertyName("color")]
-            public string Color { get; set; }
+            public string? Color { get; set; }
 
             /// <summary>
             /// 包材
             /// </summary>
             [JsonPropertyName("packing")]
-            public string Packing { get; set; }
+            public string? Packing { get; set; }
 
             /// <summary>
             /// 库存
@@ -165,13 +165,13 @@ public partial class ListStockWareResponse
                 /// 子货品编码
                 /// </summary>
                 [JsonPropertyName("ware_sn")]
-                public string WareSn { get; set; }
+                public string? WareSn { get; set; }
 
                 /// <summary>
                 /// 子货品名称
                 /// </summary>
                 [JsonPropertyName("ware_name")]
-                public string WareName { get; set; }
+                public string? WareName { get; set; }
 
                 /// <summary>
                 /// 子货品数量
@@ -224,7 +224,7 @@ public partial class ListStockWareResponse
                 /// 规格信息
                 /// </summary>
                 [JsonPropertyName("specs")]
-                public List<SpecsResponse> Specs { get; set; }
+                public List<SpecsResponse?>? Specs { get; set; }
 
                 public partial class SpecsResponse
                 {
@@ -233,13 +233,13 @@ public partial class ListStockWareResponse
                     /// 规格名称
                     /// </summary>
                     [JsonPropertyName("spec_key")]
-                    public string SpecKey { get; set; }
+                    public string? SpecKey { get; set; }
 
                     /// <summary>
                     /// 规格值
                     /// </summary>
                     [JsonPropertyName("spec_value")]
-                    public string SpecValue { get; set; }
+                    public string? SpecValue { get; set; }
 
                     /// <summary>
                     /// 规格id

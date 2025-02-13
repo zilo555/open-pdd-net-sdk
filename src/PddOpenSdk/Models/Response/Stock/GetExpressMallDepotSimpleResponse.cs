@@ -6,7 +6,7 @@ public partial class GetExpressMallDepotSimpleResponse
     /// response
     /// </summary>
     [JsonPropertyName("open_api_response")]
-    public List<OpenApiResponseResponse> OpenApiResponse { get; set; }
+    public List<OpenApiResponseResponse?>? OpenApiResponse { get; set; }
 
     public partial class OpenApiResponseResponse
     {
@@ -21,7 +21,7 @@ public partial class GetExpressMallDepotSimpleResponse
         /// 仓库id的string表示
         /// </summary>
         [JsonPropertyName("depot_str")]
-        public string DepotStr { get; set; }
+        public string? DepotStr { get; set; }
 
         /// <summary>
         /// 仓库类型(暂时1表示自建仓)
@@ -33,7 +33,7 @@ public partial class GetExpressMallDepotSimpleResponse
         /// 仓库名称
         /// </summary>
         [JsonPropertyName("name")]
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
 
     }

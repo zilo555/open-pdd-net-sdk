@@ -5,7 +5,7 @@ public partial class QueryKttIncrementOrder
     /// 团号
     /// </summary>
     [JsonPropertyName("activity_no")]
-    public string ActivityNo { get; set; }
+    public string? ActivityNo { get; set; }
 
     /// <summary>
     /// 售后状态, 可选 0-未发起售后 1-退款中 2-退款成功 3-待处理 4-拒绝退款 6-待(顾客)退货 7-待(团长)确认退货 8-(顾客)撤销 9-(系统)关闭

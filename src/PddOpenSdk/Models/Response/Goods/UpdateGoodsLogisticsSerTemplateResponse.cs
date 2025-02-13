@@ -6,7 +6,7 @@ public partial class UpdateGoodsLogisticsSerTemplateResponse
     /// response
     /// </summary>
     [JsonPropertyName("goods_logistics_ser_template_update_response")]
-    public GoodsLogisticsSerTemplateUpdateResponseResponse GoodsLogisticsSerTemplateUpdateResponse { get; set; }
+    public GoodsLogisticsSerTemplateUpdateResponseResponse? GoodsLogisticsSerTemplateUpdateResponse { get; set; }
 
     public partial class GoodsLogisticsSerTemplateUpdateResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class UpdateGoodsLogisticsSerTemplateResponse
         /// 模版id
         /// </summary>
         [JsonPropertyName("template_id")]
-        public string TemplateId { get; set; }
+        public string? TemplateId { get; set; }
 
 
     }

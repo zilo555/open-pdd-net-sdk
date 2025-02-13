@@ -6,7 +6,7 @@ public partial class AddVoucherVirtualCardBatchResponse
     /// 响应体
     /// </summary>
     [JsonPropertyName("response")]
-    public ResponseResponse Response { get; set; }
+    public ResponseResponse? Response { get; set; }
 
     public partial class ResponseResponse
     {
@@ -21,13 +21,13 @@ public partial class AddVoucherVirtualCardBatchResponse
         /// 错误信息
         /// </summary>
         [JsonPropertyName("message")]
-        public string Message { get; set; }
+        public string? Message { get; set; }
 
         /// <summary>
         /// 响应信息
         /// </summary>
         [JsonPropertyName("result")]
-        public ResultResponse Result { get; set; }
+        public ResultResponse? Result { get; set; }
 
         public partial class ResultResponse
         {
@@ -42,7 +42,7 @@ public partial class AddVoucherVirtualCardBatchResponse
             /// 充值地址
             /// </summary>
             [JsonPropertyName("chargeAddress")]
-            public string ChargeAddress { get; set; }
+            public string? ChargeAddress { get; set; }
 
             /// <summary>
             /// 店铺Id

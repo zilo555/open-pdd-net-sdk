@@ -6,7 +6,7 @@ public partial class AgreeRefundResponse
     /// 
     /// </summary>
     [JsonPropertyName("response")]
-    public ResponseResponse Response { get; set; }
+    public ResponseResponse? Response { get; set; }
 
     public partial class ResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class AgreeRefundResponse
         /// 
         /// </summary>
         [JsonPropertyName("result")]
-        public ResultResponse Result { get; set; }
+        public ResultResponse? Result { get; set; }
 
         public partial class ResultResponse
         {
@@ -30,13 +30,13 @@ public partial class AgreeRefundResponse
             /// 退款操作成功      退款操作结果信息。如果退款失败，会返回失败原因
             /// </summary>
             [JsonPropertyName("message")]
-            public string Message { get; set; }
+            public string? Message { get; set; }
 
             /// <summary>
             /// 
             /// </summary>
             [JsonPropertyName("order_sn")]
-            public string OrderSn { get; set; }
+            public string? OrderSn { get; set; }
 
             /// <summary>
             /// 接口调用成功

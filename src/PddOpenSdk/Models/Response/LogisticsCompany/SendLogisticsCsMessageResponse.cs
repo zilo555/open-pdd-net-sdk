@@ -6,7 +6,7 @@ public partial class SendLogisticsCsMessageResponse
     /// response
     /// </summary>
     [JsonPropertyName("logistics_cs_message_send_response")]
-    public LogisticsCsMessageSendResponseResponse LogisticsCsMessageSendResponse { get; set; }
+    public LogisticsCsMessageSendResponseResponse? LogisticsCsMessageSendResponse { get; set; }
 
     public partial class LogisticsCsMessageSendResponseResponse
     {

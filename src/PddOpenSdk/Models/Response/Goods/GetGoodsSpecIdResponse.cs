@@ -6,7 +6,7 @@ public partial class GetGoodsSpecIdResponse
     /// 生成规格响应对象
     /// </summary>
     [JsonPropertyName("goods_spec_id_get_response")]
-    public GoodsSpecIdGetResponseResponse GoodsSpecIdGetResponse { get; set; }
+    public GoodsSpecIdGetResponseResponse? GoodsSpecIdGetResponse { get; set; }
 
     public partial class GoodsSpecIdGetResponseResponse
     {
@@ -21,7 +21,7 @@ public partial class GetGoodsSpecIdResponse
         /// 生成的自定义规格名称
         /// </summary>
         [JsonPropertyName("spec_name")]
-        public string SpecName { get; set; }
+        public string? SpecName { get; set; }
 
         /// <summary>
         /// 生成的自定义规格ID

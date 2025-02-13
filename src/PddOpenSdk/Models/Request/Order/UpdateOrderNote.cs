@@ -17,7 +17,7 @@ public partial class UpdateOrderNote
     /// 标记名称；长度最大为3个字符，tag与tag_name关联，都入参或都不入参
     /// </summary>
     [JsonPropertyName("tag_name")]
-    public string TagName { get; set; }
+    public string? TagName { get; set; }
 
     /// <summary>
     /// 订单号

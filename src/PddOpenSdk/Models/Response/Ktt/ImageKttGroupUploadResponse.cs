@@ -6,7 +6,7 @@ public partial class ImageKttGroupUploadResponse
     /// response
     /// </summary>
     [JsonPropertyName("response")]
-    public ResponseResponse Response { get; set; }
+    public ResponseResponse? Response { get; set; }
 
     public partial class ResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class ImageKttGroupUploadResponse
         /// 上传图片结果
         /// </summary>
         [JsonPropertyName("result")]
-        public string Result { get; set; }
+        public string? Result { get; set; }
 
         /// <summary>
         /// 接口调用是否成功

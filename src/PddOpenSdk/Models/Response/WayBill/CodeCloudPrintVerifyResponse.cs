@@ -6,7 +6,7 @@ public partial class CodeCloudPrintVerifyResponse
     /// 云打印验证码响应
     /// </summary>
     [JsonPropertyName("cloud_print_verify_code_response")]
-    public CloudPrintVerifyCodeResponseResponse CloudPrintVerifyCodeResponse { get; set; }
+    public CloudPrintVerifyCodeResponseResponse? CloudPrintVerifyCodeResponse { get; set; }
 
     public partial class CloudPrintVerifyCodeResponseResponse
     {
@@ -21,13 +21,13 @@ public partial class CodeCloudPrintVerifyResponse
         /// 错误信息
         /// </summary>
         [JsonPropertyName("error_msg")]
-        public string ErrorMsg { get; set; }
+        public string? ErrorMsg { get; set; }
 
         /// <summary>
         /// 响应结果
         /// </summary>
         [JsonPropertyName("result")]
-        public ResultResponse Result { get; set; }
+        public ResultResponse? Result { get; set; }
 
         /// <summary>
         /// 是否成功

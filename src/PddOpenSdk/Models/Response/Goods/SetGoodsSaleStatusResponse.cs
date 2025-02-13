@@ -6,7 +6,7 @@ public partial class SetGoodsSaleStatusResponse
     /// 返回response
     /// </summary>
     [JsonPropertyName("goods_sale_status_set_response")]
-    public GoodsSaleStatusSetResponseResponse GoodsSaleStatusSetResponse { get; set; }
+    public GoodsSaleStatusSetResponseResponse? GoodsSaleStatusSetResponse { get; set; }
 
     public partial class GoodsSaleStatusSetResponseResponse
     {

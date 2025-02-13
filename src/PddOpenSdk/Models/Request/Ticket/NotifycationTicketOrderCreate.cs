@@ -17,7 +17,7 @@ public partial class NotifycationTicketOrderCreate
     /// 失败原因。 status=3时必填
     /// </summary>
     [JsonPropertyName("failed_reason")]
-    public string FailedReason { get; set; }
+    public string? FailedReason { get; set; }
 
     /// <summary>
     /// 拼多多制票号
@@ -41,7 +41,7 @@ public partial class NotifycationTicketOrderCreate
     /// 凭证信息列表。status=2 且 code_type!=1 时必填
     /// </summary>
     [JsonPropertyName("tickets")]
-    public List<TicketsModel> Tickets { get; set; }
+    public List<TicketsModel?>? Tickets { get; set; }
 
     /// <summary>
     /// 凭证类型。status=2时必填。1.一人一码 2.一人多码
@@ -56,25 +56,25 @@ public partial class NotifycationTicketOrderCreate
         /// 辅助凭证，有辅助凭证时返回
         /// </summary>
         [JsonPropertyName("additional")]
-        public string Additional { get; set; }
+        public string? Additional { get; set; }
 
         /// <summary>
         /// 主凭证，code_type=2时返回
         /// </summary>
         [JsonPropertyName("code")]
-        public string Code { get; set; }
+        public string? Code { get; set; }
 
         /// <summary>
         /// 文件base64流，code_type=3时返回，大小小于800KB
         /// </summary>
         [JsonPropertyName("file")]
-        public string File { get; set; }
+        public string? File { get; set; }
 
         /// <summary>
         /// 外链，code_type=4时返回
         /// </summary>
         [JsonPropertyName("url")]
-        public string Url { get; set; }
+        public string? Url { get; set; }
 
 
 

@@ -12,7 +12,7 @@ public partial class DeleteGoodsMaterialResponse
     /// 错误文案
     /// </summary>
     [JsonPropertyName("error_msg")]
-    public string ErrorMsg { get; set; }
+    public string? ErrorMsg { get; set; }
 
     /// <summary>
     /// 返回非0代表删除成功

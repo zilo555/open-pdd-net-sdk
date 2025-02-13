@@ -6,7 +6,7 @@ public partial class QueryPmcAccrueResponse
     /// response
     /// </summary>
     [JsonPropertyName("pmc_user_get_response")]
-    public PmcUserGetResponseResponse PmcUserGetResponse { get; set; }
+    public PmcUserGetResponseResponse? PmcUserGetResponse { get; set; }
 
     public partial class PmcUserGetResponseResponse
     {

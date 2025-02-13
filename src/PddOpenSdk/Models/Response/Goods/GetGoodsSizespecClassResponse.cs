@@ -6,7 +6,7 @@ public partial class GetGoodsSizespecClassResponse
     /// 响应
     /// </summary>
     [JsonPropertyName("response")]
-    public ResponseResponse Response { get; set; }
+    public ResponseResponse? Response { get; set; }
 
     public partial class ResponseResponse
     {
@@ -21,13 +21,13 @@ public partial class GetGoodsSizespecClassResponse
         /// 错误描述
         /// </summary>
         [JsonPropertyName("error_msg")]
-        public string ErrorMsg { get; set; }
+        public string? ErrorMsg { get; set; }
 
         /// <summary>
         /// 结果
         /// </summary>
         [JsonPropertyName("result")]
-        public List<ResultResponse> Result { get; set; }
+        public List<ResultResponse?>? Result { get; set; }
 
         /// <summary>
         /// 请求成功
@@ -42,7 +42,7 @@ public partial class GetGoodsSizespecClassResponse
             /// 尺码表叶分类（二级分类）
             /// </summary>
             [JsonPropertyName("children")]
-            public List<ChildrenResponse> Children { get; set; }
+            public List<ChildrenResponse?>? Children { get; set; }
 
             /// <summary>
             /// 尺码表分类id
@@ -54,7 +54,7 @@ public partial class GetGoodsSizespecClassResponse
             /// 尺码表分类名称
             /// </summary>
             [JsonPropertyName("name")]
-            public string Name { get; set; }
+            public string? Name { get; set; }
 
             public partial class ChildrenResponse
             {
@@ -69,7 +69,7 @@ public partial class GetGoodsSizespecClassResponse
                 /// 尺码表分类名称
                 /// </summary>
                 [JsonPropertyName("name")]
-                public string Name { get; set; }
+                public string? Name { get; set; }
 
 
             }

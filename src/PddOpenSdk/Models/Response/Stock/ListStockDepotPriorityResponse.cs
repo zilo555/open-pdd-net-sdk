@@ -6,7 +6,7 @@ public partial class ListStockDepotPriorityResponse
     /// 响应内容
     /// </summary>
     [JsonPropertyName("open_api_response")]
-    public OpenApiResponseResponse OpenApiResponse { get; set; }
+    public OpenApiResponseResponse? OpenApiResponse { get; set; }
 
     public partial class OpenApiResponseResponse
     {
@@ -21,7 +21,7 @@ public partial class ListStockDepotPriorityResponse
         /// 仓库列表
         /// </summary>
         [JsonPropertyName("depot_list")]
-        public List<DepotListResponse> DepotList { get; set; }
+        public List<DepotListResponse?>? DepotList { get; set; }
 
         public partial class DepotListResponse
         {
@@ -30,7 +30,7 @@ public partial class ListStockDepotPriorityResponse
             /// 仓库id
             /// </summary>
             [JsonPropertyName("depot_id")]
-            public string DepotId { get; set; }
+            public string? DepotId { get; set; }
 
             /// <summary>
             /// 仓库地址（省编号）
@@ -54,13 +54,13 @@ public partial class ListStockDepotPriorityResponse
             /// 仓库编码
             /// </summary>
             [JsonPropertyName("depot_code")]
-            public string DepotCode { get; set; }
+            public string? DepotCode { get; set; }
 
             /// <summary>
             /// 仓库名称
             /// </summary>
             [JsonPropertyName("depot_name")]
-            public string DepotName { get; set; }
+            public string? DepotName { get; set; }
 
             /// <summary>
             /// 优先级

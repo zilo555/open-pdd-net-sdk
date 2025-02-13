@@ -5,7 +5,7 @@ public partial class ChangeGoodsCpsUnit
     /// 优惠券结束时间
     /// </summary>
     [JsonPropertyName("coupon_end_time")]
-    public string CouponEndTime { get; set; }
+    public string? CouponEndTime { get; set; }
 
     /// <summary>
     /// 优惠券id
@@ -17,13 +17,13 @@ public partial class ChangeGoodsCpsUnit
     /// 优惠券号
     /// </summary>
     [JsonPropertyName("coupon_sn")]
-    public string CouponSn { get; set; }
+    public string? CouponSn { get; set; }
 
     /// <summary>
     /// 优惠券开始时间
     /// </summary>
     [JsonPropertyName("coupon_start_time")]
-    public string CouponStartTime { get; set; }
+    public string? CouponStartTime { get; set; }
 
     /// <summary>
     /// 优惠券面额（单位为分）

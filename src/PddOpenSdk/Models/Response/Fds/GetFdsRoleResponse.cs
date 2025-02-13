@@ -6,7 +6,7 @@ public partial class GetFdsRoleResponse
     /// response
     /// </summary>
     [JsonPropertyName("pdd_fds_role_get_response")]
-    public PddFdsRoleGetResponseResponse PddFdsRoleGetResponse { get; set; }
+    public PddFdsRoleGetResponseResponse? PddFdsRoleGetResponse { get; set; }
 
     public partial class PddFdsRoleGetResponseResponse
     {

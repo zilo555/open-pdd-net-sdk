@@ -6,7 +6,7 @@ public partial class ReplaceKttPurchaseOrderLogisticResponse
     /// 
     /// </summary>
     [JsonPropertyName("ktt_purchase_order_logistics_replace_response")]
-    public KttPurchaseOrderLogisticsReplaceResponseResponse KttPurchaseOrderLogisticsReplaceResponse { get; set; }
+    public KttPurchaseOrderLogisticsReplaceResponseResponse? KttPurchaseOrderLogisticsReplaceResponse { get; set; }
 
     public partial class KttPurchaseOrderLogisticsReplaceResponseResponse
     {
@@ -21,13 +21,13 @@ public partial class ReplaceKttPurchaseOrderLogisticResponse
         /// 
         /// </summary>
         [JsonPropertyName("error_msg")]
-        public string ErrorMsg { get; set; }
+        public string? ErrorMsg { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [JsonPropertyName("result")]
-        public ResultResponse Result { get; set; }
+        public ResultResponse? Result { get; set; }
 
         /// <summary>
         /// 

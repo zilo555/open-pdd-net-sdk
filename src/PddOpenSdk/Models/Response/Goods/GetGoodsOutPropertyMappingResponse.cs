@@ -6,7 +6,7 @@ public partial class GetGoodsOutPropertyMappingResponse
     /// 
     /// </summary>
     [JsonPropertyName("out_property_mapping_get_response")]
-    public OutPropertyMappingGetResponseResponse OutPropertyMappingGetResponse { get; set; }
+    public OutPropertyMappingGetResponseResponse? OutPropertyMappingGetResponse { get; set; }
 
     public partial class OutPropertyMappingGetResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class GetGoodsOutPropertyMappingResponse
         /// 
         /// </summary>
         [JsonPropertyName("property")]
-        public List<PropertyResponse> Property { get; set; }
+        public List<PropertyResponse?>? Property { get; set; }
 
         public partial class PropertyResponse
         {
@@ -24,13 +24,13 @@ public partial class GetGoodsOutPropertyMappingResponse
             /// 
             /// </summary>
             [JsonPropertyName("out_property_name")]
-            public string OutPropertyName { get; set; }
+            public string? OutPropertyName { get; set; }
 
             /// <summary>
             /// 
             /// </summary>
             [JsonPropertyName("out_property_value_name")]
-            public string OutPropertyValueName { get; set; }
+            public string? OutPropertyValueName { get; set; }
 
             /// <summary>
             /// 
@@ -42,7 +42,7 @@ public partial class GetGoodsOutPropertyMappingResponse
             /// 
             /// </summary>
             [JsonPropertyName("property_value_name")]
-            public string PropertyValueName { get; set; }
+            public string? PropertyValueName { get; set; }
 
             /// <summary>
             /// 
@@ -54,7 +54,7 @@ public partial class GetGoodsOutPropertyMappingResponse
             /// 
             /// </summary>
             [JsonPropertyName("ref_property_name")]
-            public string RefPropertyName { get; set; }
+            public string? RefPropertyName { get; set; }
 
 
         }

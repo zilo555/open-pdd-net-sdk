@@ -1,14 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFrameworks>net8.0;net6.0;netstandard2.0</TargetFrameworks>
+        <TargetFrameworks>net8.0;netstandard2.1</TargetFrameworks>
         <RootNamespace>PddOpenSdk</RootNamespace>
         <LangVersion>latest</LangVersion>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Nullable>enable</Nullable>
         <Authors>NilTor,AterDev</Authors>
         <Company>Geethin</Company>
         <Description>拼多多开放平台.NET SDK核心类库</Description>
-        <PackageReleaseNotes>
-            同步官方接口到最新(202410);
+        <PackageReleaseNotes>1. 同步官方接口到最新(20250213);
+2. 模型中对可空字段的处理;
+3. 移除对.net6.0 的支持;
         </PackageReleaseNotes>
         <PackageProjectUrl>https://github.com/niltor/open-pdd-net-sdk</PackageProjectUrl>
         <RepositoryUrl>https://github.com/niltor/open-pdd-net-sdk</RepositoryUrl>
@@ -19,7 +21,7 @@
         <FileVersion>0.1.0.0</FileVersion>
         <PackageLicenseUrl></PackageLicenseUrl>
         <PackageIcon>logo.jpg</PackageIcon>
-        <Version>8.0.10</Version>
+        <Version>8.1.0</Version>
         <PackageId>MSDev.PddOpenSdk</PackageId>
         <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
         <Copyright />
@@ -36,7 +38,7 @@
         <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
 
-    <ItemGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <ItemGroup Condition="'$(TargetFramework)'=='netstandard2.1'">
         <PackageReference Include="System.Text.Json" Version="8.0.5" />
     </ItemGroup>
 

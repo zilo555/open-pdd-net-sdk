@@ -6,7 +6,7 @@ public partial class GetLogisticsAddressResponse
     /// response
     /// </summary>
     [JsonPropertyName("logistics_address_get_response")]
-    public LogisticsAddressGetResponseResponse LogisticsAddressGetResponse { get; set; }
+    public LogisticsAddressGetResponseResponse? LogisticsAddressGetResponse { get; set; }
 
     public partial class LogisticsAddressGetResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class GetLogisticsAddressResponse
         /// 地址对象列表
         /// </summary>
         [JsonPropertyName("logistics_address_list")]
-        public List<LogisticsAddressListResponse> LogisticsAddressList { get; set; }
+        public List<LogisticsAddressListResponse?>? LogisticsAddressList { get; set; }
 
         public partial class LogisticsAddressListResponse
         {
@@ -36,7 +36,7 @@ public partial class GetLogisticsAddressResponse
             /// 地区邮编
             /// </summary>
             [JsonPropertyName("national_code")]
-            public string NationalCode { get; set; }
+            public string? NationalCode { get; set; }
 
             /// <summary>
             /// 父地区ID，顶点id为0
@@ -48,7 +48,7 @@ public partial class GetLogisticsAddressResponse
             /// 地区名称
             /// </summary>
             [JsonPropertyName("region_name")]
-            public string RegionName { get; set; }
+            public string? RegionName { get; set; }
 
             /// <summary>
             /// 地区层级，1-省份，2-市级，3-区级

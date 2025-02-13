@@ -87,16 +87,6 @@ public class DdkApi : PddCommonApi
     }
 
     /// <summary>
-    /// 生成多多进宝频道推广
-    /// </summary>
-
-    public async Task<GenDdkResourceUrlResponse> GenDdkResourceUrlAsync(GenDdkResourceUrl genDdkResourceUrl)
-    {
-        var result = await PostAsync<GenDdkResourceUrl, GenDdkResourceUrlResponse>("pdd.ddk.resource.url.gen", genDdkResourceUrl);
-        return result;
-    }
-
-    /// <summary>
     /// 创建多多礼金
     /// </summary>
 
@@ -217,12 +207,52 @@ public class DdkApi : PddCommonApi
     }
 
     /// <summary>
-    /// 多多进宝商品详情查询
+    /// 多多进宝推广链接生成
     /// </summary>
 
-    public async Task<DetailDdkGoodsResponse> DetailDdkGoodsAsync(DetailDdkGoods detailDdkGoods)
+    public async Task<GenerateDdkGoodsPromotionUrlResponse> GenerateDdkGoodsPromotionUrlAsync(GenerateDdkGoodsPromotionUrl generateDdkGoodsPromotionUrl)
     {
-        var result = await PostAsync<DetailDdkGoods, DetailDdkGoodsResponse>("pdd.ddk.goods.detail", detailDdkGoods);
+        var result = await PostAsync<GenerateDdkGoodsPromotionUrl, GenerateDdkGoodsPromotionUrlResponse>("pdd.ddk.goods.promotion.url.generate", generateDdkGoodsPromotionUrl);
+        return result;
+    }
+
+    /// <summary>
+    /// 多多进宝转链接口
+    /// </summary>
+
+    public async Task<GenDdkGoodsZsUnitUrlResponse> GenDdkGoodsZsUnitUrlAsync(GenDdkGoodsZsUnitUrl genDdkGoodsZsUnitUrl)
+    {
+        var result = await PostAsync<GenDdkGoodsZsUnitUrl, GenDdkGoodsZsUnitUrlResponse>("pdd.ddk.goods.zs.unit.url.gen", genDdkGoodsZsUnitUrl);
+        return result;
+    }
+
+    /// <summary>
+    /// 生成商城-频道推广链接
+    /// </summary>
+
+    public async Task<GenerateDdkCmsPromUrlResponse> GenerateDdkCmsPromUrlAsync(GenerateDdkCmsPromUrl generateDdkCmsPromUrl)
+    {
+        var result = await PostAsync<GenerateDdkCmsPromUrl, GenerateDdkCmsPromUrlResponse>("pdd.ddk.cms.prom.url.generate", generateDdkCmsPromUrl);
+        return result;
+    }
+
+    /// <summary>
+    /// 生成多多进宝频道推广
+    /// </summary>
+
+    public async Task<GenDdkResourceUrlResponse> GenDdkResourceUrlAsync(GenDdkResourceUrl genDdkResourceUrl)
+    {
+        var result = await PostAsync<GenDdkResourceUrl, GenDdkResourceUrlResponse>("pdd.ddk.resource.url.gen", genDdkResourceUrl);
+        return result;
+    }
+
+    /// <summary>
+    /// 生成营销工具推广链接
+    /// </summary>
+
+    public async Task<GenerateDdkRpPromUrlResponse> GenerateDdkRpPromUrlAsync(GenerateDdkRpPromUrl generateDdkRpPromUrl)
+    {
+        var result = await PostAsync<GenerateDdkRpPromUrl, GenerateDdkRpPromUrlResponse>("pdd.ddk.rp.prom.url.generate", generateDdkRpPromUrl);
         return result;
     }
 
@@ -257,42 +287,12 @@ public class DdkApi : PddCommonApi
     }
 
     /// <summary>
-    /// 生成营销工具推广链接
+    /// 多多进宝商品详情查询
     /// </summary>
 
-    public async Task<GenerateDdkRpPromUrlResponse> GenerateDdkRpPromUrlAsync(GenerateDdkRpPromUrl generateDdkRpPromUrl)
+    public async Task<DetailDdkGoodsResponse> DetailDdkGoodsAsync(DetailDdkGoods detailDdkGoods)
     {
-        var result = await PostAsync<GenerateDdkRpPromUrl, GenerateDdkRpPromUrlResponse>("pdd.ddk.rp.prom.url.generate", generateDdkRpPromUrl);
-        return result;
-    }
-
-    /// <summary>
-    /// 多多进宝推广链接生成
-    /// </summary>
-
-    public async Task<GenerateDdkGoodsPromotionUrlResponse> GenerateDdkGoodsPromotionUrlAsync(GenerateDdkGoodsPromotionUrl generateDdkGoodsPromotionUrl)
-    {
-        var result = await PostAsync<GenerateDdkGoodsPromotionUrl, GenerateDdkGoodsPromotionUrlResponse>("pdd.ddk.goods.promotion.url.generate", generateDdkGoodsPromotionUrl);
-        return result;
-    }
-
-    /// <summary>
-    /// 多多进宝转链接口
-    /// </summary>
-
-    public async Task<GenDdkGoodsZsUnitUrlResponse> GenDdkGoodsZsUnitUrlAsync(GenDdkGoodsZsUnitUrl genDdkGoodsZsUnitUrl)
-    {
-        var result = await PostAsync<GenDdkGoodsZsUnitUrl, GenDdkGoodsZsUnitUrlResponse>("pdd.ddk.goods.zs.unit.url.gen", genDdkGoodsZsUnitUrl);
-        return result;
-    }
-
-    /// <summary>
-    /// 生成商城-频道推广链接
-    /// </summary>
-
-    public async Task<GenerateDdkCmsPromUrlResponse> GenerateDdkCmsPromUrlAsync(GenerateDdkCmsPromUrl generateDdkCmsPromUrl)
-    {
-        var result = await PostAsync<GenerateDdkCmsPromUrl, GenerateDdkCmsPromUrlResponse>("pdd.ddk.cms.prom.url.generate", generateDdkCmsPromUrl);
+        var result = await PostAsync<DetailDdkGoods, DetailDdkGoodsResponse>("pdd.ddk.goods.detail", detailDdkGoods);
         return result;
     }
 

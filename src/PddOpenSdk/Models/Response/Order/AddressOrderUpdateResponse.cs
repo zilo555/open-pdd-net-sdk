@@ -6,7 +6,7 @@ public partial class AddressOrderUpdateResponse
     /// 请求响应
     /// </summary>
     [JsonPropertyName("response")]
-    public ResponseResponse Response { get; set; }
+    public ResponseResponse? Response { get; set; }
 
     public partial class ResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class AddressOrderUpdateResponse
         /// 请求返回结果
         /// </summary>
         [JsonPropertyName("result")]
-        public ResultResponse Result { get; set; }
+        public ResultResponse? Result { get; set; }
 
         /// <summary>
         /// 是否请求成功
@@ -33,7 +33,7 @@ public partial class AddressOrderUpdateResponse
         /// 错误信息
         /// </summary>
         [JsonPropertyName("errorMsg")]
-        public string ErrorMsg { get; set; }
+        public string? ErrorMsg { get; set; }
 
         public partial class ResultResponse
         {
@@ -42,13 +42,13 @@ public partial class AddressOrderUpdateResponse
             /// 提示文案
             /// </summary>
             [JsonPropertyName("msg")]
-            public string Msg { get; set; }
+            public string? Msg { get; set; }
 
             /// <summary>
             /// 订单号
             /// </summary>
             [JsonPropertyName("order_sn")]
-            public string OrderSn { get; set; }
+            public string? OrderSn { get; set; }
 
 
         }

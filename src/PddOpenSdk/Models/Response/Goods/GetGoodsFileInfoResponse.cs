@@ -6,7 +6,7 @@ public partial class GetGoodsFileInfoResponse
     /// goods_file_info_response
     /// </summary>
     [JsonPropertyName("goods_file_info_response")]
-    public GoodsFileInfoResponseResponse GoodsFileInfoResponse { get; set; }
+    public GoodsFileInfoResponseResponse? GoodsFileInfoResponse { get; set; }
 
     public partial class GoodsFileInfoResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class GetGoodsFileInfoResponse
         /// 
         /// </summary>
         [JsonPropertyName("list")]
-        public List<ListResponse> List { get; set; }
+        public List<ListResponse?>? List { get; set; }
 
         public partial class ListResponse
         {
@@ -36,7 +36,7 @@ public partial class GetGoodsFileInfoResponse
             /// 文件链接
             /// </summary>
             [JsonPropertyName("url")]
-            public string Url { get; set; }
+            public string? Url { get; set; }
 
 
         }

@@ -17,7 +17,7 @@ public partial class GetGoodsOutPropertyMapping
     /// 外部平台属性值名称
     /// </summary>
     [JsonPropertyName("out_property_value_name")]
-    public string OutPropertyValueName { get; set; }
+    public string? OutPropertyValueName { get; set; }
 
 
 

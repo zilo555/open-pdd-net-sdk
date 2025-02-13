@@ -6,7 +6,7 @@ public partial class GetPromotionLimitedQualifiedGoodsResponse
     /// 商品列表
     /// </summary>
     [JsonPropertyName("goods_list")]
-    public List<GoodsListResponse> GoodsList { get; set; }
+    public List<GoodsListResponse?>? GoodsList { get; set; }
 
     /// <summary>
     /// 总数

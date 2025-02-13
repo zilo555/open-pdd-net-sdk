@@ -6,7 +6,7 @@ public partial class DeleteGoodsSizespecTemplateResponse
     /// 响应
     /// </summary>
     [JsonPropertyName("response")]
-    public ResponseResponse Response { get; set; }
+    public ResponseResponse? Response { get; set; }
 
     public partial class ResponseResponse
     {
@@ -21,7 +21,7 @@ public partial class DeleteGoodsSizespecTemplateResponse
         /// 错误描述
         /// </summary>
         [JsonPropertyName("errorMsg")]
-        public string ErrorMsg { get; set; }
+        public string? ErrorMsg { get; set; }
 
         /// <summary>
         /// 删除成功

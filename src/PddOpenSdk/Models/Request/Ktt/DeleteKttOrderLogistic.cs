@@ -11,7 +11,7 @@ public partial class DeleteKttOrderLogistic
     /// 子单号列表，无子单号视为整单删除物流
     /// </summary>
     [JsonPropertyName("subOrderSnList")]
-    public List<string> SubOrderSnList { get; set; }
+    public List<string?>? SubOrderSnList { get; set; }
 
     /// <summary>
     /// 运单号

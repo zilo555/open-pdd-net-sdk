@@ -6,7 +6,7 @@ public partial class PagequeryKttUserSiteResponse
     /// 结果
     /// </summary>
     [JsonPropertyName("ktt_user_site_list_response")]
-    public KttUserSiteListResponseResponse KttUserSiteListResponse { get; set; }
+    public KttUserSiteListResponseResponse? KttUserSiteListResponse { get; set; }
 
     public partial class KttUserSiteListResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class PagequeryKttUserSiteResponse
         /// 自提点列表
         /// </summary>
         [JsonPropertyName("self_site_info_list")]
-        public List<SelfSiteInfoListResponse> SelfSiteInfoList { get; set; }
+        public List<SelfSiteInfoListResponse?>? SelfSiteInfoList { get; set; }
 
         /// <summary>
         /// 总数
@@ -30,19 +30,19 @@ public partial class PagequeryKttUserSiteResponse
             /// 分类名称
             /// </summary>
             [JsonPropertyName("category_name")]
-            public string CategoryName { get; set; }
+            public string? CategoryName { get; set; }
 
             /// <summary>
             /// 市
             /// </summary>
             [JsonPropertyName("city_name")]
-            public string CityName { get; set; }
+            public string? CityName { get; set; }
 
             /// <summary>
             /// 区
             /// </summary>
             [JsonPropertyName("district_name")]
-            public string DistrictName { get; set; }
+            public string? DistrictName { get; set; }
 
             /// <summary>
             /// 是否删除
@@ -54,49 +54,49 @@ public partial class PagequeryKttUserSiteResponse
             /// 电话
             /// </summary>
             [JsonPropertyName("mobile")]
-            public string Mobile { get; set; }
+            public string? Mobile { get; set; }
 
             /// <summary>
             /// 省
             /// </summary>
             [JsonPropertyName("province_name")]
-            public string ProvinceName { get; set; }
+            public string? ProvinceName { get; set; }
 
             /// <summary>
             /// 联系人
             /// </summary>
             [JsonPropertyName("receive_name")]
-            public string ReceiveName { get; set; }
+            public string? ReceiveName { get; set; }
 
             /// <summary>
             /// 路线名称
             /// </summary>
             [JsonPropertyName("route_name")]
-            public string RouteName { get; set; }
+            public string? RouteName { get; set; }
 
             /// <summary>
             /// 详细地址
             /// </summary>
             [JsonPropertyName("shipping_address")]
-            public string ShippingAddress { get; set; }
+            public string? ShippingAddress { get; set; }
 
             /// <summary>
             /// 管理员昵称
             /// </summary>
             [JsonPropertyName("site_manager_nickname")]
-            public string SiteManagerNickname { get; set; }
+            public string? SiteManagerNickname { get; set; }
 
             /// <summary>
             /// 自提点名称
             /// </summary>
             [JsonPropertyName("site_name")]
-            public string SiteName { get; set; }
+            public string? SiteName { get; set; }
 
             /// <summary>
             /// 编号
             /// </summary>
             [JsonPropertyName("site_no")]
-            public string SiteNo { get; set; }
+            public string? SiteNo { get; set; }
 
 
         }

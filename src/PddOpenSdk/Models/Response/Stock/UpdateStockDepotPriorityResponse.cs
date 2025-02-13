@@ -6,7 +6,7 @@ public partial class UpdateStockDepotPriorityResponse
     /// 请求结果
     /// </summary>
     [JsonPropertyName("open_api_response")]
-    public string OpenApiResponse { get; set; }
+    public string? OpenApiResponse { get; set; }
 
 
 }

@@ -6,7 +6,7 @@ public partial class ClosePromotionCouponResponse
     /// 关闭批次接口响应对象
     /// </summary>
     [JsonPropertyName("promotion_coupon_batch_close_response")]
-    public PromotionCouponBatchCloseResponseResponse PromotionCouponBatchCloseResponse { get; set; }
+    public PromotionCouponBatchCloseResponseResponse? PromotionCouponBatchCloseResponse { get; set; }
 
     public partial class PromotionCouponBatchCloseResponseResponse
     {

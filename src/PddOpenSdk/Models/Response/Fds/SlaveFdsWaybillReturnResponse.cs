@@ -6,7 +6,7 @@ public partial class SlaveFdsWaybillReturnResponse
     /// response
     /// </summary>
     [JsonPropertyName("pdd_fds_waybill_return_slave_response")]
-    public PddFdsWaybillReturnSlaveResponseResponse PddFdsWaybillReturnSlaveResponse { get; set; }
+    public PddFdsWaybillReturnSlaveResponseResponse? PddFdsWaybillReturnSlaveResponse { get; set; }
 
     public partial class PddFdsWaybillReturnSlaveResponseResponse
     {

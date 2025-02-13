@@ -6,7 +6,7 @@ public partial class SearchGoodsTemplatePropertyValueResponse
     /// resposne
     /// </summary>
     [JsonPropertyName("goods_template_prop_val_search_response")]
-    public GoodsTemplatePropValSearchResponseResponse GoodsTemplatePropValSearchResponse { get; set; }
+    public GoodsTemplatePropValSearchResponseResponse? GoodsTemplatePropValSearchResponse { get; set; }
 
     public partial class GoodsTemplatePropValSearchResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class SearchGoodsTemplatePropertyValueResponse
         /// list
         /// </summary>
         [JsonPropertyName("list")]
-        public List<ListResponse> List { get; set; }
+        public List<ListResponse?>? List { get; set; }
 
         public partial class ListResponse
         {
@@ -24,7 +24,7 @@ public partial class SearchGoodsTemplatePropertyValueResponse
             /// 属性值
             /// </summary>
             [JsonPropertyName("value")]
-            public string Value { get; set; }
+            public string? Value { get; set; }
 
             /// <summary>
             /// 属性值id

@@ -20,7 +20,7 @@ public partial class ReplaceKttPurchaseSampleOrderLogistic
         /// 新物流公司名（与物流公司id两者至少填一）
         /// </summary>
         [JsonPropertyName("new_logistics_name")]
-        public string NewLogisticsName { get; set; }
+        public string? NewLogisticsName { get; set; }
 
         /// <summary>
         /// 新运单号

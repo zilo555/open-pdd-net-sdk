@@ -6,7 +6,7 @@ public partial class CheckRefundStatusResponse
     /// response
     /// </summary>
     [JsonPropertyName("refund_status_check_response")]
-    public RefundStatusCheckResponseResponse RefundStatusCheckResponse { get; set; }
+    public RefundStatusCheckResponseResponse? RefundStatusCheckResponse { get; set; }
 
     public partial class RefundStatusCheckResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class CheckRefundStatusResponse
         /// 存在售后的订单
         /// </summary>
         [JsonPropertyName("order_sns_exists_refund")]
-        public List<OrderSnsExistsRefundResponse> OrderSnsExistsRefund { get; set; }
+        public List<OrderSnsExistsRefundResponse?>? OrderSnsExistsRefund { get; set; }
 
         public partial class OrderSnsExistsRefundResponse
         {
@@ -24,7 +24,7 @@ public partial class CheckRefundStatusResponse
             /// 订单编号
             /// </summary>
             [JsonPropertyName("order_sn")]
-            public string OrderSn { get; set; }
+            public string? OrderSn { get; set; }
 
 
         }

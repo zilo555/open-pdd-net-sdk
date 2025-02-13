@@ -5,7 +5,7 @@ public partial class NotifyServiceMailBizaction
     /// 请求参数
     /// </summary>
     [JsonPropertyName("request")]
-    public RequestModel Request { get; set; }
+    public RequestModel? Request { get; set; }
 
 
     public partial class RequestModel
@@ -14,25 +14,25 @@ public partial class NotifyServiceMailBizaction
         /// 扩展信息，json格式
         /// </summary>
         [JsonPropertyName("attributes")]
-        public string Attributes { get; set; }
+        public string? Attributes { get; set; }
 
         /// <summary>
         /// accept-接单， reject-拒单， dispatch-派单（需要小件员信息）， takePackage-已取件（需要有核重核价信息）， payed-支付完成 postmanCancel-小件员取消， expressCancel-快递公司取消 postMailNo-回传运单
         /// </summary>
         [JsonPropertyName("bizAction")]
-        public string BizAction { get; set; }
+        public string? BizAction { get; set; }
 
         /// <summary>
         /// 服务明细描述信息
         /// </summary>
         [JsonPropertyName("bizActionDesc")]
-        public string BizActionDesc { get; set; }
+        public string? BizActionDesc { get; set; }
 
         /// <summary>
         /// 取消原因
         /// </summary>
         [JsonPropertyName("cancelOrRejectReason")]
-        public string CancelOrRejectReason { get; set; }
+        public string? CancelOrRejectReason { get; set; }
 
         /// <summary>
         /// 核价金额，单位分
@@ -44,7 +44,7 @@ public partial class NotifyServiceMailBizaction
         /// 核价方式（当前实操为checkWeightPrice时必填）： weight:按照重量核价； volume：按照体积核价
         /// </summary>
         [JsonPropertyName("checkPriceType")]
-        public string CheckPriceType { get; set; }
+        public string? CheckPriceType { get; set; }
 
         /// <summary>
         /// 核重重量，单位克
@@ -56,37 +56,37 @@ public partial class NotifyServiceMailBizaction
         /// 最终服务商确认的收件人信息
         /// </summary>
         [JsonPropertyName("confirmReceiverInfo")]
-        public ConfirmReceiverInfoModel ConfirmReceiverInfo { get; set; }
+        public ConfirmReceiverInfoModel? ConfirmReceiverInfo { get; set; }
 
         /// <summary>
         /// 最终服务商确认的寄件人信息
         /// </summary>
         [JsonPropertyName("confirmSenderInfo")]
-        public ConfirmSenderInfoModel ConfirmSenderInfo { get; set; }
+        public ConfirmSenderInfoModel? ConfirmSenderInfo { get; set; }
 
         /// <summary>
         /// 改约结束时间- changeAppoint必填
         /// </summary>
         [JsonPropertyName("endTime")]
-        public string EndTime { get; set; }
+        public string? EndTime { get; set; }
 
         /// <summary>
         /// 业务实操时间
         /// </summary>
         [JsonPropertyName("executeTime")]
-        public string ExecuteTime { get; set; }
+        public string? ExecuteTime { get; set; }
 
         /// <summary>
         /// 柜子编号
         /// </summary>
         [JsonPropertyName("expressBoxCode")]
-        public string ExpressBoxCode { get; set; }
+        public string? ExpressBoxCode { get; set; }
 
         /// <summary>
         /// 物流公司编码
         /// </summary>
         [JsonPropertyName("expressCode")]
-        public string ExpressCode { get; set; }
+        public string? ExpressCode { get; set; }
 
         /// <summary>
         /// 运费金额
@@ -122,19 +122,19 @@ public partial class NotifyServiceMailBizaction
         /// 运单号
         /// </summary>
         [JsonPropertyName("mailNo")]
-        public string MailNo { get; set; }
+        public string? MailNo { get; set; }
 
         /// <summary>
         /// 寄件订单单号
         /// </summary>
         [JsonPropertyName("mailOrderSn")]
-        public string MailOrderSn { get; set; }
+        public string? MailOrderSn { get; set; }
 
         /// <summary>
         /// 小件员修改后的收件人信息
         /// </summary>
         [JsonPropertyName("modifyReceiverInfo")]
-        public ModifyReceiverInfoModel ModifyReceiverInfo { get; set; }
+        public ModifyReceiverInfoModel? ModifyReceiverInfo { get; set; }
 
         /// <summary>
         /// 其他费用，单位分
@@ -158,49 +158,49 @@ public partial class NotifyServiceMailBizaction
         /// 取件码
         /// </summary>
         [JsonPropertyName("pickCode")]
-        public string PickCode { get; set; }
+        public string? PickCode { get; set; }
 
         /// <summary>
         /// 寄件类型，HOME_DELIVERY-上门取件
         /// </summary>
         [JsonPropertyName("postType")]
-        public string PostType { get; set; }
+        public string? PostType { get; set; }
 
         /// <summary>
         /// 小件员code
         /// </summary>
         [JsonPropertyName("postmanCode")]
-        public string PostmanCode { get; set; }
+        public string? PostmanCode { get; set; }
 
         /// <summary>
         /// 小件员姓名
         /// </summary>
         [JsonPropertyName("postmanName")]
-        public string PostmanName { get; set; }
+        public string? PostmanName { get; set; }
 
         /// <summary>
         /// 小件员电话
         /// </summary>
         [JsonPropertyName("postmanPhone")]
-        public string PostmanPhone { get; set; }
+        public string? PostmanPhone { get; set; }
 
         /// <summary>
         /// 取消原因code
         /// </summary>
         [JsonPropertyName("reasonCode")]
-        public string ReasonCode { get; set; }
+        public string? ReasonCode { get; set; }
 
         /// <summary>
         /// 滞留原因
         /// </summary>
         [JsonPropertyName("retentionReason")]
-        public string RetentionReason { get; set; }
+        public string? RetentionReason { get; set; }
 
         /// <summary>
         /// 改约开始时间- changeAppoint节点必填
         /// </summary>
         [JsonPropertyName("startTime")]
-        public string StartTime { get; set; }
+        public string? StartTime { get; set; }
 
         /// <summary>
         /// 宽度（当前核价方式为volume时必填），单位是厘米
@@ -215,49 +215,49 @@ public partial class NotifyServiceMailBizaction
             /// 详细地址
             /// </summary>
             [JsonPropertyName("addrDetail")]
-            public string AddrDetail { get; set; }
+            public string? AddrDetail { get; set; }
 
             /// <summary>
             /// 区名称
             /// </summary>
             [JsonPropertyName("areaName")]
-            public string AreaName { get; set; }
+            public string? AreaName { get; set; }
 
             /// <summary>
             /// 市名称
             /// </summary>
             [JsonPropertyName("cityName")]
-            public string CityName { get; set; }
+            public string? CityName { get; set; }
 
             /// <summary>
             /// 联系人姓名
             /// </summary>
             [JsonPropertyName("contactName")]
-            public string ContactName { get; set; }
+            public string? ContactName { get; set; }
 
             /// <summary>
             /// 联系人手机号
             /// </summary>
             [JsonPropertyName("mobile")]
-            public string Mobile { get; set; }
+            public string? Mobile { get; set; }
 
             /// <summary>
             /// 省名称
             /// </summary>
             [JsonPropertyName("provName")]
-            public string ProvName { get; set; }
+            public string? ProvName { get; set; }
 
             /// <summary>
             /// 街道名称
             /// </summary>
             [JsonPropertyName("streetName")]
-            public string StreetName { get; set; }
+            public string? StreetName { get; set; }
 
             /// <summary>
             /// 联系人电话号码
             /// </summary>
             [JsonPropertyName("telephone")]
-            public string Telephone { get; set; }
+            public string? Telephone { get; set; }
 
 
 
@@ -268,49 +268,49 @@ public partial class NotifyServiceMailBizaction
             /// 详细地址
             /// </summary>
             [JsonPropertyName("addrDetail")]
-            public string AddrDetail { get; set; }
+            public string? AddrDetail { get; set; }
 
             /// <summary>
             /// 区名称
             /// </summary>
             [JsonPropertyName("areaName")]
-            public string AreaName { get; set; }
+            public string? AreaName { get; set; }
 
             /// <summary>
             /// 市名称
             /// </summary>
             [JsonPropertyName("cityName")]
-            public string CityName { get; set; }
+            public string? CityName { get; set; }
 
             /// <summary>
             /// 联系人姓名
             /// </summary>
             [JsonPropertyName("contactName")]
-            public string ContactName { get; set; }
+            public string? ContactName { get; set; }
 
             /// <summary>
             /// 联系人手机号
             /// </summary>
             [JsonPropertyName("mobile")]
-            public string Mobile { get; set; }
+            public string? Mobile { get; set; }
 
             /// <summary>
             /// 省名称
             /// </summary>
             [JsonPropertyName("provName")]
-            public string ProvName { get; set; }
+            public string? ProvName { get; set; }
 
             /// <summary>
             /// 街道名称
             /// </summary>
             [JsonPropertyName("streetName")]
-            public string StreetName { get; set; }
+            public string? StreetName { get; set; }
 
             /// <summary>
             /// 联系人电话号码
             /// </summary>
             [JsonPropertyName("telephone")]
-            public string Telephone { get; set; }
+            public string? Telephone { get; set; }
 
 
 
@@ -321,49 +321,49 @@ public partial class NotifyServiceMailBizaction
             /// 详细地址
             /// </summary>
             [JsonPropertyName("addrDetail")]
-            public string AddrDetail { get; set; }
+            public string? AddrDetail { get; set; }
 
             /// <summary>
             /// 区名称
             /// </summary>
             [JsonPropertyName("areaName")]
-            public string AreaName { get; set; }
+            public string? AreaName { get; set; }
 
             /// <summary>
             /// 市名称
             /// </summary>
             [JsonPropertyName("cityName")]
-            public string CityName { get; set; }
+            public string? CityName { get; set; }
 
             /// <summary>
             /// 联系人姓名
             /// </summary>
             [JsonPropertyName("contactName")]
-            public string ContactName { get; set; }
+            public string? ContactName { get; set; }
 
             /// <summary>
             /// 联系人手机号
             /// </summary>
             [JsonPropertyName("mobile")]
-            public string Mobile { get; set; }
+            public string? Mobile { get; set; }
 
             /// <summary>
             /// 省名称
             /// </summary>
             [JsonPropertyName("provName")]
-            public string ProvName { get; set; }
+            public string? ProvName { get; set; }
 
             /// <summary>
             /// 街道名称
             /// </summary>
             [JsonPropertyName("streetName")]
-            public string StreetName { get; set; }
+            public string? StreetName { get; set; }
 
             /// <summary>
             /// 联系人电话号码
             /// </summary>
             [JsonPropertyName("telephone")]
-            public string Telephone { get; set; }
+            public string? Telephone { get; set; }
 
 
 

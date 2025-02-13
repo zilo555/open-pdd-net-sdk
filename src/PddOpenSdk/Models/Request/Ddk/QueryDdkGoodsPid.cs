@@ -17,7 +17,7 @@ public partial class QueryDdkGoodsPid
     /// 推广位列表，例如：["60005_612"]
     /// </summary>
     [JsonPropertyName("pid_list")]
-    public List<string> PidList { get; set; }
+    public List<string?>? PidList { get; set; }
 
     /// <summary>
     /// 推广位状态：0-正常，1-封禁

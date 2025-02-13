@@ -6,7 +6,7 @@ public partial class GetPopMallBindTicketResponse
     /// 
     /// </summary>
     [JsonPropertyName("response")]
-    public ResponseResponse Response { get; set; }
+    public ResponseResponse? Response { get; set; }
 
     public partial class ResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class GetPopMallBindTicketResponse
         /// ticket
         /// </summary>
         [JsonPropertyName("ticket")]
-        public string Ticket { get; set; }
+        public string? Ticket { get; set; }
 
 
     }

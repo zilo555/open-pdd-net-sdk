@@ -6,7 +6,7 @@ public partial class BindDdkPidMediaidResponse
     /// response
     /// </summary>
     [JsonPropertyName("p_id_bind_response")]
-    public PIdBindResponseResponse PIdBindResponse { get; set; }
+    public PIdBindResponseResponse? PIdBindResponse { get; set; }
 
     public partial class PIdBindResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class BindDdkPidMediaidResponse
         /// 绑定结果
         /// </summary>
         [JsonPropertyName("result")]
-        public ResultResponse Result { get; set; }
+        public ResultResponse? Result { get; set; }
 
         public partial class ResultResponse
         {
@@ -24,7 +24,7 @@ public partial class BindDdkPidMediaidResponse
             /// 绑定结果文本提示
             /// </summary>
             [JsonPropertyName("msg")]
-            public string Msg { get; set; }
+            public string? Msg { get; set; }
 
             /// <summary>
             /// 绑定结果

@@ -23,19 +23,19 @@ public partial class CommitGoodsSubmitGoods
     /// 商品轮播图，按次序上传，图片格式支持JPEG/JPG/PNG， 图片尺寸长宽比1：1且尺寸不低于480px，图片大小最高1MB
     /// </summary>
     [JsonPropertyName("carousel_gallery")]
-    public List<string> CarouselGallery { get; set; }
+    public List<string?>? CarouselGallery { get; set; }
 
     /// <summary>
     /// 商品视频
     /// </summary>
     [JsonPropertyName("carousel_video")]
-    public List<CarouselVideoModel> CarouselVideo { get; set; }
+    public List<CarouselVideoModel?>? CarouselVideo { get; set; }
 
     /// <summary>
     /// 轮播视频字段
     /// </summary>
     [JsonPropertyName("carousel_video_url")]
-    public string CarouselVideoUrl { get; set; }
+    public string? CarouselVideoUrl { get; set; }
 
     /// <summary>
     /// 叶子类目ID
@@ -65,7 +65,7 @@ public partial class CommitGoodsSubmitGoods
     /// 海关名称，只在goods_type为直供商品时有效（现阶段暂不支持）
     /// </summary>
     [JsonPropertyName("customs")]
-    public string Customs { get; set; }
+    public string? Customs { get; set; }
 
     /// <summary>
     /// 是否当日发货,0 否，1 是
@@ -83,13 +83,13 @@ public partial class CommitGoodsSubmitGoods
     /// 商品详情图：; a. 尺寸要求宽度处于480~1200px之间，高度0-1500px之间; b. 大小1M以内; c. 数量限制在20张之间; d. 图片格式仅支持JPG,PNG格式; e. 点击上传时，支持批量上传详情图
     /// </summary>
     [JsonPropertyName("detail_gallery")]
-    public List<string> DetailGallery { get; set; }
+    public List<string?>? DetailGallery { get; set; }
 
     /// <summary>
     /// 卡券类商品属性
     /// </summary>
     [JsonPropertyName("elec_goods_attributes")]
-    public ElecGoodsAttributesModel ElecGoodsAttributes { get; set; }
+    public ElecGoodsAttributesModel? ElecGoodsAttributes { get; set; }
 
     /// <summary>
     /// 草稿id
@@ -101,7 +101,7 @@ public partial class CommitGoodsSubmitGoods
     /// 商品描述， 字数限制：20-500，例如，新包装，保证产品的口感和新鲜度。单颗独立小包装，双重营养，1斤家庭分享装，更实惠新疆一级骏枣夹核桃仁。
     /// </summary>
     [JsonPropertyName("goods_desc")]
-    public string GoodsDesc { get; set; }
+    public string? GoodsDesc { get; set; }
 
     /// <summary>
     /// 1213414
@@ -113,25 +113,25 @@ public partial class CommitGoodsSubmitGoods
     /// 商品标题，例如，新疆特产 红满疆枣夹核桃500g
     /// </summary>
     [JsonPropertyName("goods_name")]
-    public string GoodsName { get; set; }
+    public string? GoodsName { get; set; }
 
     /// <summary>
     /// 商品属性列表
     /// </summary>
     [JsonPropertyName("goods_properties")]
-    public List<GoodsPropertiesModel> GoodsProperties { get; set; }
+    public List<GoodsPropertiesModel?>? GoodsProperties { get; set; }
 
     /// <summary>
     /// 日历商品交易相关信息
     /// </summary>
     [JsonPropertyName("goods_trade_attr")]
-    public GoodsTradeAttrModel GoodsTradeAttr { get; set; }
+    public GoodsTradeAttrModel? GoodsTradeAttr { get; set; }
 
     /// <summary>
     /// 商品出行信息
     /// </summary>
     [JsonPropertyName("goods_travel_attr")]
-    public GoodsTravelAttrModel GoodsTravelAttr { get; set; }
+    public GoodsTravelAttrModel? GoodsTravelAttr { get; set; }
 
     /// <summary>
     /// 1-国内普通商品，2-一般贸易，3-保税仓BBC直供，4-海外BC直邮 ,5-流量 ,6-话费 ,7-优惠券 ,8-QQ充值 ,9-加油卡，15-商家卡券，18-海外CC行邮 19-平台卡券
@@ -149,7 +149,7 @@ public partial class CommitGoodsSubmitGoods
     /// 商品主图，请参考拼多多首页大图，如果商品参加部分活动则必填，否则无法参加活动; a. 尺寸750 x 352px; b. 大小100k以内; c. 图片格式仅支持JPG,PNG格式; d. 图片背景应以纯白为主, 商品图案居中显示; e. 图片不可以添加任何品牌相关文字或logo
     /// </summary>
     [JsonPropertyName("image_url")]
-    public string ImageUrl { get; set; }
+    public string? ImageUrl { get; set; }
 
     /// <summary>
     /// 是否支持正品发票
@@ -203,13 +203,13 @@ public partial class CommitGoodsSubmitGoods
     /// 本地服务id
     /// </summary>
     [JsonPropertyName("local_service_id_list")]
-    public List<int?> LocalServiceIdList { get; set; }
+    public List<int?>? LocalServiceIdList { get; set; }
 
     /// <summary>
     /// 买家自提模版id
     /// </summary>
     [JsonPropertyName("mai_jia_zi_ti")]
-    public string MaiJiaZiTi { get; set; }
+    public string? MaiJiaZiTi { get; set; }
 
     /// <summary>
     /// 参考价格，单位为分
@@ -239,13 +239,13 @@ public partial class CommitGoodsSubmitGoods
     /// 商品goods外部编码
     /// </summary>
     [JsonPropertyName("out_goods_id")]
-    public string OutGoodsId { get; set; }
+    public string? OutGoodsId { get; set; }
 
     /// <summary>
     /// 第三方商品Id
     /// </summary>
     [JsonPropertyName("out_source_goods_id")]
-    public string OutSourceGoodsId { get; set; }
+    public string? OutSourceGoodsId { get; set; }
 
     /// <summary>
     /// 第三方商品来源
@@ -257,7 +257,7 @@ public partial class CommitGoodsSubmitGoods
     /// {; 	"consumption_tax_rate": 1,; 	"value_added_tax_rate": 9,; 	"hs_code": "2200",; 	"customs_broker": "sss",; 	"customs_declaration_method": 1,; 	"bonded_warehouse": "sss",; 	"bonded_warehouse_key": "pp"; }
     /// </summary>
     [JsonPropertyName("oversea_goods")]
-    public OverseaGoodsModel OverseaGoods { get; set; }
+    public OverseaGoodsModel? OverseaGoods { get; set; }
 
     /// <summary>
     /// oversea_type
@@ -287,7 +287,7 @@ public partial class CommitGoodsSubmitGoods
     /// 上门安装模版id
     /// </summary>
     [JsonPropertyName("shang_men_an_zhuang")]
-    public string ShangMenAnZhuang { get; set; }
+    public string? ShangMenAnZhuang { get; set; }
 
     /// <summary>
     /// 承诺发货时间（ 秒），48小时或24小时，is_pre_sale为1时不必传
@@ -305,7 +305,7 @@ public partial class CommitGoodsSubmitGoods
     /// sku对象列表,实例：[{; 	"is_onsale": 1,; 	"limit_quantity": 999,; 	"price": "2200",; 	"weight": 1000,; 	"multi_price": "1900",; 	"thumb_url": "http://t06img.yangkeduo.com/images/2018-04-15/ced035033b5d40b589140af882621c03.jpg",; 	"out_sku_sn": "L",; 	"quantity": 100,; 	"spec_id_list": "[25]",; 	"oversea_sku": {; 		"measurement_code": "计量单位编码",; 		"taxation": "税费",; 		"specifications": "规格"; 	}; }]
     /// </summary>
     [JsonPropertyName("sku_list")]
-    public List<SkuListModel> SkuList { get; set; }
+    public List<SkuListModel?>? SkuList { get; set; }
 
     /// <summary>
     /// 库存方式（0：普通型，1：日历型）
@@ -317,13 +317,13 @@ public partial class CommitGoodsSubmitGoods
     /// 送货入户并安装模版id
     /// </summary>
     [JsonPropertyName("song_huo_an_zhuang")]
-    public string SongHuoAnZhuang { get; set; }
+    public string? SongHuoAnZhuang { get; set; }
 
     /// <summary>
     /// 送货入户模版id
     /// </summary>
     [JsonPropertyName("song_huo_ru_hu")]
-    public string SongHuoRuHu { get; set; }
+    public string? SongHuoRuHu { get; set; }
 
     /// <summary>
     /// 提交后上架状态，0:上架,1:保持原样
@@ -335,7 +335,7 @@ public partial class CommitGoodsSubmitGoods
     /// 短标题，示例:新包装，保证产品的口感和新鲜度。单颗独立小包装，双重营养，1斤家庭分享装，更实惠新疆一级骏枣夹核桃仁。
     /// </summary>
     [JsonPropertyName("tiny_name")]
-    public string TinyName { get; set; }
+    public string? TinyName { get; set; }
 
     /// <summary>
     /// 满2件折扣，可选范围0-100, 0表示取消，95表示95折，设置需先查询规则接口获取实际可填范围
@@ -347,13 +347,13 @@ public partial class CommitGoodsSubmitGoods
     /// 保税仓，只在goods_type为直供商品时有效（现阶段暂不支持）
     /// </summary>
     [JsonPropertyName("warehouse")]
-    public string Warehouse { get; set; }
+    public string? Warehouse { get; set; }
 
     /// <summary>
     /// 水果类目温馨提示，只在水果类目商品才生效， 字数限制：商品描述goods_desc+温馨提示总计不超过500字。
     /// </summary>
     [JsonPropertyName("warm_tips")]
-    public string WarmTips { get; set; }
+    public string? WarmTips { get; set; }
 
     /// <summary>
     /// 只换不修的天数，目前只支持0和365
@@ -374,7 +374,7 @@ public partial class CommitGoodsSubmitGoods
         /// 商品视频url
         /// </summary>
         [JsonPropertyName("video_url")]
-        public string VideoUrl { get; set; }
+        public string? VideoUrl { get; set; }
 
 
 
@@ -420,13 +420,13 @@ public partial class CommitGoodsSubmitGoods
         /// 图片url，非销售属性不用传
         /// </summary>
         [JsonPropertyName("img_url")]
-        public string ImgUrl { get; set; }
+        public string? ImgUrl { get; set; }
 
         /// <summary>
         /// 备注，非销售属性不用传
         /// </summary>
         [JsonPropertyName("note")]
-        public string Note { get; set; }
+        public string? Note { get; set; }
 
         /// <summary>
         /// 父属性id，非销售属性不用传
@@ -456,13 +456,13 @@ public partial class CommitGoodsSubmitGoods
         /// 属性值
         /// </summary>
         [JsonPropertyName("value")]
-        public string Value { get; set; }
+        public string? Value { get; set; }
 
         /// <summary>
         /// 属性单位
         /// </summary>
         [JsonPropertyName("value_unit")]
-        public string ValueUnit { get; set; }
+        public string? ValueUnit { get; set; }
 
         /// <summary>
         /// 属性值id
@@ -485,7 +485,7 @@ public partial class CommitGoodsSubmitGoods
         /// 预订须知
         /// </summary>
         [JsonPropertyName("booking_notes")]
-        public BookingNotesModel BookingNotes { get; set; }
+        public BookingNotesModel? BookingNotes { get; set; }
 
         /// <summary>
         /// 卡券有效期，日历日期后多少天可用。默认值为0表示仅限日历日当天使用
@@ -500,7 +500,7 @@ public partial class CommitGoodsSubmitGoods
             /// 预定须知图片地址
             /// </summary>
             [JsonPropertyName("url")]
-            public string Url { get; set; }
+            public string? Url { get; set; }
 
 
 
@@ -530,7 +530,7 @@ public partial class CommitGoodsSubmitGoods
         /// 保税仓唯一标识
         /// </summary>
         [JsonPropertyName("bonded_warehouse_key")]
-        public string BondedWarehouseKey { get; set; }
+        public string? BondedWarehouseKey { get; set; }
 
         /// <summary>
         /// 消费税率
@@ -542,13 +542,13 @@ public partial class CommitGoodsSubmitGoods
         /// 清关服务商
         /// </summary>
         [JsonPropertyName("customs_broker")]
-        public string CustomsBroker { get; set; }
+        public string? CustomsBroker { get; set; }
 
         /// <summary>
         /// 海关编号
         /// </summary>
         [JsonPropertyName("hs_code")]
-        public string HsCode { get; set; }
+        public string? HsCode { get; set; }
 
         /// <summary>
         /// 增值税率
@@ -589,19 +589,19 @@ public partial class CommitGoodsSubmitGoods
         /// 商品sku外部编码
         /// </summary>
         [JsonPropertyName("out_sku_sn")]
-        public string OutSkuSn { get; set; }
+        public string? OutSkuSn { get; set; }
 
         /// <summary>
         /// 第三方sku Id
         /// </summary>
         [JsonPropertyName("out_source_sku_id")]
-        public string OutSourceSkuId { get; set; }
+        public string? OutSourceSkuId { get; set; }
 
         /// <summary>
         /// oversea_sku
         /// </summary>
         [JsonPropertyName("oversea_sku")]
-        public OverseaSkuModel OverseaSku { get; set; }
+        public OverseaSkuModel? OverseaSku { get; set; }
 
         /// <summary>
         /// 商品单买价格
@@ -625,19 +625,19 @@ public partial class CommitGoodsSubmitGoods
         /// sku属性
         /// </summary>
         [JsonPropertyName("sku_properties")]
-        public List<SkuPropertiesModel> SkuProperties { get; set; }
+        public List<SkuPropertiesModel?>? SkuProperties { get; set; }
 
         /// <summary>
         /// 商品规格列表，根据pdd.goods.spec.id.get生成的规格属性id，例如：颜色规格下商家新增白色和黑色，大小规格下商家新增L和XL，则由4种spec组合，入参一种组合即可，在skulist中需要有4个spec组合的sku
         /// </summary>
         [JsonPropertyName("spec_id_list")]
-        public List<long?> SpecIdList { get; set; }
+        public List<long?>? SpecIdList { get; set; }
 
         /// <summary>
         /// sku预览图，预览图尺寸：等宽高，且高度不低于480px，现已支持1M大小，越清晰越好卖，SKU预览图格式：仅支持JPG,PNG格式
         /// </summary>
         [JsonPropertyName("thumb_url")]
-        public string ThumbUrl { get; set; }
+        public string? ThumbUrl { get; set; }
 
         /// <summary>
         /// 重量，单位为g
@@ -652,13 +652,13 @@ public partial class CommitGoodsSubmitGoods
             /// 计量单位编码，从接口pdd.gooods.sku.measurement.list获取code
             /// </summary>
             [JsonPropertyName("measurement_code")]
-            public string MeasurementCode { get; set; }
+            public string? MeasurementCode { get; set; }
 
             /// <summary>
             /// 规格
             /// </summary>
             [JsonPropertyName("specifications")]
-            public string Specifications { get; set; }
+            public string? Specifications { get; set; }
 
             /// <summary>
             /// 税费
@@ -675,7 +675,7 @@ public partial class CommitGoodsSubmitGoods
             /// 属性单位
             /// </summary>
             [JsonPropertyName("punit")]
-            public string Punit { get; set; }
+            public string? Punit { get; set; }
 
             /// <summary>
             /// 属性id
@@ -687,7 +687,7 @@ public partial class CommitGoodsSubmitGoods
             /// 属性值
             /// </summary>
             [JsonPropertyName("value")]
-            public string Value { get; set; }
+            public string? Value { get; set; }
 
             /// <summary>
             /// 属性值id

@@ -6,7 +6,7 @@ public partial class PostMallInfoStoreUpdateResponse
     /// 
     /// </summary>
     [JsonPropertyName("mall_info_store_update_post_response")]
-    public MallInfoStoreUpdatePostResponseResponse MallInfoStoreUpdatePostResponse { get; set; }
+    public MallInfoStoreUpdatePostResponseResponse? MallInfoStoreUpdatePostResponse { get; set; }
 
     public partial class MallInfoStoreUpdatePostResponseResponse
     {

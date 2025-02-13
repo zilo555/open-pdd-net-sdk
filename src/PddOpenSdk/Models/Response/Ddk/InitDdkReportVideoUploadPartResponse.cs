@@ -6,7 +6,7 @@ public partial class InitDdkReportVideoUploadPartResponse
     /// 
     /// </summary>
     [JsonPropertyName("response")]
-    public ResponseResponse Response { get; set; }
+    public ResponseResponse? Response { get; set; }
 
     public partial class ResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class InitDdkReportVideoUploadPartResponse
         /// 
         /// </summary>
         [JsonPropertyName("upload_sign")]
-        public string UploadSign { get; set; }
+        public string? UploadSign { get; set; }
 
 
     }

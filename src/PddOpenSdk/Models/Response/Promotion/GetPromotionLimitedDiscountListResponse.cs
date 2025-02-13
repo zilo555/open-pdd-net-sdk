@@ -12,7 +12,7 @@ public partial class GetPromotionLimitedDiscountListResponse
     /// 活动信息
     /// </summary>
     [JsonPropertyName("open_goods_activity_list")]
-    public List<OpenGoodsActivityListResponse> OpenGoodsActivityList { get; set; }
+    public List<OpenGoodsActivityListResponse?>? OpenGoodsActivityList { get; set; }
 
     /// <summary>
     /// 0:生成时间升序  1:生成时间降序
@@ -51,7 +51,7 @@ public partial class GetPromotionLimitedDiscountListResponse
         /// 活动名称
         /// </summary>
         [JsonPropertyName("activity_name")]
-        public string ActivityName { get; set; }
+        public string? ActivityName { get; set; }
 
         /// <summary>
         /// 活动类型
@@ -81,7 +81,7 @@ public partial class GetPromotionLimitedDiscountListResponse
         /// 商品名称
         /// </summary>
         [JsonPropertyName("goods_name")]
-        public string GoodsName { get; set; }
+        public string? GoodsName { get; set; }
 
         /// <summary>
         /// 商品剩余库存
@@ -93,7 +93,7 @@ public partial class GetPromotionLimitedDiscountListResponse
         /// 价格信息
         /// </summary>
         [JsonPropertyName("price_info")]
-        public List<PriceInfoResponse> PriceInfo { get; set; }
+        public List<PriceInfoResponse?>? PriceInfo { get; set; }
 
         /// <summary>
         /// 开始时间（单位：s）
@@ -138,7 +138,7 @@ public partial class GetPromotionLimitedDiscountListResponse
             /// 折扣范围
             /// </summary>
             [JsonPropertyName("discount_range")]
-            public string DiscountRange { get; set; }
+            public string? DiscountRange { get; set; }
 
             /// <summary>
             /// 最大的sku活动拼团价
@@ -156,7 +156,7 @@ public partial class GetPromotionLimitedDiscountListResponse
             /// sku维度的活动信息
             /// </summary>
             [JsonPropertyName("open_sku_prices")]
-            public List<OpenSkuPricesResponse> OpenSkuPrices { get; set; }
+            public List<OpenSkuPricesResponse?>? OpenSkuPrices { get; set; }
 
             /// <summary>
             /// 活动价生效时用户限购数量 0:不限购
@@ -177,7 +177,7 @@ public partial class GetPromotionLimitedDiscountListResponse
                 /// 折扣比例
                 /// </summary>
                 [JsonPropertyName("discount")]
-                public string Discount { get; set; }
+                public string? Discount { get; set; }
 
                 /// <summary>
                 /// 原拼团价（单位：分）
@@ -195,7 +195,7 @@ public partial class GetPromotionLimitedDiscountListResponse
                 /// sku名称
                 /// </summary>
                 [JsonPropertyName("sku_name")]
-                public string SkuName { get; set; }
+                public string? SkuName { get; set; }
 
 
             }

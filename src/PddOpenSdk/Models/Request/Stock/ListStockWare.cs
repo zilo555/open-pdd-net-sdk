@@ -11,13 +11,13 @@ public partial class ListStockWare
     /// 货品编码
     /// </summary>
     [JsonPropertyName("ware_sn")]
-    public string WareSn { get; set; }
+    public string? WareSn { get; set; }
 
     /// <summary>
     /// 货品名称
     /// </summary>
     [JsonPropertyName("ware_name")]
-    public string WareName { get; set; }
+    public string? WareName { get; set; }
 
     /// <summary>
     /// 类型 0:单独货品。1:组合货品

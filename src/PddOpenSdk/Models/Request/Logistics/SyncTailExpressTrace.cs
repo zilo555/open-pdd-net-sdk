@@ -14,13 +14,13 @@ public partial class SyncTailExpressTrace
         /// 地址
         /// </summary>
         [JsonPropertyName("address")]
-        public string Address { get; set; }
+        public string? Address { get; set; }
 
         /// <summary>
         /// 扫描城市名称
         /// </summary>
         [JsonPropertyName("city")]
-        public string City { get; set; }
+        public string? City { get; set; }
 
         /// <summary>
         /// 轨迹详情描述
@@ -32,13 +32,13 @@ public partial class SyncTailExpressTrace
         /// 三级地址，区/县
         /// </summary>
         [JsonPropertyName("district")]
-        public string District { get; set; }
+        public string? District { get; set; }
 
         /// <summary>
         /// 问题件原因code
         /// </summary>
         [JsonPropertyName("failReason")]
-        public string FailReason { get; set; }
+        public string? FailReason { get; set; }
 
         /// <summary>
         /// 数据id java.util.UUID生成
@@ -56,7 +56,7 @@ public partial class SyncTailExpressTrace
         /// 省份
         /// </summary>
         [JsonPropertyName("province")]
-        public string Province { get; set; }
+        public string? Province { get; set; }
 
         /// <summary>
         /// 快递公司id
@@ -68,13 +68,13 @@ public partial class SyncTailExpressTrace
         /// 扫描站点名称
         /// </summary>
         [JsonPropertyName("siteName")]
-        public string SiteName { get; set; }
+        public string? SiteName { get; set; }
 
         /// <summary>
         /// 扫描站点编码 站点编号(各快递公司用于区分站点的唯一id)
         /// </summary>
         [JsonPropertyName("siteNo")]
-        public string SiteNo { get; set; }
+        public string? SiteNo { get; set; }
 
         /// <summary>
         /// 扫描站点类型 1:网点；2:中转中心；3:代收点

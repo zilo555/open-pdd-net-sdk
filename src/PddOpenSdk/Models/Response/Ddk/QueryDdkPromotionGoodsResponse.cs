@@ -6,7 +6,7 @@ public partial class QueryDdkPromotionGoodsResponse
     /// 
     /// </summary>
     [JsonPropertyName("response")]
-    public ResponseResponse Response { get; set; }
+    public ResponseResponse? Response { get; set; }
 
     public partial class ResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class QueryDdkPromotionGoodsResponse
         /// 报备记录列表
         /// </summary>
         [JsonPropertyName("application_list")]
-        public List<ApplicationListResponse> ApplicationList { get; set; }
+        public List<ApplicationListResponse?>? ApplicationList { get; set; }
 
         /// <summary>
         /// 报备记录总数
@@ -30,7 +30,7 @@ public partial class QueryDdkPromotionGoodsResponse
             /// 审核信息
             /// </summary>
             [JsonPropertyName("comment")]
-            public string Comment { get; set; }
+            public string? Comment { get; set; }
 
             /// <summary>
             /// 报备提交时间

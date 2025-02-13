@@ -6,7 +6,7 @@ public partial class GetGoodsCommitListResponse
     /// res
     /// </summary>
     [JsonPropertyName("goods_commit_list_get_response")]
-    public GoodsCommitListGetResponseResponse GoodsCommitListGetResponse { get; set; }
+    public GoodsCommitListGetResponseResponse? GoodsCommitListGetResponse { get; set; }
 
     public partial class GoodsCommitListGetResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class GetGoodsCommitListResponse
         /// list
         /// </summary>
         [JsonPropertyName("list")]
-        public List<ListResponse> List { get; set; }
+        public List<ListResponse?>? List { get; set; }
 
         /// <summary>
         /// total
@@ -54,7 +54,7 @@ public partial class GetGoodsCommitListResponse
             /// 商品标题
             /// </summary>
             [JsonPropertyName("goods_name")]
-            public string GoodsName { get; set; }
+            public string? GoodsName { get; set; }
 
             /// <summary>
             /// 是否新增 0:新增，1：修改
@@ -66,13 +66,13 @@ public partial class GetGoodsCommitListResponse
             /// 商家编码
             /// </summary>
             [JsonPropertyName("outer_goods_id")]
-            public string OuterGoodsId { get; set; }
+            public string? OuterGoodsId { get; set; }
 
             /// <summary>
             /// 驳回原因
             /// </summary>
             [JsonPropertyName("reject_comment")]
-            public string RejectComment { get; set; }
+            public string? RejectComment { get; set; }
 
             /// <summary>
             /// 提交时间

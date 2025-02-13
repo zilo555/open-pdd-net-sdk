@@ -6,7 +6,7 @@ public partial class InvalidInvoiceDetailResponse
     /// response
     /// </summary>
     [JsonPropertyName("invoice_detail_invalid_response")]
-    public InvoiceDetailInvalidResponseResponse InvoiceDetailInvalidResponse { get; set; }
+    public InvoiceDetailInvalidResponseResponse? InvoiceDetailInvalidResponse { get; set; }
 
     public partial class InvoiceDetailInvalidResponseResponse
     {
@@ -21,13 +21,13 @@ public partial class InvalidInvoiceDetailResponse
         /// errorMsg
         /// </summary>
         [JsonPropertyName("error_msg")]
-        public string ErrorMsg { get; set; }
+        public string? ErrorMsg { get; set; }
 
         /// <summary>
         /// result
         /// </summary>
         [JsonPropertyName("result")]
-        public ResultResponse Result { get; set; }
+        public ResultResponse? Result { get; set; }
 
         /// <summary>
         /// success

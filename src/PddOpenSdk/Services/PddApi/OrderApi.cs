@@ -27,6 +27,16 @@ public class OrderApi : PddCommonApi
     }
 
     /// <summary>
+    /// 中转订单用户实际收货地址查询
+    /// </summary>
+
+    public async Task<GetOrderConsolidateOrderUserAddressResponse> GetOrderConsolidateOrderUserAddressAsync(GetOrderConsolidateOrderUserAddress getOrderConsolidateOrderUserAddress)
+    {
+        var result = await PostAsync<GetOrderConsolidateOrderUserAddress, GetOrderConsolidateOrderUserAddressResponse>("pdd.order.consolidate.order.user.address.get", getOrderConsolidateOrderUserAddress);
+        return result;
+    }
+
+    /// <summary>
     /// 订单详情
     /// </summary>
 
@@ -107,12 +117,52 @@ public class OrderApi : PddCommonApi
     }
 
     /// <summary>
+    /// 服务权益单更新接口
+    /// </summary>
+
+    public async Task<UpdateOrderServiceBenefitResponse> UpdateOrderServiceBenefitAsync(UpdateOrderServiceBenefit updateOrderServiceBenefit)
+    {
+        var result = await PostAsync<UpdateOrderServiceBenefit, UpdateOrderServiceBenefitResponse>("pdd.order.service.benefit.update", updateOrderServiceBenefit);
+        return result;
+    }
+
+    /// <summary>
+    /// 特定类型订单查询接口
+    /// </summary>
+
+    public async Task<GetOrderSpecificOrderInformationResponse> GetOrderSpecificOrderInformationAsync(GetOrderSpecificOrderInformation getOrderSpecificOrderInformation)
+    {
+        var result = await PostAsync<GetOrderSpecificOrderInformation, GetOrderSpecificOrderInformationResponse>("pdd.order.specific.order.information.get", getOrderSpecificOrderInformation);
+        return result;
+    }
+
+    /// <summary>
     /// 订单状态
     /// </summary>
 
     public async Task<GetOrderStatusResponse> GetOrderStatusAsync(GetOrderStatus getOrderStatus)
     {
         var result = await PostAsync<GetOrderStatus, GetOrderStatusResponse>("pdd.order.status.get", getOrderStatus);
+        return result;
+    }
+
+    /// <summary>
+    /// 订单国补信息查询接口
+    /// </summary>
+
+    public async Task<InfoOrderTradeinResponse> InfoOrderTradeinAsync(InfoOrderTradein infoOrderTradein)
+    {
+        var result = await PostAsync<InfoOrderTradein, InfoOrderTradeinResponse>("pdd.order.tradein.info", infoOrderTradein);
+        return result;
+    }
+
+    /// <summary>
+    /// 上传国补订单的sn码
+    /// </summary>
+
+    public async Task<SnOrderTradeinPostResponse> SnOrderTradeinPostAsync(SnOrderTradeinPost snOrderTradeinPost)
+    {
+        var result = await PostAsync<SnOrderTradeinPost, SnOrderTradeinPostResponse>("pdd.order.tradein.post.sn", snOrderTradeinPost);
         return result;
     }
 

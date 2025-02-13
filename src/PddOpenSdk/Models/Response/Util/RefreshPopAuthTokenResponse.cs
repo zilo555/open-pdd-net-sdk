@@ -6,7 +6,7 @@ public partial class RefreshPopAuthTokenResponse
     /// 
     /// </summary>
     [JsonPropertyName("pop_auth_token_refresh_response")]
-    public PopAuthTokenRefreshResponseResponse PopAuthTokenRefreshResponse { get; set; }
+    public PopAuthTokenRefreshResponseResponse? PopAuthTokenRefreshResponse { get; set; }
 
     public partial class PopAuthTokenRefreshResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class RefreshPopAuthTokenResponse
         /// access_token
         /// </summary>
         [JsonPropertyName("access_token")]
-        public string AccessToken { get; set; }
+        public string? AccessToken { get; set; }
 
         /// <summary>
         /// access_token过期时间点
@@ -33,13 +33,13 @@ public partial class RefreshPopAuthTokenResponse
         /// 商家店铺id
         /// </summary>
         [JsonPropertyName("owner_id")]
-        public string OwnerId { get; set; }
+        public string? OwnerId { get; set; }
 
         /// <summary>
         /// 商家账号名称
         /// </summary>
         [JsonPropertyName("owner_name")]
-        public string OwnerName { get; set; }
+        public string? OwnerName { get; set; }
 
         /// <summary>
         /// r1级别API或字段的访问过期时间点
@@ -69,7 +69,7 @@ public partial class RefreshPopAuthTokenResponse
         /// refresh token，可用来刷新access_token
         /// </summary>
         [JsonPropertyName("refresh_token")]
-        public string RefreshToken { get; set; }
+        public string? RefreshToken { get; set; }
 
         /// <summary>
         /// Refresh token过期时间点
@@ -87,7 +87,7 @@ public partial class RefreshPopAuthTokenResponse
         /// 接口列表
         /// </summary>
         [JsonPropertyName("scope")]
-        public List<string> Scope { get; set; }
+        public List<string?>? Scope { get; set; }
 
         /// <summary>
         /// w1级别API或字段的访问过期时间点

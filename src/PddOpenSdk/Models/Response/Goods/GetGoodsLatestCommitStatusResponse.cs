@@ -6,7 +6,7 @@ public partial class GetGoodsLatestCommitStatusResponse
     /// response
     /// </summary>
     [JsonPropertyName("goods_latest_commit_status_get_response")]
-    public GoodsLatestCommitStatusGetResponseResponse GoodsLatestCommitStatusGetResponse { get; set; }
+    public GoodsLatestCommitStatusGetResponseResponse? GoodsLatestCommitStatusGetResponse { get; set; }
 
     public partial class GoodsLatestCommitStatusGetResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class GetGoodsLatestCommitStatusResponse
         /// list
         /// </summary>
         [JsonPropertyName("list")]
-        public List<ListResponse> List { get; set; }
+        public List<ListResponse?>? List { get; set; }
 
         public partial class ListResponse
         {
@@ -36,7 +36,7 @@ public partial class GetGoodsLatestCommitStatusResponse
             /// 驳回原因
             /// </summary>
             [JsonPropertyName("reject_comment")]
-            public string RejectComment { get; set; }
+            public string? RejectComment { get; set; }
 
 
         }

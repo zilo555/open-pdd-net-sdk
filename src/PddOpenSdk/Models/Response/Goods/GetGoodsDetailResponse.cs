@@ -6,7 +6,7 @@ public partial class GetGoodsDetailResponse
     /// 商品详情response
     /// </summary>
     [JsonPropertyName("goods_detail_get_response")]
-    public GoodsDetailGetResponseResponse GoodsDetailGetResponse { get; set; }
+    public GoodsDetailGetResponseResponse? GoodsDetailGetResponse { get; set; }
 
     public partial class GoodsDetailGetResponseResponse
     {
@@ -27,7 +27,7 @@ public partial class GetGoodsDetailResponse
         /// 商品轮播图列表
         /// </summary>
         [JsonPropertyName("carousel_gallery_list")]
-        public List<string> CarouselGalleryList { get; set; }
+        public List<string?>? CarouselGalleryList { get; set; }
 
         /// <summary>
         /// 叶子类目ID
@@ -57,7 +57,7 @@ public partial class GetGoodsDetailResponse
         /// 海关名称
         /// </summary>
         [JsonPropertyName("customs")]
-        public string Customs { get; set; }
+        public string? Customs { get; set; }
 
         /// <summary>
         /// 是否当日发货,0 否，1 是
@@ -75,19 +75,19 @@ public partial class GetGoodsDetailResponse
         /// 商品详情图
         /// </summary>
         [JsonPropertyName("detail_gallery_list")]
-        public List<string> DetailGalleryList { get; set; }
+        public List<string?>? DetailGalleryList { get; set; }
 
         /// <summary>
         /// 卡券类商品属性
         /// </summary>
         [JsonPropertyName("elec_goods_attributes")]
-        public ElecGoodsAttributesResponse ElecGoodsAttributes { get; set; }
+        public ElecGoodsAttributesResponse? ElecGoodsAttributes { get; set; }
 
         /// <summary>
         /// 商品描述
         /// </summary>
         [JsonPropertyName("goods_desc")]
-        public string GoodsDesc { get; set; }
+        public string? GoodsDesc { get; set; }
 
         /// <summary>
         /// 商品id
@@ -99,25 +99,25 @@ public partial class GetGoodsDetailResponse
         /// 商品名称
         /// </summary>
         [JsonPropertyName("goods_name")]
-        public string GoodsName { get; set; }
+        public string? GoodsName { get; set; }
 
         /// <summary>
         /// 商品属性列表
         /// </summary>
         [JsonPropertyName("goods_property_list")]
-        public List<GoodsPropertyListResponse> GoodsPropertyList { get; set; }
+        public List<GoodsPropertyListResponse?>? GoodsPropertyList { get; set; }
 
         /// <summary>
         /// 日历商品交易相关信息
         /// </summary>
         [JsonPropertyName("goods_trade_attr")]
-        public GoodsTradeAttrResponse GoodsTradeAttr { get; set; }
+        public GoodsTradeAttrResponse? GoodsTradeAttr { get; set; }
 
         /// <summary>
         /// 日历商品出行信息
         /// </summary>
         [JsonPropertyName("goods_travel_attr")]
-        public GoodsTravelAttrResponse GoodsTravelAttr { get; set; }
+        public GoodsTravelAttrResponse? GoodsTravelAttr { get; set; }
 
         /// <summary>
         /// 商品类型：1-国内普通商品，2-一般贸易，3-保税仓BBC直供，4-海外BC直邮 ,5-流量 ,6-话费 ,7-优惠券 ,8-QQ充值 ,9-加油卡，15-商家卡券，18-海外CC行邮 19-平台卡券
@@ -129,7 +129,7 @@ public partial class GetGoodsDetailResponse
         /// 商品主图
         /// </summary>
         [JsonPropertyName("image_url")]
-        public string ImageUrl { get; set; }
+        public string? ImageUrl { get; set; }
 
         /// <summary>
         /// 是否支持正品发票；0-不支持、1-支持
@@ -183,13 +183,13 @@ public partial class GetGoodsDetailResponse
         /// 本地服务id
         /// </summary>
         [JsonPropertyName("local_service_id_list")]
-        public List<int?> LocalServiceIdList { get; set; }
+        public List<int?>? LocalServiceIdList { get; set; }
 
         /// <summary>
         /// 买家自提模版id
         /// </summary>
         [JsonPropertyName("mai_jia_zi_ti")]
-        public string MaiJiaZiTi { get; set; }
+        public string? MaiJiaZiTi { get; set; }
 
         /// <summary>
         /// 参考价格，单位为分
@@ -207,7 +207,7 @@ public partial class GetGoodsDetailResponse
         /// 第三方商品Id
         /// </summary>
         [JsonPropertyName("out_source_goods_id")]
-        public string OutSourceGoodsId { get; set; }
+        public string? OutSourceGoodsId { get; set; }
 
         /// <summary>
         /// 第三方商品来源
@@ -219,13 +219,13 @@ public partial class GetGoodsDetailResponse
         /// 商家编码（商品维度），同其他接口中的outer_goods_id 、out_goods_id、out_goods_sn、outer_goods_sn 都为商家编码（goods维度）。
         /// </summary>
         [JsonPropertyName("outer_goods_id")]
-        public string OuterGoodsId { get; set; }
+        public string? OuterGoodsId { get; set; }
 
         /// <summary>
         /// oversea_goods
         /// </summary>
         [JsonPropertyName("oversea_goods")]
-        public OverseaGoodsResponse OverseaGoods { get; set; }
+        public OverseaGoodsResponse? OverseaGoods { get; set; }
 
         /// <summary>
         /// oversea_type
@@ -255,7 +255,7 @@ public partial class GetGoodsDetailResponse
         /// 上门安装模版id
         /// </summary>
         [JsonPropertyName("shang_men_an_zhuang")]
-        public string ShangMenAnZhuang { get; set; }
+        public string? ShangMenAnZhuang { get; set; }
 
         /// <summary>
         /// 承诺发货时间（ 秒）
@@ -273,7 +273,7 @@ public partial class GetGoodsDetailResponse
         /// 门店组名称
         /// </summary>
         [JsonPropertyName("shop_group_name")]
-        public string ShopGroupName { get; set; }
+        public string? ShopGroupName { get; set; }
 
         /// <summary>
         /// 尺码表id
@@ -291,19 +291,19 @@ public partial class GetGoodsDetailResponse
         /// sku列表
         /// </summary>
         [JsonPropertyName("sku_list")]
-        public List<SkuListResponse> SkuList { get; set; }
+        public List<SkuListResponse?>? SkuList { get; set; }
 
         /// <summary>
         /// 送货入户并安装模版id
         /// </summary>
         [JsonPropertyName("song_huo_an_zhuang")]
-        public string SongHuoAnZhuang { get; set; }
+        public string? SongHuoAnZhuang { get; set; }
 
         /// <summary>
         /// 送货入户模版id
         /// </summary>
         [JsonPropertyName("song_huo_ru_hu")]
-        public string SongHuoRuHu { get; set; }
+        public string? SongHuoRuHu { get; set; }
 
         /// <summary>
         /// 商品状态 1:上架，2：下架，3：售罄 4：已删除
@@ -315,7 +315,7 @@ public partial class GetGoodsDetailResponse
         /// 短标题，示例：新包装，保证产品的口感和新鲜度。单颗独立小包装，双重营养，1斤家庭分享装，更实惠新疆一级骏枣夹核桃仁。
         /// </summary>
         [JsonPropertyName("tiny_name")]
-        public string TinyName { get; set; }
+        public string? TinyName { get; set; }
 
         /// <summary>
         /// 满2件折扣，可选范围0-100, 0表示取消，95表示95折，设置需先查询规则接口获取实际可填范围
@@ -327,19 +327,19 @@ public partial class GetGoodsDetailResponse
         /// 商品视频
         /// </summary>
         [JsonPropertyName("video_gallery")]
-        public List<VideoGalleryResponse> VideoGallery { get; set; }
+        public List<VideoGalleryResponse?>? VideoGallery { get; set; }
 
         /// <summary>
         /// 保税仓
         /// </summary>
         [JsonPropertyName("warehouse")]
-        public string Warehouse { get; set; }
+        public string? Warehouse { get; set; }
 
         /// <summary>
         /// 水果类目温馨提示
         /// </summary>
         [JsonPropertyName("warm_tips")]
-        public string WarmTips { get; set; }
+        public string? WarmTips { get; set; }
 
         /// <summary>
         /// 只换不修的天数，目前只支持0和365
@@ -395,13 +395,13 @@ public partial class GetGoodsDetailResponse
             /// 图片URL
             /// </summary>
             [JsonPropertyName("img_url")]
-            public string ImgUrl { get; set; }
+            public string? ImgUrl { get; set; }
 
             /// <summary>
             /// 备注
             /// </summary>
             [JsonPropertyName("note")]
-            public string Note { get; set; }
+            public string? Note { get; set; }
 
             /// <summary>
             /// 父规格ID
@@ -413,7 +413,7 @@ public partial class GetGoodsDetailResponse
             /// 属性单位
             /// </summary>
             [JsonPropertyName("punit")]
-            public string Punit { get; set; }
+            public string? Punit { get; set; }
 
             /// <summary>
             /// 引用属性id
@@ -443,7 +443,7 @@ public partial class GetGoodsDetailResponse
             /// 基础属性值
             /// </summary>
             [JsonPropertyName("vvalue")]
-            public string Vvalue { get; set; }
+            public string? Vvalue { get; set; }
 
 
         }
@@ -460,7 +460,7 @@ public partial class GetGoodsDetailResponse
             /// 预订须知
             /// </summary>
             [JsonPropertyName("booking_notes")]
-            public BookingNotesResponse BookingNotes { get; set; }
+            public BookingNotesResponse? BookingNotes { get; set; }
 
             /// <summary>
             /// 卡券有效期，日历日期后多少天可用。默认值为0表示仅限日历日当天使用
@@ -475,7 +475,7 @@ public partial class GetGoodsDetailResponse
                 /// 预定须知图片地址
                 /// </summary>
                 [JsonPropertyName("url")]
-                public string Url { get; set; }
+                public string? Url { get; set; }
 
 
             }
@@ -505,7 +505,7 @@ public partial class GetGoodsDetailResponse
             /// 保税仓唯一标识
             /// </summary>
             [JsonPropertyName("bonded_warehouse_key")]
-            public string BondedWarehouseKey { get; set; }
+            public string? BondedWarehouseKey { get; set; }
 
             /// <summary>
             /// 消费税率
@@ -517,13 +517,13 @@ public partial class GetGoodsDetailResponse
             /// 清关服务商
             /// </summary>
             [JsonPropertyName("customs_broker")]
-            public string CustomsBroker { get; set; }
+            public string? CustomsBroker { get; set; }
 
             /// <summary>
             /// 海关编号
             /// </summary>
             [JsonPropertyName("hs_code")]
-            public string HsCode { get; set; }
+            public string? HsCode { get; set; }
 
             /// <summary>
             /// 增值税率
@@ -564,19 +564,19 @@ public partial class GetGoodsDetailResponse
             /// 商家编码（sku维度），同其他接口中的outer_id 、out_id、out_sku_sn、outer_sku_sn、out_sku_id、outer_sku_id 都为商家编码（sku维度）。
             /// </summary>
             [JsonPropertyName("out_sku_sn")]
-            public string OutSkuSn { get; set; }
+            public string? OutSkuSn { get; set; }
 
             /// <summary>
             /// 第三方sku Id
             /// </summary>
             [JsonPropertyName("out_source_sku_id")]
-            public string OutSourceSkuId { get; set; }
+            public string? OutSourceSkuId { get; set; }
 
             /// <summary>
             /// oversea_sku
             /// </summary>
             [JsonPropertyName("oversea_sku")]
-            public OverseaSkuResponse OverseaSku { get; set; }
+            public OverseaSkuResponse? OverseaSku { get; set; }
 
             /// <summary>
             /// 商品单买价格 单位分
@@ -612,19 +612,19 @@ public partial class GetGoodsDetailResponse
             /// sku属性
             /// </summary>
             [JsonPropertyName("sku_property_list")]
-            public List<SkuPropertyListResponse> SkuPropertyList { get; set; }
+            public List<SkuPropertyListResponse?>? SkuPropertyList { get; set; }
 
             /// <summary>
             /// 商品规格列表
             /// </summary>
             [JsonPropertyName("spec")]
-            public List<SpecResponse> Spec { get; set; }
+            public List<SpecResponse?>? Spec { get; set; }
 
             /// <summary>
             /// sku预览图
             /// </summary>
             [JsonPropertyName("thumb_url")]
-            public string ThumbUrl { get; set; }
+            public string? ThumbUrl { get; set; }
 
             /// <summary>
             /// 重量，单位为g
@@ -639,13 +639,13 @@ public partial class GetGoodsDetailResponse
                 /// 计量单位编码，从接口pdd.gooods.sku.measurement.list获取desc
                 /// </summary>
                 [JsonPropertyName("measurement_code")]
-                public string MeasurementCode { get; set; }
+                public string? MeasurementCode { get; set; }
 
                 /// <summary>
                 /// 规格
                 /// </summary>
                 [JsonPropertyName("specifications")]
-                public string Specifications { get; set; }
+                public string? Specifications { get; set; }
 
                 /// <summary>
                 /// 税费
@@ -662,7 +662,7 @@ public partial class GetGoodsDetailResponse
                 /// 属性单位
                 /// </summary>
                 [JsonPropertyName("punit")]
-                public string Punit { get; set; }
+                public string? Punit { get; set; }
 
                 /// <summary>
                 /// 属性id
@@ -674,7 +674,7 @@ public partial class GetGoodsDetailResponse
                 /// 属性值
                 /// </summary>
                 [JsonPropertyName("value")]
-                public string Value { get; set; }
+                public string? Value { get; set; }
 
                 /// <summary>
                 /// 属性值id
@@ -697,7 +697,7 @@ public partial class GetGoodsDetailResponse
                 /// 商品规格ID对应的规格名称
                 /// </summary>
                 [JsonPropertyName("parent_name")]
-                public string ParentName { get; set; }
+                public string? ParentName { get; set; }
 
                 /// <summary>
                 /// 自定义规格ID
@@ -709,13 +709,13 @@ public partial class GetGoodsDetailResponse
                 /// 自定义规格名称
                 /// </summary>
                 [JsonPropertyName("spec_name")]
-                public string SpecName { get; set; }
+                public string? SpecName { get; set; }
 
                 /// <summary>
                 /// 规格备注
                 /// </summary>
                 [JsonPropertyName("spec_note")]
-                public string SpecNote { get; set; }
+                public string? SpecNote { get; set; }
 
 
             }
@@ -734,7 +734,7 @@ public partial class GetGoodsDetailResponse
             /// 商品视频url
             /// </summary>
             [JsonPropertyName("video_url")]
-            public string VideoUrl { get; set; }
+            public string? VideoUrl { get; set; }
 
 
         }

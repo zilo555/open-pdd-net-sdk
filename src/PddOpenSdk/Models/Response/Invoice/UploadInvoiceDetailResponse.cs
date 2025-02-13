@@ -6,7 +6,7 @@ public partial class UploadInvoiceDetailResponse
     /// response
     /// </summary>
     [JsonPropertyName("invoice_detail_upload_response")]
-    public InvoiceDetailUploadResponseResponse InvoiceDetailUploadResponse { get; set; }
+    public InvoiceDetailUploadResponseResponse? InvoiceDetailUploadResponse { get; set; }
 
     public partial class InvoiceDetailUploadResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class UploadInvoiceDetailResponse
         /// 发票流水号
         /// </summary>
         [JsonPropertyName("serial_no")]
-        public string SerialNo { get; set; }
+        public string? SerialNo { get; set; }
 
 
     }

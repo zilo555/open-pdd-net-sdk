@@ -6,7 +6,7 @@ public partial class CompleteDdkReportVideoUploadPartResponse
     /// 
     /// </summary>
     [JsonPropertyName("response")]
-    public ResponseResponse Response { get; set; }
+    public ResponseResponse? Response { get; set; }
 
     public partial class ResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class CompleteDdkReportVideoUploadPartResponse
         /// 创建的视频资源对应的vid
         /// </summary>
         [JsonPropertyName("url")]
-        public string Url { get; set; }
+        public string? Url { get; set; }
 
 
     }

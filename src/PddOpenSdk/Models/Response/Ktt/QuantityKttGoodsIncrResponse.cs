@@ -6,7 +6,7 @@ public partial class QuantityKttGoodsIncrResponse
     /// 结果
     /// </summary>
     [JsonPropertyName("ktt_goods_incr_quantity_response")]
-    public KttGoodsIncrQuantityResponseResponse KttGoodsIncrQuantityResponse { get; set; }
+    public KttGoodsIncrQuantityResponseResponse? KttGoodsIncrQuantityResponse { get; set; }
 
     public partial class KttGoodsIncrQuantityResponseResponse
     {

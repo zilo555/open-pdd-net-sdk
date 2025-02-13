@@ -26,7 +26,7 @@ public partial class PrintCloud
         /// 打印机设置
         /// </summary>
         [JsonPropertyName("printer_setting")]
-        public PrinterSettingModel PrinterSetting { get; set; }
+        public PrinterSettingModel? PrinterSetting { get; set; }
 
         /// <summary>
         /// 共享码
@@ -41,7 +41,7 @@ public partial class PrintCloud
             /// 自定区打印数据
             /// </summary>
             [JsonPropertyName("custom_area_print_data")]
-            public CustomAreaPrintDataModel CustomAreaPrintData { get; set; }
+            public CustomAreaPrintDataModel? CustomAreaPrintData { get; set; }
 
             /// <summary>
             /// 面单打印数据
@@ -73,7 +73,7 @@ public partial class PrintCloud
                 /// 追加数据,例如：{\"sender\":{\"address\":{\"province\":\"辽宁\",\"city\":\"沈阳市\",\"district\":\"铁西区\",\"detail\":\"xxx\"},\"name\":\"xxx\",\"mobile\":\"139xxxx032\"}}
                 /// </summary>
                 [JsonPropertyName("add_data")]
-                public string AddData { get; set; }
+                public string? AddData { get; set; }
 
                 /// <summary>
                 /// 打印数据
@@ -91,7 +91,7 @@ public partial class PrintCloud
                 /// 签名
                 /// </summary>
                 [JsonPropertyName("signature")]
-                public string Signature { get; set; }
+                public string? Signature { get; set; }
 
                 /// <summary>
                 /// 模板url
@@ -103,7 +103,7 @@ public partial class PrintCloud
                 /// 版本
                 /// </summary>
                 [JsonPropertyName("ver")]
-                public string Ver { get; set; }
+                public string? Ver { get; set; }
 
 
 
@@ -134,7 +134,7 @@ public partial class PrintCloud
             /// 打印方向 normal-正常 reverse-翻转
             /// </summary>
             [JsonPropertyName("orientation")]
-            public string Orientation { get; set; }
+            public string? Orientation { get; set; }
 
 
 

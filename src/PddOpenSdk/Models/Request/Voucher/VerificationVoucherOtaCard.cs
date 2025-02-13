@@ -23,7 +23,7 @@ public partial class VerificationVoucherOtaCard
     /// 拼多多订单编号
     /// </summary>
     [JsonPropertyName("order_sn")]
-    public string OrderSn { get; set; }
+    public string? OrderSn { get; set; }
 
 
 

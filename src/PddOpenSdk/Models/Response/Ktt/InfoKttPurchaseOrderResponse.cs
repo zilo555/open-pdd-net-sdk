@@ -6,7 +6,7 @@ public partial class InfoKttPurchaseOrderResponse
     /// 
     /// </summary>
     [JsonPropertyName("ktt_purchase_order_info_response")]
-    public KttPurchaseOrderInfoResponseResponse KttPurchaseOrderInfoResponse { get; set; }
+    public KttPurchaseOrderInfoResponseResponse? KttPurchaseOrderInfoResponse { get; set; }
 
     public partial class KttPurchaseOrderInfoResponseResponse
     {
@@ -21,13 +21,13 @@ public partial class InfoKttPurchaseOrderResponse
         /// 
         /// </summary>
         [JsonPropertyName("error_msg")]
-        public string ErrorMsg { get; set; }
+        public string? ErrorMsg { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [JsonPropertyName("result")]
-        public ResultResponse Result { get; set; }
+        public ResultResponse? Result { get; set; }
 
         /// <summary>
         /// 
@@ -42,13 +42,13 @@ public partial class InfoKttPurchaseOrderResponse
             /// 团号
             /// </summary>
             [JsonPropertyName("activity_no")]
-            public string ActivityNo { get; set; }
+            public string? ActivityNo { get; set; }
 
             /// <summary>
             /// 团标题
             /// </summary>
             [JsonPropertyName("activity_title")]
-            public string ActivityTitle { get; set; }
+            public string? ActivityTitle { get; set; }
 
             /// <summary>
             /// 售后状态 0-未发起售后，1-待供货商处理，2-已退款，3-已同意退款，待入账，4-待团长处理，5-已同意退货，待团长退货，6-团长已退货，待供货商确认收货，7-已撤销，8-已驳回，9-退款失败
@@ -60,13 +60,13 @@ public partial class InfoKttPurchaseOrderResponse
             /// 团长备注
             /// </summary>
             [JsonPropertyName("business_note")]
-            public string BusinessNote { get; set; }
+            public string? BusinessNote { get; set; }
 
             /// <summary>
             /// 团员备注
             /// </summary>
             [JsonPropertyName("buyer_memo")]
-            public string BuyerMemo { get; set; }
+            public string? BuyerMemo { get; set; }
 
             /// <summary>
             /// 取消状态：0-未取消 、1-已取消
@@ -84,25 +84,25 @@ public partial class InfoKttPurchaseOrderResponse
             /// 自定义项列表
             /// </summary>
             [JsonPropertyName("custom_item_list")]
-            public List<CustomItemListResponse> CustomItemList { get; set; }
+            public List<CustomItemListResponse?>? CustomItemList { get; set; }
 
             /// <summary>
             /// 赠品列表
             /// </summary>
             [JsonPropertyName("gift_order_list")]
-            public List<GiftOrderListResponse> GiftOrderList { get; set; }
+            public List<GiftOrderListResponse?>? GiftOrderList { get; set; }
 
             /// <summary>
             /// 物流汇总信息
             /// </summary>
             [JsonPropertyName("logistics_list")]
-            public List<LogisticsListResponse> LogisticsList { get; set; }
+            public List<LogisticsListResponse?>? LogisticsList { get; set; }
 
             /// <summary>
             /// 团员昵称
             /// </summary>
             [JsonPropertyName("nick_name")]
-            public string NickName { get; set; }
+            public string? NickName { get; set; }
 
             /// <summary>
             /// 订单实付金额（分）
@@ -114,7 +114,7 @@ public partial class InfoKttPurchaseOrderResponse
             /// 订单号
             /// </summary>
             [JsonPropertyName("order_sn")]
-            public string OrderSn { get; set; }
+            public string? OrderSn { get; set; }
 
             /// <summary>
             /// 接龙号
@@ -138,37 +138,37 @@ public partial class InfoKttPurchaseOrderResponse
             /// 收货地址（市）
             /// </summary>
             [JsonPropertyName("receiver_address_city")]
-            public string ReceiverAddressCity { get; set; }
+            public string? ReceiverAddressCity { get; set; }
 
             /// <summary>
             /// 收货地址（详细地址）
             /// </summary>
             [JsonPropertyName("receiver_address_detail")]
-            public string ReceiverAddressDetail { get; set; }
+            public string? ReceiverAddressDetail { get; set; }
 
             /// <summary>
             /// 收货地址（区）
             /// </summary>
             [JsonPropertyName("receiver_address_district")]
-            public string ReceiverAddressDistrict { get; set; }
+            public string? ReceiverAddressDistrict { get; set; }
 
             /// <summary>
             /// 收货地址（省）
             /// </summary>
             [JsonPropertyName("receiver_address_province")]
-            public string ReceiverAddressProvince { get; set; }
+            public string? ReceiverAddressProvince { get; set; }
 
             /// <summary>
             /// 收货人手机号
             /// </summary>
             [JsonPropertyName("receiver_mobile")]
-            public string ReceiverMobile { get; set; }
+            public string? ReceiverMobile { get; set; }
 
             /// <summary>
             /// 收货人姓名
             /// </summary>
             [JsonPropertyName("receiver_name")]
-            public string ReceiverName { get; set; }
+            public string? ReceiverName { get; set; }
 
             /// <summary>
             /// 退款金额（分）
@@ -192,25 +192,25 @@ public partial class InfoKttPurchaseOrderResponse
             /// 
             /// </summary>
             [JsonPropertyName("sub_order_list")]
-            public List<SubOrderListResponse> SubOrderList { get; set; }
+            public List<SubOrderListResponse?>? SubOrderList { get; set; }
 
             /// <summary>
             /// 供货商备注
             /// </summary>
             [JsonPropertyName("supplier_remark")]
-            public string SupplierRemark { get; set; }
+            public string? SupplierRemark { get; set; }
 
             /// <summary>
             /// 团长昵称
             /// </summary>
             [JsonPropertyName("supply_nick_name")]
-            public string SupplyNickName { get; set; }
+            public string? SupplyNickName { get; set; }
 
             /// <summary>
             /// 团长昵称备注
             /// </summary>
             [JsonPropertyName("supply_nick_name_remark")]
-            public string SupplyNickNameRemark { get; set; }
+            public string? SupplyNickNameRemark { get; set; }
 
             /// <summary>
             /// 更新时间
@@ -225,13 +225,13 @@ public partial class InfoKttPurchaseOrderResponse
                 /// 标题
                 /// </summary>
                 [JsonPropertyName("name")]
-                public string Name { get; set; }
+                public string? Name { get; set; }
 
                 /// <summary>
                 /// 值
                 /// </summary>
                 [JsonPropertyName("value")]
-                public string Value { get; set; }
+                public string? Value { get; set; }
 
 
             }
@@ -242,13 +242,13 @@ public partial class InfoKttPurchaseOrderResponse
                 /// 赠品外部编码
                 /// </summary>
                 [JsonPropertyName("external_sku_id")]
-                public string ExternalSkuId { get; set; }
+                public string? ExternalSkuId { get; set; }
 
                 /// <summary>
                 /// 赠品名
                 /// </summary>
                 [JsonPropertyName("goods_name")]
-                public string GoodsName { get; set; }
+                public string? GoodsName { get; set; }
 
                 /// <summary>
                 /// 赠品数量
@@ -260,7 +260,7 @@ public partial class InfoKttPurchaseOrderResponse
                 /// 宿主子订单号
                 /// </summary>
                 [JsonPropertyName("host_sub_order_sn")]
-                public string HostSubOrderSn { get; set; }
+                public string? HostSubOrderSn { get; set; }
 
 
             }
@@ -271,19 +271,19 @@ public partial class InfoKttPurchaseOrderResponse
                 /// 物流公司名
                 /// </summary>
                 [JsonPropertyName("shipping_company")]
-                public string ShippingCompany { get; set; }
+                public string? ShippingCompany { get; set; }
 
                 /// <summary>
                 /// 物流单号
                 /// </summary>
                 [JsonPropertyName("shipping_no")]
-                public string ShippingNo { get; set; }
+                public string? ShippingNo { get; set; }
 
                 /// <summary>
                 /// 若为子单发货，返回发货的子单列表
                 /// </summary>
                 [JsonPropertyName("sub_order_sn_list")]
-                public List<string> SubOrderSnList { get; set; }
+                public List<string?>? SubOrderSnList { get; set; }
 
 
             }
@@ -306,7 +306,7 @@ public partial class InfoKttPurchaseOrderResponse
                 /// 商品编号
                 /// </summary>
                 [JsonPropertyName("external_sku_id")]
-                public string ExternalSkuId { get; set; }
+                public string? ExternalSkuId { get; set; }
 
                 /// <summary>
                 /// 商品价格
@@ -330,7 +330,7 @@ public partial class InfoKttPurchaseOrderResponse
                 /// 商品名
                 /// </summary>
                 [JsonPropertyName("goods_name")]
-                public string GoodsName { get; set; }
+                public string? GoodsName { get; set; }
 
                 /// <summary>
                 /// 商品数量
@@ -348,7 +348,7 @@ public partial class InfoKttPurchaseOrderResponse
                 /// 商品规格描述
                 /// </summary>
                 [JsonPropertyName("goods_specification")]
-                public string GoodsSpecification { get; set; }
+                public string? GoodsSpecification { get; set; }
 
                 /// <summary>
                 /// 退款金额（分）
@@ -366,7 +366,7 @@ public partial class InfoKttPurchaseOrderResponse
                 /// 子单号
                 /// </summary>
                 [JsonPropertyName("sub_order_sn")]
-                public string SubOrderSn { get; set; }
+                public string? SubOrderSn { get; set; }
 
 
             }

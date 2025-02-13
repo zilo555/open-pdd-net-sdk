@@ -6,7 +6,7 @@ public partial class PermitPmcUserResponse
     /// response
     /// </summary>
     [JsonPropertyName("pmc_user_permit_response")]
-    public PmcUserPermitResponseResponse PmcUserPermitResponse { get; set; }
+    public PmcUserPermitResponseResponse? PmcUserPermitResponse { get; set; }
 
     public partial class PmcUserPermitResponseResponse
     {

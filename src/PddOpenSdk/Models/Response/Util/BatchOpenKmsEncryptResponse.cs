@@ -6,7 +6,7 @@ public partial class BatchOpenKmsEncryptResponse
     /// response
     /// </summary>
     [JsonPropertyName("open_kms_encrypt_batch_response")]
-    public OpenKmsEncryptBatchResponseResponse OpenKmsEncryptBatchResponse { get; set; }
+    public OpenKmsEncryptBatchResponseResponse? OpenKmsEncryptBatchResponse { get; set; }
 
     public partial class OpenKmsEncryptBatchResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class BatchOpenKmsEncryptResponse
         /// list
         /// </summary>
         [JsonPropertyName("data_encrypt_list")]
-        public List<DataEncryptListResponse> DataEncryptList { get; set; }
+        public List<DataEncryptListResponse?>? DataEncryptList { get; set; }
 
         public partial class DataEncryptListResponse
         {
@@ -24,13 +24,13 @@ public partial class BatchOpenKmsEncryptResponse
             /// 明文数据
             /// </summary>
             [JsonPropertyName("data")]
-            public string Data { get; set; }
+            public string? Data { get; set; }
 
             /// <summary>
             /// 加密结果
             /// </summary>
             [JsonPropertyName("data_encrypt")]
-            public string DataEncrypt { get; set; }
+            public string? DataEncrypt { get; set; }
 
             /// <summary>
             /// 是否支持搜索
@@ -48,7 +48,7 @@ public partial class BatchOpenKmsEncryptResponse
             /// 敏感信息类型. id: 身份证号, phone: 手机号码, simple: 昵称, 地址等
             /// </summary>
             [JsonPropertyName("type")]
-            public string Type { get; set; }
+            public string? Type { get; set; }
 
 
         }

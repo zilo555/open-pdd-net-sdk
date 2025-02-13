@@ -6,7 +6,7 @@ public partial class GetGoodsSkusResponse
     /// sku信息
     /// </summary>
     [JsonPropertyName("goods_sku_get_response")]
-    public GoodsSkuGetResponseResponse GoodsSkuGetResponse { get; set; }
+    public GoodsSkuGetResponseResponse? GoodsSkuGetResponse { get; set; }
 
     public partial class GoodsSkuGetResponseResponse
     {
@@ -33,7 +33,7 @@ public partial class GetGoodsSkusResponse
         /// SKU维度商家外部编码
         /// </summary>
         [JsonPropertyName("out_sku_sn")]
-        public string OutSkuSn { get; set; }
+        public string? OutSkuSn { get; set; }
 
         /// <summary>
         /// 库存
@@ -63,7 +63,7 @@ public partial class GetGoodsSkusResponse
         /// 规格列表
         /// </summary>
         [JsonPropertyName("spec")]
-        public List<SpecResponse> Spec { get; set; }
+        public List<SpecResponse?>? Spec { get; set; }
 
         public partial class SpecResponse
         {
@@ -78,7 +78,7 @@ public partial class GetGoodsSkusResponse
             /// 规格项
             /// </summary>
             [JsonPropertyName("parent_spec_name")]
-            public string ParentSpecName { get; set; }
+            public string? ParentSpecName { get; set; }
 
             /// <summary>
             /// 规格ID
@@ -90,13 +90,13 @@ public partial class GetGoodsSkusResponse
             /// 规格值
             /// </summary>
             [JsonPropertyName("spec_name")]
-            public string SpecName { get; set; }
+            public string? SpecName { get; set; }
 
             /// <summary>
             /// 规格备注
             /// </summary>
             [JsonPropertyName("spec_note")]
-            public string SpecNote { get; set; }
+            public string? SpecNote { get; set; }
 
 
         }

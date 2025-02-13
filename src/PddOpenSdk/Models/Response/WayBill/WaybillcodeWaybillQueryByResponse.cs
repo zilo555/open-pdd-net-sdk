@@ -6,7 +6,7 @@ public partial class WaybillcodeWaybillQueryByResponse
     /// response
     /// </summary>
     [JsonPropertyName("pdd_waybill_query_by_waybillcode_response")]
-    public PddWaybillQueryByWaybillcodeResponseResponse PddWaybillQueryByWaybillcodeResponse { get; set; }
+    public PddWaybillQueryByWaybillcodeResponseResponse? PddWaybillQueryByWaybillcodeResponse { get; set; }
 
     public partial class PddWaybillQueryByWaybillcodeResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class WaybillcodeWaybillQueryByResponse
         /// 查询返回值
         /// </summary>
         [JsonPropertyName("modules")]
-        public List<ModulesResponse> Modules { get; set; }
+        public List<ModulesResponse?>? Modules { get; set; }
 
         public partial class ModulesResponse
         {
@@ -24,7 +24,7 @@ public partial class WaybillcodeWaybillQueryByResponse
             /// 面单查询结构体
             /// </summary>
             [JsonPropertyName("waybill_cloud_print_response")]
-            public WaybillCloudPrintResponseResponse WaybillCloudPrintResponse { get; set; }
+            public WaybillCloudPrintResponseResponse? WaybillCloudPrintResponse { get; set; }
 
             public partial class WaybillCloudPrintResponseResponse
             {
@@ -33,19 +33,19 @@ public partial class WaybillcodeWaybillQueryByResponse
                 /// 请求id
                 /// </summary>
                 [JsonPropertyName("object_id")]
-                public string ObjectId { get; set; }
+                public string? ObjectId { get; set; }
 
                 /// <summary>
                 /// 面单信息
                 /// </summary>
                 [JsonPropertyName("print_data")]
-                public string PrintData { get; set; }
+                public string? PrintData { get; set; }
 
                 /// <summary>
                 /// 面单号
                 /// </summary>
                 [JsonPropertyName("waybill_code")]
-                public string WaybillCode { get; set; }
+                public string? WaybillCode { get; set; }
 
 
             }

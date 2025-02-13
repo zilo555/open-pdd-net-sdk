@@ -6,7 +6,7 @@ public partial class QueryGoodsCpsUnitResponse
     /// 计划使用的优惠券信息。商品没有优惠券将返回null，有优惠券将返回优惠券信息，包括优惠券起始结束时间，优惠券数量，剩余数量，金额等
     /// </summary>
     [JsonPropertyName("coupon_vo")]
-    public CouponVoResponse CouponVo { get; set; }
+    public CouponVoResponse? CouponVo { get; set; }
 
     /// <summary>
     /// 商品id
@@ -30,7 +30,7 @@ public partial class QueryGoodsCpsUnitResponse
     /// 通用推广计划佣金生效时间
     /// </summary>
     [JsonPropertyName("rate_to_be_day")]
-    public string RateToBeDay { get; set; }
+    public string? RateToBeDay { get; set; }
 
     /// <summary>
     /// 商品状态，1-推广中，2-暂停，3-删除
@@ -48,7 +48,7 @@ public partial class QueryGoodsCpsUnitResponse
     /// 通用推广计划状态生效时间
     /// </summary>
     [JsonPropertyName("status_to_be_day")]
-    public string StatusToBeDay { get; set; }
+    public string? StatusToBeDay { get; set; }
 
     /// <summary>
     /// 单品推广计划单元id
@@ -63,7 +63,7 @@ public partial class QueryGoodsCpsUnitResponse
         /// coupon_end_time
         /// </summary>
         [JsonPropertyName("coupon_end_time")]
-        public string CouponEndTime { get; set; }
+        public string? CouponEndTime { get; set; }
 
         /// <summary>
         /// coupon_id
@@ -75,7 +75,7 @@ public partial class QueryGoodsCpsUnitResponse
         /// coupon_start_time
         /// </summary>
         [JsonPropertyName("coupon_start_time")]
-        public string CouponStartTime { get; set; }
+        public string? CouponStartTime { get; set; }
 
         /// <summary>
         /// discount

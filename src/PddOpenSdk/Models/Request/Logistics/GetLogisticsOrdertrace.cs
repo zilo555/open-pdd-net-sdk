@@ -5,13 +5,13 @@ public partial class GetLogisticsOrdertrace
     /// 1
     /// </summary>
     [JsonPropertyName("company_code")]
-    public string CompanyCode { get; set; }
+    public string? CompanyCode { get; set; }
 
     /// <summary>
     /// 1
     /// </summary>
     [JsonPropertyName("mail_no")]
-    public string MailNo { get; set; }
+    public string? MailNo { get; set; }
 
 
 

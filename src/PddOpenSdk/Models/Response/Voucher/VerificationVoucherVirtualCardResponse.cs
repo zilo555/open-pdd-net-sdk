@@ -6,7 +6,7 @@ public partial class VerificationVoucherVirtualCardResponse
     /// response
     /// </summary>
     [JsonPropertyName("voucher_voucher_info_verify_response")]
-    public VoucherVoucherInfoVerifyResponseResponse VoucherVoucherInfoVerifyResponse { get; set; }
+    public VoucherVoucherInfoVerifyResponseResponse? VoucherVoucherInfoVerifyResponse { get; set; }
 
     public partial class VoucherVoucherInfoVerifyResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class VerificationVoucherVirtualCardResponse
         /// 拼多多订单号
         /// </summary>
         [JsonPropertyName("order_sn")]
-        public string OrderSn { get; set; }
+        public string? OrderSn { get; set; }
 
         /// <summary>
         /// 商品id
@@ -39,7 +39,7 @@ public partial class VerificationVoucherVirtualCardResponse
         /// 券信息数组
         /// </summary>
         [JsonPropertyName("voucher_list")]
-        public List<VoucherListResponse> VoucherList { get; set; }
+        public List<VoucherListResponse?>? VoucherList { get; set; }
 
         public partial class VoucherListResponse
         {
@@ -48,19 +48,19 @@ public partial class VerificationVoucherVirtualCardResponse
             /// 卡号
             /// </summary>
             [JsonPropertyName("card_no")]
-            public string CardNo { get; set; }
+            public string? CardNo { get; set; }
 
             /// <summary>
             /// 卡密
             /// </summary>
             [JsonPropertyName("card_code")]
-            public string CardCode { get; set; }
+            public string? CardCode { get; set; }
 
             /// <summary>
             /// 标准密码
             /// </summary>
             [JsonPropertyName("mark_password")]
-            public string MarkPassword { get; set; }
+            public string? MarkPassword { get; set; }
 
             /// <summary>
             /// 状态

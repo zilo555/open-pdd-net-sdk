@@ -12,7 +12,7 @@ public partial class SyncVoucherRealtimeVerifyResponse
     /// 错误描述
     /// </summary>
     [JsonPropertyName("message")]
-    public string Message { get; set; }
+    public string? Message { get; set; }
 
 
 }

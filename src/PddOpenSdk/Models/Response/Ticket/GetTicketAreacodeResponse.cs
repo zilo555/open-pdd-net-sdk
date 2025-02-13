@@ -6,7 +6,7 @@ public partial class GetTicketAreacodeResponse
     /// 
     /// </summary>
     [JsonPropertyName("response")]
-    public ResponseResponse Response { get; set; }
+    public ResponseResponse? Response { get; set; }
 
     public partial class ResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class GetTicketAreacodeResponse
         /// 
         /// </summary>
         [JsonPropertyName("area_list")]
-        public List<AreaListResponse> AreaList { get; set; }
+        public List<AreaListResponse?>? AreaList { get; set; }
 
         public partial class AreaListResponse
         {
@@ -36,7 +36,7 @@ public partial class GetTicketAreacodeResponse
             /// 
             /// </summary>
             [JsonPropertyName("name")]
-            public string Name { get; set; }
+            public string? Name { get; set; }
 
             /// <summary>
             /// 

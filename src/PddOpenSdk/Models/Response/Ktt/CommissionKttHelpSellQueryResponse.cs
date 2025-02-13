@@ -6,7 +6,7 @@ public partial class CommissionKttHelpSellQueryResponse
     /// 
     /// </summary>
     [JsonPropertyName("response")]
-    public ResponseResponse Response { get; set; }
+    public ResponseResponse? Response { get; set; }
 
     public partial class ResponseResponse
     {
@@ -21,13 +21,13 @@ public partial class CommissionKttHelpSellQueryResponse
         /// 
         /// </summary>
         [JsonPropertyName("error_msg")]
-        public string ErrorMsg { get; set; }
+        public string? ErrorMsg { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [JsonPropertyName("result")]
-        public ResultResponse Result { get; set; }
+        public ResultResponse? Result { get; set; }
 
         /// <summary>
         /// 
@@ -42,7 +42,7 @@ public partial class CommissionKttHelpSellQueryResponse
             /// 父单分佣列表
             /// </summary>
             [JsonPropertyName("parent_order_commission_list")]
-            public List<ParentOrderCommissionListResponse> ParentOrderCommissionList { get; set; }
+            public List<ParentOrderCommissionListResponse?>? ParentOrderCommissionList { get; set; }
 
             public partial class ParentOrderCommissionListResponse
             {
@@ -51,13 +51,13 @@ public partial class CommissionKttHelpSellQueryResponse
                 /// 子单分佣列表
                 /// </summary>
                 [JsonPropertyName("order_commission_list")]
-                public List<OrderCommissionListResponse> OrderCommissionList { get; set; }
+                public List<OrderCommissionListResponse?>? OrderCommissionList { get; set; }
 
                 /// <summary>
                 /// 父单号
                 /// </summary>
                 [JsonPropertyName("parent_order_sn")]
-                public string ParentOrderSn { get; set; }
+                public string? ParentOrderSn { get; set; }
 
                 public partial class OrderCommissionListResponse
                 {
@@ -78,7 +78,7 @@ public partial class CommissionKttHelpSellQueryResponse
                     /// 子单号
                     /// </summary>
                     [JsonPropertyName("order_sn")]
-                    public string OrderSn { get; set; }
+                    public string? OrderSn { get; set; }
 
 
                 }

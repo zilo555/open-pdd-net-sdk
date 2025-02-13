@@ -6,7 +6,7 @@ public partial class NotifyOverseaDeclarationFailResponse
     /// 
     /// </summary>
     [JsonPropertyName("notify_exceeded_response")]
-    public NotifyExceededResponseResponse NotifyExceededResponse { get; set; }
+    public NotifyExceededResponseResponse? NotifyExceededResponse { get; set; }
 
     public partial class NotifyExceededResponseResponse
     {

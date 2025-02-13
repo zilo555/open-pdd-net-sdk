@@ -29,19 +29,19 @@ public partial class StartLogisticsCsSession
     /// 客服id，biz_type为1时必填
     /// </summary>
     [JsonPropertyName("dealer_id")]
-    public string DealerId { get; set; }
+    public string? DealerId { get; set; }
 
     /// <summary>
     /// 队列id，biz_type为1时必填
     /// </summary>
     [JsonPropertyName("queue_id")]
-    public string QueueId { get; set; }
+    public string? QueueId { get; set; }
 
     /// <summary>
     /// 网点名，biz_type为1时必填
     /// </summary>
     [JsonPropertyName("queue_name")]
-    public string QueueName { get; set; }
+    public string? QueueName { get; set; }
 
     /// <summary>
     /// 排队位置，biz_type为2时必填
@@ -59,13 +59,13 @@ public partial class StartLogisticsCsSession
     /// 物流客服系统遇到的异常，biz_type为3时不为空
     /// </summary>
     [JsonPropertyName("exception_msg")]
-    public string ExceptionMsg { get; set; }
+    public string? ExceptionMsg { get; set; }
 
     /// <summary>
     /// 接待的网点地址，biz_type为1时必填，示例: ”河南省”
     /// </summary>
     [JsonPropertyName("queue_address")]
-    public string QueueAddress { get; set; }
+    public string? QueueAddress { get; set; }
 
 
 

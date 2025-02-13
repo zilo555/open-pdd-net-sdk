@@ -6,7 +6,7 @@ public partial class UploadTicketGoodsResponse
     /// 
     /// </summary>
     [JsonPropertyName("goods_upload_response")]
-    public GoodsUploadResponseResponse GoodsUploadResponse { get; set; }
+    public GoodsUploadResponseResponse? GoodsUploadResponse { get; set; }
 
     public partial class GoodsUploadResponseResponse
     {

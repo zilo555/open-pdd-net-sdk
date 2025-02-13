@@ -6,7 +6,7 @@ public partial class UploadLogisticsTicketImageResponse
     /// 返回response
     /// </summary>
     [JsonPropertyName("logistics_ticket_image_upload_response")]
-    public LogisticsTicketImageUploadResponseResponse LogisticsTicketImageUploadResponse { get; set; }
+    public LogisticsTicketImageUploadResponseResponse? LogisticsTicketImageUploadResponse { get; set; }
 
     public partial class LogisticsTicketImageUploadResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class UploadLogisticsTicketImageResponse
         /// 图片url
         /// </summary>
         [JsonPropertyName("image_url")]
-        public string ImageUrl { get; set; }
+        public string? ImageUrl { get; set; }
 
 
     }

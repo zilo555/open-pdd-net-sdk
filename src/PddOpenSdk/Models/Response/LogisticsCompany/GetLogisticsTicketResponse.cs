@@ -6,7 +6,7 @@ public partial class GetLogisticsTicketResponse
     /// response
     /// </summary>
     [JsonPropertyName("logistics_ticket_get_response")]
-    public LogisticsTicketGetResponseResponse LogisticsTicketGetResponse { get; set; }
+    public LogisticsTicketGetResponseResponse? LogisticsTicketGetResponse { get; set; }
 
     public partial class LogisticsTicketGetResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class GetLogisticsTicketResponse
         /// 工单列表
         /// </summary>
         [JsonPropertyName("logistics_ticket_list")]
-        public List<LogisticsTicketListResponse> LogisticsTicketList { get; set; }
+        public List<LogisticsTicketListResponse?>? LogisticsTicketList { get; set; }
 
         /// <summary>
         /// 列表总数
@@ -30,13 +30,13 @@ public partial class GetLogisticsTicketResponse
             /// 附件列表
             /// </summary>
             [JsonPropertyName("attach_url")]
-            public List<string> AttachUrl { get; set; }
+            public List<string?>? AttachUrl { get; set; }
 
             /// <summary>
             /// 末端品牌代码
             /// </summary>
             [JsonPropertyName("cabinet_code")]
-            public string CabinetCode { get; set; }
+            public string? CabinetCode { get; set; }
 
             /// <summary>
             /// 赔付金额(单位:分)
@@ -66,7 +66,7 @@ public partial class GetLogisticsTicketResponse
             /// 备注
             /// </summary>
             [JsonPropertyName("description")]
-            public string Description { get; set; }
+            public string? Description { get; set; }
 
             /// <summary>
             /// duty
@@ -78,7 +78,7 @@ public partial class GetLogisticsTicketResponse
             /// 物流商回传凭证
             /// </summary>
             [JsonPropertyName("express_attachment")]
-            public List<ExpressAttachmentResponse> ExpressAttachment { get; set; }
+            public List<ExpressAttachmentResponse?>? ExpressAttachment { get; set; }
 
             /// <summary>
             /// 物流商快递编码
@@ -90,25 +90,25 @@ public partial class GetLogisticsTicketResponse
             /// 处理人
             /// </summary>
             [JsonPropertyName("express_dealer")]
-            public string ExpressDealer { get; set; }
+            public string? ExpressDealer { get; set; }
 
             /// <summary>
             /// 处理人联系方式
             /// </summary>
             [JsonPropertyName("express_dealer_contact")]
-            public string ExpressDealerContact { get; set; }
+            public string? ExpressDealerContact { get; set; }
 
             /// <summary>
             /// 物流商处理结果
             /// </summary>
             [JsonPropertyName("handle_result")]
-            public string HandleResult { get; set; }
+            public string? HandleResult { get; set; }
 
             /// <summary>
             /// 寄件单号
             /// </summary>
             [JsonPropertyName("mail_order_sn")]
-            public string MailOrderSn { get; set; }
+            public string? MailOrderSn { get; set; }
 
             /// <summary>
             /// 订单金额
@@ -120,25 +120,25 @@ public partial class GetLogisticsTicketResponse
             /// 订单号生成的物流单号
             /// </summary>
             [JsonPropertyName("pre_delivery_id")]
-            public string PreDeliveryId { get; set; }
+            public string? PreDeliveryId { get; set; }
 
             /// <summary>
             /// receive_address
             /// </summary>
             [JsonPropertyName("receive_address")]
-            public string ReceiveAddress { get; set; }
+            public string? ReceiveAddress { get; set; }
 
             /// <summary>
             /// 联系人电话
             /// </summary>
             [JsonPropertyName("receive_contact")]
-            public string ReceiveContact { get; set; }
+            public string? ReceiveContact { get; set; }
 
             /// <summary>
             /// 联系人姓名
             /// </summary>
             [JsonPropertyName("receive_name")]
-            public string ReceiveName { get; set; }
+            public string? ReceiveName { get; set; }
 
             /// <summary>
             /// 工单退回次数
@@ -150,7 +150,7 @@ public partial class GetLogisticsTicketResponse
             /// send_address
             /// </summary>
             [JsonPropertyName("send_address")]
-            public string SendAddress { get; set; }
+            public string? SendAddress { get; set; }
 
             /// <summary>
             /// 0:默认,1:未签收,2:已签收
@@ -174,7 +174,7 @@ public partial class GetLogisticsTicketResponse
             /// 物流投诉标签
             /// </summary>
             [JsonPropertyName("sub_type_ids")]
-            public List<int?> SubTypeIds { get; set; }
+            public List<int?>? SubTypeIds { get; set; }
 
             /// <summary>
             /// 工单id
@@ -186,7 +186,7 @@ public partial class GetLogisticsTicketResponse
             /// 问题描述
             /// </summary>
             [JsonPropertyName("title")]
-            public string Title { get; set; }
+            public string? Title { get; set; }
 
             /// <summary>
             /// 问题类型id
@@ -210,19 +210,19 @@ public partial class GetLogisticsTicketResponse
             /// 运单号(可能为空字符串)
             /// </summary>
             [JsonPropertyName("waybill_no")]
-            public string WaybillNo { get; set; }
+            public string? WaybillNo { get; set; }
 
             /// <summary>
             /// 国家/区域名称(集运物流工单)
             /// </summary>
             [JsonPropertyName("area_name")]
-            public string AreaName { get; set; }
+            public string? AreaName { get; set; }
 
             /// <summary>
             /// 用户投诉时上传的附件
             /// </summary>
             [JsonPropertyName("attachment_urls_by_customer")]
-            public List<string> AttachmentUrlsByCustomer { get; set; }
+            public List<string?>? AttachmentUrlsByCustomer { get; set; }
 
             public partial class ExpressAttachmentResponse
             {
@@ -231,7 +231,7 @@ public partial class GetLogisticsTicketResponse
                 /// 物流商回传凭证链接
                 /// </summary>
                 [JsonPropertyName("url")]
-                public string Url { get; set; }
+                public string? Url { get; set; }
 
 
             }

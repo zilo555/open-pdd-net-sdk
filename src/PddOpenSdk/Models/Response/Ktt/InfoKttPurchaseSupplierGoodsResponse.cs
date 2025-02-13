@@ -6,7 +6,7 @@ public partial class InfoKttPurchaseSupplierGoodsResponse
     /// 
     /// </summary>
     [JsonPropertyName("response")]
-    public ResponseResponse Response { get; set; }
+    public ResponseResponse? Response { get; set; }
 
     public partial class ResponseResponse
     {
@@ -21,13 +21,13 @@ public partial class InfoKttPurchaseSupplierGoodsResponse
         /// 
         /// </summary>
         [JsonPropertyName("error_msg")]
-        public string ErrorMsg { get; set; }
+        public string? ErrorMsg { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [JsonPropertyName("result")]
-        public ResultResponse Result { get; set; }
+        public ResultResponse? Result { get; set; }
 
         /// <summary>
         /// 
@@ -42,7 +42,7 @@ public partial class InfoKttPurchaseSupplierGoodsResponse
             /// 结果集
             /// </summary>
             [JsonPropertyName("result")]
-            public List<ResultResponse> Result { get; set; }
+            public List<ResultResponse?>? Result { get; set; }
 
             /// <summary>
             /// 总数
@@ -57,37 +57,37 @@ public partial class InfoKttPurchaseSupplierGoodsResponse
                 /// 品牌信息
                 /// </summary>
                 [JsonPropertyName("brand_info")]
-                public BrandInfoResponse BrandInfo { get; set; }
+                public BrandInfoResponse? BrandInfo { get; set; }
 
                 /// <summary>
                 /// 类目信息
                 /// </summary>
                 [JsonPropertyName("category_info")]
-                public CategoryInfoResponse CategoryInfo { get; set; }
+                public CategoryInfoResponse? CategoryInfo { get; set; }
 
                 /// <summary>
                 /// 商品发布时间
                 /// </summary>
                 [JsonPropertyName("create_time")]
-                public string CreateTime { get; set; }
+                public string? CreateTime { get; set; }
 
                 /// <summary>
                 /// 商品详情图
                 /// </summary>
                 [JsonPropertyName("detail_gallery")]
-                public List<DetailGalleryResponse> DetailGallery { get; set; }
+                public List<DetailGalleryResponse?>? DetailGallery { get; set; }
 
                 /// <summary>
                 /// 专属价团长列表
                 /// </summary>
                 [JsonPropertyName("exclusive_price_user_info_list")]
-                public List<ExclusivePriceUserInfoListResponse> ExclusivePriceUserInfoList { get; set; }
+                public List<ExclusivePriceUserInfoListResponse?>? ExclusivePriceUserInfoList { get; set; }
 
                 /// <summary>
                 /// 商品描述
                 /// </summary>
                 [JsonPropertyName("goods_desc")]
-                public string GoodsDesc { get; set; }
+                public string? GoodsDesc { get; set; }
 
                 /// <summary>
                 /// 商品前台状态 1：在售中 2：已下架 3：发布中 4：已驳回 5：未发布
@@ -105,13 +105,13 @@ public partial class InfoKttPurchaseSupplierGoodsResponse
                 /// 商品名称
                 /// </summary>
                 [JsonPropertyName("goods_name")]
-                public string GoodsName { get; set; }
+                public string? GoodsName { get; set; }
 
                 /// <summary>
                 /// 商品属性
                 /// </summary>
                 [JsonPropertyName("goods_property_info")]
-                public List<GoodsPropertyInfoResponse> GoodsPropertyInfo { get; set; }
+                public List<GoodsPropertyInfoResponse?>? GoodsPropertyInfo { get; set; }
 
                 /// <summary>
                 /// 是否控佣
@@ -129,7 +129,7 @@ public partial class InfoKttPurchaseSupplierGoodsResponse
                 /// 报名驳回理由
                 /// </summary>
                 [JsonPropertyName("refuse_reason")]
-                public string RefuseReason { get; set; }
+                public string? RefuseReason { get; set; }
 
                 /// <summary>
                 /// 佣金配置 基数：100000
@@ -141,13 +141,13 @@ public partial class InfoKttPurchaseSupplierGoodsResponse
                 /// sku列表
                 /// </summary>
                 [JsonPropertyName("sku_list")]
-                public List<SkuListResponse> SkuList { get; set; }
+                public List<SkuListResponse?>? SkuList { get; set; }
 
                 /// <summary>
                 /// 视频
                 /// </summary>
                 [JsonPropertyName("video_info")]
-                public List<VideoInfoResponse> VideoInfo { get; set; }
+                public List<VideoInfoResponse?>? VideoInfo { get; set; }
 
                 /// <summary>
                 /// 可见类型 可见类型 0：全部可见，1：白名单可见
@@ -159,7 +159,7 @@ public partial class InfoKttPurchaseSupplierGoodsResponse
                 /// 可见用户列表
                 /// </summary>
                 [JsonPropertyName("visible_user_info_list")]
-                public List<VisibleUserInfoListResponse> VisibleUserInfoList { get; set; }
+                public List<VisibleUserInfoListResponse?>? VisibleUserInfoList { get; set; }
 
                 public partial class BrandInfoResponse
                 {
@@ -168,19 +168,19 @@ public partial class InfoKttPurchaseSupplierGoodsResponse
                     /// 品牌logo
                     /// </summary>
                     [JsonPropertyName("brand_logo")]
-                    public string BrandLogo { get; set; }
+                    public string? BrandLogo { get; set; }
 
                     /// <summary>
                     /// 品牌名称
                     /// </summary>
                     [JsonPropertyName("brand_name")]
-                    public string BrandName { get; set; }
+                    public string? BrandName { get; set; }
 
                     /// <summary>
                     /// 品牌唯一ID
                     /// </summary>
                     [JsonPropertyName("brand_sn")]
-                    public string BrandSn { get; set; }
+                    public string? BrandSn { get; set; }
 
 
                 }
@@ -197,13 +197,13 @@ public partial class InfoKttPurchaseSupplierGoodsResponse
                     /// 类目名称
                     /// </summary>
                     [JsonPropertyName("category_name")]
-                    public string CategoryName { get; set; }
+                    public string? CategoryName { get; set; }
 
                     /// <summary>
                     /// 默认属性
                     /// </summary>
                     [JsonPropertyName("default_property_info")]
-                    public List<DefaultPropertyInfoResponse> DefaultPropertyInfo { get; set; }
+                    public List<DefaultPropertyInfoResponse?>? DefaultPropertyInfo { get; set; }
 
                     public partial class DefaultPropertyInfoResponse
                     {
@@ -218,13 +218,13 @@ public partial class InfoKttPurchaseSupplierGoodsResponse
                         /// 属性名
                         /// </summary>
                         [JsonPropertyName("name")]
-                        public string Name { get; set; }
+                        public string? Name { get; set; }
 
                         /// <summary>
                         /// 属性值
                         /// </summary>
                         [JsonPropertyName("values")]
-                        public List<string> Values { get; set; }
+                        public List<string?>? Values { get; set; }
 
 
                     }
@@ -237,7 +237,7 @@ public partial class InfoKttPurchaseSupplierGoodsResponse
                     /// 视频封面链接
                     /// </summary>
                     [JsonPropertyName("cover_url")]
-                    public string CoverUrl { get; set; }
+                    public string? CoverUrl { get; set; }
 
                     /// <summary>
                     /// 元素类型 0：图片 1：视频
@@ -249,7 +249,7 @@ public partial class InfoKttPurchaseSupplierGoodsResponse
                     /// 链接
                     /// </summary>
                     [JsonPropertyName("url")]
-                    public string Url { get; set; }
+                    public string? Url { get; set; }
 
 
                 }
@@ -260,19 +260,19 @@ public partial class InfoKttPurchaseSupplierGoodsResponse
                     /// 头像
                     /// </summary>
                     [JsonPropertyName("avatar")]
-                    public string Avatar { get; set; }
+                    public string? Avatar { get; set; }
 
                     /// <summary>
                     /// 昵称
                     /// </summary>
                     [JsonPropertyName("nick_name")]
-                    public string NickName { get; set; }
+                    public string? NickName { get; set; }
 
                     /// <summary>
                     /// 用户编号
                     /// </summary>
                     [JsonPropertyName("user_no")]
-                    public string UserNo { get; set; }
+                    public string? UserNo { get; set; }
 
 
                 }
@@ -289,13 +289,13 @@ public partial class InfoKttPurchaseSupplierGoodsResponse
                     /// 属性名
                     /// </summary>
                     [JsonPropertyName("name")]
-                    public string Name { get; set; }
+                    public string? Name { get; set; }
 
                     /// <summary>
                     /// 属性值
                     /// </summary>
                     [JsonPropertyName("values")]
-                    public List<string> Values { get; set; }
+                    public List<string?>? Values { get; set; }
 
 
                 }
@@ -312,7 +312,7 @@ public partial class InfoKttPurchaseSupplierGoodsResponse
                     /// 商品编码
                     /// </summary>
                     [JsonPropertyName("external_sku_id")]
-                    public string ExternalSkuId { get; set; }
+                    public string? ExternalSkuId { get; set; }
 
                     /// <summary>
                     /// 团购价
@@ -354,7 +354,7 @@ public partial class InfoKttPurchaseSupplierGoodsResponse
                     /// 规格列表
                     /// </summary>
                     [JsonPropertyName("spec_list")]
-                    public List<SpecListResponse> SpecList { get; set; }
+                    public List<SpecListResponse?>? SpecList { get; set; }
 
                     /// <summary>
                     /// sku状态 0：正常 1：下架
@@ -366,7 +366,7 @@ public partial class InfoKttPurchaseSupplierGoodsResponse
                     /// sku图
                     /// </summary>
                     [JsonPropertyName("thumb_url")]
-                    public string ThumbUrl { get; set; }
+                    public string? ThumbUrl { get; set; }
 
                     /// <summary>
                     /// 总库存
@@ -381,13 +381,13 @@ public partial class InfoKttPurchaseSupplierGoodsResponse
                         /// 规格名，如红色
                         /// </summary>
                         [JsonPropertyName("name")]
-                        public string Name { get; set; }
+                        public string? Name { get; set; }
 
                         /// <summary>
                         /// 父规格名，如颜色
                         /// </summary>
                         [JsonPropertyName("parent_name")]
-                        public string ParentName { get; set; }
+                        public string? ParentName { get; set; }
 
                         /// <summary>
                         /// 规格ID
@@ -406,7 +406,7 @@ public partial class InfoKttPurchaseSupplierGoodsResponse
                     /// 视频封面链接
                     /// </summary>
                     [JsonPropertyName("cover_url")]
-                    public string CoverUrl { get; set; }
+                    public string? CoverUrl { get; set; }
 
                     /// <summary>
                     /// 元素类型 0：图片 1：视频
@@ -418,7 +418,7 @@ public partial class InfoKttPurchaseSupplierGoodsResponse
                     /// 链接
                     /// </summary>
                     [JsonPropertyName("url")]
-                    public string Url { get; set; }
+                    public string? Url { get; set; }
 
 
                 }
@@ -429,19 +429,19 @@ public partial class InfoKttPurchaseSupplierGoodsResponse
                     /// 头像
                     /// </summary>
                     [JsonPropertyName("avatar")]
-                    public string Avatar { get; set; }
+                    public string? Avatar { get; set; }
 
                     /// <summary>
                     /// 昵称
                     /// </summary>
                     [JsonPropertyName("nick_name")]
-                    public string NickName { get; set; }
+                    public string? NickName { get; set; }
 
                     /// <summary>
                     /// 用户编号
                     /// </summary>
                     [JsonPropertyName("user_no")]
-                    public string UserNo { get; set; }
+                    public string? UserNo { get; set; }
 
 
                 }

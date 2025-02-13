@@ -17,7 +17,7 @@ public partial class GenerateDdkCmsPromUrl
     /// 自定义参数，为链接打上自定义标签；自定义参数最长限制64个字节；格式为：  {"uid":"11111","sid":"22222"} ，其中 uid 用户唯一标识，可自行加密后传入，每个用户仅且对应一个标识，必填； sid 上下文信息标识，例如sessionId等，非必填。该json字符串中也可以加入其他自定义的key。（如果使用GET请求，请使用URLEncode处理参数）
     /// </summary>
     [JsonPropertyName("custom_parameters")]
-    public string CustomParameters { get; set; }
+    public string? CustomParameters { get; set; }
 
     /// <summary>
     /// 是否生成手机跳转链接。true-是，false-否，默认false
@@ -47,13 +47,13 @@ public partial class GenerateDdkCmsPromUrl
     /// 搜索关键词
     /// </summary>
     [JsonPropertyName("keyword")]
-    public string Keyword { get; set; }
+    public string? Keyword { get; set; }
 
     /// <summary>
     /// 语言代码，生成跨境商城时有效
     /// </summary>
     [JsonPropertyName("language_code")]
-    public string LanguageCode { get; set; }
+    public string? LanguageCode { get; set; }
 
     /// <summary>
     /// 单人团多人团标志。true-多人团，false-单人团 默认false

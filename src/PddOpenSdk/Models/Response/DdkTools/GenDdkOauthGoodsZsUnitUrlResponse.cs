@@ -6,7 +6,7 @@ public partial class GenDdkOauthGoodsZsUnitUrlResponse
     /// goods_zs_unit_generate_response
     /// </summary>
     [JsonPropertyName("goods_zs_unit_generate_response")]
-    public GoodsZsUnitGenerateResponseResponse GoodsZsUnitGenerateResponse { get; set; }
+    public GoodsZsUnitGenerateResponseResponse? GoodsZsUnitGenerateResponse { get; set; }
 
     public partial class GoodsZsUnitGenerateResponseResponse
     {
@@ -15,67 +15,67 @@ public partial class GenDdkOauthGoodsZsUnitUrlResponse
         /// 推广短链接（可唤起拼多多app）
         /// </summary>
         [JsonPropertyName("mobile_short_url")]
-        public string MobileShortUrl { get; set; }
+        public string? MobileShortUrl { get; set; }
 
         /// <summary>
         /// 推广长链接（唤起拼多多app）
         /// </summary>
         [JsonPropertyName("mobile_url")]
-        public string MobileUrl { get; set; }
+        public string? MobileUrl { get; set; }
 
         /// <summary>
         /// 推广短链接（唤起拼多多app）
         /// </summary>
         [JsonPropertyName("multi_group_mobile_short_url")]
-        public string MultiGroupMobileShortUrl { get; set; }
+        public string? MultiGroupMobileShortUrl { get; set; }
 
         /// <summary>
         /// 推广长链接（可唤起拼多多app）
         /// </summary>
         [JsonPropertyName("multi_group_mobile_url")]
-        public string MultiGroupMobileUrl { get; set; }
+        public string? MultiGroupMobileUrl { get; set; }
 
         /// <summary>
         /// 双人团推广短链接
         /// </summary>
         [JsonPropertyName("multi_group_short_url")]
-        public string MultiGroupShortUrl { get; set; }
+        public string? MultiGroupShortUrl { get; set; }
 
         /// <summary>
         /// 双人团推广长链接
         /// </summary>
         [JsonPropertyName("multi_group_url")]
-        public string MultiGroupUrl { get; set; }
+        public string? MultiGroupUrl { get; set; }
 
         /// <summary>
         /// schema的链接
         /// </summary>
         [JsonPropertyName("schema_url")]
-        public string SchemaUrl { get; set; }
+        public string? SchemaUrl { get; set; }
 
         /// <summary>
         /// 单人团推广短链接
         /// </summary>
         [JsonPropertyName("short_url")]
-        public string ShortUrl { get; set; }
+        public string? ShortUrl { get; set; }
 
         /// <summary>
         /// 单人团推广长链接
         /// </summary>
         [JsonPropertyName("url")]
-        public string Url { get; set; }
+        public string? Url { get; set; }
 
         /// <summary>
         /// 微信小程序longLink
         /// </summary>
         [JsonPropertyName("weixin_long_link")]
-        public string WeixinLongLink { get; set; }
+        public string? WeixinLongLink { get; set; }
 
         /// <summary>
         /// 微信小程序shortLink
         /// </summary>
         [JsonPropertyName("weixin_short_link")]
-        public string WeixinShortLink { get; set; }
+        public string? WeixinShortLink { get; set; }
 
 
     }

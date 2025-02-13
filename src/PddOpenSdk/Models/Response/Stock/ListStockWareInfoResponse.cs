@@ -6,7 +6,7 @@ public partial class ListStockWareInfoResponse
     /// response
     /// </summary>
     [JsonPropertyName("stock_ware_info_list_response")]
-    public StockWareInfoListResponseResponse StockWareInfoListResponse { get; set; }
+    public StockWareInfoListResponseResponse? StockWareInfoListResponse { get; set; }
 
     public partial class StockWareInfoListResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class ListStockWareInfoResponse
         /// 货品信息列表
         /// </summary>
         [JsonPropertyName("ware_list")]
-        public List<WareListResponse> WareList { get; set; }
+        public List<WareListResponse?>? WareList { get; set; }
 
         public partial class WareListResponse
         {
@@ -24,7 +24,7 @@ public partial class ListStockWareInfoResponse
             /// 货品编码
             /// </summary>
             [JsonPropertyName("ware_sn")]
-            public string WareSn { get; set; }
+            public string? WareSn { get; set; }
 
             /// <summary>
             /// 货品ID

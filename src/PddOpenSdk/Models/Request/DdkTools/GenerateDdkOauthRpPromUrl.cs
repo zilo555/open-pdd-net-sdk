@@ -8,7 +8,7 @@ public partial class GenerateDdkOauthRpPromUrl
     public long? Amount { get; set; }
 
     /// <summary>
-    /// 营销工具类型，必填：-1-活动列表，0-红包(需申请推广权限)，2–新人红包，3-刮刮卡，5-员工内购，10-生成绑定备案链接，12-砸金蛋，14-千万补贴B端页面，15-充值中心B端页面，16-千万补贴C端页面，17-千万补贴投票页面，23-超级红包，24-礼金全场N折活动B端页面，27-带货赢千万，30-免单B端页面，31-免单C端页面，32-转盘得现金B端页面，33-转盘得现金C端页面，34-千万神券C端页面，35-千万神券B端页面，36-爆品日历B端页面，37-超级红包B端推品页，39-母婴馆C端页面，40-母婴馆B端页面，41-限时折扣B端页面，42-超级红包9.9C端活动页 45-大促会场集合B端页面 46-大促会场集合C端页面 47-类目排位赛B端页面 48-惊喜价B端页面 49-惊喜价C端页面
+    /// 营销工具类型，必填：-1-活动列表，0-红包(需申请推广权限)，2–新人红包，3-刮刮卡，5-员工内购，10-生成绑定备案链接，12-砸金蛋，14-千万补贴B端页面，15-充值中心B端页面，16-千万补贴C端页面，17-千万补贴投票页面，23-超级红包，24-礼金全场N折活动B端页面，27-带货赢千万，30-免单B端页面，31-免单C端页面，32-转盘得现金B端页面，33-转盘得现金C端页面，34-千万神券C端页面，35-千万神券B端页面，36-爆品日历B端页面，37-超级红包B端推品页，39-母婴馆C端页面，40-母婴馆B端页面，41-限时折扣B端页面，42-超级红包9.9C端活动页 45-大促会场集合B端页面 46-大促会场集合C端页面 47-类目排位赛B端页面 48-惊喜价B端页面 49-惊喜价C端页面 50-单单返券页面
     /// </summary>
     [JsonPropertyName("channel_type")]
     public int? ChannelType { get; set; }
@@ -17,37 +17,37 @@ public partial class GenerateDdkOauthRpPromUrl
     /// 自定义参数，为链接打上自定义标签；自定义参数最长限制64个字节；格式为：  {"uid":"11111","sid":"22222"} ，其中 uid 用户唯一标识，可自行加密后传入，每个用户仅且对应一个标识，必填； sid 上下文信息标识，例如sessionId等，非必填。该json字符串中也可以加入其他自定义的key。（如果使用GET请求，请使用URLEncode处理参数）
     /// </summary>
     [JsonPropertyName("custom_parameters")]
-    public string CustomParameters { get; set; }
+    public string? CustomParameters { get; set; }
 
     /// <summary>
     /// 一元购自定义参数，json格式，例如:{"goods_sign":"Y9b2_0uSWMFPGSaVwvfZAlm_y2ADLWZl_JQ7UYaS80K"}
     /// </summary>
     [JsonPropertyName("diy_one_yuan_param")]
-    public DiyOneYuanParamModel DiyOneYuanParam { get; set; }
+    public DiyOneYuanParamModel? DiyOneYuanParam { get; set; }
 
     /// <summary>
     /// 大促会场集合页参数
     /// </summary>
     [JsonPropertyName("diy_promo_act_collection_param")]
-    public DiyPromoActCollectionParamModel DiyPromoActCollectionParam { get; set; }
+    public DiyPromoActCollectionParamModel? DiyPromoActCollectionParam { get; set; }
 
     /// <summary>
     /// 红包自定义参数，json格式
     /// </summary>
     [JsonPropertyName("diy_red_packet_param")]
-    public DiyRedPacketParamModel DiyRedPacketParam { get; set; }
+    public DiyRedPacketParamModel? DiyRedPacketParam { get; set; }
 
     /// <summary>
     /// 超级红包自定义参数，json格式
     /// </summary>
     [JsonPropertyName("diy_sp_red_packet_param")]
-    public DiySpRedPacketParamModel DiySpRedPacketParam { get; set; }
+    public DiySpRedPacketParamModel? DiySpRedPacketParam { get; set; }
 
     /// <summary>
     /// 扩展参数
     /// </summary>
     [JsonPropertyName("ext_params")]
-    public Dictionary<string, object> ExtParams { get; set; }
+    public Dictionary<string, object>? ExtParams { get; set; }
 
     /// <summary>
     /// 是否生成qq小程序
@@ -95,13 +95,19 @@ public partial class GenerateDdkOauthRpPromUrl
     /// 千万神券C端生链扩展参数 支持置顶活动ID 和 置顶商品(品牌活动才支持)
     /// </summary>
     [JsonPropertyName("tmcc_param")]
-    public TmccParamModel TmccParam { get; set; }
+    public TmccParamModel? TmccParam { get; set; }
 
     /// <summary>
     /// 招商DuoID
     /// </summary>
     [JsonPropertyName("zs_duo_id")]
     public long? ZsDuoId { get; set; }
+
+    /// <summary>
+    /// 单单返券参数
+    /// </summary>
+    [JsonPropertyName("diy_coupon_rebate_param")]
+    public DiyCouponRebateParamModel? DiyCouponRebateParam { get; set; }
 
 
     public partial class DiyOneYuanParamModel
@@ -110,7 +116,7 @@ public partial class GenerateDdkOauthRpPromUrl
         /// 商品goodsSign，支持通过goodsSign查询商品。goodsSign是加密后的goodsId, goodsId已下线，请使用goodsSign来替代。使用说明：https://jinbao.pinduoduo.com/qa-system?questionId=252
         /// </summary>
         [JsonPropertyName("goods_sign")]
-        public string GoodsSign { get; set; }
+        public string? GoodsSign { get; set; }
 
 
 
@@ -132,7 +138,7 @@ public partial class GenerateDdkOauthRpPromUrl
         /// 红包金额列表，200、300、500、1000、2000，单位分。红包金额和红包抵后价设置只能二选一，默认设置了红包金额会忽略红包抵后价设置
         /// </summary>
         [JsonPropertyName("amount_probability")]
-        public List<long?> AmountProbability { get; set; }
+        public List<long?>? AmountProbability { get; set; }
 
         /// <summary>
         /// 设置玩法，false-现金红包, true-现金券
@@ -156,7 +162,7 @@ public partial class GenerateDdkOauthRpPromUrl
         /// 自定义红包抵后价和商品佣金区间对象数组
         /// </summary>
         [JsonPropertyName("range_items")]
-        public List<RangeItemsModel> RangeItems { get; set; }
+        public List<RangeItemsModel?>? RangeItems { get; set; }
 
 
         public partial class RangeItemsModel
@@ -190,13 +196,13 @@ public partial class GenerateDdkOauthRpPromUrl
         /// 商品goodsSign，支持通过goodsSign置顶落地页商品。使用说明：https://jinbao.pinduoduo.com/qa-system?questionId=252
         /// </summary>
         [JsonPropertyName("goods_sign")]
-        public string GoodsSign { get; set; }
+        public string? GoodsSign { get; set; }
 
         /// <summary>
         /// 商品skuId密文，支持自动选中对应sku
         /// </summary>
         [JsonPropertyName("sku_id_code")]
-        public string SkuIdCode { get; set; }
+        public string? SkuIdCode { get; set; }
 
 
 
@@ -207,13 +213,13 @@ public partial class GenerateDdkOauthRpPromUrl
         /// 扩展参数Key
         /// </summary>
         [JsonPropertyName("$key")]
-        public string Key { get; set; }
+        public string? Key { get; set; }
 
         /// <summary>
         /// 扩展参数Value
         /// </summary>
         [JsonPropertyName("$value")]
-        public string Value { get; set; }
+        public string? Value { get; set; }
 
 
 
@@ -224,13 +230,24 @@ public partial class GenerateDdkOauthRpPromUrl
         /// 置顶商品的goodsSign列表
         /// </summary>
         [JsonPropertyName("goods_signs")]
-        public List<string> GoodsSigns { get; set; }
+        public List<string?>? GoodsSigns { get; set; }
 
         /// <summary>
         /// 指定活动id
         /// </summary>
         [JsonPropertyName("tmc_config_id")]
         public long? TmcConfigId { get; set; }
+
+
+
+    }
+    public partial class DiyCouponRebateParamModel
+    {
+        /// <summary>
+        /// 商品编码
+        /// </summary>
+        [JsonPropertyName("goods_sign")]
+        public string? GoodsSign { get; set; }
 
 
 

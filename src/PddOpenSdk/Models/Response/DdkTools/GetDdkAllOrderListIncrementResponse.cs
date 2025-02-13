@@ -6,7 +6,7 @@ public partial class GetDdkAllOrderListIncrementResponse
     /// order_list_get_response
     /// </summary>
     [JsonPropertyName("order_list_get_response")]
-    public OrderListGetResponseResponse OrderListGetResponse { get; set; }
+    public OrderListGetResponseResponse? OrderListGetResponse { get; set; }
 
     public partial class OrderListGetResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class GetDdkAllOrderListIncrementResponse
         /// 多多进宝推广位对象列表
         /// </summary>
         [JsonPropertyName("order_list")]
-        public List<OrderListResponse> OrderList { get; set; }
+        public List<OrderListResponse?>? OrderList { get; set; }
 
         /// <summary>
         /// 请求到的结果数
@@ -30,7 +30,7 @@ public partial class GetDdkAllOrderListIncrementResponse
             /// 商品活动标记数组，例：[4,7]，4-秒杀 7-百亿补贴等
             /// </summary>
             [JsonPropertyName("activity_tags")]
-            public List<int?> ActivityTags { get; set; }
+            public List<int?>? ActivityTags { get; set; }
 
             /// <summary>
             /// 多多客工具id
@@ -48,7 +48,7 @@ public partial class GetDdkAllOrderListIncrementResponse
             /// 结算批次号
             /// </summary>
             [JsonPropertyName("batch_no")]
-            public string BatchNo { get; set; }
+            public string? BatchNo { get; set; }
 
             /// <summary>
             /// 订单关联礼金活动Id
@@ -60,7 +60,7 @@ public partial class GetDdkAllOrderListIncrementResponse
             /// 商品一~四级类目ID列表
             /// </summary>
             [JsonPropertyName("cat_ids")]
-            public List<long?> CatIds { get; set; }
+            public List<long?>? CatIds { get; set; }
 
             /// <summary>
             /// 是否是 cpa 新用户，1表示是，0表示否
@@ -69,22 +69,28 @@ public partial class GetDdkAllOrderListIncrementResponse
             public int? CpaNew { get; set; }
 
             /// <summary>
+            /// 0-普通订单 3-限时补贴订单
+            /// </summary>
+            [JsonPropertyName("cps_level")]
+            public int? CpsLevel { get; set; }
+
+            /// <summary>
             /// 自定义参数
             /// </summary>
             [JsonPropertyName("custom_parameters")]
-            public string CustomParameters { get; set; }
+            public string? CustomParameters { get; set; }
 
             /// <summary>
             /// 订单审核失败/惩罚原因
             /// </summary>
             [JsonPropertyName("fail_reason")]
-            public string FailReason { get; set; }
+            public string? FailReason { get; set; }
 
             /// <summary>
             /// 商品一级类目名称
             /// </summary>
             [JsonPropertyName("goods_category_name")]
-            public string GoodsCategoryName { get; set; }
+            public string? GoodsCategoryName { get; set; }
 
             /// <summary>
             /// 商品ID
@@ -96,7 +102,7 @@ public partial class GetDdkAllOrderListIncrementResponse
             /// 商品标题
             /// </summary>
             [JsonPropertyName("goods_name")]
-            public string GoodsName { get; set; }
+            public string? GoodsName { get; set; }
 
             /// <summary>
             /// 订单中sku的单件价格，单位为分
@@ -114,13 +120,13 @@ public partial class GetDdkAllOrderListIncrementResponse
             /// goodsSign是加密后的goodsId，goodsId已下线，请使用goodsSign来替代。需要注意的是：推广链接带有goodsSign信息时，订单会返回原goodsSign；反之，会生成新的goodsSign返回。
             /// </summary>
             [JsonPropertyName("goods_sign")]
-            public string GoodsSign { get; set; }
+            public string? GoodsSign { get; set; }
 
             /// <summary>
             /// 商品缩略图
             /// </summary>
             [JsonPropertyName("goods_thumbnail_url")]
-            public string GoodsThumbnailUrl { get; set; }
+            public string? GoodsThumbnailUrl { get; set; }
 
             /// <summary>
             /// 成团编号
@@ -144,13 +150,13 @@ public partial class GetDdkAllOrderListIncrementResponse
             /// 店铺名称
             /// </summary>
             [JsonPropertyName("mall_name")]
-            public string MallName { get; set; }
+            public string? MallName { get; set; }
 
             /// <summary>
             /// 非补贴订单原因，例如："商品补贴达上限"，"达到单个用户下单上限"，"非指定落地页直推订单"，"订单超过2个月未审核成功"等
             /// </summary>
             [JsonPropertyName("no_subsidy_reason")]
-            public string NoSubsidyReason { get; set; }
+            public string? NoSubsidyReason { get; set; }
 
             /// <summary>
             /// 实际支付金额，单位为分
@@ -198,7 +204,7 @@ public partial class GetDdkAllOrderListIncrementResponse
             /// 推广订单编号
             /// </summary>
             [JsonPropertyName("order_sn")]
-            public string OrderSn { get; set; }
+            public string? OrderSn { get; set; }
 
             /// <summary>
             /// 订单状态：0-已支付；1-已成团；2-确认收货；3-审核成功；4-审核失败（不可提现）；5-已经结算 ;10-已处罚
@@ -210,7 +216,7 @@ public partial class GetDdkAllOrderListIncrementResponse
             /// 订单状态描述
             /// </summary>
             [JsonPropertyName("order_status_desc")]
-            public string OrderStatusDesc { get; set; }
+            public string? OrderStatusDesc { get; set; }
 
             /// <summary>
             /// 审核时间
@@ -222,7 +228,7 @@ public partial class GetDdkAllOrderListIncrementResponse
             /// 推广位ID
             /// </summary>
             [JsonPropertyName("p_id")]
-            public string PId { get; set; }
+            public string? PId { get; set; }
 
             /// <summary>
             /// 平台券金额，表示该订单使用的平台券金额，单位分
@@ -276,13 +282,13 @@ public partial class GetDdkAllOrderListIncrementResponse
             /// 直播间推广自定义参数
             /// </summary>
             [JsonPropertyName("sep_parameters")]
-            public string SepParameters { get; set; }
+            public string? SepParameters { get; set; }
 
             /// <summary>
             /// 直播间订单推广位
             /// </summary>
             [JsonPropertyName("sep_pid")]
-            public string SepPid { get; set; }
+            public string? SepPid { get; set; }
 
             /// <summary>
             /// 直播间推广佣金比例

@@ -17,7 +17,7 @@ public partial class UpdateStockWare
     /// 组合货品中子货品的关联关系, ware_type为1时必填；
     /// </summary>
     [JsonPropertyName("ware_infos")]
-    public List<WareInfosModel> WareInfos { get; set; }
+    public List<WareInfosModel?>? WareInfos { get; set; }
 
     /// <summary>
     /// 货品编码
@@ -35,7 +35,7 @@ public partial class UpdateStockWare
     /// 备注
     /// </summary>
     [JsonPropertyName("note")]
-    public string Note { get; set; }
+    public string? Note { get; set; }
 
     /// <summary>
     /// 高低值服务
@@ -101,13 +101,13 @@ public partial class UpdateStockWare
     /// 颜色
     /// </summary>
     [JsonPropertyName("color")]
-    public string Color { get; set; }
+    public string? Color { get; set; }
 
     /// <summary>
     /// 包材
     /// </summary>
     [JsonPropertyName("packing")]
-    public string Packing { get; set; }
+    public string? Packing { get; set; }
 
 
     public partial class WareInfosModel

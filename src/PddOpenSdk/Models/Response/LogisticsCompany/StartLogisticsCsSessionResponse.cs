@@ -6,7 +6,7 @@ public partial class StartLogisticsCsSessionResponse
     /// response
     /// </summary>
     [JsonPropertyName("logistics_cs_session_start_response")]
-    public LogisticsCsSessionStartResponseResponse LogisticsCsSessionStartResponse { get; set; }
+    public LogisticsCsSessionStartResponseResponse? LogisticsCsSessionStartResponse { get; set; }
 
     public partial class LogisticsCsSessionStartResponseResponse
     {

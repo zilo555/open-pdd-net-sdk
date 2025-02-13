@@ -6,7 +6,7 @@ public partial class NopoiMallInfoStoreCreatePostResponse
     /// 
     /// </summary>
     [JsonPropertyName("res")]
-    public string Res { get; set; }
+    public string? Res { get; set; }
 
 
 }

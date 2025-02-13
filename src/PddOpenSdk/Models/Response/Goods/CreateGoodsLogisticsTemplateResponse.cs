@@ -6,7 +6,7 @@ public partial class CreateGoodsLogisticsTemplateResponse
     /// 返回resposne
     /// </summary>
     [JsonPropertyName("goods_logistics_template_create_response")]
-    public GoodsLogisticsTemplateCreateResponseResponse GoodsLogisticsTemplateCreateResponse { get; set; }
+    public GoodsLogisticsTemplateCreateResponseResponse? GoodsLogisticsTemplateCreateResponse { get; set; }
 
     public partial class GoodsLogisticsTemplateCreateResponseResponse
     {

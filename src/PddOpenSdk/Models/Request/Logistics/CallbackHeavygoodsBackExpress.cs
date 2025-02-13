@@ -5,7 +5,7 @@ public partial class CallbackHeavygoodsBackExpress
     /// 包裹回退原因
     /// </summary>
     [JsonPropertyName("back_reason")]
-    public string BackReason { get; set; }
+    public string? BackReason { get; set; }
 
     /// <summary>
     /// 逆向运单号

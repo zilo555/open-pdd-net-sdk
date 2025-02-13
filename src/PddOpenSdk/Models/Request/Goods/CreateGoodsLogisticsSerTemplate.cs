@@ -5,7 +5,7 @@ public partial class CreateGoodsLogisticsSerTemplate
     /// 分类目基础价格配置,入参为string，[{; 	"cat_id4": 1,; 	"cat_id3": 2,; 	"list": [{; 		"limit_type": 1,; 		"value": 1,; 		"content": [{; 			"price": 1,; 			"max_pro": 1,; 			"min_pro": 1; 		}]; 	}]; }]
     /// </summary>
     [JsonPropertyName("cat_list")]
-    public List<CatListModel> CatList { get; set; }
+    public List<CatListModel?>? CatList { get; set; }
 
     /// <summary>
     /// 分地区配置溢价时使用的计价单位：0：价格分，按价格分计算费用；1：百分比，按照基础价格乘以百分比计算费用，除了"买家自提"服务，其他服务类型必传
@@ -59,7 +59,7 @@ public partial class CreateGoodsLogisticsSerTemplate
             /// 按属性收取费用时配置的内容：按属性限价时设置；按件限价时不用传，value和content必须设置一个
             /// </summary>
             [JsonPropertyName("content")]
-            public List<ContentModel> Content { get; set; }
+            public List<ContentModel?>? Content { get; set; }
 
             /// <summary>
             /// 分类目收取服务费用方式：1-按件收取费用，2-按属性收取费用

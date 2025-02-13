@@ -6,7 +6,7 @@ public partial class SingleKttGoodsQueryResponse
     /// 
     /// </summary>
     [JsonPropertyName("response")]
-    public ResponseResponse Response { get; set; }
+    public ResponseResponse? Response { get; set; }
 
     public partial class ResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class SingleKttGoodsQueryResponse
         /// 
         /// </summary>
         [JsonPropertyName("result")]
-        public ResultResponse Result { get; set; }
+        public ResultResponse? Result { get; set; }
 
         /// <summary>
         /// 接口调用是否成功
@@ -30,19 +30,19 @@ public partial class SingleKttGoodsQueryResponse
             /// 商品归属快团团团号
             /// </summary>
             [JsonPropertyName("activity_no")]
-            public string ActivityNo { get; set; }
+            public string? ActivityNo { get; set; }
 
             /// <summary>
             /// 商品分类名
             /// </summary>
             [JsonPropertyName("category_name")]
-            public string CategoryName { get; set; }
+            public string? CategoryName { get; set; }
 
             /// <summary>
             /// 商品描述
             /// </summary>
             [JsonPropertyName("goods_desc")]
-            public string GoodsDesc { get; set; }
+            public string? GoodsDesc { get; set; }
 
             /// <summary>
             /// 商品ID
@@ -54,13 +54,13 @@ public partial class SingleKttGoodsQueryResponse
             /// 商品图列表
             /// </summary>
             [JsonPropertyName("goods_image_list")]
-            public List<string> GoodsImageList { get; set; }
+            public List<string?>? GoodsImageList { get; set; }
 
             /// <summary>
             /// 商品名
             /// </summary>
             [JsonPropertyName("goods_name")]
-            public string GoodsName { get; set; }
+            public string? GoodsName { get; set; }
 
             /// <summary>
             /// 商品归属团是否删除
@@ -84,7 +84,7 @@ public partial class SingleKttGoodsQueryResponse
             /// sku列表
             /// </summary>
             [JsonPropertyName("sku_list")]
-            public List<SkuListResponse> SkuList { get; set; }
+            public List<SkuListResponse?>? SkuList { get; set; }
 
             /// <summary>
             /// 更新时间 毫秒时间戳
@@ -99,7 +99,7 @@ public partial class SingleKttGoodsQueryResponse
                 /// 外部商品编码
                 /// </summary>
                 [JsonPropertyName("external_sku_id")]
-                public string ExternalSkuId { get; set; }
+                public string? ExternalSkuId { get; set; }
 
                 /// <summary>
                 /// 成本价 单位分 可能没有
@@ -147,19 +147,19 @@ public partial class SingleKttGoodsQueryResponse
                 /// 规格列表
                 /// </summary>
                 [JsonPropertyName("spec_list")]
-                public List<SpecListResponse> SpecList { get; set; }
+                public List<SpecListResponse?>? SpecList { get; set; }
 
                 /// <summary>
                 /// 具体规格名
                 /// </summary>
                 [JsonPropertyName("spec_name")]
-                public string SpecName { get; set; }
+                public string? SpecName { get; set; }
 
                 /// <summary>
                 /// sku缩略图
                 /// </summary>
                 [JsonPropertyName("thumb_url")]
-                public string ThumbUrl { get; set; }
+                public string? ThumbUrl { get; set; }
 
                 /// <summary>
                 /// 总库存=剩余+预占+已售
@@ -174,13 +174,13 @@ public partial class SingleKttGoodsQueryResponse
                     /// 子规格名
                     /// </summary>
                     [JsonPropertyName("name")]
-                    public string Name { get; set; }
+                    public string? Name { get; set; }
 
                     /// <summary>
                     /// 父规格名
                     /// </summary>
                     [JsonPropertyName("parent_name")]
-                    public string ParentName { get; set; }
+                    public string? ParentName { get; set; }
 
                     /// <summary>
                     /// 规格id

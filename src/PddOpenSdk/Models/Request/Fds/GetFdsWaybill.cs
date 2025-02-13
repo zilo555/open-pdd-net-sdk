@@ -68,7 +68,7 @@ public partial class GetFdsWaybill
                 /// 国家/地区
                 /// </summary>
                 [JsonPropertyName("country")]
-                public string Country { get; set; }
+                public string? Country { get; set; }
 
                 /// <summary>
                 /// 详细地址
@@ -92,7 +92,7 @@ public partial class GetFdsWaybill
                 /// 街道
                 /// </summary>
                 [JsonPropertyName("town")]
-                public string Town { get; set; }
+                public string? Town { get; set; }
 
 
 
@@ -105,7 +105,7 @@ public partial class GetFdsWaybill
             /// 物流服务内容链接
             /// </summary>
             [JsonPropertyName("logistics_services")]
-            public string LogisticsServices { get; set; }
+            public string? LogisticsServices { get; set; }
 
             /// <summary>
             /// 请求id
@@ -178,13 +178,13 @@ public partial class GetFdsWaybill
                 /// 快运货品描述
                 /// </summary>
                 [JsonPropertyName("goods_description")]
-                public string GoodsDescription { get; set; }
+                public string? GoodsDescription { get; set; }
 
                 /// <summary>
                 /// 包裹id,拆合单使用
                 /// </summary>
                 [JsonPropertyName("id")]
-                public string Id { get; set; }
+                public string? Id { get; set; }
 
                 /// <summary>
                 /// 商品信息,数量限制为100
@@ -196,13 +196,13 @@ public partial class GetFdsWaybill
                 /// 快运包装方式描述
                 /// </summary>
                 [JsonPropertyName("packaging_description")]
-                public string PackagingDescription { get; set; }
+                public string? PackagingDescription { get; set; }
 
                 /// <summary>
                 /// 子母件总包裹数
                 /// </summary>
                 [JsonPropertyName("total_packages_count")]
-                public string TotalPackagesCount { get; set; }
+                public string? TotalPackagesCount { get; set; }
 
                 /// <summary>
                 /// 体积, 单位 ml

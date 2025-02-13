@@ -32,13 +32,13 @@ public partial class CreateGoodsCpsUnit
         /// 优惠券开始时间，商品售价>=10元必传
         /// </summary>
         [JsonPropertyName("coupon_start_time")]
-        public string CouponStartTime { get; set; }
+        public string? CouponStartTime { get; set; }
 
         /// <summary>
         /// 优惠券结束时间，商品售价>=10元必传
         /// </summary>
         [JsonPropertyName("coupon_end_time")]
-        public string CouponEndTime { get; set; }
+        public string? CouponEndTime { get; set; }
 
         /// <summary>
         /// 优惠券面额（单位为分），商品售价>=10元必传

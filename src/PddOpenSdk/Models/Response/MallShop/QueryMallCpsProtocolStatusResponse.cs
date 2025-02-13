@@ -6,7 +6,7 @@ public partial class QueryMallCpsProtocolStatusResponse
     /// mall_cps_protocol_status_query_response
     /// </summary>
     [JsonPropertyName("mall_cps_protocol_status_query_response")]
-    public MallCpsProtocolStatusQueryResponseResponse MallCpsProtocolStatusQueryResponse { get; set; }
+    public MallCpsProtocolStatusQueryResponseResponse? MallCpsProtocolStatusQueryResponse { get; set; }
 
     public partial class MallCpsProtocolStatusQueryResponseResponse
     {

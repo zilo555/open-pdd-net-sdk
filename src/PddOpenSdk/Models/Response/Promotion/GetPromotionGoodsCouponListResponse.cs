@@ -6,7 +6,7 @@ public partial class GetPromotionGoodsCouponListResponse
     /// 返回商品优惠券批次表
     /// </summary>
     [JsonPropertyName("goods_coupon_batch_list_response")]
-    public GoodsCouponBatchListResponseResponse GoodsCouponBatchListResponse { get; set; }
+    public GoodsCouponBatchListResponseResponse? GoodsCouponBatchListResponse { get; set; }
 
     public partial class GoodsCouponBatchListResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class GetPromotionGoodsCouponListResponse
         /// 返回商品优惠券对象
         /// </summary>
         [JsonPropertyName("coupon_batch_list")]
-        public List<CouponBatchListResponse> CouponBatchList { get; set; }
+        public List<CouponBatchListResponse?>? CouponBatchList { get; set; }
 
         /// <summary>
         /// 返回的优惠券总数
@@ -36,7 +36,7 @@ public partial class GetPromotionGoodsCouponListResponse
             /// 批次描述
             /// </summary>
             [JsonPropertyName("batch_desc")]
-            public string BatchDesc { get; set; }
+            public string? BatchDesc { get; set; }
 
             /// <summary>
             /// 折扣参数，为请求中传入的discountAmount，表示折扣金额，单位: 分
@@ -102,13 +102,13 @@ public partial class GetPromotionGoodsCouponListResponse
             /// 商品名
             /// </summary>
             [JsonPropertyName("goods_name")]
-            public string GoodsName { get; set; }
+            public string? GoodsName { get; set; }
 
             /// <summary>
             /// 图片URL
             /// </summary>
             [JsonPropertyName("image_url")]
-            public string ImageUrl { get; set; }
+            public string? ImageUrl { get; set; }
 
             /// <summary>
             /// 批次状态，1 领取中，2 已领完，3 已结束，4 已暂停

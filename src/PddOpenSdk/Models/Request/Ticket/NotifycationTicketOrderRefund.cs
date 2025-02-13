@@ -17,7 +17,7 @@ public partial class NotifycationTicketOrderRefund
     /// 驳回原因 status=3时必传
     /// </summary>
     [JsonPropertyName("reject_reason")]
-    public string RejectReason { get; set; }
+    public string? RejectReason { get; set; }
 
     /// <summary>
     /// 退款流水号

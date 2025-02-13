@@ -5,7 +5,7 @@ public partial class GetGoodsFileInfo
     /// url列表
     /// </summary>
     [JsonPropertyName("url_list")]
-    public List<string> UrlList { get; set; }
+    public List<string?>? UrlList { get; set; }
 
 
 

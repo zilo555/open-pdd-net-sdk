@@ -6,7 +6,7 @@ public partial class ShippingRefundExchangeResponse
     /// 
     /// </summary>
     [JsonPropertyName("response")]
-    public ResponseResponse Response { get; set; }
+    public ResponseResponse? Response { get; set; }
 
     public partial class ResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class ShippingRefundExchangeResponse
         /// 
         /// </summary>
         [JsonPropertyName("result")]
-        public ResultResponse Result { get; set; }
+        public ResultResponse? Result { get; set; }
 
         public partial class ResultResponse
         {
@@ -30,13 +30,13 @@ public partial class ShippingRefundExchangeResponse
             /// 操作结果信息。如果失败，会返回失败原因
             /// </summary>
             [JsonPropertyName("message")]
-            public string Message { get; set; }
+            public string? Message { get; set; }
 
             /// <summary>
             /// 
             /// </summary>
             [JsonPropertyName("order_sn")]
-            public string OrderSn { get; set; }
+            public string? OrderSn { get; set; }
 
             /// <summary>
             /// 是否操作成功

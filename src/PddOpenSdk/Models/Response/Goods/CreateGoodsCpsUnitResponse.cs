@@ -6,7 +6,7 @@ public partial class CreateGoodsCpsUnitResponse
     /// 失败原因列表对象，创建成功则此参数为空
     /// </summary>
     [JsonPropertyName("failed_vos")]
-    public List<FailedVosResponse> FailedVos { get; set; }
+    public List<FailedVosResponse?>? FailedVos { get; set; }
 
     public partial class FailedVosResponse
     {
@@ -21,7 +21,7 @@ public partial class CreateGoodsCpsUnitResponse
         /// 创建失败原因
         /// </summary>
         [JsonPropertyName("reason")]
-        public string Reason { get; set; }
+        public string? Reason { get; set; }
 
 
     }

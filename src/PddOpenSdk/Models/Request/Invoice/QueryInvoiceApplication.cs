@@ -5,7 +5,7 @@ public partial class QueryInvoiceApplication
     /// 订单号；订单号和申请时间必填其一
     /// </summary>
     [JsonPropertyName("order_sn")]
-    public string OrderSn { get; set; }
+    public string? OrderSn { get; set; }
 
     /// <summary>
     /// 页码，默认1

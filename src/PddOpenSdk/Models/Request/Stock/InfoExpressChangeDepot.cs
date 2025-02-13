@@ -11,19 +11,19 @@ public partial class InfoExpressChangeDepot
     /// 仓库编码
     /// </summary>
     [JsonPropertyName("depot_code")]
-    public string DepotCode { get; set; }
+    public string? DepotCode { get; set; }
 
     /// <summary>
     /// 仓库名称
     /// </summary>
     [JsonPropertyName("depot_name")]
-    public string DepotName { get; set; }
+    public string? DepotName { get; set; }
 
     /// <summary>
     /// 别名
     /// </summary>
     [JsonPropertyName("depot_alias")]
-    public string DepotAlias { get; set; }
+    public string? DepotAlias { get; set; }
 
     /// <summary>
     /// 所在省id
@@ -47,25 +47,25 @@ public partial class InfoExpressChangeDepot
     /// 仓库详细地址 5-20字
     /// </summary>
     [JsonPropertyName("depot_address")]
-    public string DepotAddress { get; set; }
+    public string? DepotAddress { get; set; }
 
     /// <summary>
     /// 联系人姓名
     /// </summary>
     [JsonPropertyName("contact_name")]
-    public string ContactName { get; set; }
+    public string? ContactName { get; set; }
 
     /// <summary>
     /// 联系人电话
     /// </summary>
     [JsonPropertyName("telephone")]
-    public string Telephone { get; set; }
+    public string? Telephone { get; set; }
 
     /// <summary>
     /// 仓库区域（ 省->市->区id列表）例如：{"34":{"396":[3383]}}Map<Integer, Map<Integer, List<Integer>>>
     /// </summary>
     [JsonPropertyName("depot_region")]
-    public string DepotRegion { get; set; }
+    public string? DepotRegion { get; set; }
 
 
 

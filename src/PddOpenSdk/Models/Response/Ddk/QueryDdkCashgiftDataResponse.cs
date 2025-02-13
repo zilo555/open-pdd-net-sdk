@@ -6,7 +6,7 @@ public partial class QueryDdkCashgiftDataResponse
     /// response
     /// </summary>
     [JsonPropertyName("cashgift_data_response")]
-    public CashgiftDataResponseResponse CashgiftDataResponse { get; set; }
+    public CashgiftDataResponseResponse? CashgiftDataResponse { get; set; }
 
     public partial class CashgiftDataResponseResponse
     {
@@ -21,7 +21,7 @@ public partial class QueryDdkCashgiftDataResponse
         /// 多多礼金数据列表
         /// </summary>
         [JsonPropertyName("list")]
-        public List<ListResponse> List { get; set; }
+        public List<ListResponse?>? List { get; set; }
 
         /// <summary>
         /// 请求到的结果数
@@ -48,7 +48,7 @@ public partial class QueryDdkCashgiftDataResponse
             /// 礼金名称
             /// </summary>
             [JsonPropertyName("cash_gift_name")]
-            public string CashGiftName { get; set; }
+            public string? CashGiftName { get; set; }
 
             /// <summary>
             /// 礼金券面额
@@ -72,7 +72,7 @@ public partial class QueryDdkCashgiftDataResponse
             /// 商品列表信息
             /// </summary>
             [JsonPropertyName("goods_info_list")]
-            public List<GoodsInfoListResponse> GoodsInfoList { get; set; }
+            public List<GoodsInfoListResponse?>? GoodsInfoList { get; set; }
 
             /// <summary>
             /// 礼金订单使用的券总金额，单位为分（实时数据）
@@ -135,7 +135,7 @@ public partial class QueryDdkCashgiftDataResponse
                 /// 商品名称
                 /// </summary>
                 [JsonPropertyName("goods_name")]
-                public string GoodsName { get; set; }
+                public string? GoodsName { get; set; }
 
                 /// <summary>
                 /// 商品原价，单位为分
@@ -147,7 +147,7 @@ public partial class QueryDdkCashgiftDataResponse
                 /// 商品goodsSign，支持通过goodsSign查询商品。goodsSign是加密后的goodsId, goodsId已下线，请使用goodsSign来替代。使用说明：https://jinbao.pinduoduo.com/qa-system?questionId=252
                 /// </summary>
                 [JsonPropertyName("goods_sign")]
-                public string GoodsSign { get; set; }
+                public string? GoodsSign { get; set; }
 
                 /// <summary>
                 /// 商品佣金比例，千分比

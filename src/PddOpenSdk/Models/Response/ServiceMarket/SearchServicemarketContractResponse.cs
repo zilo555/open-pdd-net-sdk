@@ -6,7 +6,7 @@ public partial class SearchServicemarketContractResponse
     /// response
     /// </summary>
     [JsonPropertyName("servicemarket_contract_search_response")]
-    public ServicemarketContractSearchResponseResponse ServicemarketContractSearchResponse { get; set; }
+    public ServicemarketContractSearchResponseResponse? ServicemarketContractSearchResponse { get; set; }
 
     public partial class ServicemarketContractSearchResponseResponse
     {
@@ -21,13 +21,13 @@ public partial class SearchServicemarketContractResponse
         /// 订单号列表
         /// </summary>
         [JsonPropertyName("orderSns")]
-        public List<string> OrderSns { get; set; }
+        public List<string?>? OrderSns { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [JsonPropertyName("specValue")]
-        public SpecValueResponse SpecValue { get; set; }
+        public SpecValueResponse? SpecValue { get; set; }
 
         /// <summary>
         /// 授权开始时间
@@ -42,7 +42,7 @@ public partial class SearchServicemarketContractResponse
             /// 
             /// </summary>
             [JsonPropertyName("specValueList")]
-            public List<SpecValueListResponse> SpecValueList { get; set; }
+            public List<SpecValueListResponse?>? SpecValueList { get; set; }
 
             public partial class SpecValueListResponse
             {
@@ -57,13 +57,13 @@ public partial class SearchServicemarketContractResponse
                 /// 规格名称
                 /// </summary>
                 [JsonPropertyName("specName")]
-                public string SpecName { get; set; }
+                public string? SpecName { get; set; }
 
                 /// <summary>
                 /// 规格值名称
                 /// </summary>
                 [JsonPropertyName("specValue")]
-                public string SpecValue { get; set; }
+                public string? SpecValue { get; set; }
 
                 /// <summary>
                 /// 规格时长参数

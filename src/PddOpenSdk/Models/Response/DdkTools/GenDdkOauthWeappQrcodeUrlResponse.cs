@@ -6,7 +6,7 @@ public partial class GenDdkOauthWeappQrcodeUrlResponse
     /// response
     /// </summary>
     [JsonPropertyName("weapp_qrcode_generate_response")]
-    public WeappQrcodeGenerateResponseResponse WeappQrcodeGenerateResponse { get; set; }
+    public WeappQrcodeGenerateResponseResponse? WeappQrcodeGenerateResponse { get; set; }
 
     public partial class WeappQrcodeGenerateResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class GenDdkOauthWeappQrcodeUrlResponse
         /// 单品推广小程序二维码url
         /// </summary>
         [JsonPropertyName("url")]
-        public string Url { get; set; }
+        public string? Url { get; set; }
 
 
     }

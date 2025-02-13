@@ -6,7 +6,7 @@ public partial class GetPromotionMerchantCouponListResponse
     /// 返回店铺优惠券批次列表
     /// </summary>
     [JsonPropertyName("merchant_coupon_batch_list_response")]
-    public MerchantCouponBatchListResponseResponse MerchantCouponBatchListResponse { get; set; }
+    public MerchantCouponBatchListResponseResponse? MerchantCouponBatchListResponse { get; set; }
 
     public partial class MerchantCouponBatchListResponseResponse
     {
@@ -21,7 +21,7 @@ public partial class GetPromotionMerchantCouponListResponse
         /// 返回店铺优惠券批次对象
         /// </summary>
         [JsonPropertyName("coupon_batch_list")]
-        public List<CouponBatchListResponse> CouponBatchList { get; set; }
+        public List<CouponBatchListResponse?>? CouponBatchList { get; set; }
 
         public partial class CouponBatchListResponse
         {
@@ -36,13 +36,13 @@ public partial class GetPromotionMerchantCouponListResponse
             /// 批次名
             /// </summary>
             [JsonPropertyName("batch_name")]
-            public string BatchName { get; set; }
+            public string? BatchName { get; set; }
 
             /// <summary>
             /// 批次描述
             /// </summary>
             [JsonPropertyName("batch_desc")]
-            public string BatchDesc { get; set; }
+            public string? BatchDesc { get; set; }
 
             /// <summary>
             /// 折扣类型，1 代表满减券，2 代表折扣券
@@ -132,7 +132,7 @@ public partial class GetPromotionMerchantCouponListResponse
             /// 用券条件
             /// </summary>
             [JsonPropertyName("rules")]
-            public string Rules { get; set; }
+            public string? Rules { get; set; }
 
             /// <summary>
             /// 券展示类型，固定为8，代表商家券

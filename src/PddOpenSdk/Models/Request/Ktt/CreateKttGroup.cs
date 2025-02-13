@@ -23,7 +23,7 @@ public partial class CreateKttGroup
     /// 分配给isv的编号，用于绑新
     /// </summary>
     [JsonPropertyName("isv_no")]
-    public string IsvNo { get; set; }
+    public string? IsvNo { get; set; }
 
     /// <summary>
     /// 开始时间戳，毫秒级
@@ -74,7 +74,7 @@ public partial class CreateKttGroup
         /// 商品图列表，注意数量不可超过20
         /// </summary>
         [JsonPropertyName("pic_url_list")]
-        public List<string> PicUrlList { get; set; }
+        public List<string?>? PicUrlList { get; set; }
 
         /// <summary>
         /// sku列表
@@ -89,7 +89,7 @@ public partial class CreateKttGroup
             /// 外部商品编码，不超过32位
             /// </summary>
             [JsonPropertyName("external_sku_id")]
-            public string ExternalSkuId { get; set; }
+            public string? ExternalSkuId { get; set; }
 
             /// <summary>
             /// sku价格，单位分
@@ -113,7 +113,7 @@ public partial class CreateKttGroup
             /// sku图url，注意sku图格式必须是jpg、jpeg、png中的一个，且尺寸不得大于1200*1200，大小不大于1MB，可以不填
             /// </summary>
             [JsonPropertyName("thumb_url")]
-            public string ThumbUrl { get; set; }
+            public string? ThumbUrl { get; set; }
 
             /// <summary>
             /// 总库存，最大100w

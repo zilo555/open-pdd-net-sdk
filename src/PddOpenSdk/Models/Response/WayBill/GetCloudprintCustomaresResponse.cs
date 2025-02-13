@@ -6,7 +6,7 @@ public partial class GetCloudprintCustomaresResponse
     /// response
     /// </summary>
     [JsonPropertyName("pdd_cloudprint_customares_get_response")]
-    public PddCloudprintCustomaresGetResponseResponse PddCloudprintCustomaresGetResponse { get; set; }
+    public PddCloudprintCustomaresGetResponseResponse? PddCloudprintCustomaresGetResponse { get; set; }
 
     public partial class PddCloudprintCustomaresGetResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class GetCloudprintCustomaresResponse
         /// result
         /// </summary>
         [JsonPropertyName("result")]
-        public ResultResponse Result { get; set; }
+        public ResultResponse? Result { get; set; }
 
         public partial class ResultResponse
         {
@@ -24,7 +24,7 @@ public partial class GetCloudprintCustomaresResponse
             /// datas
             /// </summary>
             [JsonPropertyName("datas")]
-            public List<DatasResponse> Datas { get; set; }
+            public List<DatasResponse?>? Datas { get; set; }
 
             public partial class DatasResponse
             {
@@ -39,19 +39,19 @@ public partial class GetCloudprintCustomaresResponse
                 /// custom_area_name
                 /// </summary>
                 [JsonPropertyName("custom_area_name")]
-                public string CustomAreaName { get; set; }
+                public string? CustomAreaName { get; set; }
 
                 /// <summary>
                 /// custom_area_url
                 /// </summary>
                 [JsonPropertyName("custom_area_url")]
-                public string CustomAreaUrl { get; set; }
+                public string? CustomAreaUrl { get; set; }
 
                 /// <summary>
                 /// keys
                 /// </summary>
                 [JsonPropertyName("keys")]
-                public List<object> Keys { get; set; }
+                public List<object>? Keys { get; set; }
 
 
             }

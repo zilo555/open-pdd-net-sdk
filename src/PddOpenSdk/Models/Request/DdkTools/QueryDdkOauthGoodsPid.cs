@@ -17,7 +17,7 @@ public partial class QueryDdkOauthGoodsPid
     /// 推广位列表，例如：["60005_612"]
     /// </summary>
     [JsonPropertyName("pid_list")]
-    public List<string> PidList { get; set; }
+    public List<string?>? PidList { get; set; }
 
 
 

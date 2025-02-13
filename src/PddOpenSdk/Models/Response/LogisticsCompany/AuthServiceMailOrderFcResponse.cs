@@ -6,7 +6,7 @@ public partial class AuthServiceMailOrderFcResponse
     /// 
     /// </summary>
     [JsonPropertyName("access_token")]
-    public string AccessToken { get; set; }
+    public string? AccessToken { get; set; }
 
     /// <summary>
     /// 

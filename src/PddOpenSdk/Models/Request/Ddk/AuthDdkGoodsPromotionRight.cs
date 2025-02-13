@@ -47,7 +47,7 @@ public partial class AuthDdkGoodsPromotionRight
     /// 商品图片素材url列表，0到3张图
     /// </summary>
     [JsonPropertyName("thumb_pic_url")]
-    public List<string> ThumbPicUrl { get; set; }
+    public List<string?>? ThumbPicUrl { get; set; }
 
 
 

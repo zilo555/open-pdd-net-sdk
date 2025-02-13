@@ -6,7 +6,7 @@ public partial class UpdateWaybillResponse
     /// response
     /// </summary>
     [JsonPropertyName("pdd_waybill_update_response")]
-    public PddWaybillUpdateResponseResponse PddWaybillUpdateResponse { get; set; }
+    public PddWaybillUpdateResponseResponse? PddWaybillUpdateResponse { get; set; }
 
     public partial class PddWaybillUpdateResponseResponse
     {
@@ -15,13 +15,13 @@ public partial class UpdateWaybillResponse
         /// 模板内容
         /// </summary>
         [JsonPropertyName("print_data")]
-        public string PrintData { get; set; }
+        public string? PrintData { get; set; }
 
         /// <summary>
         /// 面单号
         /// </summary>
         [JsonPropertyName("waybill_code")]
-        public string WaybillCode { get; set; }
+        public string? WaybillCode { get; set; }
 
 
     }

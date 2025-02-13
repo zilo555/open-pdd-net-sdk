@@ -26,13 +26,13 @@ public partial class GetGoodsSpu
         /// 属性值单位
         /// </summary>
         [JsonPropertyName("value_unit")]
-        public string ValueUnit { get; set; }
+        public string? ValueUnit { get; set; }
 
         /// <summary>
         /// 关键属性值，和vid必须入参其一。
         /// </summary>
         [JsonPropertyName("value")]
-        public string Value { get; set; }
+        public string? Value { get; set; }
 
         /// <summary>
         /// 关键属性值ID，和value必须入参其一。

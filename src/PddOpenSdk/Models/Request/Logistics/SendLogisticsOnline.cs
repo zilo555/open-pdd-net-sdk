@@ -2,10 +2,10 @@ namespace PddOpenSdk.Models.Request.Logistics;
 public partial class SendLogisticsOnline
 {
     /// <summary>
-    /// 发货个性内容，支持imei（手机串号），deviceSn（设备序列号），overseaTracing（海淘溯源码id）内容，appraisalCert（商品证书编号）。形如：“imei=识别码1,识别码2;”、“ deviceSn=序列号1,序列号2;”、“ organicCode=有机码1,有机码2;”、“overseaTracing=溯源码1,溯源码2;”、“appraisalCert=商品证书编号1;”。以英文逗号“,”分割串号，以英文分号“;”分割不同参数内容。上传时请严格区分imei，deviceSn，organicCode，overseaTracing和appraisalCert，其中overseaTracing（海淘溯源码id）要求海淘商品在支持溯源的情况下必传，appraisalCert（商品证书编号）要求珠宝类商品在支持专业鉴定的情况下必传；以上错传/漏传将会导致发货失败
+    /// 发货个性内容，支持imei（手机串号），imei2（手机串号2），deviceSn（设备序列号），overseaTracing（海淘溯源码id）内容，appraisalCert（商品证书编号）。形如：“imei=识别码1,识别码2;”、“imei2=识别码;”、“ deviceSn=序列号1,序列号2;”、“ organicCode=有机码1,有机码2;”、“overseaTracing=溯源码1,溯源码2;”、“appraisalCert=商品证书编号1;”。以英文逗号“,”分割串号，以英文分号“;”分割不同参数内容。上传时请严格区分imei，deviceSn，organicCode，overseaTracing和appraisalCert，其中overseaTracing（海淘溯源码id）要求海淘商品在支持溯源的情况下必传，appraisalCert（商品证书编号）要求珠宝类商品在支持专业鉴定的情况下必传；deviceSn、imei（手机串号）、imei2（手机串号2）要求国补订单在此码已报送国家平台的情况下必传（形如：deviceSn=28978862659;imei=868904040681771;imei2=868904046817891;）；以上错传/漏传将会导致发货失败
     /// </summary>
     [JsonPropertyName("feature")]
-    public string Feature { get; set; }
+    public string? Feature { get; set; }
 
     /// <summary>
     /// 快递公司编号
@@ -29,7 +29,13 @@ public partial class SendLogisticsOnline
     /// 退货地址的id，不填则取商品默认退货地址（可在“拼多多-商家后台/售后工作台/售后设置”为商品绑定默认退货地址，若未设置则取店铺默认退货地址）
     /// </summary>
     [JsonPropertyName("refund_address_id")]
-    public string RefundAddressId { get; set; }
+    public string? RefundAddressId { get; set; }
+
+    /// <summary>
+    /// 发货批次：普通订单无需传入，当前仅限 分批发货订单(考研图书等场景) 传入
+    /// </summary>
+    [JsonPropertyName("sequence_id")]
+    public int? SequenceId { get; set; }
 
     /// <summary>
     /// 快递单号

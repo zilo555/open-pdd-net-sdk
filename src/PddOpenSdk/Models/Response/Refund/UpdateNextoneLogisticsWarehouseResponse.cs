@@ -6,7 +6,7 @@ public partial class UpdateNextoneLogisticsWarehouseResponse
     /// response
     /// </summary>
     [JsonPropertyName("response")]
-    public ResponseResponse Response { get; set; }
+    public ResponseResponse? Response { get; set; }
 
     public partial class ResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class UpdateNextoneLogisticsWarehouseResponse
         /// result
         /// </summary>
         [JsonPropertyName("result")]
-        public ResultResponse Result { get; set; }
+        public ResultResponse? Result { get; set; }
 
         public partial class ResultResponse
         {
@@ -30,7 +30,7 @@ public partial class UpdateNextoneLogisticsWarehouseResponse
             /// order_sn
             /// </summary>
             [JsonPropertyName("order_sn")]
-            public string OrderSn { get; set; }
+            public string? OrderSn { get; set; }
 
 
         }

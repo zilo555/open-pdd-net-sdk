@@ -6,7 +6,7 @@ public partial class DeleteGoodsLogisticsSerTemplateResponse
     /// response
     /// </summary>
     [JsonPropertyName("goods_logistics_ser_template_delete_response")]
-    public GoodsLogisticsSerTemplateDeleteResponseResponse GoodsLogisticsSerTemplateDeleteResponse { get; set; }
+    public GoodsLogisticsSerTemplateDeleteResponseResponse? GoodsLogisticsSerTemplateDeleteResponse { get; set; }
 
     public partial class GoodsLogisticsSerTemplateDeleteResponseResponse
     {

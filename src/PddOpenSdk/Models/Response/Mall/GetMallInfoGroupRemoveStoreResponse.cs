@@ -6,7 +6,7 @@ public partial class GetMallInfoGroupRemoveStoreResponse
     /// 
     /// </summary>
     [JsonPropertyName("mall_info_group_remove_store_get_response")]
-    public MallInfoGroupRemoveStoreGetResponseResponse MallInfoGroupRemoveStoreGetResponse { get; set; }
+    public MallInfoGroupRemoveStoreGetResponseResponse? MallInfoGroupRemoveStoreGetResponse { get; set; }
 
     public partial class MallInfoGroupRemoveStoreGetResponseResponse
     {

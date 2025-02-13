@@ -6,7 +6,7 @@ public partial class SearchVasOrderResponse
     /// response
     /// </summary>
     [JsonPropertyName("vas_order_search_response")]
-    public VasOrderSearchResponseResponse VasOrderSearchResponse { get; set; }
+    public VasOrderSearchResponseResponse? VasOrderSearchResponse { get; set; }
 
     public partial class VasOrderSearchResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class SearchVasOrderResponse
         /// 订单列表
         /// </summary>
         [JsonPropertyName("orders")]
-        public List<OrdersResponse> Orders { get; set; }
+        public List<OrdersResponse?>? Orders { get; set; }
 
         /// <summary>
         /// 当前查询条件下所有订单总数
@@ -48,7 +48,7 @@ public partial class SearchVasOrderResponse
             /// 服务订单ID
             /// </summary>
             [JsonPropertyName("order_sn")]
-            public string OrderSn { get; set; }
+            public string? OrderSn { get; set; }
 
             /// <summary>
             /// 支付状态，枚举值，0-未支付，1-已支付
@@ -72,7 +72,7 @@ public partial class SearchVasOrderResponse
             /// 服务名称
             /// </summary>
             [JsonPropertyName("service_name")]
-            public string ServiceName { get; set; }
+            public string? ServiceName { get; set; }
 
             /// <summary>
             /// 服务SKUID
@@ -84,7 +84,7 @@ public partial class SearchVasOrderResponse
             /// 服务SKU名称
             /// </summary>
             [JsonPropertyName("sku_spec")]
-            public string SkuSpec { get; set; }
+            public string? SkuSpec { get; set; }
 
             /// <summary>
             /// 订单来源，0-线上订购，1-线下回流
@@ -114,7 +114,7 @@ public partial class SearchVasOrderResponse
             /// 店铺名称
             /// </summary>
             [JsonPropertyName("mall_name")]
-            public string MallName { get; set; }
+            public string? MallName { get; set; }
 
 
         }

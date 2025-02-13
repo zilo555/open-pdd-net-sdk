@@ -11,7 +11,7 @@ public partial class CreateKttOrderLogistic
     /// 物流公司名称
     /// </summary>
     [JsonPropertyName("logisticsName")]
-    public string LogisticsName { get; set; }
+    public string? LogisticsName { get; set; }
 
     /// <summary>
     /// 订单号
@@ -23,7 +23,7 @@ public partial class CreateKttOrderLogistic
     /// 发货子单号列表，无子单号视为整单发货
     /// </summary>
     [JsonPropertyName("subOrderSnList")]
-    public List<string> SubOrderSnList { get; set; }
+    public List<string?>? SubOrderSnList { get; set; }
 
     /// <summary>
     /// 运单号

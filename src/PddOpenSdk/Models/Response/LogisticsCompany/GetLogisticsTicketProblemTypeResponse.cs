@@ -6,7 +6,7 @@ public partial class GetLogisticsTicketProblemTypeResponse
     /// 返回response
     /// </summary>
     [JsonPropertyName("logistics_problem_type_get_response")]
-    public LogisticsProblemTypeGetResponseResponse LogisticsProblemTypeGetResponse { get; set; }
+    public LogisticsProblemTypeGetResponseResponse? LogisticsProblemTypeGetResponse { get; set; }
 
     public partial class LogisticsProblemTypeGetResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class GetLogisticsTicketProblemTypeResponse
         /// 问题类型list
         /// </summary>
         [JsonPropertyName("logistics_problem_type_list")]
-        public List<LogisticsProblemTypeListResponse> LogisticsProblemTypeList { get; set; }
+        public List<LogisticsProblemTypeListResponse?>? LogisticsProblemTypeList { get; set; }
 
         public partial class LogisticsProblemTypeListResponse
         {
@@ -30,7 +30,7 @@ public partial class GetLogisticsTicketProblemTypeResponse
             /// 问题类型描述
             /// </summary>
             [JsonPropertyName("type_desc")]
-            public string TypeDesc { get; set; }
+            public string? TypeDesc { get; set; }
 
 
         }

@@ -6,7 +6,7 @@ public partial class SendVoucherAppointmentInfoResponse
     /// voucher_appointment_info_send_response
     /// </summary>
     [JsonPropertyName("voucher_appointment_info_send_response")]
-    public VoucherAppointmentInfoSendResponseResponse VoucherAppointmentInfoSendResponse { get; set; }
+    public VoucherAppointmentInfoSendResponseResponse? VoucherAppointmentInfoSendResponse { get; set; }
 
     public partial class VoucherAppointmentInfoSendResponseResponse
     {

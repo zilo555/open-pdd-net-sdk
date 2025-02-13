@@ -77,7 +77,7 @@ public partial class CreateDdkCashgift
     /// 商品goodsSign列表，例如：["c9r2omogKFFAc7WBwvbZU1ikIb16_J3CTa8HNN"]，最多可支持传20个商品。创建普通满减礼金、免单礼金和灵活面额礼金时，该字段必填；创建不限商品满减礼金时，该字段传空。goodsSign使用说明：https://jinbao.pinduoduo.com/qa-system?questionId=252
     /// </summary>
     [JsonPropertyName("goods_sign_list")]
-    public List<string> GoodsSignList { get; set; }
+    public List<string?>? GoodsSignList { get; set; }
 
     /// <summary>
     /// 活动单链接可领券数量，默认无限制，最小值为1。
@@ -89,13 +89,13 @@ public partial class CreateDdkCashgift
     /// 礼金名称
     /// </summary>
     [JsonPropertyName("name")]
-    public string Name { get; set; }
+    public string? Name { get; set; }
 
     /// <summary>
     /// 可使用推广位列表，例如：["60005_612"]。(列表中的PID方可推广该礼金)
     /// </summary>
     [JsonPropertyName("p_id_list")]
-    public List<string> PIdList { get; set; }
+    public List<string?>? PIdList { get; set; }
 
     /// <summary>
     /// 礼金券数量，创建普通满减礼金、不限商品满减礼金或免单礼金时，该字段必填；创建灵活面额礼金时，礼金券数量不固定，礼金总预算用完为止，该字段不传

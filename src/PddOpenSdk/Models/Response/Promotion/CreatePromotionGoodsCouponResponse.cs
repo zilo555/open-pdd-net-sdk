@@ -6,7 +6,7 @@ public partial class CreatePromotionGoodsCouponResponse
     /// 创建无门槛商品劵批次对象
     /// </summary>
     [JsonPropertyName("goods_coupon_batch_create_response")]
-    public GoodsCouponBatchCreateResponseResponse GoodsCouponBatchCreateResponse { get; set; }
+    public GoodsCouponBatchCreateResponseResponse? GoodsCouponBatchCreateResponse { get; set; }
 
     public partial class GoodsCouponBatchCreateResponseResponse
     {

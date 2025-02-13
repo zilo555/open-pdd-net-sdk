@@ -6,7 +6,7 @@ public partial class GetMallInfoStoreResponse
     /// 返回结构体
     /// </summary>
     [JsonPropertyName("res")]
-    public ResResponse Res { get; set; }
+    public ResResponse? Res { get; set; }
 
     public partial class ResResponse
     {
@@ -15,7 +15,7 @@ public partial class GetMallInfoStoreResponse
         /// 返回结构体
         /// </summary>
         [JsonPropertyName("mallStoreVOList")]
-        public List<MallStoreVOListResponse> MallStoreVOList { get; set; }
+        public List<MallStoreVOListResponse?>? MallStoreVOList { get; set; }
 
         public partial class MallStoreVOListResponse
         {
@@ -30,13 +30,13 @@ public partial class GetMallInfoStoreResponse
             /// 市
             /// </summary>
             [JsonPropertyName("city")]
-            public string City { get; set; }
+            public string? City { get; set; }
 
             /// <summary>
             /// 区
             /// </summary>
             [JsonPropertyName("district")]
-            public string District { get; set; }
+            public string? District { get; set; }
 
             /// <summary>
             /// 店铺id
@@ -60,13 +60,13 @@ public partial class GetMallInfoStoreResponse
             /// 省
             /// </summary>
             [JsonPropertyName("province")]
-            public string Province { get; set; }
+            public string? Province { get; set; }
 
             /// <summary>
             /// 门店详细地址
             /// </summary>
             [JsonPropertyName("store_address")]
-            public string StoreAddress { get; set; }
+            public string? StoreAddress { get; set; }
 
             /// <summary>
             /// 门店id
@@ -78,13 +78,13 @@ public partial class GetMallInfoStoreResponse
             /// 门店名称
             /// </summary>
             [JsonPropertyName("store_name")]
-            public string StoreName { get; set; }
+            public string? StoreName { get; set; }
 
             /// <summary>
             /// 门店自有编号
             /// </summary>
             [JsonPropertyName("store_number")]
-            public string StoreNumber { get; set; }
+            public string? StoreNumber { get; set; }
 
 
         }

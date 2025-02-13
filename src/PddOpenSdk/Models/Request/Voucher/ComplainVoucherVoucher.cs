@@ -17,7 +17,7 @@ public partial class ComplainVoucherVoucher
     /// 优惠券信息列表,例子[{"voucher_id":"test voucher_id","voucher_no":"test voucher_no"}]
     /// </summary>
     [JsonPropertyName("voucher_list")]
-    public List<VoucherListModel> VoucherList { get; set; }
+    public List<VoucherListModel?>? VoucherList { get; set; }
 
     /// <summary>
     /// 投诉人
@@ -56,13 +56,13 @@ public partial class ComplainVoucherVoucher
         /// 卡券ID
         /// </summary>
         [JsonPropertyName("voucher_id")]
-        public string VoucherId { get; set; }
+        public string? VoucherId { get; set; }
 
         /// <summary>
         /// 卡券号
         /// </summary>
         [JsonPropertyName("voucher_no")]
-        public string VoucherNo { get; set; }
+        public string? VoucherNo { get; set; }
 
 
 

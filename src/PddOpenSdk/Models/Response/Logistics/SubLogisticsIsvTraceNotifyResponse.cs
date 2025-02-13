@@ -6,7 +6,7 @@ public partial class SubLogisticsIsvTraceNotifyResponse
     /// 订阅响应对象
     /// </summary>
     [JsonPropertyName("logistics_isv_trace_notify_sub")]
-    public LogisticsIsvTraceNotifySubResponse LogisticsIsvTraceNotifySub { get; set; }
+    public LogisticsIsvTraceNotifySubResponse? LogisticsIsvTraceNotifySub { get; set; }
 
     public partial class LogisticsIsvTraceNotifySubResponse
     {

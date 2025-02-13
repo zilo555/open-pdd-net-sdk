@@ -6,7 +6,7 @@ public partial class GetGoodsAdvicePriceResponse
     /// response
     /// </summary>
     [JsonPropertyName("goods_advice_price_get_response")]
-    public GoodsAdvicePriceGetResponseResponse GoodsAdvicePriceGetResponse { get; set; }
+    public GoodsAdvicePriceGetResponseResponse? GoodsAdvicePriceGetResponse { get; set; }
 
     public partial class GoodsAdvicePriceGetResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class GetGoodsAdvicePriceResponse
         /// 商品建议价列表
         /// </summary>
         [JsonPropertyName("advice_price_list")]
-        public List<AdvicePriceListResponse> AdvicePriceList { get; set; }
+        public List<AdvicePriceListResponse?>? AdvicePriceList { get; set; }
 
         /// <summary>
         /// 商品建议价数据总数
@@ -42,7 +42,7 @@ public partial class GetGoodsAdvicePriceResponse
             /// 商品标题
             /// </summary>
             [JsonPropertyName("goods_name")]
-            public string GoodsName { get; set; }
+            public string? GoodsName { get; set; }
 
             /// <summary>
             /// sku拼单价，单位为分
@@ -60,7 +60,7 @@ public partial class GetGoodsAdvicePriceResponse
             /// sku名
             /// </summary>
             [JsonPropertyName("sku_name")]
-            public string SkuName { get; set; }
+            public string? SkuName { get; set; }
 
 
         }

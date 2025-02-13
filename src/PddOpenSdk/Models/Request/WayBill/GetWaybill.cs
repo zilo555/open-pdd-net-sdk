@@ -26,7 +26,7 @@ public partial class GetWaybill
         /// 请求面单信息，数量限制为10
         /// </summary>
         [JsonPropertyName("trade_order_info_dtos")]
-        public List<TradeOrderInfoDtosModel> TradeOrderInfoDtos { get; set; }
+        public List<TradeOrderInfoDtosModel?>? TradeOrderInfoDtos { get; set; }
 
         /// <summary>
         /// 物流公司Code
@@ -47,7 +47,7 @@ public partial class GetWaybill
             /// 手机号码
             /// </summary>
             [JsonPropertyName("mobile")]
-            public string Mobile { get; set; }
+            public string? Mobile { get; set; }
 
             /// <summary>
             /// 姓名
@@ -59,7 +59,7 @@ public partial class GetWaybill
             /// 固定电话
             /// </summary>
             [JsonPropertyName("phone")]
-            public string Phone { get; set; }
+            public string? Phone { get; set; }
 
 
             public partial class AddressModel
@@ -74,7 +74,7 @@ public partial class GetWaybill
                 /// 国家/地区
                 /// </summary>
                 [JsonPropertyName("country")]
-                public string Country { get; set; }
+                public string? Country { get; set; }
 
                 /// <summary>
                 /// 详细地址，仅支持非空值
@@ -98,7 +98,7 @@ public partial class GetWaybill
                 /// 街道
                 /// </summary>
                 [JsonPropertyName("town")]
-                public string Town { get; set; }
+                public string? Town { get; set; }
 
 
 
@@ -111,7 +111,13 @@ public partial class GetWaybill
             /// 物流服务内容链接
             /// </summary>
             [JsonPropertyName("logistics_services")]
-            public string LogisticsServices { get; set; }
+            public string? LogisticsServices { get; set; }
+
+            /// <summary>
+            /// 其他物流服务内容链接
+            /// </summary>
+            [JsonPropertyName("notify_extend_info")]
+            public Dictionary<string, object>? NotifyExtendInfo { get; set; }
 
             /// <summary>
             /// 请求id
@@ -135,7 +141,7 @@ public partial class GetWaybill
             /// 收件人信息
             /// </summary>
             [JsonPropertyName("recipient")]
-            public RecipientModel Recipient { get; set; }
+            public RecipientModel? Recipient { get; set; }
 
             /// <summary>
             /// 标准模板模板URL
@@ -150,6 +156,23 @@ public partial class GetWaybill
             public long UserId { get; set; }
 
 
+            public partial class NotifyExtendInfoModel
+            {
+                /// <summary>
+                /// key
+                /// </summary>
+                [JsonPropertyName("$key")]
+                public string? Key { get; set; }
+
+                /// <summary>
+                /// value
+                /// </summary>
+                [JsonPropertyName("$value")]
+                public string? Value { get; set; }
+
+
+
+            }
             public partial class OrderInfoModel
             {
                 /// <summary>
@@ -173,13 +196,13 @@ public partial class GetWaybill
                 /// 快运货品描述
                 /// </summary>
                 [JsonPropertyName("goods_description")]
-                public string GoodsDescription { get; set; }
+                public string? GoodsDescription { get; set; }
 
                 /// <summary>
                 /// 包裹id,拆合单使用
                 /// </summary>
                 [JsonPropertyName("id")]
-                public string Id { get; set; }
+                public string? Id { get; set; }
 
                 /// <summary>
                 /// 商品信息,数量限制为100
@@ -191,7 +214,7 @@ public partial class GetWaybill
                 /// 快运包装方式描述
                 /// </summary>
                 [JsonPropertyName("packaging_description")]
-                public string PackagingDescription { get; set; }
+                public string? PackagingDescription { get; set; }
 
                 /// <summary>
                 /// 子母件总包裹数
@@ -243,7 +266,7 @@ public partial class GetWaybill
                 /// 手机号码
                 /// </summary>
                 [JsonPropertyName("mobile")]
-                public string Mobile { get; set; }
+                public string? Mobile { get; set; }
 
                 /// <summary>
                 /// 姓名
@@ -255,7 +278,7 @@ public partial class GetWaybill
                 /// 固定电话
                 /// </summary>
                 [JsonPropertyName("phone")]
-                public string Phone { get; set; }
+                public string? Phone { get; set; }
 
 
                 public partial class AddressModel
@@ -270,7 +293,7 @@ public partial class GetWaybill
                     /// 国家/地区
                     /// </summary>
                     [JsonPropertyName("country")]
-                    public string Country { get; set; }
+                    public string? Country { get; set; }
 
                     /// <summary>
                     /// 详细地址，仅支持非空值
@@ -294,7 +317,7 @@ public partial class GetWaybill
                     /// 街道
                     /// </summary>
                     [JsonPropertyName("town")]
-                    public string Town { get; set; }
+                    public string? Town { get; set; }
 
 
 

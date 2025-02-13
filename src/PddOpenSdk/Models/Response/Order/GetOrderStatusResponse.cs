@@ -6,7 +6,7 @@ public partial class GetOrderStatusResponse
     /// response
     /// </summary>
     [JsonPropertyName("order_status_get_response")]
-    public OrderStatusGetResponseResponse OrderStatusGetResponse { get; set; }
+    public OrderStatusGetResponseResponse? OrderStatusGetResponse { get; set; }
 
     public partial class OrderStatusGetResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class GetOrderStatusResponse
         /// 订单状态列表对象
         /// </summary>
         [JsonPropertyName("order_status_list")]
-        public List<OrderStatusListResponse> OrderStatusList { get; set; }
+        public List<OrderStatusListResponse?>? OrderStatusList { get; set; }
 
         public partial class OrderStatusListResponse
         {
@@ -24,7 +24,7 @@ public partial class GetOrderStatusResponse
             /// 订单编号
             /// </summary>
             [JsonPropertyName("orderSn")]
-            public string OrderSn { get; set; }
+            public string? OrderSn { get; set; }
 
             /// <summary>
             /// 订单发货状态，1：待发货，2：已发货待签收，3：已签收 0：异常

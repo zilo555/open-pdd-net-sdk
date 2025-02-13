@@ -21,6 +21,7 @@ public class NameHelper
         }
 
         string attributionName;
+        string defaultValue = string.Empty;
         var isArray = false;
 
         //name = name.ToLower();
@@ -56,6 +57,7 @@ public class NameHelper
                 if (hasChild)
                 {
                     type = Function.ToPascalCase(name + modelType);
+                    type = isMust == 0 ? $"{type}?" : type;
                 }
                 else
                 {
@@ -71,7 +73,7 @@ public class NameHelper
             // 可使用复数形式
             type = isMust == 0 ? $"List<{type}>?" : $"List<{type}>";
         }
-        attributionName = $"public {type} {name} {{ get; set; }}" + Environment.NewLine;
+        attributionName = $"public {type} {name} {{ get; set; }}{defaultValue}" + Environment.NewLine;
         return attributionName;
     }
 }

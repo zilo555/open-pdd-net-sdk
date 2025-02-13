@@ -6,7 +6,7 @@ public partial class GetRefundAddressListResponse
     /// response
     /// </summary>
     [JsonPropertyName("refund_address_list_get_response")]
-    public RefundAddressListGetResponseResponse RefundAddressListGetResponse { get; set; }
+    public RefundAddressListGetResponseResponse? RefundAddressListGetResponse { get; set; }
 
     public partial class RefundAddressListGetResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class GetRefundAddressListResponse
         /// 退货地址列表
         /// </summary>
         [JsonPropertyName("refund_address_list")]
-        public List<RefundAddressListResponse> RefundAddressList { get; set; }
+        public List<RefundAddressListResponse?>? RefundAddressList { get; set; }
 
         public partial class RefundAddressListResponse
         {
@@ -30,7 +30,7 @@ public partial class GetRefundAddressListResponse
             /// 退货地址所在城市名字
             /// </summary>
             [JsonPropertyName("city_name")]
-            public string CityName { get; set; }
+            public string? CityName { get; set; }
 
             /// <summary>
             /// 退货地址所在区ID
@@ -42,7 +42,7 @@ public partial class GetRefundAddressListResponse
             /// 退货地址所在区名字
             /// </summary>
             [JsonPropertyName("district_name")]
-            public string DistrictName { get; set; }
+            public string? DistrictName { get; set; }
 
             /// <summary>
             /// 退货地址ID
@@ -54,7 +54,7 @@ public partial class GetRefundAddressListResponse
             /// 是否为默认退货地址
             /// </summary>
             [JsonPropertyName("is_default")]
-            public string IsDefault { get; set; }
+            public string? IsDefault { get; set; }
 
             /// <summary>
             /// 退货地址是否合法
@@ -84,37 +84,37 @@ public partial class GetRefundAddressListResponse
             /// 退货地址所在省份名字
             /// </summary>
             [JsonPropertyName("province_name")]
-            public string ProvinceName { get; set; }
+            public string? ProvinceName { get; set; }
 
             /// <summary>
             /// 退货地址
             /// </summary>
             [JsonPropertyName("refund_address")]
-            public string RefundAddress { get; set; }
+            public string? RefundAddress { get; set; }
 
             /// <summary>
             /// refund_id
             /// </summary>
             [JsonPropertyName("refund_address_id")]
-            public string RefundAddressId { get; set; }
+            public string? RefundAddressId { get; set; }
 
             /// <summary>
             /// 退货收件人名字
             /// </summary>
             [JsonPropertyName("refund_name")]
-            public string RefundName { get; set; }
+            public string? RefundName { get; set; }
 
             /// <summary>
             /// 退货收件人手机号
             /// </summary>
             [JsonPropertyName("refund_phone")]
-            public string RefundPhone { get; set; }
+            public string? RefundPhone { get; set; }
 
             /// <summary>
             /// 退货收件人固定电话
             /// </summary>
             [JsonPropertyName("refund_tel")]
-            public string RefundTel { get; set; }
+            public string? RefundTel { get; set; }
 
 
         }

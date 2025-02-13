@@ -6,7 +6,7 @@ public partial class QueryDdkOauthMemberAuthorityResponse
     /// 查询结果
     /// </summary>
     [JsonPropertyName("authority_query_response")]
-    public AuthorityQueryResponseResponse AuthorityQueryResponse { get; set; }
+    public AuthorityQueryResponseResponse? AuthorityQueryResponse { get; set; }
 
     public partial class AuthorityQueryResponseResponse
     {

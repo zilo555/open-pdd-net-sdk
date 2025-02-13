@@ -6,7 +6,7 @@ public partial class UploadGoodsImgResponse
     /// 
     /// </summary>
     [JsonPropertyName("goods_img_upload_response")]
-    public GoodsImgUploadResponseResponse GoodsImgUploadResponse { get; set; }
+    public GoodsImgUploadResponseResponse? GoodsImgUploadResponse { get; set; }
 
     public partial class GoodsImgUploadResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class UploadGoodsImgResponse
         /// 
         /// </summary>
         [JsonPropertyName("url")]
-        public string Url { get; set; }
+        public string? Url { get; set; }
 
 
     }

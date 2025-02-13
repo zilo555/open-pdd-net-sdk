@@ -6,7 +6,7 @@ public partial class GetGoodsOuterCatMappingResponse
     /// response
     /// </summary>
     [JsonPropertyName("outer_cat_mapping_get_response")]
-    public OuterCatMappingGetResponseResponse OuterCatMappingGetResponse { get; set; }
+    public OuterCatMappingGetResponseResponse? OuterCatMappingGetResponse { get; set; }
 
     public partial class OuterCatMappingGetResponseResponse
     {

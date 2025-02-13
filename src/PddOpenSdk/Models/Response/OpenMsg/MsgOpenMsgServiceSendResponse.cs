@@ -12,7 +12,7 @@ public partial class MsgOpenMsgServiceSendResponse
     /// 状态原因
     /// </summary>
     [JsonPropertyName("message")]
-    public string Message { get; set; }
+    public string? Message { get; set; }
 
 
 }

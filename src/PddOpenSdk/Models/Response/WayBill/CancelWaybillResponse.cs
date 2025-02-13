@@ -6,7 +6,7 @@ public partial class CancelWaybillResponse
     /// response
     /// </summary>
     [JsonPropertyName("pdd_waybill_cancel_response")]
-    public PddWaybillCancelResponseResponse PddWaybillCancelResponse { get; set; }
+    public PddWaybillCancelResponseResponse? PddWaybillCancelResponse { get; set; }
 
     public partial class PddWaybillCancelResponseResponse
     {

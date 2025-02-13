@@ -6,7 +6,7 @@ public partial class UploadGoodsImageResponse
     /// 商品图片上传响应对象
     /// </summary>
     [JsonPropertyName("goods_image_upload_response")]
-    public GoodsImageUploadResponseResponse GoodsImageUploadResponse { get; set; }
+    public GoodsImageUploadResponseResponse? GoodsImageUploadResponse { get; set; }
 
     public partial class GoodsImageUploadResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class UploadGoodsImageResponse
         /// 返回图片url
         /// </summary>
         [JsonPropertyName("image_url")]
-        public string ImageUrl { get; set; }
+        public string? ImageUrl { get; set; }
 
 
     }

@@ -6,7 +6,7 @@ public partial class InfoExpressChangeDepotResponse
     /// 响应结果
     /// </summary>
     [JsonPropertyName("open_api_response")]
-    public string OpenApiResponse { get; set; }
+    public string? OpenApiResponse { get; set; }
 
 
 }

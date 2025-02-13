@@ -6,7 +6,7 @@ public partial class PostMallInfoGroupQueryResponse
     /// 
     /// </summary>
     [JsonPropertyName("response")]
-    public ResponseResponse Response { get; set; }
+    public ResponseResponse? Response { get; set; }
 
     public partial class ResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class PostMallInfoGroupQueryResponse
         /// 
         /// </summary>
         [JsonPropertyName("mall_store_group_list")]
-        public List<MallStoreGroupListResponse> MallStoreGroupList { get; set; }
+        public List<MallStoreGroupListResponse?>? MallStoreGroupList { get; set; }
 
         /// <summary>
         /// 总数
@@ -36,7 +36,7 @@ public partial class PostMallInfoGroupQueryResponse
             /// 
             /// </summary>
             [JsonPropertyName("group_name")]
-            public string GroupName { get; set; }
+            public string? GroupName { get; set; }
 
             /// <summary>
             /// 

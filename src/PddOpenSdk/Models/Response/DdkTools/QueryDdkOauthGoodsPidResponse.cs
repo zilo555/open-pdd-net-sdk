@@ -6,7 +6,7 @@ public partial class QueryDdkOauthGoodsPidResponse
     /// response
     /// </summary>
     [JsonPropertyName("p_id_query_response")]
-    public PIdQueryResponseResponse PIdQueryResponse { get; set; }
+    public PIdQueryResponseResponse? PIdQueryResponse { get; set; }
 
     public partial class PIdQueryResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class QueryDdkOauthGoodsPidResponse
         /// 多多进宝推广位对象列表
         /// </summary>
         [JsonPropertyName("p_id_list")]
-        public List<PIdListResponse> PIdList { get; set; }
+        public List<PIdListResponse?>? PIdList { get; set; }
 
         /// <summary>
         /// 返回推广位总数
@@ -42,13 +42,13 @@ public partial class QueryDdkOauthGoodsPidResponse
             /// 推广位名称
             /// </summary>
             [JsonPropertyName("pid_name")]
-            public string PidName { get; set; }
+            public string? PidName { get; set; }
 
             /// <summary>
             /// 推广位ID
             /// </summary>
             [JsonPropertyName("p_id")]
-            public string PId { get; set; }
+            public string? PId { get; set; }
 
 
         }

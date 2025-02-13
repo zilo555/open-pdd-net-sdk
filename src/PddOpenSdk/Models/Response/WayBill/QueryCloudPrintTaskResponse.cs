@@ -6,7 +6,7 @@ public partial class QueryCloudPrintTaskResponse
     /// 
     /// </summary>
     [JsonPropertyName("response")]
-    public ResponseResponse Response { get; set; }
+    public ResponseResponse? Response { get; set; }
 
     public partial class ResponseResponse
     {
@@ -21,13 +21,13 @@ public partial class QueryCloudPrintTaskResponse
         /// 
         /// </summary>
         [JsonPropertyName("error_msg")]
-        public string ErrorMsg { get; set; }
+        public string? ErrorMsg { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [JsonPropertyName("result")]
-        public ResultResponse Result { get; set; }
+        public ResultResponse? Result { get; set; }
 
         /// <summary>
         /// 
@@ -42,7 +42,7 @@ public partial class QueryCloudPrintTaskResponse
             /// 云打印任务结果列表
             /// </summary>
             [JsonPropertyName("cloud_print_task_result_list")]
-            public List<CloudPrintTaskResultListResponse> CloudPrintTaskResultList { get; set; }
+            public List<CloudPrintTaskResultListResponse?>? CloudPrintTaskResultList { get; set; }
 
             public partial class CloudPrintTaskResultListResponse
             {
@@ -51,7 +51,7 @@ public partial class QueryCloudPrintTaskResponse
                 /// 失败原因
                 /// </summary>
                 [JsonPropertyName("fail_reason")]
-                public string FailReason { get; set; }
+                public string? FailReason { get; set; }
 
                 /// <summary>
                 /// 请求云打印时token对应的mallId
@@ -75,7 +75,7 @@ public partial class QueryCloudPrintTaskResponse
                 /// 打印任务id
                 /// </summary>
                 [JsonPropertyName("print_task_id")]
-                public string PrintTaskId { get; set; }
+                public string? PrintTaskId { get; set; }
 
                 /// <summary>
                 /// 是否推送给云打印机，只有打印失败的任务才有值，如果为true，需要重点关注是否打印完成
@@ -87,13 +87,13 @@ public partial class QueryCloudPrintTaskResponse
                 /// 快递公司编码
                 /// </summary>
                 [JsonPropertyName("ship_code")]
-                public string ShipCode { get; set; }
+                public string? ShipCode { get; set; }
 
                 /// <summary>
                 /// 运单号
                 /// </summary>
                 [JsonPropertyName("waybill_code")]
-                public string WaybillCode { get; set; }
+                public string? WaybillCode { get; set; }
 
 
             }

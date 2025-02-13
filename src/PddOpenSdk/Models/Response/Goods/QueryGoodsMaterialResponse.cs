@@ -6,7 +6,7 @@ public partial class QueryGoodsMaterialResponse
     /// 
     /// </summary>
     [JsonPropertyName("material_list")]
-    public List<MaterialListResponse> MaterialList { get; set; }
+    public List<MaterialListResponse?>? MaterialList { get; set; }
 
     public partial class MaterialListResponse
     {
@@ -15,13 +15,13 @@ public partial class QueryGoodsMaterialResponse
         /// 申诉审核信息
         /// </summary>
         [JsonPropertyName("appeal_check_comment")]
-        public string AppealCheckComment { get; set; }
+        public string? AppealCheckComment { get; set; }
 
         /// <summary>
         /// 审核信息
         /// </summary>
         [JsonPropertyName("check_comment")]
-        public string CheckComment { get; set; }
+        public string? CheckComment { get; set; }
 
         /// <summary>
         /// 审核状态（1：待审核；2：通过；3：驳回；101：申诉待审核；102：申诉通过；103：申诉驳回）
@@ -33,7 +33,7 @@ public partial class QueryGoodsMaterialResponse
         /// 素材内容
         /// </summary>
         [JsonPropertyName("content")]
-        public string Content { get; set; }
+        public string? Content { get; set; }
 
         /// <summary>
         /// 商品id
@@ -51,7 +51,7 @@ public partial class QueryGoodsMaterialResponse
         /// 线上素材
         /// </summary>
         [JsonPropertyName("online_material")]
-        public string OnlineMaterial { get; set; }
+        public string? OnlineMaterial { get; set; }
 
         /// <summary>
         /// 素材类型（1：白底图；3：长图）

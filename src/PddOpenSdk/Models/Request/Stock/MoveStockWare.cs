@@ -26,7 +26,7 @@ public partial class MoveStockWare
         /// 调整单备注
         /// </summary>
         [JsonPropertyName("order_note")]
-        public string OrderNote { get; set; }
+        public string? OrderNote { get; set; }
 
         /// <summary>
         /// 业务类型。1, "采购"；2, "调拨"；3, "退货"；4, "盘点"；5, "发货"；6, "库存同步"
@@ -61,7 +61,7 @@ public partial class MoveStockWare
         /// 备注
         /// </summary>
         [JsonPropertyName("note")]
-        public string Note { get; set; }
+        public string? Note { get; set; }
 
         /// <summary>
         /// 调整数量

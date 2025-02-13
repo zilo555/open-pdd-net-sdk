@@ -6,7 +6,7 @@ public partial class GetGoodsOptResponse
     /// 返回response
     /// </summary>
     [JsonPropertyName("goods_opt_get_response")]
-    public GoodsOptGetResponseResponse GoodsOptGetResponse { get; set; }
+    public GoodsOptGetResponseResponse? GoodsOptGetResponse { get; set; }
 
     public partial class GoodsOptGetResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class GetGoodsOptResponse
         /// opt列表
         /// </summary>
         [JsonPropertyName("goods_opt_list")]
-        public List<GoodsOptListResponse> GoodsOptList { get; set; }
+        public List<GoodsOptListResponse?>? GoodsOptList { get; set; }
 
         public partial class GoodsOptListResponse
         {
@@ -36,7 +36,7 @@ public partial class GetGoodsOptResponse
             /// 商品标签名
             /// </summary>
             [JsonPropertyName("opt_name")]
-            public string OptName { get; set; }
+            public string? OptName { get; set; }
 
             /// <summary>
             /// id所属父ID，其中，parent_id=0时为顶级节点

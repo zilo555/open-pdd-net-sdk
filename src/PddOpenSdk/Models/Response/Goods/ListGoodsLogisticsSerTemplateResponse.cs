@@ -6,7 +6,7 @@ public partial class ListGoodsLogisticsSerTemplateResponse
     /// response
     /// </summary>
     [JsonPropertyName("goods_logistics_ser_template_list_response")]
-    public GoodsLogisticsSerTemplateListResponseResponse GoodsLogisticsSerTemplateListResponse { get; set; }
+    public GoodsLogisticsSerTemplateListResponseResponse? GoodsLogisticsSerTemplateListResponse { get; set; }
 
     public partial class GoodsLogisticsSerTemplateListResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class ListGoodsLogisticsSerTemplateResponse
         /// 列表
         /// </summary>
         [JsonPropertyName("list")]
-        public List<ListResponse> List { get; set; }
+        public List<ListResponse?>? List { get; set; }
 
         /// <summary>
         /// 总数
@@ -30,13 +30,13 @@ public partial class ListGoodsLogisticsSerTemplateResponse
             /// 模版id
             /// </summary>
             [JsonPropertyName("template_id")]
-            public string TemplateId { get; set; }
+            public string? TemplateId { get; set; }
 
             /// <summary>
             /// 模版名称
             /// </summary>
             [JsonPropertyName("template_name")]
-            public string TemplateName { get; set; }
+            public string? TemplateName { get; set; }
 
             /// <summary>
             /// 更新时间

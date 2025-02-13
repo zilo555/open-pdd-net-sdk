@@ -6,7 +6,7 @@ public partial class GetGoodsCatsResponse
     /// response
     /// </summary>
     [JsonPropertyName("goods_cats_get_response")]
-    public GoodsCatsGetResponseResponse GoodsCatsGetResponse { get; set; }
+    public GoodsCatsGetResponseResponse? GoodsCatsGetResponse { get; set; }
 
     public partial class GoodsCatsGetResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class GetGoodsCatsResponse
         /// 类目树对象
         /// </summary>
         [JsonPropertyName("goods_cats_list")]
-        public List<GoodsCatsListResponse> GoodsCatsList { get; set; }
+        public List<GoodsCatsListResponse?>? GoodsCatsList { get; set; }
 
         public partial class GoodsCatsListResponse
         {
@@ -30,7 +30,7 @@ public partial class GetGoodsCatsResponse
             /// 商品类目名称
             /// </summary>
             [JsonPropertyName("cat_name")]
-            public string CatName { get; set; }
+            public string? CatName { get; set; }
 
             /// <summary>
             /// 类目层级，1-一级类目，2-二级类目，3-三级类目，4-四级类目

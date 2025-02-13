@@ -6,7 +6,7 @@ public partial class SendLogisticsOnlineResponse
     /// 发货通知响应对象
     /// </summary>
     [JsonPropertyName("logistics_online_send_response")]
-    public LogisticsOnlineSendResponseResponse LogisticsOnlineSendResponse { get; set; }
+    public LogisticsOnlineSendResponseResponse? LogisticsOnlineSendResponse { get; set; }
 
     public partial class LogisticsOnlineSendResponseResponse
     {

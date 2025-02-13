@@ -6,7 +6,7 @@ public partial class GetMallInfoGroupListStoreResponse
     /// 
     /// </summary>
     [JsonPropertyName("mall_info_group_list_store_get_response")]
-    public MallInfoGroupListStoreGetResponseResponse MallInfoGroupListStoreGetResponse { get; set; }
+    public MallInfoGroupListStoreGetResponseResponse? MallInfoGroupListStoreGetResponse { get; set; }
 
     public partial class MallInfoGroupListStoreGetResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class GetMallInfoGroupListStoreResponse
         /// 门店列表
         /// </summary>
         [JsonPropertyName("mall_store_final_vo_list")]
-        public List<MallStoreFinalVoListResponse> MallStoreFinalVoList { get; set; }
+        public List<MallStoreFinalVoListResponse?>? MallStoreFinalVoList { get; set; }
 
         /// <summary>
         /// 总数
@@ -36,13 +36,13 @@ public partial class GetMallInfoGroupListStoreResponse
             /// 省市区三级地址-市
             /// </summary>
             [JsonPropertyName("city")]
-            public string City { get; set; }
+            public string? City { get; set; }
 
             /// <summary>
             /// 省市区三级地址-区
             /// </summary>
             [JsonPropertyName("district")]
-            public string District { get; set; }
+            public string? District { get; set; }
 
             /// <summary>
             /// 
@@ -54,13 +54,13 @@ public partial class GetMallInfoGroupListStoreResponse
             /// 省市区三级地址-省
             /// </summary>
             [JsonPropertyName("province")]
-            public string Province { get; set; }
+            public string? Province { get; set; }
 
             /// <summary>
             /// 门店地址
             /// </summary>
             [JsonPropertyName("storeAddress")]
-            public string StoreAddress { get; set; }
+            public string? StoreAddress { get; set; }
 
             /// <summary>
             /// 门店ID
@@ -72,13 +72,13 @@ public partial class GetMallInfoGroupListStoreResponse
             /// 店铺名称
             /// </summary>
             [JsonPropertyName("storeName")]
-            public string StoreName { get; set; }
+            public string? StoreName { get; set; }
 
             /// <summary>
             /// 门店自有编号
             /// </summary>
             [JsonPropertyName("storeNumber")]
-            public string StoreNumber { get; set; }
+            public string? StoreNumber { get; set; }
 
 
         }

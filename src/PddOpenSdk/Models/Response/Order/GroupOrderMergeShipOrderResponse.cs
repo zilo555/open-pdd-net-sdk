@@ -6,7 +6,7 @@ public partial class GroupOrderMergeShipOrderResponse
     /// 
     /// </summary>
     [JsonPropertyName("merge_ship_order_group_response")]
-    public MergeShipOrderGroupResponseResponse MergeShipOrderGroupResponse { get; set; }
+    public MergeShipOrderGroupResponseResponse? MergeShipOrderGroupResponse { get; set; }
 
     public partial class MergeShipOrderGroupResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class GroupOrderMergeShipOrderResponse
         /// 订单分组结果
         /// </summary>
         [JsonPropertyName("order_group_list")]
-        public List<OrderGroupListResponse> OrderGroupList { get; set; }
+        public List<OrderGroupListResponse?>? OrderGroupList { get; set; }
 
         public partial class OrderGroupListResponse
         {
@@ -24,7 +24,7 @@ public partial class GroupOrderMergeShipOrderResponse
             /// 可以合并发货的订单号列表。不同列表之间不能合并发货
             /// </summary>
             [JsonPropertyName("order_sn_list")]
-            public List<string> OrderSnList { get; set; }
+            public List<string?>? OrderSnList { get; set; }
 
 
         }

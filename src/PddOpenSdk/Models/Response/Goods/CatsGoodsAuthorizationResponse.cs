@@ -6,7 +6,7 @@ public partial class CatsGoodsAuthorizationResponse
     /// response
     /// </summary>
     [JsonPropertyName("goods_auth_cats_get_response")]
-    public GoodsAuthCatsGetResponseResponse GoodsAuthCatsGetResponse { get; set; }
+    public GoodsAuthCatsGetResponseResponse? GoodsAuthCatsGetResponse { get; set; }
 
     public partial class GoodsAuthCatsGetResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class CatsGoodsAuthorizationResponse
         /// 类目对象列表
         /// </summary>
         [JsonPropertyName("goods_cats_list")]
-        public List<GoodsCatsListResponse> GoodsCatsList { get; set; }
+        public List<GoodsCatsListResponse?>? GoodsCatsList { get; set; }
 
         public partial class GoodsCatsListResponse
         {
@@ -30,7 +30,7 @@ public partial class CatsGoodsAuthorizationResponse
             /// 对应ID下的类目名称
             /// </summary>
             [JsonPropertyName("cat_name")]
-            public string CatName { get; set; }
+            public string? CatName { get; set; }
 
             /// <summary>
             /// 是否为叶子类目

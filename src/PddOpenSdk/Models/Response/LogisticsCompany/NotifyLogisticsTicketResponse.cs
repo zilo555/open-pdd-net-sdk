@@ -6,7 +6,7 @@ public partial class NotifyLogisticsTicketResponse
     /// response
     /// </summary>
     [JsonPropertyName("logistics_ticket_notify_response")]
-    public LogisticsTicketNotifyResponseResponse LogisticsTicketNotifyResponse { get; set; }
+    public LogisticsTicketNotifyResponseResponse? LogisticsTicketNotifyResponse { get; set; }
 
     public partial class LogisticsTicketNotifyResponseResponse
     {

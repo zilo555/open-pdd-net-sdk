@@ -6,7 +6,7 @@ public partial class CheckOpenVirtualNumberResponse
     /// 
     /// </summary>
     [JsonPropertyName("open_virtual_number_check_response")]
-    public OpenVirtualNumberCheckResponseResponse OpenVirtualNumberCheckResponse { get; set; }
+    public OpenVirtualNumberCheckResponseResponse? OpenVirtualNumberCheckResponse { get; set; }
 
     public partial class OpenVirtualNumberCheckResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class CheckOpenVirtualNumberResponse
         /// 
         /// </summary>
         [JsonPropertyName("result")]
-        public ResultResponse Result { get; set; }
+        public ResultResponse? Result { get; set; }
 
         public partial class ResultResponse
         {
@@ -36,7 +36,7 @@ public partial class CheckOpenVirtualNumberResponse
             /// 错误信息
             /// </summary>
             [JsonPropertyName("error_msg")]
-            public string ErrorMsg { get; set; }
+            public string? ErrorMsg { get; set; }
 
             /// <summary>
             /// 是否订单所绑定的虚拟号，true是，false否

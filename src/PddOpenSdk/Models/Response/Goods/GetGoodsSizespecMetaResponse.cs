@@ -6,7 +6,7 @@ public partial class GetGoodsSizespecMetaResponse
     /// 响应
     /// </summary>
     [JsonPropertyName("response")]
-    public ResponseResponse Response { get; set; }
+    public ResponseResponse? Response { get; set; }
 
     public partial class ResponseResponse
     {
@@ -21,13 +21,13 @@ public partial class GetGoodsSizespecMetaResponse
         /// 错误消息
         /// </summary>
         [JsonPropertyName("error_msg")]
-        public string ErrorMsg { get; set; }
+        public string? ErrorMsg { get; set; }
 
         /// <summary>
         /// 结果
         /// </summary>
         [JsonPropertyName("result")]
-        public ResultResponse Result { get; set; }
+        public ResultResponse? Result { get; set; }
 
         /// <summary>
         /// 请求成功
@@ -42,19 +42,19 @@ public partial class GetGoodsSizespecMetaResponse
             /// 可批量的尺码元素id
             /// </summary>
             [JsonPropertyName("batchable_element_ids")]
-            public List<int?> BatchableElementIds { get; set; }
+            public List<int?>? BatchableElementIds { get; set; }
 
             /// <summary>
             /// 尺码元素
             /// </summary>
             [JsonPropertyName("elements")]
-            public List<ElementsResponse> Elements { get; set; }
+            public List<ElementsResponse?>? Elements { get; set; }
 
             /// <summary>
             /// 尺码组
             /// </summary>
             [JsonPropertyName("groups")]
-            public List<GroupsResponse> Groups { get; set; }
+            public List<GroupsResponse?>? Groups { get; set; }
 
             public partial class ElementsResponse
             {
@@ -69,7 +69,7 @@ public partial class GetGoodsSizespecMetaResponse
                 /// 尺码元数据名称
                 /// </summary>
                 [JsonPropertyName("name")]
-                public string Name { get; set; }
+                public string? Name { get; set; }
 
 
             }
@@ -86,7 +86,7 @@ public partial class GetGoodsSizespecMetaResponse
                 /// 尺码元数据名称
                 /// </summary>
                 [JsonPropertyName("name")]
-                public string Name { get; set; }
+                public string? Name { get; set; }
 
 
             }

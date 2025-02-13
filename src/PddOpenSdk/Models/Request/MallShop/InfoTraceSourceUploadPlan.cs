@@ -5,31 +5,31 @@ public partial class InfoTraceSourceUploadPlan
     /// 到港日期
     /// </summary>
     [JsonPropertyName("arrive_time")]
-    public string ArriveTime { get; set; }
+    public string? ArriveTime { get; set; }
 
     /// <summary>
     /// 提单号
     /// </summary>
     [JsonPropertyName("bill_no")]
-    public string BillNo { get; set; }
+    public string? BillNo { get; set; }
 
     /// <summary>
     /// 报检日期
     /// </summary>
     [JsonPropertyName("ciq_date")]
-    public string CiqDate { get; set; }
+    public string? CiqDate { get; set; }
 
     /// <summary>
     /// 报检单号
     /// </summary>
     [JsonPropertyName("ciq_no")]
-    public string CiqNo { get; set; }
+    public string? CiqNo { get; set; }
 
     /// <summary>
     /// 境内收发货人
     /// </summary>
     [JsonPropertyName("dealer_org")]
-    public string DealerOrg { get; set; }
+    public string? DealerOrg { get; set; }
 
     /// <summary>
     /// 申报单位
@@ -65,13 +65,13 @@ public partial class InfoTraceSourceUploadPlan
     /// 清单申报日期
     /// </summary>
     [JsonPropertyName("list_date")]
-    public string ListDate { get; set; }
+    public string? ListDate { get; set; }
 
     /// <summary>
     /// 核注清单编号
     /// </summary>
     [JsonPropertyName("list_no")]
-    public string ListNo { get; set; }
+    public string? ListNo { get; set; }
 
     /// <summary>
     /// 装货港
@@ -152,7 +152,7 @@ public partial class InfoTraceSourceUploadPlan
         /// 商品备案图片
         /// </summary>
         [JsonPropertyName("goods_image_url")]
-        public string GoodsImageUrl { get; set; }
+        public string? GoodsImageUrl { get; set; }
 
         /// <summary>
         /// 商品备案名称

@@ -5,7 +5,7 @@ public partial class GetCloudprintStdtemplates
     /// 快递公司code
     /// </summary>
     [JsonPropertyName("wp_code")]
-    public string WpCode { get; set; }
+    public string? WpCode { get; set; }
 
 
 

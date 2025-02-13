@@ -6,7 +6,7 @@ public partial class AddPromotionCouponQuantityResponse
     /// 增加优惠券发行数量响应对象
     /// </summary>
     [JsonPropertyName("coupon_quantity_add_response")]
-    public CouponQuantityAddResponseResponse CouponQuantityAddResponse { get; set; }
+    public CouponQuantityAddResponseResponse? CouponQuantityAddResponse { get; set; }
 
     public partial class CouponQuantityAddResponseResponse
     {

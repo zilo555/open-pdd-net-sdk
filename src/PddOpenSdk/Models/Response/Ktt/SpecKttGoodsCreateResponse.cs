@@ -6,7 +6,7 @@ public partial class SpecKttGoodsCreateResponse
     /// 
     /// </summary>
     [JsonPropertyName("response")]
-    public ResponseResponse Response { get; set; }
+    public ResponseResponse? Response { get; set; }
 
     public partial class ResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class SpecKttGoodsCreateResponse
         /// 规格map
         /// </summary>
         [JsonPropertyName("spec_map")]
-        public Dictionary<string, object> SpecMap { get; set; }
+        public Dictionary<string, object>? SpecMap { get; set; }
 
         /// <summary>
         /// 请求结果
@@ -30,13 +30,13 @@ public partial class SpecKttGoodsCreateResponse
             /// 父规格名
             /// </summary>
             [JsonPropertyName("$key")]
-            public string Key { get; set; }
+            public string? Key { get; set; }
 
             /// <summary>
             /// 子规格列表
             /// </summary>
             [JsonPropertyName("$value")]
-            public List<ValueResponse> Value { get; set; }
+            public List<ValueResponse?>? Value { get; set; }
 
             public partial class ValueResponse
             {
@@ -45,13 +45,13 @@ public partial class SpecKttGoodsCreateResponse
                 /// 子规格名
                 /// </summary>
                 [JsonPropertyName("name")]
-                public string Name { get; set; }
+                public string? Name { get; set; }
 
                 /// <summary>
                 /// 父规格名
                 /// </summary>
                 [JsonPropertyName("parent_name")]
-                public string ParentName { get; set; }
+                public string? ParentName { get; set; }
 
                 /// <summary>
                 /// 规格id，创建商品用

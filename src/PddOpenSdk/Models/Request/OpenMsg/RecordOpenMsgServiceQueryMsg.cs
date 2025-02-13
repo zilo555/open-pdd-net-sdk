@@ -5,7 +5,7 @@ public partial class RecordOpenMsgServiceQueryMsg
     /// 短信发送流水
     /// </summary>
     [JsonPropertyName("biz_id")]
-    public string BizId { get; set; }
+    public string? BizId { get; set; }
 
     /// <summary>
     /// 分页参数,页码

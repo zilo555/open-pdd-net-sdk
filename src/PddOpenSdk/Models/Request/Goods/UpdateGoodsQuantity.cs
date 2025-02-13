@@ -23,7 +23,7 @@ public partial class UpdateGoodsQuantity
     /// sku商家编码，如果sku_id未填，则使用outer_id
     /// </summary>
     [JsonPropertyName("outer_id")]
-    public string OuterId { get; set; }
+    public string? OuterId { get; set; }
 
     /// <summary>
     /// 库存更新方式，可选。1为全量更新，2为增量更新。如果不填，默认为全量更新

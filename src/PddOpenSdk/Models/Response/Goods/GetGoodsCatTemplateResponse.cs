@@ -6,7 +6,7 @@ public partial class GetGoodsCatTemplateResponse
     /// 属性信息
     /// </summary>
     [JsonPropertyName("open_api_response")]
-    public OpenApiResponseResponse OpenApiResponse { get; set; }
+    public OpenApiResponseResponse? OpenApiResponse { get; set; }
 
     public partial class OpenApiResponseResponse
     {
@@ -45,7 +45,7 @@ public partial class GetGoodsCatTemplateResponse
         /// 属性信息
         /// </summary>
         [JsonPropertyName("properties")]
-        public List<PropertiesResponse> Properties { get; set; }
+        public List<PropertiesResponse?>? Properties { get; set; }
 
         /// <summary>
         /// 单个自定义规格值上限
@@ -120,25 +120,25 @@ public partial class GetGoodsCatTemplateResponse
             /// 输入最大值：文本类型代表文本最长长度、 数值类型代表数字最大值、时间类型代表时间最大值
             /// </summary>
             [JsonPropertyName("max_value")]
-            public string MaxValue { get; set; }
+            public string? MaxValue { get; set; }
 
             /// <summary>
             /// 输入最小值：文本类型代表文本最小长度、数值类型代表数字最小值、时间类型代表时间最小值
             /// </summary>
             [JsonPropertyName("min_value")]
-            public string MinValue { get; set; }
+            public string? MinValue { get; set; }
 
             /// <summary>
             /// 属性名称
             /// </summary>
             [JsonPropertyName("name")]
-            public string Name { get; set; }
+            public string? Name { get; set; }
 
             /// <summary>
             /// 属性别名
             /// </summary>
             [JsonPropertyName("name_alias")]
-            public string NameAlias { get; set; }
+            public string? NameAlias { get; set; }
 
             /// <summary>
             /// 父属性id
@@ -162,7 +162,7 @@ public partial class GetGoodsCatTemplateResponse
             /// 必填规则具体内容，当required=true且required_rule_type=1时该字段有效，表示当出现哪些属性/属性值时，该属性需要必填，json格式，两层List结构，外层list代表"或"关系，内层list代表"且"关系，例如：[[{\"ref_pid\":123,\"vid\":123}]]
             /// </summary>
             [JsonPropertyName("required_rule")]
-            public string RequiredRule { get; set; }
+            public string? RequiredRule { get; set; }
 
             /// <summary>
             /// required=true时，该字段有效，为“0”时表示当前属性必填，不受其他属性影响，为“1”时表示当前属性是否必填由已填写的其他属性值决定
@@ -180,7 +180,7 @@ public partial class GetGoodsCatTemplateResponse
             /// 若属性按条件展示,则只有show_vids中的值被选择时属性才可使用
             /// </summary>
             [JsonPropertyName("show_vids")]
-            public List<long?> ShowVids { get; set; }
+            public List<long?>? ShowVids { get; set; }
 
             /// <summary>
             /// 销售属性规格id，非销售属性为null
@@ -192,7 +192,7 @@ public partial class GetGoodsCatTemplateResponse
             /// 属性值列表
             /// </summary>
             [JsonPropertyName("values")]
-            public List<ValuesResponse> Values { get; set; }
+            public List<ValuesResponse?>? Values { get; set; }
 
             /// <summary>
             /// 小数点允许最大精度,为0时代表不允许输入小数
@@ -210,7 +210,7 @@ public partial class GetGoodsCatTemplateResponse
             /// 属性值单位
             /// </summary>
             [JsonPropertyName("value_unit")]
-            public string ValueUnit { get; set; }
+            public string? ValueUnit { get; set; }
 
             public partial class ValuesResponse
             {
@@ -219,13 +219,13 @@ public partial class GetGoodsCatTemplateResponse
                 /// 扩展信息，颜色的话色号在这里,ARGB，非销售属性为null
                 /// </summary>
                 [JsonPropertyName("extend_info")]
-                public string ExtendInfo { get; set; }
+                public string? ExtendInfo { get; set; }
 
                 /// <summary>
                 /// 分组信息，非销售属性为null
                 /// </summary>
                 [JsonPropertyName("group")]
-                public GroupResponse Group { get; set; }
+                public GroupResponse? Group { get; set; }
 
                 /// <summary>
                 /// 是否父属性值
@@ -237,7 +237,7 @@ public partial class GetGoodsCatTemplateResponse
                 /// 对应的父属性值id
                 /// </summary>
                 [JsonPropertyName("parent_vids")]
-                public List<long?> ParentVids { get; set; }
+                public List<long?>? ParentVids { get; set; }
 
                 /// <summary>
                 /// 规格id,非销售属性为null
@@ -249,7 +249,7 @@ public partial class GetGoodsCatTemplateResponse
                 /// 属性值
                 /// </summary>
                 [JsonPropertyName("value")]
-                public string Value { get; set; }
+                public string? Value { get; set; }
 
                 /// <summary>
                 /// 基础属性值id
@@ -270,7 +270,7 @@ public partial class GetGoodsCatTemplateResponse
                     /// 组名称
                     /// </summary>
                     [JsonPropertyName("name")]
-                    public string Name { get; set; }
+                    public string? Name { get; set; }
 
 
                 }

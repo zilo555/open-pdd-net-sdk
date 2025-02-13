@@ -6,7 +6,7 @@ public partial class CommitGoodsSubmitGoodsResponse
     /// 返回response
     /// </summary>
     [JsonPropertyName("goods_update_response")]
-    public GoodsUpdateResponseResponse GoodsUpdateResponse { get; set; }
+    public GoodsUpdateResponseResponse? GoodsUpdateResponse { get; set; }
 
     public partial class GoodsUpdateResponseResponse
     {

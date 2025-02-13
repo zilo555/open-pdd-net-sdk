@@ -6,7 +6,7 @@ public partial class DepotExpressAddResponse
     /// 操作成功
     /// </summary>
     [JsonPropertyName("open_api_response")]
-    public string OpenApiResponse { get; set; }
+    public string? OpenApiResponse { get; set; }
 
 
 }

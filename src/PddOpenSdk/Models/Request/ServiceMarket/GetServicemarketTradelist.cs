@@ -35,7 +35,7 @@ public partial class GetServicemarketTradelist
     /// 服务订单号
     /// </summary>
     [JsonPropertyName("service_order_sn")]
-    public string ServiceOrderSn { get; set; }
+    public string? ServiceOrderSn { get; set; }
 
 
 

@@ -6,7 +6,7 @@ public partial class ComplainVoucherVoucherResponse
     /// response
     /// </summary>
     [JsonPropertyName("voucher_voucher_complain_response")]
-    public VoucherVoucherComplainResponseResponse VoucherVoucherComplainResponse { get; set; }
+    public VoucherVoucherComplainResponseResponse? VoucherVoucherComplainResponse { get; set; }
 
     public partial class VoucherVoucherComplainResponseResponse
     {

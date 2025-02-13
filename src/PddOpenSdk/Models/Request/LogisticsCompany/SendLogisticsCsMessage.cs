@@ -29,19 +29,19 @@ public partial class SendLogisticsCsMessage
     /// message_type为0时不为空
     /// </summary>
     [JsonPropertyName("text")]
-    public string Text { get; set; }
+    public string? Text { get; set; }
 
     /// <summary>
     /// message_type为1时不为空
     /// </summary>
     [JsonPropertyName("attach")]
-    public string Attach { get; set; }
+    public string? Attach { get; set; }
 
     /// <summary>
     /// message_type为1时不为空
     /// </summary>
     [JsonPropertyName("preview")]
-    public string Preview { get; set; }
+    public string? Preview { get; set; }
 
 
 

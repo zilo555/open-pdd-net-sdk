@@ -6,7 +6,7 @@ public partial class MsgOpenMsgServiceSendBatchResponse
     /// 回执id
     /// </summary>
     [JsonPropertyName("biz_id")]
-    public string BizId { get; set; }
+    public string? BizId { get; set; }
 
     /// <summary>
     /// 状态码
@@ -18,7 +18,7 @@ public partial class MsgOpenMsgServiceSendBatchResponse
     /// 状态原因
     /// </summary>
     [JsonPropertyName("message")]
-    public string Message { get; set; }
+    public string? Message { get; set; }
 
 
 }

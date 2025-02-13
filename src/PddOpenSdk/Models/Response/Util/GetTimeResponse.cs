@@ -6,7 +6,7 @@ public partial class GetTimeResponse
     /// response
     /// </summary>
     [JsonPropertyName("time_get_response")]
-    public TimeGetResponseResponse TimeGetResponse { get; set; }
+    public TimeGetResponseResponse? TimeGetResponse { get; set; }
 
     public partial class TimeGetResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class GetTimeResponse
         /// 拼多多系统时间
         /// </summary>
         [JsonPropertyName("time")]
-        public string Time { get; set; }
+        public string? Time { get; set; }
 
 
     }

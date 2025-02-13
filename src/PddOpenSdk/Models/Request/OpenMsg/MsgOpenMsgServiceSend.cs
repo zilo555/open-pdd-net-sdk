@@ -5,7 +5,7 @@ public partial class MsgOpenMsgServiceSend
     /// 业务请求唯一标识
     /// </summary>
     [JsonPropertyName("out_id")]
-    public string OutId { get; set; }
+    public string? OutId { get; set; }
 
     /// <summary>
     /// 接收短信的手机号码列表（仅允许密文）,["密文1", "密文2"]
@@ -23,7 +23,7 @@ public partial class MsgOpenMsgServiceSend
     /// 上行短信扩展码
     /// </summary>
     [JsonPropertyName("sms_up_extend_code")]
-    public string SmsUpExtendCode { get; set; }
+    public string? SmsUpExtendCode { get; set; }
 
     /// <summary>
     /// 短信模板ID
@@ -35,7 +35,7 @@ public partial class MsgOpenMsgServiceSend
     /// 短信模板变量对应的实际值，JSON格式,示例："${param}","aaa"，注意${}符号勿遗漏
     /// </summary>
     [JsonPropertyName("template_param")]
-    public Dictionary<string, object> TemplateParam { get; set; }
+    public Dictionary<string, object>? TemplateParam { get; set; }
 
 
     public partial class TemplateParamModel
@@ -44,13 +44,13 @@ public partial class MsgOpenMsgServiceSend
         /// 模板变量名
         /// </summary>
         [JsonPropertyName("$key")]
-        public string Key { get; set; }
+        public string? Key { get; set; }
 
         /// <summary>
         /// 模板变量值
         /// </summary>
         [JsonPropertyName("$value")]
-        public string Value { get; set; }
+        public string? Value { get; set; }
 
 
 

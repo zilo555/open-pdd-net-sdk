@@ -11,7 +11,7 @@ public partial class GetPromotionLimitedDiscountList
     /// 商品id列表
     /// </summary>
     [JsonPropertyName("goods_id_list")]
-    public List<long?> GoodsIdList { get; set; }
+    public List<long?>? GoodsIdList { get; set; }
 
     /// <summary>
     /// 默认false。true-仅返回活动数量；false-返回活动数量和活动设置数据

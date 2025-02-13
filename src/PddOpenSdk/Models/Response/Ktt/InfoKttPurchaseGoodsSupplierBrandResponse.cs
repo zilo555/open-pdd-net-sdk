@@ -6,7 +6,7 @@ public partial class InfoKttPurchaseGoodsSupplierBrandResponse
     /// 
     /// </summary>
     [JsonPropertyName("response")]
-    public ResponseResponse Response { get; set; }
+    public ResponseResponse? Response { get; set; }
 
     public partial class ResponseResponse
     {
@@ -21,13 +21,13 @@ public partial class InfoKttPurchaseGoodsSupplierBrandResponse
         /// 
         /// </summary>
         [JsonPropertyName("error_msg")]
-        public string ErrorMsg { get; set; }
+        public string? ErrorMsg { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [JsonPropertyName("result")]
-        public ResultResponse Result { get; set; }
+        public ResultResponse? Result { get; set; }
 
         /// <summary>
         /// 
@@ -42,7 +42,7 @@ public partial class InfoKttPurchaseGoodsSupplierBrandResponse
             /// 品牌列表
             /// </summary>
             [JsonPropertyName("brand_list")]
-            public List<BrandListResponse> BrandList { get; set; }
+            public List<BrandListResponse?>? BrandList { get; set; }
 
             public partial class BrandListResponse
             {
@@ -51,19 +51,19 @@ public partial class InfoKttPurchaseGoodsSupplierBrandResponse
                 /// 品牌Logo
                 /// </summary>
                 [JsonPropertyName("brand_logo")]
-                public string BrandLogo { get; set; }
+                public string? BrandLogo { get; set; }
 
                 /// <summary>
                 /// 品牌名
                 /// </summary>
                 [JsonPropertyName("brand_name")]
-                public string BrandName { get; set; }
+                public string? BrandName { get; set; }
 
                 /// <summary>
                 /// 品牌唯一ID
                 /// </summary>
                 [JsonPropertyName("brand_sn")]
-                public string BrandSn { get; set; }
+                public string? BrandSn { get; set; }
 
 
             }

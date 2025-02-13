@@ -5,13 +5,13 @@ public partial class GetMallInfoStore
     /// 市
     /// </summary>
     [JsonPropertyName("city")]
-    public string City { get; set; }
+    public string? City { get; set; }
 
     /// <summary>
     /// 区
     /// </summary>
     [JsonPropertyName("district")]
-    public string District { get; set; }
+    public string? District { get; set; }
 
     /// <summary>
     /// 分页
@@ -29,7 +29,7 @@ public partial class GetMallInfoStore
     /// 省
     /// </summary>
     [JsonPropertyName("province")]
-    public string Province { get; set; }
+    public string? Province { get; set; }
 
     /// <summary>
     /// 门店Id
@@ -41,13 +41,13 @@ public partial class GetMallInfoStore
     /// 门店名称
     /// </summary>
     [JsonPropertyName("store_name")]
-    public string StoreName { get; set; }
+    public string? StoreName { get; set; }
 
     /// <summary>
     /// 门店自有编号
     /// </summary>
     [JsonPropertyName("store_number")]
-    public string StoreNumber { get; set; }
+    public string? StoreNumber { get; set; }
 
 
 

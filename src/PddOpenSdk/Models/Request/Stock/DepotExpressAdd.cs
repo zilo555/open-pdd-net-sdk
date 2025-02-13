@@ -5,7 +5,7 @@ public partial class DepotExpressAdd
     /// 联系人姓名
     /// </summary>
     [JsonPropertyName("contact_name")]
-    public string ContactName { get; set; }
+    public string? ContactName { get; set; }
 
     /// <summary>
     /// 仓库详细地址5-20字
@@ -59,13 +59,13 @@ public partial class DepotExpressAdd
     /// 联系人电话
     /// </summary>
     [JsonPropertyName("telephone")]
-    public string Telephone { get; set; }
+    public string? Telephone { get; set; }
 
     /// <summary>
     /// 邮编
     /// </summary>
     [JsonPropertyName("zip_code")]
-    public string ZipCode { get; set; }
+    public string? ZipCode { get; set; }
 
 
     public partial class DepotRegionModel

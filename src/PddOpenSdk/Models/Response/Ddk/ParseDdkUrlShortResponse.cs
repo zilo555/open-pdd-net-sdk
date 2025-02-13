@@ -6,7 +6,7 @@ public partial class ParseDdkUrlShortResponse
     /// 普通长链，与短链接功能一致
     /// </summary>
     [JsonPropertyName("url")]
-    public string Url { get; set; }
+    public string? Url { get; set; }
 
 
 }

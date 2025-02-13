@@ -77,7 +77,7 @@ public partial class NopoiMallInfoStoreUpdatePost
     /// 门店自有编号
     /// </summary>
     [JsonPropertyName("store_number")]
-    public string StoreNumber { get; set; }
+    public string? StoreNumber { get; set; }
 
     /// <summary>
     /// 门店电话

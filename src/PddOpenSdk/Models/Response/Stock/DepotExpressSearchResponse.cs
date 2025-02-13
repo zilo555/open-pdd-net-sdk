@@ -6,7 +6,7 @@ public partial class DepotExpressSearchResponse
     /// response
     /// </summary>
     [JsonPropertyName("open_api_response")]
-    public OpenApiResponseResponse OpenApiResponse { get; set; }
+    public OpenApiResponseResponse? OpenApiResponse { get; set; }
 
     public partial class OpenApiResponseResponse
     {
@@ -21,7 +21,7 @@ public partial class DepotExpressSearchResponse
         /// 仓库列表
         /// </summary>
         [JsonPropertyName("depot_list")]
-        public List<DepotListResponse> DepotList { get; set; }
+        public List<DepotListResponse?>? DepotList { get; set; }
 
         public partial class DepotListResponse
         {
@@ -30,13 +30,13 @@ public partial class DepotExpressSearchResponse
             /// 详细地址
             /// </summary>
             [JsonPropertyName("address")]
-            public string Address { get; set; }
+            public string? Address { get; set; }
 
             /// <summary>
             /// 仓库别名
             /// </summary>
             [JsonPropertyName("alias")]
-            public string Alias { get; set; }
+            public string? Alias { get; set; }
 
             /// <summary>
             /// 仓库地址（市编号）
@@ -48,19 +48,19 @@ public partial class DepotExpressSearchResponse
             /// 仓库编码
             /// </summary>
             [JsonPropertyName("code")]
-            public string Code { get; set; }
+            public string? Code { get; set; }
 
             /// <summary>
             /// 联系人姓名
             /// </summary>
             [JsonPropertyName("contact_name")]
-            public string ContactName { get; set; }
+            public string? ContactName { get; set; }
 
             /// <summary>
             /// 联系人电话
             /// </summary>
             [JsonPropertyName("contact_tel")]
-            public string ContactTel { get; set; }
+            public string? ContactTel { get; set; }
 
             /// <summary>
             /// 仓库id
@@ -78,13 +78,13 @@ public partial class DepotExpressSearchResponse
             /// 仓库id（string）
             /// </summary>
             [JsonPropertyName("id_str")]
-            public string IdStr { get; set; }
+            public string? IdStr { get; set; }
 
             /// <summary>
             /// 仓库名称
             /// </summary>
             [JsonPropertyName("name")]
-            public string Name { get; set; }
+            public string? Name { get; set; }
 
             /// <summary>
             /// 仓库地址（省编号）
@@ -96,7 +96,7 @@ public partial class DepotExpressSearchResponse
             /// 覆盖信息，省：全覆盖
             /// </summary>
             [JsonPropertyName("province_map")]
-            public Dictionary<string, object> ProvinceMap { get; set; }
+            public Dictionary<string, object>? ProvinceMap { get; set; }
 
             /// <summary>
             /// 仓库类型，暂时只有1
@@ -108,7 +108,7 @@ public partial class DepotExpressSearchResponse
             /// 邮编
             /// </summary>
             [JsonPropertyName("zip")]
-            public string Zip { get; set; }
+            public string? Zip { get; set; }
 
             public partial class ProvinceMapResponse
             {
@@ -117,13 +117,13 @@ public partial class DepotExpressSearchResponse
                 /// 省份id
                 /// </summary>
                 [JsonPropertyName("key")]
-                public string Key { get; set; }
+                public string? Key { get; set; }
 
                 /// <summary>
                 /// 1 半覆盖， 2 全覆盖
                 /// </summary>
                 [JsonPropertyName("value")]
-                public string Value { get; set; }
+                public string? Value { get; set; }
 
 
             }

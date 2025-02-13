@@ -12,7 +12,7 @@ public partial class CallbackHeavygoodsBackExpressResponse
     /// 
     /// </summary>
     [JsonPropertyName("error_msg")]
-    public string ErrorMsg { get; set; }
+    public string? ErrorMsg { get; set; }
 
     /// <summary>
     /// 

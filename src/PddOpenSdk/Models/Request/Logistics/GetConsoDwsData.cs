@@ -26,13 +26,13 @@ public partial class GetConsoDwsData
         /// 体积-高(单位：cm)
         /// </summary>
         [JsonPropertyName("height")]
-        public string Height { get; set; }
+        public string? Height { get; set; }
 
         /// <summary>
         /// 体积-长(单位：cm)
         /// </summary>
         [JsonPropertyName("length")]
-        public string Length { get; set; }
+        public string? Length { get; set; }
 
         /// <summary>
         /// 扫描时间戳(毫秒)
@@ -50,31 +50,31 @@ public partial class GetConsoDwsData
         /// 体积(单位：cm^3)
         /// </summary>
         [JsonPropertyName("volume")]
-        public string Volume { get; set; }
+        public string? Volume { get; set; }
 
         /// <summary>
         /// 体积重
         /// </summary>
         [JsonPropertyName("volumeWeight")]
-        public string VolumeWeight { get; set; }
+        public string? VolumeWeight { get; set; }
 
         /// <summary>
         /// 称重重量(单位：g)
         /// </summary>
         [JsonPropertyName("weight")]
-        public string Weight { get; set; }
+        public string? Weight { get; set; }
 
         /// <summary>
         /// 体积-宽(单位：cm)
         /// </summary>
         [JsonPropertyName("width")]
-        public string Width { get; set; }
+        public string? Width { get; set; }
 
         /// <summary>
         /// 图片链接列表
         /// </summary>
         [JsonPropertyName("images")]
-        public List<string> Images { get; set; }
+        public List<string?>? Images { get; set; }
 
 
 

@@ -11,13 +11,13 @@ public partial class GenerateDdkGoodsPromotionUrl
     /// 自定义礼金标题，用于向用户展示渠道专属福利，不超过12个字
     /// </summary>
     [JsonPropertyName("cash_gift_name")]
-    public string CashGiftName { get; set; }
+    public string? CashGiftName { get; set; }
 
     /// <summary>
     /// 自定义参数，为链接打上自定义标签；自定义参数最长限制64个字节；格式为： {"uid":"11111","sid":"22222"} ，其中 uid 用户唯一标识，可自行加密后传入，每个用户仅且对应一个标识，必填； sid 上下文信息标识，例如sessionId等，非必填。该json字符串中也可以加入其他自定义的key。若进行cid投放，生链的时候不填充custom_parameters，后续在推广前原始链接上拼接custom_parameters。（如果使用GET请求，请使用URLEncode处理参数）
     /// </summary>
     [JsonPropertyName("custom_parameters")]
-    public string CustomParameters { get; set; }
+    public string? CustomParameters { get; set; }
 
     /// <summary>
     /// 是否生成带授权的单品链接。如果未授权，则会走授权流程
@@ -77,19 +77,19 @@ public partial class GenerateDdkGoodsPromotionUrl
     /// 支持拼接特殊参数的商品生链参数列表。生链优先级：goods_gen_url_param_list > goods_sign_list，两者按优先级选其一。
     /// </summary>
     [JsonPropertyName("goods_gen_url_param_list")]
-    public List<GoodsGenUrlParamListModel> GoodsGenUrlParamList { get; set; }
+    public List<GoodsGenUrlParamListModel?>? GoodsGenUrlParamList { get; set; }
 
     /// <summary>
     /// 商品goodsSign列表，例如：["c9r2omogKFFAc7WBwvbZU1ikIb16_J3CTa8HNN"]，支持批量生链。goodsSign是加密后的goodsId, goodsId已下线，请使用goodsSign来替代。使用说明：https://jinbao.pinduoduo.com/qa-system?questionId=252
     /// </summary>
     [JsonPropertyName("goods_sign_list")]
-    public List<string> GoodsSignList { get; set; }
+    public List<string?>? GoodsSignList { get; set; }
 
     /// <summary>
     /// 素材ID，可以通过商品详情接口获取商品素材信息
     /// </summary>
     [JsonPropertyName("material_id")]
-    public string MaterialId { get; set; }
+    public string? MaterialId { get; set; }
 
     /// <summary>
     /// true--生成多人团推广链接 false--生成单人团推广链接（默认false）1、单人团推广链接：用户访问单人团推广链接，可直接购买商品无需拼团。2、多人团推广链接：用户访问双人团推广链接开团，若用户分享给他人参团，则开团者和参团者的佣金均结算给推手
@@ -107,13 +107,13 @@ public partial class GenerateDdkGoodsPromotionUrl
     /// 搜索id，建议填写，提高收益。来自pdd.ddk.goods.recommend.get、pdd.ddk.goods.search、pdd.ddk.top.goods.list.query等接口
     /// </summary>
     [JsonPropertyName("search_id")]
-    public string SearchId { get; set; }
+    public string? SearchId { get; set; }
 
     /// <summary>
     /// 特殊参数
     /// </summary>
     [JsonPropertyName("special_params")]
-    public Dictionary<string, object> SpecialParams { get; set; }
+    public Dictionary<string, object>? SpecialParams { get; set; }
 
     /// <summary>
     /// 生成商品链接类型 0-默认 1-百补相似品列表
@@ -140,19 +140,19 @@ public partial class GenerateDdkGoodsPromotionUrl
         /// 商品goodsSign，支持通过goodsSign查询商品。goodsSign是加密后的goodsId, goodsId已下线，请使用goodsSign来替代。使用说明：https://jinbao.pinduoduo.com/qa-system?questionId=252
         /// </summary>
         [JsonPropertyName("goods_sign")]
-        public string GoodsSign { get; set; }
+        public string? GoodsSign { get; set; }
 
         /// <summary>
         /// 需要在链接上拼接的skuIdCode列表，skuIdCode为skuId密文，由订单详情接口pdd.ddk.order.detail.get返回。要求拥有sku权限否则不生效，作用同sku_id_list，且与sku_id_list独立。此列表传入n个skuIdCode，则针对该goodsSign生成n个拼接sku_id=xxx(skuIdCode)的链接。若列表为空或者skuIdCode无效则返回普通链接
         /// </summary>
         [JsonPropertyName("sku_id_code_list")]
-        public List<string> SkuIdCodeList { get; set; }
+        public List<string?>? SkuIdCodeList { get; set; }
 
         /// <summary>
         /// 需要在链接上拼接的skuId列表，要求拥有sku权限否则不生效。拼接sku_id的链接在点击跳转商详时，自动选中对应的sku。此列表传入n个skuId，则针对该goodsSign生成n个拼接sku_id链接。若列表为空或着skuId无效（null，非正）则返回普通链接。
         /// </summary>
         [JsonPropertyName("sku_id_list")]
-        public List<long?> SkuIdList { get; set; }
+        public List<long?>? SkuIdList { get; set; }
 
 
 

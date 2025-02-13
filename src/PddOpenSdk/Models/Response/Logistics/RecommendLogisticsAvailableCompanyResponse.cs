@@ -6,7 +6,7 @@ public partial class RecommendLogisticsAvailableCompanyResponse
     /// 
     /// </summary>
     [JsonPropertyName("response")]
-    public ResponseResponse Response { get; set; }
+    public ResponseResponse? Response { get; set; }
 
     public partial class ResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class RecommendLogisticsAvailableCompanyResponse
         /// 
         /// </summary>
         [JsonPropertyName("result")]
-        public List<ResultResponse> Result { get; set; }
+        public List<ResultResponse?>? Result { get; set; }
 
         public partial class ResultResponse
         {
@@ -30,7 +30,7 @@ public partial class RecommendLogisticsAvailableCompanyResponse
             /// 快递公司id
             /// </summary>
             [JsonPropertyName("company_id")]
-            public List<long?> CompanyId { get; set; }
+            public List<long?>? CompanyId { get; set; }
 
 
         }

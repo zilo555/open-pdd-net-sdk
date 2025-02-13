@@ -6,7 +6,7 @@ public partial class GetTicketSkuRuleResponse
     /// 
     /// </summary>
     [JsonPropertyName("response")]
-    public ResponseResponse Response { get; set; }
+    public ResponseResponse? Response { get; set; }
 
     public partial class ResponseResponse
     {
@@ -15,67 +15,67 @@ public partial class GetTicketSkuRuleResponse
         /// 下单人信息设置
         /// </summary>
         [JsonPropertyName("booker_info_limitation")]
-        public BookerInfoLimitationResponse BookerInfoLimitation { get; set; }
+        public BookerInfoLimitationResponse? BookerInfoLimitation { get; set; }
 
         /// <summary>
         /// 预定须知
         /// </summary>
         [JsonPropertyName("booking_notice")]
-        public BookingNoticeResponse BookingNotice { get; set; }
+        public BookingNoticeResponse? BookingNotice { get; set; }
 
         /// <summary>
         /// 下单限制
         /// </summary>
         [JsonPropertyName("order_limitation")]
-        public OrderLimitationResponse OrderLimitation { get; set; }
+        public OrderLimitationResponse? OrderLimitation { get; set; }
 
         /// <summary>
         /// 商户rule ID
         /// </summary>
         [JsonPropertyName("out_rule_id")]
-        public string OutRuleId { get; set; }
+        public string? OutRuleId { get; set; }
 
         /// <summary>
         /// 服务商联系方式
         /// </summary>
         [JsonPropertyName("provider_contact_info")]
-        public ProviderContactInfoResponse ProviderContactInfo { get; set; }
+        public ProviderContactInfoResponse? ProviderContactInfo { get; set; }
 
         /// <summary>
         /// 退款规则
         /// </summary>
         [JsonPropertyName("refund_limitations")]
-        public RefundLimitationsResponse RefundLimitations { get; set; }
+        public RefundLimitationsResponse? RefundLimitations { get; set; }
 
         /// <summary>
         /// 拼多多 rule ID
         /// </summary>
         [JsonPropertyName("rule_id")]
-        public string RuleId { get; set; }
+        public string? RuleId { get; set; }
 
         /// <summary>
         /// 商户rule 名称
         /// </summary>
         [JsonPropertyName("rule_name")]
-        public string RuleName { get; set; }
+        public string? RuleName { get; set; }
 
         /// <summary>
         /// 规则版本
         /// </summary>
         [JsonPropertyName("rule_version")]
-        public string RuleVersion { get; set; }
+        public string? RuleVersion { get; set; }
 
         /// <summary>
         /// 游玩人信息
         /// </summary>
         [JsonPropertyName("traveler_info_limitation")]
-        public TravelerInfoLimitationResponse TravelerInfoLimitation { get; set; }
+        public TravelerInfoLimitationResponse? TravelerInfoLimitation { get; set; }
 
         /// <summary>
         /// 卡券有效期设置
         /// </summary>
         [JsonPropertyName("valid_limitation")]
-        public ValidLimitationResponse ValidLimitation { get; set; }
+        public ValidLimitationResponse? ValidLimitation { get; set; }
 
         public partial class BookerInfoLimitationResponse
         {
@@ -101,43 +101,43 @@ public partial class GetTicketSkuRuleResponse
             /// 入园地址
             /// </summary>
             [JsonPropertyName("enter_address")]
-            public string EnterAddress { get; set; }
+            public string? EnterAddress { get; set; }
 
             /// <summary>
             /// 入园时间
             /// </summary>
             [JsonPropertyName("enter_time")]
-            public List<EnterTimeResponse> EnterTime { get; set; }
+            public List<EnterTimeResponse?>? EnterTime { get; set; }
 
             /// <summary>
             /// 入园方式
             /// </summary>
             [JsonPropertyName("enter_ways")]
-            public string EnterWays { get; set; }
+            public string? EnterWays { get; set; }
 
             /// <summary>
             /// 补充说明
             /// </summary>
             [JsonPropertyName("extra_desc")]
-            public string ExtraDesc { get; set; }
+            public string? ExtraDesc { get; set; }
 
             /// <summary>
             /// 费用包含
             /// </summary>
             [JsonPropertyName("fee_include")]
-            public string FeeInclude { get; set; }
+            public string? FeeInclude { get; set; }
 
             /// <summary>
             /// 费用不包含
             /// </summary>
             [JsonPropertyName("fee_not_include")]
-            public string FeeNotInclude { get; set; }
+            public string? FeeNotInclude { get; set; }
 
             /// <summary>
             /// 重要提示
             /// </summary>
             [JsonPropertyName("important_notice")]
-            public string ImportantNotice { get; set; }
+            public string? ImportantNotice { get; set; }
 
             /// <summary>
             /// 通关限制时间
@@ -149,13 +149,13 @@ public partial class GetTicketSkuRuleResponse
             /// 换票地址
             /// </summary>
             [JsonPropertyName("ticket_place")]
-            public string TicketPlace { get; set; }
+            public string? TicketPlace { get; set; }
 
             /// <summary>
             /// 换票时间
             /// </summary>
             [JsonPropertyName("ticket_time")]
-            public List<TicketTimeResponse> TicketTime { get; set; }
+            public List<TicketTimeResponse?>? TicketTime { get; set; }
 
             public partial class EnterTimeResponse
             {
@@ -164,19 +164,19 @@ public partial class GetTicketSkuRuleResponse
                 /// 备注
                 /// </summary>
                 [JsonPropertyName("comment")]
-                public string Comment { get; set; }
+                public string? Comment { get; set; }
 
                 /// <summary>
                 /// 入园结束时间
                 /// </summary>
                 [JsonPropertyName("end_at")]
-                public string EndAt { get; set; }
+                public string? EndAt { get; set; }
 
                 /// <summary>
                 /// 入园开始时间
                 /// </summary>
                 [JsonPropertyName("start_at")]
-                public string StartAt { get; set; }
+                public string? StartAt { get; set; }
 
 
             }
@@ -187,19 +187,19 @@ public partial class GetTicketSkuRuleResponse
                 /// 备注
                 /// </summary>
                 [JsonPropertyName("comment")]
-                public string Comment { get; set; }
+                public string? Comment { get; set; }
 
                 /// <summary>
                 /// 换票结束时间
                 /// </summary>
                 [JsonPropertyName("end_at")]
-                public string EndAt { get; set; }
+                public string? EndAt { get; set; }
 
                 /// <summary>
                 /// 换票开始时间
                 /// </summary>
                 [JsonPropertyName("start_at")]
-                public string StartAt { get; set; }
+                public string? StartAt { get; set; }
 
 
             }
@@ -241,19 +241,19 @@ public partial class GetTicketSkuRuleResponse
             /// 服务时间
             /// </summary>
             [JsonPropertyName("provider_business_hour")]
-            public List<ProviderBusinessHourResponse> ProviderBusinessHour { get; set; }
+            public List<ProviderBusinessHourResponse?>? ProviderBusinessHour { get; set; }
 
             /// <summary>
             /// 服务商名称
             /// </summary>
             [JsonPropertyName("provider_name")]
-            public string ProviderName { get; set; }
+            public string? ProviderName { get; set; }
 
             /// <summary>
             /// 服务商联系电话
             /// </summary>
             [JsonPropertyName("provider_telephone")]
-            public string ProviderTelephone { get; set; }
+            public string? ProviderTelephone { get; set; }
 
             public partial class ProviderBusinessHourResponse
             {
@@ -262,19 +262,19 @@ public partial class GetTicketSkuRuleResponse
                 /// 结束时间
                 /// </summary>
                 [JsonPropertyName("close_at")]
-                public string CloseAt { get; set; }
+                public string? CloseAt { get; set; }
 
                 /// <summary>
                 /// 开始时间
                 /// </summary>
                 [JsonPropertyName("open_at")]
-                public string OpenAt { get; set; }
+                public string? OpenAt { get; set; }
 
                 /// <summary>
                 /// 描述
                 /// </summary>
                 [JsonPropertyName("time_info")]
-                public string TimeInfo { get; set; }
+                public string? TimeInfo { get; set; }
 
 
             }
@@ -293,7 +293,7 @@ public partial class GetTicketSkuRuleResponse
             /// 退款规则
             /// </summary>
             [JsonPropertyName("refund_rules")]
-            public List<RefundRulesResponse> RefundRules { get; set; }
+            public List<RefundRulesResponse?>? RefundRules { get; set; }
 
             public partial class RefundRulesResponse
             {

@@ -6,7 +6,7 @@ public partial class GetLogisticsCompaniesResponse
     /// 返回的快递公司列表对象
     /// </summary>
     [JsonPropertyName("logistics_companies_get_response")]
-    public LogisticsCompaniesGetResponseResponse LogisticsCompaniesGetResponse { get; set; }
+    public LogisticsCompaniesGetResponseResponse? LogisticsCompaniesGetResponse { get; set; }
 
     public partial class LogisticsCompaniesGetResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class GetLogisticsCompaniesResponse
         /// 快递公司列表对象
         /// </summary>
         [JsonPropertyName("logistics_companies")]
-        public List<LogisticsCompaniesResponse> LogisticsCompanies { get; set; }
+        public List<LogisticsCompaniesResponse?>? LogisticsCompanies { get; set; }
 
         public partial class LogisticsCompaniesResponse
         {
@@ -36,13 +36,13 @@ public partial class GetLogisticsCompaniesResponse
             /// 快递公司名称
             /// </summary>
             [JsonPropertyName("logistics_company")]
-            public string LogisticsCompany { get; set; }
+            public string? LogisticsCompany { get; set; }
 
             /// <summary>
             /// 物流公司代码
             /// </summary>
             [JsonPropertyName("code")]
-            public string Code { get; set; }
+            public string? Code { get; set; }
 
 
         }

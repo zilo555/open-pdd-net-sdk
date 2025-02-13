@@ -23,7 +23,7 @@ public partial class CreateSmsVendorComplaint
     /// 短信下发时间(格式yyyy-MM-dd HH:mm:ss)
     /// </summary>
     [JsonPropertyName("deliver_time")]
-    public string DeliverTime { get; set; }
+    public string? DeliverTime { get; set; }
 
     /// <summary>
     /// 手机号码
@@ -47,7 +47,7 @@ public partial class CreateSmsVendorComplaint
     /// 短信投诉内容(不超过500个字)
     /// </summary>
     [JsonPropertyName("sms_content")]
-    public string SmsContent { get; set; }
+    public string? SmsContent { get; set; }
 
 
 

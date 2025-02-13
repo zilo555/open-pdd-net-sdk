@@ -6,7 +6,7 @@ public partial class SearchDdkOauthGoodsResponse
     /// response
     /// </summary>
     [JsonPropertyName("goods_search_response")]
-    public GoodsSearchResponseResponse GoodsSearchResponse { get; set; }
+    public GoodsSearchResponseResponse? GoodsSearchResponse { get; set; }
 
     public partial class GoodsSearchResponseResponse
     {
@@ -15,19 +15,19 @@ public partial class SearchDdkOauthGoodsResponse
         /// 商品列表
         /// </summary>
         [JsonPropertyName("goods_list")]
-        public List<GoodsListResponse> GoodsList { get; set; }
+        public List<GoodsListResponse?>? GoodsList { get; set; }
 
         /// <summary>
         /// 翻页时必填前页返回的list_id值
         /// </summary>
         [JsonPropertyName("list_id")]
-        public string ListId { get; set; }
+        public string? ListId { get; set; }
 
         /// <summary>
         /// 搜索id，建议生成推广链接时候填写，提高收益
         /// </summary>
         [JsonPropertyName("search_id")]
-        public string SearchId { get; set; }
+        public string? SearchId { get; set; }
 
         /// <summary>
         /// 返回商品总数
@@ -48,7 +48,7 @@ public partial class SearchDdkOauthGoodsResponse
             /// 商品活动标记数组，例：[4,7]，4-秒杀 7-百亿补贴等
             /// </summary>
             [JsonPropertyName("activity_tags")]
-            public List<int?> ActivityTags { get; set; }
+            public List<int?>? ActivityTags { get; set; }
 
             /// <summary>
             /// 活动类型，0-无活动;1-秒杀;3-限量折扣;12-限时折扣;13-大促活动;14-名品折扣;15-品牌清仓;16-食品超市;17-一元幸运团;18-爱逛街;19-时尚穿搭;20-男人帮;21-9块9;22-竞价活动;23-榜单活动;24-幸运半价购;25-定金预售;26-幸运人气购;27-特色主题活动;28-断码清仓;29-一元话费;30-电器城;31-每日好店;32-品牌卡;101-大促搜索池;102-大促品类分会场;
@@ -60,7 +60,7 @@ public partial class SearchDdkOauthGoodsResponse
             /// 商品品牌词信息，如“苹果”、“阿迪达斯”、“李宁”等
             /// </summary>
             [JsonPropertyName("brand_name")]
-            public string BrandName { get; set; }
+            public string? BrandName { get; set; }
 
             /// <summary>
             /// 全局礼金金额，单位分
@@ -72,13 +72,13 @@ public partial class SearchDdkOauthGoodsResponse
             /// 商品类目id
             /// </summary>
             [JsonPropertyName("cat_ids")]
-            public List<long?> CatIds { get; set; }
+            public List<long?>? CatIds { get; set; }
 
             /// <summary>
             /// 店铺收藏券id
             /// </summary>
             [JsonPropertyName("clt_cpn_batch_sn")]
-            public string CltCpnBatchSn { get; set; }
+            public string? CltCpnBatchSn { get; set; }
 
             /// <summary>
             /// 店铺收藏券面额,单位为分
@@ -162,7 +162,7 @@ public partial class SearchDdkOauthGoodsResponse
             /// 描述分
             /// </summary>
             [JsonPropertyName("desc_txt")]
-            public string DescTxt { get; set; }
+            public string? DescTxt { get; set; }
 
             /// <summary>
             /// 额外优惠券，单位为分
@@ -174,37 +174,37 @@ public partial class SearchDdkOauthGoodsResponse
             /// 商品描述
             /// </summary>
             [JsonPropertyName("goods_desc")]
-            public string GoodsDesc { get; set; }
+            public string? GoodsDesc { get; set; }
 
             /// <summary>
             /// 商品主图
             /// </summary>
             [JsonPropertyName("goods_image_url")]
-            public string GoodsImageUrl { get; set; }
+            public string? GoodsImageUrl { get; set; }
 
             /// <summary>
             /// 商品特殊标签列表。例: [1]，1-APP专享
             /// </summary>
             [JsonPropertyName("goods_labels")]
-            public List<int?> GoodsLabels { get; set; }
+            public List<int?>? GoodsLabels { get; set; }
 
             /// <summary>
             /// 商品名称
             /// </summary>
             [JsonPropertyName("goods_name")]
-            public string GoodsName { get; set; }
+            public string? GoodsName { get; set; }
 
             /// <summary>
             /// 商品goodsSign，支持通过goodsSign查询商品。goodsSign是加密后的goodsId, goodsId已下线，请使用goodsSign来替代。使用说明：https://jinbao.pinduoduo.com/qa-system?questionId=252
             /// </summary>
             [JsonPropertyName("goods_sign")]
-            public string GoodsSign { get; set; }
+            public string? GoodsSign { get; set; }
 
             /// <summary>
             /// 商品缩略图
             /// </summary>
             [JsonPropertyName("goods_thumbnail_url")]
-            public string GoodsThumbnailUrl { get; set; }
+            public string? GoodsThumbnailUrl { get; set; }
 
             /// <summary>
             /// 商品是否有优惠券 true-有，false-没有
@@ -234,7 +234,7 @@ public partial class SearchDdkOauthGoodsResponse
             /// 物流分
             /// </summary>
             [JsonPropertyName("lgst_txt")]
-            public string LgstTxt { get; set; }
+            public string? LgstTxt { get; set; }
 
             /// <summary>
             /// 店铺券折扣
@@ -300,7 +300,7 @@ public partial class SearchDdkOauthGoodsResponse
             /// 店铺名字
             /// </summary>
             [JsonPropertyName("mall_name")]
-            public string MallName { get; set; }
+            public string? MallName { get; set; }
 
             /// <summary>
             /// 店铺类型，1-个人，2-企业，3-旗舰店，4-专卖店，5-专营店，6-普通店
@@ -336,13 +336,13 @@ public partial class SearchDdkOauthGoodsResponse
             /// 商品标签id
             /// </summary>
             [JsonPropertyName("opt_ids")]
-            public List<long?> OptIds { get; set; }
+            public List<long?>? OptIds { get; set; }
 
             /// <summary>
             /// 商品标签名
             /// </summary>
             [JsonPropertyName("opt_name")]
-            public string OptName { get; set; }
+            public string? OptName { get; set; }
 
             /// <summary>
             /// 推广计划类型: 1-全店推广 2-单品推广 3-定向推广 4-招商推广 5-分销推广
@@ -366,25 +366,25 @@ public partial class SearchDdkOauthGoodsResponse
             /// 已售卖件数
             /// </summary>
             [JsonPropertyName("sales_tip")]
-            public string SalesTip { get; set; }
+            public string? SalesTip { get; set; }
 
             /// <summary>
             /// 搜索id，建议生成推广链接时候填写，提高收益
             /// </summary>
             [JsonPropertyName("search_id")]
-            public string SearchId { get; set; }
+            public string? SearchId { get; set; }
 
             /// <summary>
             /// 服务分
             /// </summary>
             [JsonPropertyName("serv_txt")]
-            public string ServTxt { get; set; }
+            public string? ServTxt { get; set; }
 
             /// <summary>
             /// 服务标签: 1-全场包邮,2-七天退换,3-退货包运费,4-送货入户并安装,5-送货入户,6-电子发票,7-诚信发货,8-缺重包赔,9-坏果包赔,10-果重保证,11-闪电退款,12-24小时发货,13-48小时发货,14-免税费,15-假一罚十,16-贴心服务,17-顺丰包邮,18-只换不修,19-全国联保,20-分期付款,21-纸质发票,22-上门安装,23-爱心助农,24-极速退款,25-品质保障,26-缺重包退,27-当日发货,28-可定制化,29-预约配送,30-商品进口,31-电器城,1000001-正品发票,1000002-送货入户并安装,2000001-价格保护
             /// </summary>
             [JsonPropertyName("service_tags")]
-            public List<long?> ServiceTags { get; set; }
+            public List<long?>? ServiceTags { get; set; }
 
             /// <summary>
             /// 招商分成服务费比例，千分比
@@ -414,7 +414,7 @@ public partial class SearchDdkOauthGoodsResponse
             /// 优惠标签列表，包括："X元券","比全网低X元","服务费","精选素材","近30天低价","同款低价","同款好评","同款热销","旗舰店","一降到底","招商优选","商家优选","好价再降X元","全站销量XX","实时热销榜第X名","实时好评榜第X名","额外补X元"等
             /// </summary>
             [JsonPropertyName("unified_tags")]
-            public List<string> UnifiedTags { get; set; }
+            public List<string?>? UnifiedTags { get; set; }
 
             /// <summary>
             /// 招商团长id

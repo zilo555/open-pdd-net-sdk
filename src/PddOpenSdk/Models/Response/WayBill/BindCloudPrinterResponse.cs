@@ -6,7 +6,7 @@ public partial class BindCloudPrinterResponse
     /// 
     /// </summary>
     [JsonPropertyName("cloud_printer_bind_response")]
-    public CloudPrinterBindResponseResponse CloudPrinterBindResponse { get; set; }
+    public CloudPrinterBindResponseResponse? CloudPrinterBindResponse { get; set; }
 
     public partial class CloudPrinterBindResponseResponse
     {
@@ -21,13 +21,13 @@ public partial class BindCloudPrinterResponse
         /// 
         /// </summary>
         [JsonPropertyName("errorMsg")]
-        public string ErrorMsg { get; set; }
+        public string? ErrorMsg { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [JsonPropertyName("result")]
-        public ResultResponse Result { get; set; }
+        public ResultResponse? Result { get; set; }
 
         /// <summary>
         /// 
@@ -48,7 +48,7 @@ public partial class BindCloudPrinterResponse
             /// 
             /// </summary>
             [JsonPropertyName("shareCode")]
-            public string ShareCode { get; set; }
+            public string? ShareCode { get; set; }
 
 
         }

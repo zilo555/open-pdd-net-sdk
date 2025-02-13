@@ -6,7 +6,7 @@ public partial class AuthDdkGoodsPromotionRightResponse
     /// 返回结果
     /// </summary>
     [JsonPropertyName("goods_promotion_right_auth_response")]
-    public GoodsPromotionRightAuthResponseResponse GoodsPromotionRightAuthResponse { get; set; }
+    public GoodsPromotionRightAuthResponseResponse? GoodsPromotionRightAuthResponse { get; set; }
 
     public partial class GoodsPromotionRightAuthResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class AuthDdkGoodsPromotionRightResponse
         /// 备案失败原因
         /// </summary>
         [JsonPropertyName("reason")]
-        public string Reason { get; set; }
+        public string? Reason { get; set; }
 
         /// <summary>
         /// 备案结果

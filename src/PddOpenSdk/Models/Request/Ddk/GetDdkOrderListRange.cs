@@ -17,7 +17,7 @@ public partial class GetDdkOrderListRange
     /// 上一次的迭代器id(第一次不填)
     /// </summary>
     [JsonPropertyName("last_order_id")]
-    public string LastOrderId { get; set; }
+    public string? LastOrderId { get; set; }
 
     /// <summary>
     /// 每次请求多少条，建议300

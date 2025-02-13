@@ -6,7 +6,7 @@ public partial class AgreeRefundReturngoodsResponse
     /// 返回结果
     /// </summary>
     [JsonPropertyName("response")]
-    public ResponseResponse Response { get; set; }
+    public ResponseResponse? Response { get; set; }
 
     public partial class ResponseResponse
     {
@@ -21,13 +21,13 @@ public partial class AgreeRefundReturngoodsResponse
         /// 接口调用错误描述
         /// </summary>
         [JsonPropertyName("error_msg")]
-        public string ErrorMsg { get; set; }
+        public string? ErrorMsg { get; set; }
 
         /// <summary>
         /// 返回内容
         /// </summary>
         [JsonPropertyName("result")]
-        public ResultResponse Result { get; set; }
+        public ResultResponse? Result { get; set; }
 
         /// <summary>
         /// 接口是否调用成功
@@ -48,13 +48,13 @@ public partial class AgreeRefundReturngoodsResponse
             /// 退货是否成功描述
             /// </summary>
             [JsonPropertyName("message")]
-            public string Message { get; set; }
+            public string? Message { get; set; }
 
             /// <summary>
             /// 订单号
             /// </summary>
             [JsonPropertyName("order_sn")]
-            public string OrderSn { get; set; }
+            public string? OrderSn { get; set; }
 
             /// <summary>
             /// 退货是否成功

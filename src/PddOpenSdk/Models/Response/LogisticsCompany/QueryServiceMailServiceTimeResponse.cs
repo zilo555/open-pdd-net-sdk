@@ -6,7 +6,7 @@ public partial class QueryServiceMailServiceTimeResponse
     /// 
     /// </summary>
     [JsonPropertyName("response")]
-    public ResponseResponse Response { get; set; }
+    public ResponseResponse? Response { get; set; }
 
     public partial class ResponseResponse
     {
@@ -27,19 +27,19 @@ public partial class QueryServiceMailServiceTimeResponse
         /// 
         /// </summary>
         [JsonPropertyName("errorMsg")]
-        public string ErrorMsg { get; set; }
+        public string? ErrorMsg { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [JsonPropertyName("serviceTimes")]
-        public List<ServiceTimesResponse> ServiceTimes { get; set; }
+        public List<ServiceTimesResponse?>? ServiceTimes { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [JsonPropertyName("serviceOptions")]
-        public ServiceOptionsResponse ServiceOptions { get; set; }
+        public ServiceOptionsResponse? ServiceOptions { get; set; }
 
         public partial class ServiceTimesResponse
         {
@@ -48,19 +48,19 @@ public partial class QueryServiceMailServiceTimeResponse
             /// 开始服务时间
             /// </summary>
             [JsonPropertyName("startTime")]
-            public string StartTime { get; set; }
+            public string? StartTime { get; set; }
 
             /// <summary>
             /// 结束服务时间
             /// </summary>
             [JsonPropertyName("endTime")]
-            public string EndTime { get; set; }
+            public string? EndTime { get; set; }
 
             /// <summary>
             /// 服务日期
             /// </summary>
             [JsonPropertyName("serviceDate")]
-            public string ServiceDate { get; set; }
+            public string? ServiceDate { get; set; }
 
 
         }

@@ -6,7 +6,7 @@ public partial class GetLogisticsCsHistoryMessageResponse
     /// response
     /// </summary>
     [JsonPropertyName("logistics_cs_history_message_get_response")]
-    public LogisticsCsHistoryMessageGetResponseResponse LogisticsCsHistoryMessageGetResponse { get; set; }
+    public LogisticsCsHistoryMessageGetResponseResponse? LogisticsCsHistoryMessageGetResponse { get; set; }
 
     public partial class LogisticsCsHistoryMessageGetResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class GetLogisticsCsHistoryMessageResponse
         /// 消息列表
         /// </summary>
         [JsonPropertyName("message_infos")]
-        public List<MessageInfosResponse> MessageInfos { get; set; }
+        public List<MessageInfosResponse?>? MessageInfos { get; set; }
 
         public partial class MessageInfosResponse
         {
@@ -30,7 +30,7 @@ public partial class GetLogisticsCsHistoryMessageResponse
             /// 消息时间戳,样式YYYY-MM-DD HH:MM:SS
             /// </summary>
             [JsonPropertyName("msg_ts")]
-            public string MsgTs { get; set; }
+            public string? MsgTs { get; set; }
 
             /// <summary>
             /// 0为用户 1为机器人
@@ -42,7 +42,7 @@ public partial class GetLogisticsCsHistoryMessageResponse
             /// 聊天内容，如果是图片的话，则是图片的url
             /// </summary>
             [JsonPropertyName("text")]
-            public string Text { get; set; }
+            public string? Text { get; set; }
 
 
         }

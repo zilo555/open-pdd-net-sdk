@@ -6,7 +6,7 @@ public partial class GetGoodsSpecResponse
     /// response
     /// </summary>
     [JsonPropertyName("goods_spec_get_response")]
-    public GoodsSpecGetResponseResponse GoodsSpecGetResponse { get; set; }
+    public GoodsSpecGetResponseResponse? GoodsSpecGetResponse { get; set; }
 
     public partial class GoodsSpecGetResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class GetGoodsSpecResponse
         /// 规格列表对象
         /// </summary>
         [JsonPropertyName("goods_spec_list")]
-        public List<GoodsSpecListResponse> GoodsSpecList { get; set; }
+        public List<GoodsSpecListResponse?>? GoodsSpecList { get; set; }
 
         public partial class GoodsSpecListResponse
         {
@@ -36,7 +36,7 @@ public partial class GetGoodsSpecResponse
             /// 商品规格ID对应的规格名称
             /// </summary>
             [JsonPropertyName("parent_spec_name")]
-            public string ParentSpecName { get; set; }
+            public string? ParentSpecName { get; set; }
 
 
         }

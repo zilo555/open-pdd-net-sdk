@@ -6,7 +6,7 @@ public partial class UpdateGoodsSkuPriceResponse
     /// response
     /// </summary>
     [JsonPropertyName("goods_update_sku_price_response")]
-    public GoodsUpdateSkuPriceResponseResponse GoodsUpdateSkuPriceResponse { get; set; }
+    public GoodsUpdateSkuPriceResponseResponse? GoodsUpdateSkuPriceResponse { get; set; }
 
     public partial class GoodsUpdateSkuPriceResponseResponse
     {

@@ -35,7 +35,7 @@ public partial class CreateKttPurchaseGoods
             /// 商品描述，不能超过2000字
             /// </summary>
             [JsonPropertyName("goods_desc")]
-            public string GoodsDesc { get; set; }
+            public string? GoodsDesc { get; set; }
 
             /// <summary>
             /// 商品名称，不能超过100字
@@ -65,7 +65,7 @@ public partial class CreateKttPurchaseGoods
             /// 视频列表，最多1个
             /// </summary>
             [JsonPropertyName("video_urls")]
-            public List<string> VideoUrls { get; set; }
+            public List<string?>? VideoUrls { get; set; }
 
 
             public partial class GoodsPropertyInfoModel
@@ -91,7 +91,7 @@ public partial class CreateKttPurchaseGoods
                 /// sku货号，不能超过30个字
                 /// </summary>
                 [JsonPropertyName("external_sku_id")]
-                public string ExternalSkuId { get; set; }
+                public string? ExternalSkuId { get; set; }
 
                 /// <summary>
                 /// 团购价（单位：分），范围 1 - 50000000
@@ -121,7 +121,7 @@ public partial class CreateKttPurchaseGoods
                 /// sku图
                 /// </summary>
                 [JsonPropertyName("thumb_url")]
-                public string ThumbUrl { get; set; }
+                public string? ThumbUrl { get; set; }
 
                 /// <summary>
                 /// 总库存，范围 0 - 99999999

@@ -6,7 +6,7 @@ public partial class GenerateDdkRpPromUrlResponse
     /// 推广链接返回对象
     /// </summary>
     [JsonPropertyName("rp_promotion_url_generate_response")]
-    public RpPromotionUrlGenerateResponseResponse RpPromotionUrlGenerateResponse { get; set; }
+    public RpPromotionUrlGenerateResponseResponse? RpPromotionUrlGenerateResponse { get; set; }
 
     public partial class RpPromotionUrlGenerateResponseResponse
     {
@@ -15,13 +15,13 @@ public partial class GenerateDdkRpPromUrlResponse
         /// resource_list
         /// </summary>
         [JsonPropertyName("resource_list")]
-        public List<ResourceListResponse> ResourceList { get; set; }
+        public List<ResourceListResponse?>? ResourceList { get; set; }
 
         /// <summary>
         /// url_list
         /// </summary>
         [JsonPropertyName("url_list")]
-        public List<UrlListResponse> UrlList { get; set; }
+        public List<UrlListResponse?>? UrlList { get; set; }
 
         public partial class ResourceListResponse
         {
@@ -30,13 +30,13 @@ public partial class GenerateDdkRpPromUrlResponse
             /// 活动描述
             /// </summary>
             [JsonPropertyName("desc")]
-            public string Desc { get; set; }
+            public string? Desc { get; set; }
 
             /// <summary>
             /// 活动地址
             /// </summary>
             [JsonPropertyName("url")]
-            public string Url { get; set; }
+            public string? Url { get; set; }
 
 
         }
@@ -47,79 +47,79 @@ public partial class GenerateDdkRpPromUrlResponse
             /// 推广移动短链接，对应出参mobile_url的短链接，与mobile_url功能一致。
             /// </summary>
             [JsonPropertyName("mobile_short_url")]
-            public string MobileShortUrl { get; set; }
+            public string? MobileShortUrl { get; set; }
 
             /// <summary>
             /// 推广移动链接，用户安装拼多多APP的情况下会唤起APP，否则唤起H5页面
             /// </summary>
             [JsonPropertyName("mobile_url")]
-            public string MobileUrl { get; set; }
+            public string? MobileUrl { get; set; }
 
             /// <summary>
             /// 推广多人团移动短链接
             /// </summary>
             [JsonPropertyName("multi_group_mobile_short_url")]
-            public string MultiGroupMobileShortUrl { get; set; }
+            public string? MultiGroupMobileShortUrl { get; set; }
 
             /// <summary>
             /// 推广多人团移动链接，用户安装拼多多APP的情况下会唤起APP，否则唤起H5页面
             /// </summary>
             [JsonPropertyName("multi_group_mobile_url")]
-            public string MultiGroupMobileUrl { get; set; }
+            public string? MultiGroupMobileUrl { get; set; }
 
             /// <summary>
             /// 推广多人团短链接
             /// </summary>
             [JsonPropertyName("multi_group_short_url")]
-            public string MultiGroupShortUrl { get; set; }
+            public string? MultiGroupShortUrl { get; set; }
 
             /// <summary>
             /// 推广多人团链接，唤起H5页面
             /// </summary>
             [JsonPropertyName("multi_group_url")]
-            public string MultiGroupUrl { get; set; }
+            public string? MultiGroupUrl { get; set; }
 
             /// <summary>
             /// qq小程序信息
             /// </summary>
             [JsonPropertyName("qq_app_info")]
-            public QqAppInfoResponse QqAppInfo { get; set; }
+            public QqAppInfoResponse? QqAppInfo { get; set; }
 
             /// <summary>
             /// schema链接，用户安装拼多多APP的情况下会唤起APP（需客户端支持schema跳转协议）
             /// </summary>
             [JsonPropertyName("schema_url")]
-            public string SchemaUrl { get; set; }
+            public string? SchemaUrl { get; set; }
 
             /// <summary>
             /// 推广短链接，对应出参url的短链接，与url功能一致
             /// </summary>
             [JsonPropertyName("short_url")]
-            public string ShortUrl { get; set; }
+            public string? ShortUrl { get; set; }
 
             /// <summary>
             /// 使用此推广链接，用户安装多多团长APP的情况下会唤起APP（需客户端支持schema跳转协议）
             /// </summary>
             [JsonPropertyName("tz_schema_url")]
-            public string TzSchemaUrl { get; set; }
+            public string? TzSchemaUrl { get; set; }
 
             /// <summary>
             /// 普通推广长链接，唤起H5页面
             /// </summary>
             [JsonPropertyName("url")]
-            public string Url { get; set; }
+            public string? Url { get; set; }
 
             /// <summary>
             /// 拼多多福利券微信小程序信息
             /// </summary>
             [JsonPropertyName("we_app_info")]
-            public WeAppInfoResponse WeAppInfo { get; set; }
+            public WeAppInfoResponse? WeAppInfo { get; set; }
 
             /// <summary>
             /// 微信shortLink，该字段支持超红c端活动页、超红二合一、b端推品页，单个渠道每天生成的shortLink数量有限，请合理生成shortLink链接
             /// </summary>
             [JsonPropertyName("weixin_short_link")]
-            public string WeixinShortLink { get; set; }
+            public string? WeixinShortLink { get; set; }
 
             public partial class QqAppInfoResponse
             {
@@ -128,49 +128,49 @@ public partial class GenerateDdkRpPromUrlResponse
                 /// 拼多多小程序id
                 /// </summary>
                 [JsonPropertyName("app_id")]
-                public string AppId { get; set; }
+                public string? AppId { get; set; }
 
                 /// <summary>
                 /// Banner图
                 /// </summary>
                 [JsonPropertyName("banner_url")]
-                public string BannerUrl { get; set; }
+                public string? BannerUrl { get; set; }
 
                 /// <summary>
                 /// 描述
                 /// </summary>
                 [JsonPropertyName("desc")]
-                public string Desc { get; set; }
+                public string? Desc { get; set; }
 
                 /// <summary>
                 /// 小程序path值
                 /// </summary>
                 [JsonPropertyName("page_path")]
-                public string PagePath { get; set; }
+                public string? PagePath { get; set; }
 
                 /// <summary>
                 /// 小程序icon
                 /// </summary>
                 [JsonPropertyName("qq_app_icon_url")]
-                public string QqAppIconUrl { get; set; }
+                public string? QqAppIconUrl { get; set; }
 
                 /// <summary>
                 /// 来源名
                 /// </summary>
                 [JsonPropertyName("source_display_name")]
-                public string SourceDisplayName { get; set; }
+                public string? SourceDisplayName { get; set; }
 
                 /// <summary>
                 /// 小程序标题
                 /// </summary>
                 [JsonPropertyName("title")]
-                public string Title { get; set; }
+                public string? Title { get; set; }
 
                 /// <summary>
                 /// 用户名
                 /// </summary>
                 [JsonPropertyName("user_name")]
-                public string UserName { get; set; }
+                public string? UserName { get; set; }
 
 
             }
@@ -181,49 +181,49 @@ public partial class GenerateDdkRpPromUrlResponse
                 /// 小程序id
                 /// </summary>
                 [JsonPropertyName("app_id")]
-                public string AppId { get; set; }
+                public string? AppId { get; set; }
 
                 /// <summary>
                 /// Banner图
                 /// </summary>
                 [JsonPropertyName("banner_url")]
-                public string BannerUrl { get; set; }
+                public string? BannerUrl { get; set; }
 
                 /// <summary>
                 /// 描述
                 /// </summary>
                 [JsonPropertyName("desc")]
-                public string Desc { get; set; }
+                public string? Desc { get; set; }
 
                 /// <summary>
                 /// 小程序path值
                 /// </summary>
                 [JsonPropertyName("page_path")]
-                public string PagePath { get; set; }
+                public string? PagePath { get; set; }
 
                 /// <summary>
                 /// 来源名
                 /// </summary>
                 [JsonPropertyName("source_display_name")]
-                public string SourceDisplayName { get; set; }
+                public string? SourceDisplayName { get; set; }
 
                 /// <summary>
                 /// 小程序标题
                 /// </summary>
                 [JsonPropertyName("title")]
-                public string Title { get; set; }
+                public string? Title { get; set; }
 
                 /// <summary>
                 /// 用户名
                 /// </summary>
                 [JsonPropertyName("user_name")]
-                public string UserName { get; set; }
+                public string? UserName { get; set; }
 
                 /// <summary>
                 /// 小程序icon
                 /// </summary>
                 [JsonPropertyName("we_app_icon_url")]
-                public string WeAppIconUrl { get; set; }
+                public string? WeAppIconUrl { get; set; }
 
 
             }

@@ -11,7 +11,7 @@ public partial class GenerateDdkGoodsPid
     /// 推广位名称，例如["1","2"]
     /// </summary>
     [JsonPropertyName("p_id_name_list")]
-    public List<string> PIdNameList { get; set; }
+    public List<string?>? PIdNameList { get; set; }
 
     /// <summary>
     /// 媒体id

@@ -188,12 +188,12 @@ public class PddApiDocHelper
                         }
                         var docDetail = await GetDocDetailByIdAsync(pddDocInfo.Id);
                         methodsContent += BuildRequestMethod(docDetail, className);
-                        System.Console.WriteLine($"[{totalNumber}]" + docDetail.ScopeName + "...✅");
+                        System.Console.WriteLine($"✅ [{totalNumber}]" + docDetail.ScopeName);
                     }
                     SaveApiClass(className, methodsContent);
                 }
             });
-            System.Console.WriteLine("Get All " + totalNumber + " Api ✅");
+            System.Console.WriteLine("✅ Get All " + totalNumber + " Api");
         }
     }
 

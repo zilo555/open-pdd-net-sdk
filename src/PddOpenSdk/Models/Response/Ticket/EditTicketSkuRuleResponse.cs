@@ -6,7 +6,7 @@ public partial class EditTicketSkuRuleResponse
     /// 
     /// </summary>
     [JsonPropertyName("response")]
-    public ResponseResponse Response { get; set; }
+    public ResponseResponse? Response { get; set; }
 
     public partial class ResponseResponse
     {
@@ -15,13 +15,13 @@ public partial class EditTicketSkuRuleResponse
         /// 规则 ID
         /// </summary>
         [JsonPropertyName("rule_id")]
-        public string RuleId { get; set; }
+        public string? RuleId { get; set; }
 
         /// <summary>
         /// 版本
         /// </summary>
         [JsonPropertyName("rule_version")]
-        public string RuleVersion { get; set; }
+        public string? RuleVersion { get; set; }
 
 
     }

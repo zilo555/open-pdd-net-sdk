@@ -20,7 +20,7 @@ public partial class DeliveryKttPurchaseSampleOrder
         /// 物流公司名
         /// </summary>
         [JsonPropertyName("logistics_name")]
-        public string LogisticsName { get; set; }
+        public string? LogisticsName { get; set; }
 
         /// <summary>
         /// 订单号

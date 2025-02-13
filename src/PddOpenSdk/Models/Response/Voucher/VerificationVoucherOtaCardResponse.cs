@@ -6,7 +6,7 @@ public partial class VerificationVoucherOtaCardResponse
     /// 
     /// </summary>
     [JsonPropertyName("voucher_ota_card_verification_response")]
-    public VoucherOtaCardVerificationResponseResponse VoucherOtaCardVerificationResponse { get; set; }
+    public VoucherOtaCardVerificationResponseResponse? VoucherOtaCardVerificationResponse { get; set; }
 
     public partial class VoucherOtaCardVerificationResponseResponse
     {
@@ -21,13 +21,13 @@ public partial class VerificationVoucherOtaCardResponse
         /// 
         /// </summary>
         [JsonPropertyName("errorMsg")]
-        public string ErrorMsg { get; set; }
+        public string? ErrorMsg { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [JsonPropertyName("result")]
-        public ResultResponse Result { get; set; }
+        public ResultResponse? Result { get; set; }
 
         /// <summary>
         /// 
@@ -42,7 +42,7 @@ public partial class VerificationVoucherOtaCardResponse
             /// 券码
             /// </summary>
             [JsonPropertyName("card_no")]
-            public string CardNo { get; set; }
+            public string? CardNo { get; set; }
 
             /// <summary>
             /// 店铺编码
@@ -54,7 +54,7 @@ public partial class VerificationVoucherOtaCardResponse
             /// 订单号
             /// </summary>
             [JsonPropertyName("order_sn")]
-            public string OrderSn { get; set; }
+            public string? OrderSn { get; set; }
 
             /// <summary>
             /// 核销状态（1-未核销，2-已核销， 3-已过期，4-已销毁，99-核销中）
@@ -72,13 +72,13 @@ public partial class VerificationVoucherOtaCardResponse
             /// 门店名称
             /// </summary>
             [JsonPropertyName("store_name")]
-            public string StoreName { get; set; }
+            public string? StoreName { get; set; }
 
             /// <summary>
             /// 核销时间（yyyy-MM-dd HH:mm:ss格式）
             /// </summary>
             [JsonPropertyName("verification_time")]
-            public string VerificationTime { get; set; }
+            public string? VerificationTime { get; set; }
 
 
         }

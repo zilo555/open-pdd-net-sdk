@@ -137,6 +137,16 @@ public class DdkToolsApi : PddCommonApi
     }
 
     /// <summary>
+    /// 按照更新时间段增量同步推广订单信息
+    /// </summary>
+
+    public async Task<GetDdkOauthOrderListIncrementResponse> GetDdkOauthOrderListIncrementAsync(GetDdkOauthOrderListIncrement getDdkOauthOrderListIncrement)
+    {
+        var result = await PostAsync<GetDdkOauthOrderListIncrement, GetDdkOauthOrderListIncrementResponse>("pdd.ddk.oauth.order.list.increment.get", getDdkOauthOrderListIncrement);
+        return result;
+    }
+
+    /// <summary>
     /// 批量绑定推广位的媒体id
     /// </summary>
 

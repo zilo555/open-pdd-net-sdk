@@ -6,7 +6,7 @@ public partial class LogisticsOrderUploadExtraResponse
     /// 
     /// </summary>
     [JsonPropertyName("upload_extra_logistics_response")]
-    public UploadExtraLogisticsResponseResponse UploadExtraLogisticsResponse { get; set; }
+    public UploadExtraLogisticsResponseResponse? UploadExtraLogisticsResponse { get; set; }
 
     public partial class UploadExtraLogisticsResponseResponse
     {

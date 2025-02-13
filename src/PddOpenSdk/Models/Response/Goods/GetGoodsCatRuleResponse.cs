@@ -6,7 +6,7 @@ public partial class GetGoodsCatRuleResponse
     /// 类目规则
     /// </summary>
     [JsonPropertyName("cat_rule_get_response")]
-    public CatRuleGetResponseResponse CatRuleGetResponse { get; set; }
+    public CatRuleGetResponseResponse? CatRuleGetResponse { get; set; }
 
     public partial class CatRuleGetResponseResponse
     {
@@ -15,31 +15,31 @@ public partial class GetGoodsCatRuleResponse
         /// 商品属性规则
         /// </summary>
         [JsonPropertyName("goods_properties_rule")]
-        public GoodsPropertiesRuleResponse GoodsPropertiesRule { get; set; }
+        public GoodsPropertiesRuleResponse? GoodsPropertiesRule { get; set; }
 
         /// <summary>
         /// 商品服务规则
         /// </summary>
         [JsonPropertyName("goods_service_rule")]
-        public GoodsServiceRuleResponse GoodsServiceRule { get; set; }
+        public GoodsServiceRuleResponse? GoodsServiceRule { get; set; }
 
         /// <summary>
         /// sku规则
         /// </summary>
         [JsonPropertyName("goods_sku_rule")]
-        public GoodsSkuRuleResponse GoodsSkuRule { get; set; }
+        public GoodsSkuRuleResponse? GoodsSkuRule { get; set; }
 
         /// <summary>
         /// 标品规则
         /// </summary>
         [JsonPropertyName("spu_rule")]
-        public SpuRuleResponse SpuRule { get; set; }
+        public SpuRuleResponse? SpuRule { get; set; }
 
         /// <summary>
         /// 满2件折扣相关规则
         /// </summary>
         [JsonPropertyName("two_pieces_discount_rule")]
-        public TwoPiecesDiscountRuleResponse TwoPiecesDiscountRule { get; set; }
+        public TwoPiecesDiscountRuleResponse? TwoPiecesDiscountRule { get; set; }
 
         public partial class GoodsPropertiesRuleResponse
         {
@@ -60,7 +60,7 @@ public partial class GetGoodsCatRuleResponse
             /// 属性信息
             /// </summary>
             [JsonPropertyName("properties")]
-            public List<PropertiesResponse> Properties { get; set; }
+            public List<PropertiesResponse?>? Properties { get; set; }
 
             public partial class PropertiesResponse
             {
@@ -105,19 +105,19 @@ public partial class GetGoodsCatRuleResponse
                 /// 最大值。在不同的属性值类型下有不同的含义。  文本类型时，代表文本最大长度；  数值类型时，代表数字最大值；  时间类型且最大值为时间时，代表时间最大值；  时间类型且最大值为数字时，代表距离今天或者本月往后的天数或月数。
                 /// </summary>
                 [JsonPropertyName("max_value")]
-                public string MaxValue { get; set; }
+                public string? MaxValue { get; set; }
 
                 /// <summary>
                 /// 最小值。在不同的属性值类型下有不同的含义。  文本类型时，代表文本最小长度；  数值类型时，代表数字最小值；  时间类型且最小值为时间时，代表时间最小值；  时间类型且最小值为数字时，代表距离今天或者本月往前的天数或月数。
                 /// </summary>
                 [JsonPropertyName("min_value")]
-                public string MinValue { get; set; }
+                public string? MinValue { get; set; }
 
                 /// <summary>
                 /// 属性名称
                 /// </summary>
                 [JsonPropertyName("name")]
-                public string Name { get; set; }
+                public string? Name { get; set; }
 
                 /// <summary>
                 /// 销售属性对应的父规格id。
@@ -147,7 +147,7 @@ public partial class GetGoodsCatRuleResponse
                 /// 必填规则具体内容，当required=true且required_rule_type=1时该字段有效，表示当出现哪些属性/属性值时，该属性需要必填，json格式，两层List结构，外层list代表"或"关系，内层list代表"且"关系，例如：[[{\"ref_pid\":123,\"vid\":123}]]
                 /// </summary>
                 [JsonPropertyName("required_rule")]
-                public string RequiredRule { get; set; }
+                public string? RequiredRule { get; set; }
 
                 /// <summary>
                 /// required=true时，该字段有效，为“0”时表示当前属性必填，不受其他属性影响，为“1”时表示当前属性是否必填由已填写的其他属性值决定
@@ -159,7 +159,7 @@ public partial class GetGoodsCatRuleResponse
                 /// 该属性的父属性。只有parent_pid下的show_vids中的值被选择时才可入参该属性。有多组父属性时，为且的关系。
                 /// </summary>
                 [JsonPropertyName("show_condition")]
-                public List<ShowConditionResponse> ShowCondition { get; set; }
+                public List<ShowConditionResponse?>? ShowCondition { get; set; }
 
                 /// <summary>
                 /// 小数点允许最大精度，为0时代表不允许输入小数。对数值类属性值限制。
@@ -171,13 +171,13 @@ public partial class GetGoodsCatRuleResponse
                 /// 可选属性值单位，发商品填写自定义数值属性值时，选择其中之一作为单位。
                 /// </summary>
                 [JsonPropertyName("value_unit")]
-                public List<string> ValueUnit { get; set; }
+                public List<string?>? ValueUnit { get; set; }
 
                 /// <summary>
                 /// 属性值列表
                 /// </summary>
                 [JsonPropertyName("values")]
-                public List<ValuesResponse> Values { get; set; }
+                public List<ValuesResponse?>? Values { get; set; }
 
                 public partial class ShowConditionResponse
                 {
@@ -192,7 +192,7 @@ public partial class GetGoodsCatRuleResponse
                     /// 父属性值id。多个值任选其一即可。若为空表示任意值都可以。
                     /// </summary>
                     [JsonPropertyName("parent_vids")]
-                    public List<long?> ParentVids { get; set; }
+                    public List<long?>? ParentVids { get; set; }
 
 
                 }
@@ -203,19 +203,19 @@ public partial class GetGoodsCatRuleResponse
                     /// 扩展信息，表示颜色的色号。格式为ARGB
                     /// </summary>
                     [JsonPropertyName("extend_info")]
-                    public string ExtendInfo { get; set; }
+                    public string? ExtendInfo { get; set; }
 
                     /// <summary>
                     /// 分组信息
                     /// </summary>
                     [JsonPropertyName("group")]
-                    public GroupResponse Group { get; set; }
+                    public GroupResponse? Group { get; set; }
 
                     /// <summary>
                     /// 表示对应父属性值id。当其中父属性值被选中时该子属性值才可选。为空则表示无此限制。
                     /// </summary>
                     [JsonPropertyName("parent_vids")]
-                    public List<long?> ParentVids { get; set; }
+                    public List<long?>? ParentVids { get; set; }
 
                     /// <summary>
                     /// 规格id，发商品时需要和sku上的spec对应。
@@ -227,7 +227,7 @@ public partial class GetGoodsCatRuleResponse
                     /// 属性值
                     /// </summary>
                     [JsonPropertyName("value")]
-                    public string Value { get; set; }
+                    public string? Value { get; set; }
 
                     /// <summary>
                     /// 基础属性值id
@@ -248,7 +248,7 @@ public partial class GetGoodsCatRuleResponse
                         /// 组名称
                         /// </summary>
                         [JsonPropertyName("name")]
-                        public string Name { get; set; }
+                        public string? Name { get; set; }
 
 
                     }
@@ -265,13 +265,13 @@ public partial class GetGoodsCatRuleResponse
             /// 
             /// </summary>
             [JsonPropertyName("goods_service_rule_map")]
-            public Dictionary<string, object> GoodsServiceRuleMap { get; set; }
+            public Dictionary<string, object>? GoodsServiceRuleMap { get; set; }
 
             /// <summary>
             /// 可选的商品类型列表
             /// </summary>
             [JsonPropertyName("goods_type_list")]
-            public List<int?> GoodsTypeList { get; set; }
+            public List<int?>? GoodsTypeList { get; set; }
 
             public partial class GoodsServiceRuleMapResponse
             {
@@ -280,13 +280,13 @@ public partial class GetGoodsCatRuleResponse
                 /// 商品类型
                 /// </summary>
                 [JsonPropertyName("$key")]
-                public string Key { get; set; }
+                public string? Key { get; set; }
 
                 /// <summary>
                 /// 
                 /// </summary>
                 [JsonPropertyName("$value")]
-                public ValueResponse Value { get; set; }
+                public ValueResponse? Value { get; set; }
 
                 public partial class ValueResponse
                 {
@@ -337,7 +337,7 @@ public partial class GetGoodsCatRuleResponse
                     /// 可选承诺发货时间列表，单位：秒
                     /// </summary>
                     [JsonPropertyName("shipment_limit_second_list")]
-                    public List<int?> ShipmentLimitSecondList { get; set; }
+                    public List<int?>? ShipmentLimitSecondList { get; set; }
 
                     /// <summary>
                     /// 只换不修规则：0不可选、1可选
@@ -387,7 +387,7 @@ public partial class GetGoodsCatRuleResponse
             /// 关键属性
             /// </summary>
             [JsonPropertyName("key_prop")]
-            public List<KeyPropResponse> KeyProp { get; set; }
+            public List<KeyPropResponse?>? KeyProp { get; set; }
 
             public partial class KeyPropResponse
             {
@@ -396,7 +396,7 @@ public partial class GetGoodsCatRuleResponse
                 /// 关键属性名
                 /// </summary>
                 [JsonPropertyName("pname")]
-                public string Pname { get; set; }
+                public string? Pname { get; set; }
 
                 /// <summary>
                 /// 关键属性id

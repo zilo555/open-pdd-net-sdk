@@ -6,7 +6,7 @@ public partial class NotifycationTicketVerificationResponse
     /// 错误码
     /// </summary>
     [JsonPropertyName("response")]
-    public ResponseResponse Response { get; set; }
+    public ResponseResponse? Response { get; set; }
 
     public partial class ResponseResponse
     {

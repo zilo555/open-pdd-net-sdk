@@ -6,7 +6,7 @@ public partial class NotifyVirtualMobileChargeResponse
     /// 虚拟充值回调通知响应对象
     /// </summary>
     [JsonPropertyName("mobile_charge_notify_response")]
-    public MobileChargeNotifyResponseResponse MobileChargeNotifyResponse { get; set; }
+    public MobileChargeNotifyResponseResponse? MobileChargeNotifyResponse { get; set; }
 
     public partial class MobileChargeNotifyResponseResponse
     {

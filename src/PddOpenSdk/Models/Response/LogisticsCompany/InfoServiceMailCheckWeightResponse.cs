@@ -6,7 +6,7 @@ public partial class InfoServiceMailCheckWeightResponse
     /// 返回结果
     /// </summary>
     [JsonPropertyName("response")]
-    public ResponseResponse Response { get; set; }
+    public ResponseResponse? Response { get; set; }
 
     public partial class ResponseResponse
     {
@@ -21,7 +21,7 @@ public partial class InfoServiceMailCheckWeightResponse
         /// 错误信息
         /// </summary>
         [JsonPropertyName("errorMsg")]
-        public string ErrorMsg { get; set; }
+        public string? ErrorMsg { get; set; }
 
         /// <summary>
         /// 同步结果

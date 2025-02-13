@@ -6,7 +6,7 @@ public partial class CancelPmcUserResponse
     /// response
     /// </summary>
     [JsonPropertyName("tmc_user_cancel_response")]
-    public TmcUserCancelResponseResponse TmcUserCancelResponse { get; set; }
+    public TmcUserCancelResponseResponse? TmcUserCancelResponse { get; set; }
 
     public partial class TmcUserCancelResponseResponse
     {

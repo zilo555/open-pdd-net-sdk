@@ -6,13 +6,13 @@ public partial class GetPromotionLimitedQualifiedSkuResponse
     /// 不可选sku列表
     /// </summary>
     [JsonPropertyName("in_valid_sku_List")]
-    public List<InValidSkuListResponse> InValidSkuList { get; set; }
+    public List<InValidSkuListResponse?>? InValidSkuList { get; set; }
 
     /// <summary>
     /// 可选sku列表
     /// </summary>
     [JsonPropertyName("valid_sku_list")]
-    public List<ValidSkuListResponse> ValidSkuList { get; set; }
+    public List<ValidSkuListResponse?>? ValidSkuList { get; set; }
 
     public partial class InValidSkuListResponse
     {
@@ -27,7 +27,7 @@ public partial class GetPromotionLimitedQualifiedSkuResponse
         /// 不可选原因
         /// </summary>
         [JsonPropertyName("invalid_reason")]
-        public string InvalidReason { get; set; }
+        public string? InvalidReason { get; set; }
 
         /// <summary>
         /// skuid
@@ -56,7 +56,7 @@ public partial class GetPromotionLimitedQualifiedSkuResponse
         /// 不可选原因
         /// </summary>
         [JsonPropertyName("invalid_reason")]
-        public string InvalidReason { get; set; }
+        public string? InvalidReason { get; set; }
 
         /// <summary>
         /// skuid

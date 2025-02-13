@@ -6,7 +6,7 @@ public partial class CreateDdkOauthCashgiftResponse
     /// response
     /// </summary>
     [JsonPropertyName("create_cashgift_response")]
-    public CreateCashgiftResponseResponse CreateCashgiftResponse { get; set; }
+    public CreateCashgiftResponseResponse? CreateCashgiftResponse { get; set; }
 
     public partial class CreateCashgiftResponseResponse
     {

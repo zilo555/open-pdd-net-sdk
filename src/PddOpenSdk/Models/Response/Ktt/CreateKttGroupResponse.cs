@@ -6,7 +6,7 @@ public partial class CreateKttGroupResponse
     /// 
     /// </summary>
     [JsonPropertyName("response")]
-    public ResponseResponse Response { get; set; }
+    public ResponseResponse? Response { get; set; }
 
     public partial class ResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class CreateKttGroupResponse
         /// 团号，用于请求创建团结果
         /// </summary>
         [JsonPropertyName("activity_no")]
-        public string ActivityNo { get; set; }
+        public string? ActivityNo { get; set; }
 
         /// <summary>
         /// 调用是否成功

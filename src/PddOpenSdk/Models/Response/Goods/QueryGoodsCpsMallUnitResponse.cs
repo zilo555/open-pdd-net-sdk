@@ -6,7 +6,7 @@ public partial class QueryGoodsCpsMallUnitResponse
     /// respone
     /// </summary>
     [JsonPropertyName("goods_cps_mall_unit_query_response")]
-    public GoodsCpsMallUnitQueryResponseResponse GoodsCpsMallUnitQueryResponse { get; set; }
+    public GoodsCpsMallUnitQueryResponseResponse? GoodsCpsMallUnitQueryResponse { get; set; }
 
     public partial class GoodsCpsMallUnitQueryResponseResponse
     {
@@ -27,7 +27,7 @@ public partial class QueryGoodsCpsMallUnitResponse
         /// 全店推广计划佣金生效时间
         /// </summary>
         [JsonPropertyName("rate_to_be_day")]
-        public string RateToBeDay { get; set; }
+        public string? RateToBeDay { get; set; }
 
         /// <summary>
         /// 全店推广计划状态：1-推广中，2-暂停推广
@@ -45,7 +45,7 @@ public partial class QueryGoodsCpsMallUnitResponse
         /// 全店推广计划状态生效时间
         /// </summary>
         [JsonPropertyName("status_to_be_day")]
-        public string StatusToBeDay { get; set; }
+        public string? StatusToBeDay { get; set; }
 
 
     }

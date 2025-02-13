@@ -6,7 +6,7 @@ public partial class GetOrderPromiseInfoResponse
     /// 
     /// </summary>
     [JsonPropertyName("promise_info_get_response")]
-    public PromiseInfoGetResponseResponse PromiseInfoGetResponse { get; set; }
+    public PromiseInfoGetResponseResponse? PromiseInfoGetResponse { get; set; }
 
     public partial class PromiseInfoGetResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class GetOrderPromiseInfoResponse
         /// 
         /// </summary>
         [JsonPropertyName("promise_info")]
-        public PromiseInfoResponse PromiseInfo { get; set; }
+        public PromiseInfoResponse? PromiseInfo { get; set; }
 
         public partial class PromiseInfoResponse
         {
@@ -24,13 +24,13 @@ public partial class GetOrderPromiseInfoResponse
             /// 承诺详情
             /// </summary>
             [JsonPropertyName("detail_info")]
-            public Dictionary<string, object> DetailInfo { get; set; }
+            public Dictionary<string, object>? DetailInfo { get; set; }
 
             /// <summary>
             /// 额外信息
             /// </summary>
             [JsonPropertyName("extra_info")]
-            public Dictionary<string, object> ExtraInfo { get; set; }
+            public Dictionary<string, object>? ExtraInfo { get; set; }
 
             /// <summary>
             /// 是否已删除
@@ -42,13 +42,13 @@ public partial class GetOrderPromiseInfoResponse
             /// 订单号
             /// </summary>
             [JsonPropertyName("order_sn")]
-            public string OrderSn { get; set; }
+            public string? OrderSn { get; set; }
 
             /// <summary>
             /// 服务承诺描述
             /// </summary>
             [JsonPropertyName("promise_desc")]
-            public string PromiseDesc { get; set; }
+            public string? PromiseDesc { get; set; }
 
             /// <summary>
             /// 服务承诺单性质，1-平台协议，2-客服承 诺，3-平台建议
@@ -84,7 +84,7 @@ public partial class GetOrderPromiseInfoResponse
             /// 最后更新时间
             /// </summary>
             [JsonPropertyName("updated_at")]
-            public string UpdatedAt { get; set; }
+            public string? UpdatedAt { get; set; }
 
             public partial class DetailInfoResponse
             {
@@ -93,13 +93,13 @@ public partial class GetOrderPromiseInfoResponse
                 /// key 详情请参阅接口文档
                 /// </summary>
                 [JsonPropertyName("$key")]
-                public string Key { get; set; }
+                public string? Key { get; set; }
 
                 /// <summary>
                 /// value 详情请参阅接口文档
                 /// </summary>
                 [JsonPropertyName("$value")]
-                public string Value { get; set; }
+                public string? Value { get; set; }
 
 
             }
@@ -110,13 +110,13 @@ public partial class GetOrderPromiseInfoResponse
                 /// 
                 /// </summary>
                 [JsonPropertyName("$key")]
-                public string Key { get; set; }
+                public string? Key { get; set; }
 
                 /// <summary>
                 /// 
                 /// </summary>
                 [JsonPropertyName("$value")]
-                public string Value { get; set; }
+                public string? Value { get; set; }
 
 
             }

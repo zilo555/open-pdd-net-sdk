@@ -5,13 +5,13 @@ public partial class SubLogisticsCoTrack
     /// 快递公司伙伴ID
     /// </summary>
     [JsonPropertyName("ship_id")]
-    public string ShipId { get; set; }
+    public string? ShipId { get; set; }
 
     /// <summary>
     /// 消息体
     /// </summary>
     [JsonPropertyName("data")]
-    public string Data { get; set; }
+    public string? Data { get; set; }
 
 
 

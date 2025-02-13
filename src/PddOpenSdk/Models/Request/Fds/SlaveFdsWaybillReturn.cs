@@ -26,7 +26,7 @@ public partial class SlaveFdsWaybillReturn
         /// 从运单号列表，最多传递十条从运单号
         /// </summary>
         [JsonPropertyName("waybill_codes")]
-        public List<string> WaybillCodes { get; set; }
+        public List<string?>? WaybillCodes { get; set; }
 
         /// <summary>
         /// 物流公司 Code ，枚举： YTO- 圆通，ZTO-中通，YUNDA-韵达，STO-申通

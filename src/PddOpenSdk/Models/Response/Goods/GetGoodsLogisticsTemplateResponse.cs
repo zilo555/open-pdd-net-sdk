@@ -6,7 +6,7 @@ public partial class GetGoodsLogisticsTemplateResponse
     /// response
     /// </summary>
     [JsonPropertyName("goods_logistics_template_get_response")]
-    public GoodsLogisticsTemplateGetResponseResponse GoodsLogisticsTemplateGetResponse { get; set; }
+    public GoodsLogisticsTemplateGetResponseResponse? GoodsLogisticsTemplateGetResponse { get; set; }
 
     public partial class GoodsLogisticsTemplateGetResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class GetGoodsLogisticsTemplateResponse
         /// 商家运费模板对象列表
         /// </summary>
         [JsonPropertyName("logistics_template_list")]
-        public List<LogisticsTemplateListResponse> LogisticsTemplateList { get; set; }
+        public List<LogisticsTemplateListResponse?>? LogisticsTemplateList { get; set; }
 
         /// <summary>
         /// 返回的运费模板总数
@@ -48,7 +48,7 @@ public partial class GetGoodsLogisticsTemplateResponse
             /// 运费模板名称
             /// </summary>
             [JsonPropertyName("template_name")]
-            public string TemplateName { get; set; }
+            public string? TemplateName { get; set; }
 
 
         }

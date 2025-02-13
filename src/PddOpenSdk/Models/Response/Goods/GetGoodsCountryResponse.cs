@@ -6,7 +6,7 @@ public partial class GetGoodsCountryResponse
     /// response
     /// </summary>
     [JsonPropertyName("goods_country_get_response")]
-    public GoodsCountryGetResponseResponse GoodsCountryGetResponse { get; set; }
+    public GoodsCountryGetResponseResponse? GoodsCountryGetResponse { get; set; }
 
     public partial class GoodsCountryGetResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class GetGoodsCountryResponse
         /// 国家或地区对象列表
         /// </summary>
         [JsonPropertyName("country_list")]
-        public List<CountryListResponse> CountryList { get; set; }
+        public List<CountryListResponse?>? CountryList { get; set; }
 
         public partial class CountryListResponse
         {
@@ -30,7 +30,7 @@ public partial class GetGoodsCountryResponse
             /// 对应ID下的国家或地区名称
             /// </summary>
             [JsonPropertyName("country_name")]
-            public string CountryName { get; set; }
+            public string? CountryName { get; set; }
 
 
         }

@@ -20,7 +20,7 @@ public partial class SyncVoucherRealtimeVerify
         /// 备注
         /// </summary>
         [JsonPropertyName("remark")]
-        public string Remark { get; set; }
+        public string? Remark { get; set; }
 
         /// <summary>
         /// ISV核销流水号
@@ -32,13 +32,13 @@ public partial class SyncVoucherRealtimeVerify
         /// 门店名称
         /// </summary>
         [JsonPropertyName("shop_name")]
-        public string ShopName { get; set; }
+        public string? ShopName { get; set; }
 
         /// <summary>
         /// 门店编号
         /// </summary>
         [JsonPropertyName("shop_no")]
-        public string ShopNo { get; set; }
+        public string? ShopNo { get; set; }
 
         /// <summary>
         /// 卡券核销时间（13 位毫秒）

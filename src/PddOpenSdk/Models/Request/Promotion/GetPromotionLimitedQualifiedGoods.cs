@@ -5,7 +5,7 @@ public partial class GetPromotionLimitedQualifiedGoods
     /// 商品id列表
     /// </summary>
     [JsonPropertyName("goods_id_list")]
-    public List<long?> GoodsIdList { get; set; }
+    public List<long?>? GoodsIdList { get; set; }
 
     /// <summary>
     /// TRUE-仅查询可选商品（满足活动资格商品）数据；FALSE-查询不可选商品数据

@@ -6,7 +6,7 @@ public partial class GetTicketScenicResponse
     /// 
     /// </summary>
     [JsonPropertyName("response")]
-    public ResponseResponse Response { get; set; }
+    public ResponseResponse? Response { get; set; }
 
     public partial class ResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class GetTicketScenicResponse
         /// 
         /// </summary>
         [JsonPropertyName("area_list")]
-        public List<AreaListResponse> AreaList { get; set; }
+        public List<AreaListResponse?>? AreaList { get; set; }
 
         public partial class AreaListResponse
         {
@@ -48,7 +48,7 @@ public partial class GetTicketScenicResponse
             /// 拼多多景区名称
             /// </summary>
             [JsonPropertyName("scenic_name")]
-            public string ScenicName { get; set; }
+            public string? ScenicName { get; set; }
 
 
         }

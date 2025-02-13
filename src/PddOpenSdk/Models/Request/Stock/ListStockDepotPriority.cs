@@ -23,7 +23,7 @@ public partial class ListStockDepotPriority
     /// 仓库编码
     /// </summary>
     [JsonPropertyName("depot_code")]
-    public string DepotCode { get; set; }
+    public string? DepotCode { get; set; }
 
     /// <summary>
     /// 每页数据显示数量

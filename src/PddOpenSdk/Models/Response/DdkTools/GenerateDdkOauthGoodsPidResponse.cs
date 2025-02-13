@@ -6,7 +6,7 @@ public partial class GenerateDdkOauthGoodsPidResponse
     /// response
     /// </summary>
     [JsonPropertyName("p_id_generate_response")]
-    public PIdGenerateResponseResponse PIdGenerateResponse { get; set; }
+    public PIdGenerateResponseResponse? PIdGenerateResponse { get; set; }
 
     public partial class PIdGenerateResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class GenerateDdkOauthGoodsPidResponse
         /// 多多进宝推广位对象列表
         /// </summary>
         [JsonPropertyName("p_id_list")]
-        public List<PIdListResponse> PIdList { get; set; }
+        public List<PIdListResponse?>? PIdList { get; set; }
 
         /// <summary>
         /// PID剩余数量
@@ -42,13 +42,13 @@ public partial class GenerateDdkOauthGoodsPidResponse
             /// 推广位名称
             /// </summary>
             [JsonPropertyName("pid_name")]
-            public string PidName { get; set; }
+            public string? PidName { get; set; }
 
             /// <summary>
             /// 调用方推广位ID
             /// </summary>
             [JsonPropertyName("p_id")]
-            public string PId { get; set; }
+            public string? PId { get; set; }
 
 
         }

@@ -6,7 +6,7 @@ public partial class UpdateOrderNoteResponse
     /// 请求响应
     /// </summary>
     [JsonPropertyName("response")]
-    public ResponseResponse Response { get; set; }
+    public ResponseResponse? Response { get; set; }
 
     public partial class ResponseResponse
     {
@@ -27,7 +27,7 @@ public partial class UpdateOrderNoteResponse
         /// 错误信息
         /// </summary>
         [JsonPropertyName("error_msg")]
-        public string ErrorMsg { get; set; }
+        public string? ErrorMsg { get; set; }
 
 
     }

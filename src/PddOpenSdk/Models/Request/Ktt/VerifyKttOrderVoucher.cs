@@ -29,7 +29,7 @@ public partial class VerifyKttOrderVoucher
     /// 销毁理由
     /// </summary>
     [JsonPropertyName("reason")]
-    public string Reason { get; set; }
+    public string? Reason { get; set; }
 
     /// <summary>
     /// 子订单号
@@ -41,7 +41,7 @@ public partial class VerifyKttOrderVoucher
     /// 核销门店
     /// </summary>
     [JsonPropertyName("verification_store")]
-    public VerificationStoreModel VerificationStore { get; set; }
+    public VerificationStoreModel? VerificationStore { get; set; }
 
     /// <summary>
     /// 核销次数/销毁收回次数
@@ -68,43 +68,43 @@ public partial class VerifyKttOrderVoucher
         /// 门店编号
         /// </summary>
         [JsonPropertyName("external_store_no")]
-        public string ExternalStoreNo { get; set; }
+        public string? ExternalStoreNo { get; set; }
 
         /// <summary>
         /// 门店地址详情
         /// </summary>
         [JsonPropertyName("store_address_detail")]
-        public string StoreAddressDetail { get; set; }
+        public string? StoreAddressDetail { get; set; }
 
         /// <summary>
         /// 门店市
         /// </summary>
         [JsonPropertyName("store_city")]
-        public string StoreCity { get; set; }
+        public string? StoreCity { get; set; }
 
         /// <summary>
         /// 门店区
         /// </summary>
         [JsonPropertyName("store_district")]
-        public string StoreDistrict { get; set; }
+        public string? StoreDistrict { get; set; }
 
         /// <summary>
         /// 门店名字
         /// </summary>
         [JsonPropertyName("store_name")]
-        public string StoreName { get; set; }
+        public string? StoreName { get; set; }
 
         /// <summary>
         /// 门店电话
         /// </summary>
         [JsonPropertyName("store_phone")]
-        public string StorePhone { get; set; }
+        public string? StorePhone { get; set; }
 
         /// <summary>
         /// 门店省
         /// </summary>
         [JsonPropertyName("store_province")]
-        public string StoreProvince { get; set; }
+        public string? StoreProvince { get; set; }
 
 
 

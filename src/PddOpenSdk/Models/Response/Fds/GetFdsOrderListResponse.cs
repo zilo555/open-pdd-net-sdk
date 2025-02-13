@@ -6,7 +6,7 @@ public partial class GetFdsOrderListResponse
     /// response
     /// </summary>
     [JsonPropertyName("pdd_fds_order_list_get_response")]
-    public PddFdsOrderListGetResponseResponse PddFdsOrderListGetResponse { get; set; }
+    public PddFdsOrderListGetResponseResponse? PddFdsOrderListGetResponse { get; set; }
 
     public partial class PddFdsOrderListGetResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class GetFdsOrderListResponse
         /// 订单列表
         /// </summary>
         [JsonPropertyName("order_list")]
-        public List<OrderListResponse> OrderList { get; set; }
+        public List<OrderListResponse?>? OrderList { get; set; }
 
         /// <summary>
         /// 订单总数
@@ -42,19 +42,19 @@ public partial class GetFdsOrderListResponse
             /// 市
             /// </summary>
             [JsonPropertyName("city")]
-            public string City { get; set; }
+            public string? City { get; set; }
 
             /// <summary>
             /// 区
             /// </summary>
             [JsonPropertyName("district")]
-            public string District { get; set; }
+            public string? District { get; set; }
 
             /// <summary>
             /// 商品名称
             /// </summary>
             [JsonPropertyName("goods_name")]
-            public string GoodsName { get; set; }
+            public string? GoodsName { get; set; }
 
             /// <summary>
             /// 商品数量
@@ -66,31 +66,31 @@ public partial class GetFdsOrderListResponse
             /// 规格
             /// </summary>
             [JsonPropertyName("goods_spec")]
-            public string GoodsSpec { get; set; }
+            public string? GoodsSpec { get; set; }
 
             /// <summary>
             /// 代打店铺id
             /// </summary>
             [JsonPropertyName("mall_mask_id")]
-            public string MallMaskId { get; set; }
+            public string? MallMaskId { get; set; }
 
             /// <summary>
             /// 代打店铺自定义名称
             /// </summary>
             [JsonPropertyName("mall_mask_name")]
-            public string MallMaskName { get; set; }
+            public string? MallMaskName { get; set; }
 
             /// <summary>
             /// 代打订单号
             /// </summary>
             [JsonPropertyName("order_mask_sn")]
-            public string OrderMaskSn { get; set; }
+            public string? OrderMaskSn { get; set; }
 
             /// <summary>
             /// 商家配置的sku编码
             /// </summary>
             [JsonPropertyName("out_sku_sn")]
-            public string OutSkuSn { get; set; }
+            public string? OutSkuSn { get; set; }
 
             /// <summary>
             /// 结算价格，单位：分
@@ -102,25 +102,25 @@ public partial class GetFdsOrderListResponse
             /// 货号
             /// </summary>
             [JsonPropertyName("product_sn")]
-            public string ProductSn { get; set; }
+            public string? ProductSn { get; set; }
 
             /// <summary>
             /// 省
             /// </summary>
             [JsonPropertyName("province")]
-            public string Province { get; set; }
+            public string? Province { get; set; }
 
             /// <summary>
             /// 收件人姓名+电话+地址相同,receiver_id字段相同，该功能上线前字段为""
             /// </summary>
             [JsonPropertyName("receiver_id")]
-            public string ReceiverId { get; set; }
+            public string? ReceiverId { get; set; }
 
             /// <summary>
             /// 卖家备注
             /// </summary>
             [JsonPropertyName("remark")]
-            public string Remark { get; set; }
+            public string? Remark { get; set; }
 
             /// <summary>
             /// 运单回传状态 0：未回传 1：已回传

@@ -6,7 +6,7 @@ public partial class VerificationVoucherOtaCardPrepareResponse
     /// 响应体
     /// </summary>
     [JsonPropertyName("response")]
-    public ResponseResponse Response { get; set; }
+    public ResponseResponse? Response { get; set; }
 
     public partial class ResponseResponse
     {
@@ -21,13 +21,13 @@ public partial class VerificationVoucherOtaCardPrepareResponse
         /// 
         /// </summary>
         [JsonPropertyName("errorMsg")]
-        public string ErrorMsg { get; set; }
+        public string? ErrorMsg { get; set; }
 
         /// <summary>
         /// 卡密和订单信息
         /// </summary>
         [JsonPropertyName("result")]
-        public ResultResponse Result { get; set; }
+        public ResultResponse? Result { get; set; }
 
         /// <summary>
         /// 
@@ -42,19 +42,19 @@ public partial class VerificationVoucherOtaCardPrepareResponse
             /// 卡券信息
             /// </summary>
             [JsonPropertyName("card_vo")]
-            public CardVoResponse CardVo { get; set; }
+            public CardVoResponse? CardVo { get; set; }
 
             /// <summary>
             /// 商品信息
             /// </summary>
             [JsonPropertyName("order_goods_vo")]
-            public OrderGoodsVoResponse OrderGoodsVo { get; set; }
+            public OrderGoodsVoResponse? OrderGoodsVo { get; set; }
 
             /// <summary>
             /// 订单信息
             /// </summary>
             [JsonPropertyName("order_vo")]
-            public OrderVoResponse OrderVo { get; set; }
+            public OrderVoResponse? OrderVo { get; set; }
 
             public partial class CardVoResponse
             {
@@ -75,7 +75,7 @@ public partial class VerificationVoucherOtaCardPrepareResponse
                 /// 打码卡密
                 /// </summary>
                 [JsonPropertyName("mask_card_no")]
-                public string MaskCardNo { get; set; }
+                public string? MaskCardNo { get; set; }
 
                 /// <summary>
                 /// 剩余可用次数
@@ -93,7 +93,7 @@ public partial class VerificationVoucherOtaCardPrepareResponse
                 /// 状态文案
                 /// </summary>
                 [JsonPropertyName("status_tips")]
-                public string StatusTips { get; set; }
+                public string? StatusTips { get; set; }
 
                 /// <summary>
                 /// 总次数
@@ -110,7 +110,7 @@ public partial class VerificationVoucherOtaCardPrepareResponse
                 /// 商品标题
                 /// </summary>
                 [JsonPropertyName("goods_name")]
-                public string GoodsName { get; set; }
+                public string? GoodsName { get; set; }
 
                 /// <summary>
                 /// 购买商品数
@@ -122,19 +122,19 @@ public partial class VerificationVoucherOtaCardPrepareResponse
                 /// 外部商品编码
                 /// </summary>
                 [JsonPropertyName("out_goods_sn")]
-                public string OutGoodsSn { get; set; }
+                public string? OutGoodsSn { get; set; }
 
                 /// <summary>
                 /// 外部sku编码
                 /// </summary>
                 [JsonPropertyName("out_sku_sn")]
-                public string OutSkuSn { get; set; }
+                public string? OutSkuSn { get; set; }
 
                 /// <summary>
                 /// 规格
                 /// </summary>
                 [JsonPropertyName("spec")]
-                public string Spec { get; set; }
+                public string? Spec { get; set; }
 
 
             }
@@ -151,7 +151,7 @@ public partial class VerificationVoucherOtaCardPrepareResponse
                 /// 订单编号
                 /// </summary>
                 [JsonPropertyName("order_sn")]
-                public string OrderSn { get; set; }
+                public string? OrderSn { get; set; }
 
 
             }

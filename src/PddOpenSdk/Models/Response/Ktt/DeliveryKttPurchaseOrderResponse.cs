@@ -6,7 +6,7 @@ public partial class DeliveryKttPurchaseOrderResponse
     /// 
     /// </summary>
     [JsonPropertyName("pdd_ktt_purchase_order_delivery_response")]
-    public PddKttPurchaseOrderDeliveryResponseResponse PddKttPurchaseOrderDeliveryResponse { get; set; }
+    public PddKttPurchaseOrderDeliveryResponseResponse? PddKttPurchaseOrderDeliveryResponse { get; set; }
 
     public partial class PddKttPurchaseOrderDeliveryResponseResponse
     {
@@ -21,13 +21,13 @@ public partial class DeliveryKttPurchaseOrderResponse
         /// 
         /// </summary>
         [JsonPropertyName("error_msg")]
-        public string ErrorMsg { get; set; }
+        public string? ErrorMsg { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [JsonPropertyName("result")]
-        public ResultResponse Result { get; set; }
+        public ResultResponse? Result { get; set; }
 
         /// <summary>
         /// 

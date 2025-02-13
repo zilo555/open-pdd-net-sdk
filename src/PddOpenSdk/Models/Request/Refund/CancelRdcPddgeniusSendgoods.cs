@@ -20,7 +20,7 @@ public partial class CancelRdcPddgeniusSendgoods
         /// 描述
         /// </summary>
         [JsonPropertyName("msg")]
-        public string Msg { get; set; }
+        public string? Msg { get; set; }
 
         /// <summary>
         /// 操作时间戳（毫秒）

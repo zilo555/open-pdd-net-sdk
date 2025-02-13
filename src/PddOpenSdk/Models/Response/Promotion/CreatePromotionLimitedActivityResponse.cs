@@ -6,7 +6,7 @@ public partial class CreatePromotionLimitedActivityResponse
     /// 结果列表
     /// </summary>
     [JsonPropertyName("result_list")]
-    public List<ResultListResponse> ResultList { get; set; }
+    public List<ResultListResponse?>? ResultList { get; set; }
 
     public partial class ResultListResponse
     {
@@ -15,13 +15,13 @@ public partial class CreatePromotionLimitedActivityResponse
         /// 创建失败时的失败原因
         /// </summary>
         [JsonPropertyName("fail_reason")]
-        public string FailReason { get; set; }
+        public string? FailReason { get; set; }
 
         /// <summary>
         /// 商品id
         /// </summary>
         [JsonPropertyName("goods_id")]
-        public string GoodsId { get; set; }
+        public string? GoodsId { get; set; }
 
         /// <summary>
         /// 商品是否创建成功。0代表成功，非0代表失败

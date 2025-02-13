@@ -6,7 +6,7 @@ public partial class SearchGoodsSpuResponse
     /// 标品搜索查询结果
     /// </summary>
     [JsonPropertyName("spu_search_response")]
-    public SpuSearchResponseResponse SpuSearchResponse { get; set; }
+    public SpuSearchResponseResponse? SpuSearchResponse { get; set; }
 
     public partial class SpuSearchResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class SearchGoodsSpuResponse
         /// 标品列表
         /// </summary>
         [JsonPropertyName("spu_list")]
-        public List<SpuListResponse> SpuList { get; set; }
+        public List<SpuListResponse?>? SpuList { get; set; }
 
         public partial class SpuListResponse
         {
@@ -30,13 +30,13 @@ public partial class SearchGoodsSpuResponse
             /// 关键属性
             /// </summary>
             [JsonPropertyName("key_prop")]
-            public List<KeyPropResponse> KeyProp { get; set; }
+            public List<KeyPropResponse?>? KeyProp { get; set; }
 
             /// <summary>
             /// 标品标题
             /// </summary>
             [JsonPropertyName("spu_name")]
-            public string SpuName { get; set; }
+            public string? SpuName { get; set; }
 
             public partial class KeyPropResponse
             {
@@ -51,13 +51,13 @@ public partial class SearchGoodsSpuResponse
                 /// 属性值
                 /// </summary>
                 [JsonPropertyName("value")]
-                public string Value { get; set; }
+                public string? Value { get; set; }
 
                 /// <summary>
                 /// 属性值单位
                 /// </summary>
                 [JsonPropertyName("value_unit")]
-                public string ValueUnit { get; set; }
+                public string? ValueUnit { get; set; }
 
                 /// <summary>
                 /// 属性值ID

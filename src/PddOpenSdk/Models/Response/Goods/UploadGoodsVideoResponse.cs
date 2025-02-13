@@ -6,7 +6,7 @@ public partial class UploadGoodsVideoResponse
     /// 1
     /// </summary>
     [JsonPropertyName("goods_video_upload_response")]
-    public GoodsVideoUploadResponseResponse GoodsVideoUploadResponse { get; set; }
+    public GoodsVideoUploadResponseResponse? GoodsVideoUploadResponse { get; set; }
 
     public partial class GoodsVideoUploadResponseResponse
     {
@@ -21,7 +21,7 @@ public partial class UploadGoodsVideoResponse
         /// 文件url
         /// </summary>
         [JsonPropertyName("url")]
-        public string Url { get; set; }
+        public string? Url { get; set; }
 
         /// <summary>
         /// 审核状态

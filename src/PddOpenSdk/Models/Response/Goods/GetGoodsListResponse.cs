@@ -6,7 +6,7 @@ public partial class GetGoodsListResponse
     /// 商品列表响应对象
     /// </summary>
     [JsonPropertyName("goods_list_get_response")]
-    public GoodsListGetResponseResponse GoodsListGetResponse { get; set; }
+    public GoodsListGetResponseResponse? GoodsListGetResponse { get; set; }
 
     public partial class GoodsListGetResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class GetGoodsListResponse
         /// 商品列表对象
         /// </summary>
         [JsonPropertyName("goods_list")]
-        public List<GoodsListResponse> GoodsList { get; set; }
+        public List<GoodsListResponse?>? GoodsList { get; set; }
 
         /// <summary>
         /// 返回商品总数
@@ -42,7 +42,7 @@ public partial class GetGoodsListResponse
             /// 商品名称
             /// </summary>
             [JsonPropertyName("goods_name")]
-            public string GoodsName { get; set; }
+            public string? GoodsName { get; set; }
 
             /// <summary>
             /// 商品总数量
@@ -60,7 +60,7 @@ public partial class GetGoodsListResponse
             /// 商品图片
             /// </summary>
             [JsonPropertyName("image_url")]
-            public string ImageUrl { get; set; }
+            public string? ImageUrl { get; set; }
 
             /// <summary>
             /// 是否多sku，0-单sku，1-多sku
@@ -78,13 +78,13 @@ public partial class GetGoodsListResponse
             /// sku列表对象
             /// </summary>
             [JsonPropertyName("sku_list")]
-            public List<SkuListResponse> SkuList { get; set; }
+            public List<SkuListResponse?>? SkuList { get; set; }
 
             /// <summary>
             /// 商品缩略图
             /// </summary>
             [JsonPropertyName("thumb_url")]
-            public string ThumbUrl { get; set; }
+            public string? ThumbUrl { get; set; }
 
             public partial class SkuListResponse
             {
@@ -99,13 +99,13 @@ public partial class GetGoodsListResponse
                 /// 商家外部编码（商品），同其他接口中的outer_goods_id 、out_goods_id、out_goods_sn、outer_goods_sn 都为商家编码（goods维度）。
                 /// </summary>
                 [JsonPropertyName("outer_goods_id")]
-                public string OuterGoodsId { get; set; }
+                public string? OuterGoodsId { get; set; }
 
                 /// <summary>
                 /// 商家外部编码（sku），同其他接口中的outer_id 、out_id、out_sku_sn、outer_sku_sn、out_sku_id、outer_sku_id 都为商家编码（sku维度）。
                 /// </summary>
                 [JsonPropertyName("outer_id")]
-                public string OuterId { get; set; }
+                public string? OuterId { get; set; }
 
                 /// <summary>
                 /// sku预扣库存
@@ -129,13 +129,13 @@ public partial class GetGoodsListResponse
                 /// 规格名称
                 /// </summary>
                 [JsonPropertyName("spec")]
-                public string Spec { get; set; }
+                public string? Spec { get; set; }
 
                 /// <summary>
                 /// 规格信息
                 /// </summary>
                 [JsonPropertyName("spec_details")]
-                public List<SpecDetailsResponse> SpecDetails { get; set; }
+                public List<SpecDetailsResponse?>? SpecDetails { get; set; }
 
                 public partial class SpecDetailsResponse
                 {
@@ -150,7 +150,7 @@ public partial class GetGoodsListResponse
                     /// 父规格名
                     /// </summary>
                     [JsonPropertyName("parent_name")]
-                    public string ParentName { get; set; }
+                    public string? ParentName { get; set; }
 
                     /// <summary>
                     /// 子规格id
@@ -162,13 +162,13 @@ public partial class GetGoodsListResponse
                     /// 子规格名称
                     /// </summary>
                     [JsonPropertyName("spec_name")]
-                    public string SpecName { get; set; }
+                    public string? SpecName { get; set; }
 
                     /// <summary>
                     /// 规则备注
                     /// </summary>
                     [JsonPropertyName("spec_note")]
-                    public string SpecNote { get; set; }
+                    public string? SpecNote { get; set; }
 
 
                 }

@@ -14,7 +14,7 @@ public partial class QueryCloudPrintTask
         /// 打印序号，非必填，填了则只查询列表内的任务
         /// </summary>
         [JsonPropertyName("print_sequence_list")]
-        public List<int?> PrintSequenceList { get; set; }
+        public List<int?>? PrintSequenceList { get; set; }
 
         /// <summary>
         /// 打印任务id

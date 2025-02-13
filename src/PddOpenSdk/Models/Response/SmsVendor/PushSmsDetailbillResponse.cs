@@ -6,7 +6,7 @@ public partial class PushSmsDetailbillResponse
     /// response
     /// </summary>
     [JsonPropertyName("sms_detailbill_push_resposne")]
-    public SmsDetailbillPushResposneResponse SmsDetailbillPushResposne { get; set; }
+    public SmsDetailbillPushResposneResponse? SmsDetailbillPushResposne { get; set; }
 
     public partial class SmsDetailbillPushResposneResponse
     {

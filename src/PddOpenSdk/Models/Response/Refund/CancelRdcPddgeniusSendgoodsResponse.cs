@@ -6,7 +6,7 @@ public partial class CancelRdcPddgeniusSendgoodsResponse
     /// response
     /// </summary>
     [JsonPropertyName("rdc_pddgenius_sendgoods_cancel_response")]
-    public RdcPddgeniusSendgoodsCancelResponseResponse RdcPddgeniusSendgoodsCancelResponse { get; set; }
+    public RdcPddgeniusSendgoodsCancelResponseResponse? RdcPddgeniusSendgoodsCancelResponse { get; set; }
 
     public partial class RdcPddgeniusSendgoodsCancelResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class CancelRdcPddgeniusSendgoodsResponse
         /// result
         /// </summary>
         [JsonPropertyName("result")]
-        public ResultResponse Result { get; set; }
+        public ResultResponse? Result { get; set; }
 
         public partial class ResultResponse
         {
@@ -24,7 +24,7 @@ public partial class CancelRdcPddgeniusSendgoodsResponse
             /// result_data
             /// </summary>
             [JsonPropertyName("result_data")]
-            public ResultDataResponse ResultData { get; set; }
+            public ResultDataResponse? ResultData { get; set; }
 
             public partial class ResultDataResponse
             {

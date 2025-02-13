@@ -6,7 +6,7 @@ public partial class CheckGoodsPriceResponse
     /// 
     /// </summary>
     [JsonPropertyName("goodsid_price_check_response")]
-    public GoodsidPriceCheckResponseResponse GoodsidPriceCheckResponse { get; set; }
+    public GoodsidPriceCheckResponseResponse? GoodsidPriceCheckResponse { get; set; }
 
     public partial class GoodsidPriceCheckResponseResponse
     {

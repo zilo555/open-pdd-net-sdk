@@ -44,7 +44,7 @@ public partial class EditGoodsChildSku
         /// 与sku_id必填其一，用于确定编辑的sku，当有多个sku的out_sku_sn一样时会编辑失败。
         /// </summary>
         [JsonPropertyName("out_sku_sn")]
-        public string OutSkuSn { get; set; }
+        public string? OutSkuSn { get; set; }
 
         /// <summary>
         /// 日历库存商品父skuId

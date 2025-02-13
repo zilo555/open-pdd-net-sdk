@@ -11,7 +11,7 @@ public partial class ReplaceKttPurchaseOrderLogistic
     /// 新物流公司名（与物流公司id两者至少填一）
     /// </summary>
     [JsonPropertyName("new_logistics_name")]
-    public string NewLogisticsName { get; set; }
+    public string? NewLogisticsName { get; set; }
 
     /// <summary>
     /// 新运单号
@@ -35,7 +35,7 @@ public partial class ReplaceKttPurchaseOrderLogistic
     /// 发货子单列表，无子单号视为整单发货
     /// </summary>
     [JsonPropertyName("sub_order_sn_list")]
-    public List<string> SubOrderSnList { get; set; }
+    public List<string?>? SubOrderSnList { get; set; }
 
 
 

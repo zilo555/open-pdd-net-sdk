@@ -5,13 +5,13 @@ public partial class GetTicketSkuRule
     /// 商户履约规则 id
     /// </summary>
     [JsonPropertyName("out_rule_id")]
-    public string OutRuleId { get; set; }
+    public string? OutRuleId { get; set; }
 
     /// <summary>
     /// 上传商品的上传序列 ID
     /// </summary>
     [JsonPropertyName("rule_id")]
-    public string RuleId { get; set; }
+    public string? RuleId { get; set; }
 
 
 

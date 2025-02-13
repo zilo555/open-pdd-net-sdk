@@ -6,7 +6,7 @@ public partial class DetailGoodsLogisticsSerTemplateResponse
     /// response
     /// </summary>
     [JsonPropertyName("goods_logistics_ser_template_detail_response")]
-    public GoodsLogisticsSerTemplateDetailResponseResponse GoodsLogisticsSerTemplateDetailResponse { get; set; }
+    public GoodsLogisticsSerTemplateDetailResponseResponse? GoodsLogisticsSerTemplateDetailResponse { get; set; }
 
     public partial class GoodsLogisticsSerTemplateDetailResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class DetailGoodsLogisticsSerTemplateResponse
         /// 分类目基础价格配置
         /// </summary>
         [JsonPropertyName("cat_list")]
-        public List<CatListResponse> CatList { get; set; }
+        public List<CatListResponse?>? CatList { get; set; }
 
         /// <summary>
         /// 店铺id
@@ -33,19 +33,19 @@ public partial class DetailGoodsLogisticsSerTemplateResponse
         /// 服务地区范围配置
         /// </summary>
         [JsonPropertyName("service_area_list")]
-        public List<ServiceAreaListResponse> ServiceAreaList { get; set; }
+        public List<ServiceAreaListResponse?>? ServiceAreaList { get; set; }
 
         /// <summary>
         /// 模版id
         /// </summary>
         [JsonPropertyName("template_id")]
-        public string TemplateId { get; set; }
+        public string? TemplateId { get; set; }
 
         /// <summary>
         /// 服务模板名称（不超过50字）
         /// </summary>
         [JsonPropertyName("template_name")]
-        public string TemplateName { get; set; }
+        public string? TemplateName { get; set; }
 
         /// <summary>
         /// 服务模板类型：2：送货上门 3：送货上门并安装 4：上门安装 5： 买家自提
@@ -72,19 +72,19 @@ public partial class DetailGoodsLogisticsSerTemplateResponse
             /// 三级类目名称
             /// </summary>
             [JsonPropertyName("cat_name3")]
-            public string CatName3 { get; set; }
+            public string? CatName3 { get; set; }
 
             /// <summary>
             /// 四级类目名称
             /// </summary>
             [JsonPropertyName("cat_name4")]
-            public string CatName4 { get; set; }
+            public string? CatName4 { get; set; }
 
             /// <summary>
             /// 类目规则配置
             /// </summary>
             [JsonPropertyName("list")]
-            public List<ListResponse> List { get; set; }
+            public List<ListResponse?>? List { get; set; }
 
             public partial class ListResponse
             {
@@ -93,7 +93,7 @@ public partial class DetailGoodsLogisticsSerTemplateResponse
                 /// 按属性收取费用时配置的内容：按属性限价时设置；按件限价时不用传，value和content必须设置一个
                 /// </summary>
                 [JsonPropertyName("content")]
-                public List<ContentResponse> Content { get; set; }
+                public List<ContentResponse?>? Content { get; set; }
 
                 /// <summary>
                 /// 分类目收取服务费用方式：1-按件收取费用，2-按属性收取费用
@@ -105,7 +105,7 @@ public partial class DetailGoodsLogisticsSerTemplateResponse
                 /// mms商品编辑页的展示字段
                 /// </summary>
                 [JsonPropertyName("mms_view")]
-                public string MmsView { get; set; }
+                public string? MmsView { get; set; }
 
                 /// <summary>
                 /// 按件收取费用时配置的内容：按件限价时输入数字，表示每件商品附加费用$value分；按属性限价时不用传value和content必须设置一个

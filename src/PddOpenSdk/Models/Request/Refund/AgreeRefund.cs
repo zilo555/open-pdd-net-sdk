@@ -20,7 +20,7 @@ public partial class AgreeRefund
         /// 退款备注，商家留言
         /// </summary>
         [JsonPropertyName("operate_desc")]
-        public string OperateDesc { get; set; }
+        public string? OperateDesc { get; set; }
 
         /// <summary>
         /// 订单编号

@@ -6,7 +6,7 @@ public partial class ChangeGoodsCpsMallUnitResponse
     /// response
     /// </summary>
     [JsonPropertyName("goods_cps_mall_unit_change_response")]
-    public GoodsCpsMallUnitChangeResponseResponse GoodsCpsMallUnitChangeResponse { get; set; }
+    public GoodsCpsMallUnitChangeResponseResponse? GoodsCpsMallUnitChangeResponse { get; set; }
 
     public partial class GoodsCpsMallUnitChangeResponseResponse
     {

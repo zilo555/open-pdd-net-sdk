@@ -6,7 +6,7 @@ public partial class CloseLogisticsCsSessionResponse
     /// response
     /// </summary>
     [JsonPropertyName("logistics_cs_session_close_response")]
-    public LogisticsCsSessionCloseResponseResponse LogisticsCsSessionCloseResponse { get; set; }
+    public LogisticsCsSessionCloseResponseResponse? LogisticsCsSessionCloseResponse { get; set; }
 
     public partial class LogisticsCsSessionCloseResponseResponse
     {

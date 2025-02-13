@@ -27,6 +27,26 @@ public class LogisticsApi : PddCommonApi
     }
 
     /// <summary>
+    /// 偏远集运中转仓包裹扫码入库
+    /// </summary>
+
+    public async Task<EnterConsoWarehousePackScanResponse> EnterConsoWarehousePackScanAsync(EnterConsoWarehousePackScan enterConsoWarehousePackScan)
+    {
+        var result = await PostAsync<EnterConsoWarehousePackScan, EnterConsoWarehousePackScanResponse>("pdd.conso.warehouse.pack.scan.enter", enterConsoWarehousePackScan);
+        return result;
+    }
+
+    /// <summary>
+    /// 偏远集运快递拦截结果回调
+    /// </summary>
+
+    public async Task<CallbackConsoWaybillInterceptResultResponse> CallbackConsoWaybillInterceptResultAsync(CallbackConsoWaybillInterceptResult callbackConsoWaybillInterceptResult)
+    {
+        var result = await PostAsync<CallbackConsoWaybillInterceptResult, CallbackConsoWaybillInterceptResultResponse>("pdd.conso.waybill.intercept.result.callback", callbackConsoWaybillInterceptResult);
+        return result;
+    }
+
+    /// <summary>
     /// 重抛逆向运单回传
     /// </summary>
 
@@ -97,12 +117,42 @@ public class LogisticsApi : PddCommonApi
     }
 
     /// <summary>
+    /// 运单号特殊标签查询
+    /// </summary>
+
+    public async Task<GetLogisticsSpecialTagResponse> GetLogisticsSpecialTagAsync(GetLogisticsSpecialTag getLogisticsSpecialTag)
+    {
+        var result = await PostAsync<GetLogisticsSpecialTag, GetLogisticsSpecialTagResponse>("pdd.logistics.special.tag.get", getLogisticsSpecialTag);
+        return result;
+    }
+
+    /// <summary>
     /// 末端三段轨迹回传
     /// </summary>
 
     public async Task<SyncTailExpressTraceResponse> SyncTailExpressTraceAsync(SyncTailExpressTrace syncTailExpressTrace)
     {
         var result = await PostAsync<SyncTailExpressTrace, SyncTailExpressTraceResponse>("pdd.tail.express.trace.sync", syncTailExpressTrace);
+        return result;
+    }
+
+    /// <summary>
+    /// 偏远集运快递拦截请求下发
+    /// </summary>
+
+    public async Task<ApplyConsoWaybillInterceptResponse> ApplyConsoWaybillInterceptAsync(ApplyConsoWaybillIntercept applyConsoWaybillIntercept)
+    {
+        var result = await PostAsync<ApplyConsoWaybillIntercept, ApplyConsoWaybillInterceptResponse>("pdd.conso.waybill.intercept.apply", applyConsoWaybillIntercept);
+        return result;
+    }
+
+    /// <summary>
+    /// 香港集运末端代收点同步供应商
+    /// </summary>
+
+    public async Task<ProviderInfoSyncExpressResponse> ProviderInfoSyncExpressAsync(ProviderInfoSyncExpress providerInfoSyncExpress)
+    {
+        var result = await PostAsync<ProviderInfoSyncExpress, ProviderInfoSyncExpressResponse>("site.info.sync.express.provider", providerInfoSyncExpress);
         return result;
     }
 

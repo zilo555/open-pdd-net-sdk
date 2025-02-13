@@ -6,7 +6,7 @@ public partial class QueryInvoiceApplicationResponse
     /// response
     /// </summary>
     [JsonPropertyName("invoice_application_query_response")]
-    public InvoiceApplicationQueryResponseResponse InvoiceApplicationQueryResponse { get; set; }
+    public InvoiceApplicationQueryResponseResponse? InvoiceApplicationQueryResponse { get; set; }
 
     public partial class InvoiceApplicationQueryResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class QueryInvoiceApplicationResponse
         /// 发票申请列表
         /// </summary>
         [JsonPropertyName("invoice_application_list")]
-        public List<InvoiceApplicationListResponse> InvoiceApplicationList { get; set; }
+        public List<InvoiceApplicationListResponse?>? InvoiceApplicationList { get; set; }
 
         public partial class InvoiceApplicationListResponse
         {
@@ -42,7 +42,7 @@ public partial class QueryInvoiceApplicationResponse
             /// 开票金额，单位：分
             /// </summary>
             [JsonPropertyName("invoice_amount")]
-            public string InvoiceAmount { get; set; }
+            public string? InvoiceAmount { get; set; }
 
             /// <summary>
             /// 发票种类：0-电子，1-纸质，2-专票；目前只支持0和2
@@ -72,49 +72,49 @@ public partial class QueryInvoiceApplicationResponse
             /// 备注
             /// </summary>
             [JsonPropertyName("memo")]
-            public string Memo { get; set; }
+            public string? Memo { get; set; }
 
             /// <summary>
             /// 订单号
             /// </summary>
             [JsonPropertyName("order_sn")]
-            public string OrderSn { get; set; }
+            public string? OrderSn { get; set; }
 
             /// <summary>
             /// （企业抬头）开户账号
             /// </summary>
             [JsonPropertyName("payer_account")]
-            public string PayerAccount { get; set; }
+            public string? PayerAccount { get; set; }
 
             /// <summary>
             /// （企业抬头）地址
             /// </summary>
             [JsonPropertyName("payer_address")]
-            public string PayerAddress { get; set; }
+            public string? PayerAddress { get; set; }
 
             /// <summary>
             /// （企业抬头）开户银行
             /// </summary>
             [JsonPropertyName("payer_bank")]
-            public string PayerBank { get; set; }
+            public string? PayerBank { get; set; }
 
             /// <summary>
             /// 发票抬头
             /// </summary>
             [JsonPropertyName("payer_name")]
-            public string PayerName { get; set; }
+            public string? PayerName { get; set; }
 
             /// <summary>
             /// （企业抬头）电话
             /// </summary>
             [JsonPropertyName("payer_phone")]
-            public string PayerPhone { get; set; }
+            public string? PayerPhone { get; set; }
 
             /// <summary>
             /// 企业税号，抬头为企业类型必填
             /// </summary>
             [JsonPropertyName("payer_register_no")]
-            public string PayerRegisterNo { get; set; }
+            public string? PayerRegisterNo { get; set; }
 
             /// <summary>
             /// 是否正品发票：0=非正品发票，1=非正品发票
@@ -126,25 +126,25 @@ public partial class QueryInvoiceApplicationResponse
             /// 驳回原因
             /// </summary>
             [JsonPropertyName("reason")]
-            public string Reason { get; set; }
+            public string? Reason { get; set; }
 
             /// <summary>
             /// 不含税金额，暂为null
             /// </summary>
             [JsonPropertyName("sum_price")]
-            public string SumPrice { get; set; }
+            public string? SumPrice { get; set; }
 
             /// <summary>
             /// 总税额，暂为null
             /// </summary>
             [JsonPropertyName("sum_tax")]
-            public string SumTax { get; set; }
+            public string? SumTax { get; set; }
 
             /// <summary>
             /// 税率，暂为null
             /// </summary>
             [JsonPropertyName("tax_rate")]
-            public string TaxRate { get; set; }
+            public string? TaxRate { get; set; }
 
             /// <summary>
             /// 开票申请触发类型：1-申请开票，2-改抬头

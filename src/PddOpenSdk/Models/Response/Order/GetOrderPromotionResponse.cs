@@ -6,7 +6,7 @@ public partial class GetOrderPromotionResponse
     /// 
     /// </summary>
     [JsonPropertyName("order_promotion_get_response")]
-    public OrderPromotionGetResponseResponse OrderPromotionGetResponse { get; set; }
+    public OrderPromotionGetResponseResponse? OrderPromotionGetResponse { get; set; }
 
     public partial class OrderPromotionGetResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class GetOrderPromotionResponse
         /// 订单优惠信息列表
         /// </summary>
         [JsonPropertyName("order_promotion_list")]
-        public List<OrderPromotionListResponse> OrderPromotionList { get; set; }
+        public List<OrderPromotionListResponse?>? OrderPromotionList { get; set; }
 
         public partial class OrderPromotionListResponse
         {
@@ -24,13 +24,13 @@ public partial class GetOrderPromotionResponse
             /// 订单号
             /// </summary>
             [JsonPropertyName("order_sn")]
-            public string OrderSn { get; set; }
+            public string? OrderSn { get; set; }
 
             /// <summary>
             /// 商家优惠信息
             /// </summary>
             [JsonPropertyName("seller_discount_details")]
-            public List<SellerDiscountDetailsResponse> SellerDiscountDetails { get; set; }
+            public List<SellerDiscountDetailsResponse?>? SellerDiscountDetails { get; set; }
 
             public partial class SellerDiscountDetailsResponse
             {
@@ -45,7 +45,7 @@ public partial class GetOrderPromotionResponse
                 /// 优惠描述
                 /// </summary>
                 [JsonPropertyName("discount_desc")]
-                public string DiscountDesc { get; set; }
+                public string? DiscountDesc { get; set; }
 
 
             }

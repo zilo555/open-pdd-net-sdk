@@ -5,7 +5,7 @@ public partial class CheckOpenVirtualNumber
     /// 分机号，非必填，4位数字字符
     /// </summary>
     [JsonPropertyName("identify_number")]
-    public string IdentifyNumber { get; set; }
+    public string? IdentifyNumber { get; set; }
 
     /// <summary>
     /// 订单号

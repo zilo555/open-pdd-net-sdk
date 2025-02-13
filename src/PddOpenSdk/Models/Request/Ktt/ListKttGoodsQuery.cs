@@ -5,7 +5,7 @@ public partial class ListKttGoodsQuery
     /// 团号（团号和创建时间只能传一个）
     /// </summary>
     [JsonPropertyName("activity_no")]
-    public string ActivityNo { get; set; }
+    public string? ActivityNo { get; set; }
 
     /// <summary>
     /// 分页页码

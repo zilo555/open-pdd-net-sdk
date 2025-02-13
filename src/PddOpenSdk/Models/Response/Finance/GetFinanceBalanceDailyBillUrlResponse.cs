@@ -6,7 +6,7 @@ public partial class GetFinanceBalanceDailyBillUrlResponse
     /// response
     /// </summary>
     [JsonPropertyName("finance_balance_daily_bill_url_get_response")]
-    public FinanceBalanceDailyBillUrlGetResponseResponse FinanceBalanceDailyBillUrlGetResponse { get; set; }
+    public FinanceBalanceDailyBillUrlGetResponseResponse? FinanceBalanceDailyBillUrlGetResponse { get; set; }
 
     public partial class FinanceBalanceDailyBillUrlGetResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class GetFinanceBalanceDailyBillUrlResponse
         /// 货款账单下载 URL
         /// </summary>
         [JsonPropertyName("download_url")]
-        public string DownloadUrl { get; set; }
+        public string? DownloadUrl { get; set; }
 
 
     }

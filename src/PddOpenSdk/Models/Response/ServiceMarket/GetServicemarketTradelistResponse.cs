@@ -6,7 +6,7 @@ public partial class GetServicemarketTradelistResponse
     /// response
     /// </summary>
     [JsonPropertyName("mall_balance_flow_search_response")]
-    public MallBalanceFlowSearchResponseResponse MallBalanceFlowSearchResponse { get; set; }
+    public MallBalanceFlowSearchResponseResponse? MallBalanceFlowSearchResponse { get; set; }
 
     public partial class MallBalanceFlowSearchResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class GetServicemarketTradelistResponse
         /// 交易流水列表
         /// </summary>
         [JsonPropertyName("data")]
-        public List<DataResponse> Data { get; set; }
+        public List<DataResponse?>? Data { get; set; }
 
         /// <summary>
         /// 当前查询条件下所有订单总数
@@ -36,7 +36,7 @@ public partial class GetServicemarketTradelistResponse
             /// 流水类目名称，1-交易收入，2-优惠券结算，3-退款，4-提现，5-技术服务费，7-扣款
             /// </summary>
             [JsonPropertyName("class_name")]
-            public string ClassName { get; set; }
+            public string? ClassName { get; set; }
 
             /// <summary>
             /// 流水创建时间，单位秒
@@ -54,13 +54,13 @@ public partial class GetServicemarketTradelistResponse
             /// 服务订单号
             /// </summary>
             [JsonPropertyName("service_order_sn")]
-            public string ServiceOrderSn { get; set; }
+            public string? ServiceOrderSn { get; set; }
 
             /// <summary>
             /// 交易备注
             /// </summary>
             [JsonPropertyName("trade_note")]
-            public string TradeNote { get; set; }
+            public string? TradeNote { get; set; }
 
 
         }

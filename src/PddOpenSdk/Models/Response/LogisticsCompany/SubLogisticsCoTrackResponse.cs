@@ -6,7 +6,7 @@ public partial class SubLogisticsCoTrackResponse
     /// 快递公司伙伴ID
     /// </summary>
     [JsonPropertyName("ship_id")]
-    public string ShipId { get; set; }
+    public string? ShipId { get; set; }
 
     /// <summary>
     /// 是否成功
@@ -18,7 +18,7 @@ public partial class SubLogisticsCoTrackResponse
     /// 返回码
     /// </summary>
     [JsonPropertyName("reason_code")]
-    public string ReasonCode { get; set; }
+    public string? ReasonCode { get; set; }
 
 
 }

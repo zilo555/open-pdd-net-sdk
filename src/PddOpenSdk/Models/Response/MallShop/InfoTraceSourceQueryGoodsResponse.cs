@@ -6,7 +6,7 @@ public partial class InfoTraceSourceQueryGoodsResponse
     /// 返回参数
     /// </summary>
     [JsonPropertyName("response")]
-    public string Response { get; set; }
+    public string? Response { get; set; }
 
 
 }

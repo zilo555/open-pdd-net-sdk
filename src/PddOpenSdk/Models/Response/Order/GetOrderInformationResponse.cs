@@ -6,7 +6,7 @@ public partial class GetOrderInformationResponse
     /// response
     /// </summary>
     [JsonPropertyName("order_info_get_response")]
-    public OrderInfoGetResponseResponse OrderInfoGetResponse { get; set; }
+    public OrderInfoGetResponseResponse? OrderInfoGetResponse { get; set; }
 
     public partial class OrderInfoGetResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class GetOrderInformationResponse
         /// 订单详情对象
         /// </summary>
         [JsonPropertyName("order_info")]
-        public OrderInfoResponse OrderInfo { get; set; }
+        public OrderInfoResponse? OrderInfo { get; set; }
 
         public partial class OrderInfoResponse
         {
@@ -24,13 +24,13 @@ public partial class GetOrderInformationResponse
             /// 收件详细地址
             /// </summary>
             [JsonPropertyName("address")]
-            public string Address { get; set; }
+            public string? Address { get; set; }
 
             /// <summary>
             /// 详细地址（打码）
             /// </summary>
             [JsonPropertyName("address_mask")]
-            public string AddressMask { get; set; }
+            public string? AddressMask { get; set; }
 
             /// <summary>
             /// 售后状态 0：无售后 2：买家申请退款，待商家处理 3：退货退款，待商家处理 4：商家同意退款，退款中 5：平台同意退款，退款中 6：驳回退款，待买家处理 7：已同意退货退款,待用户发货 8：平台处理中 9：平台拒绝退款，退款关闭 10：退款成功 11：买家撤销 12：买家逾期未处理，退款失败 13：买家逾期，超过有效期 14：换货补寄待商家处理 15：换货补寄待用户处理 16：换货补寄成功 17：换货补寄失败 18：换货补寄待用户确认完成 21：待商家同意维修 22：待用户确认发货 24：维修关闭 25：维修成功 27：待用户确认收货 31：已同意拒收退款，待用户拒收 32：补寄待商家发货 33：同意召回后退款，待商家召回
@@ -42,13 +42,13 @@ public partial class GetOrderInformationResponse
             /// 保税仓名称
             /// </summary>
             [JsonPropertyName("bonded_warehouse")]
-            public string BondedWarehouse { get; set; }
+            public string? BondedWarehouse { get; set; }
 
             /// <summary>
             /// 买家留言信息
             /// </summary>
             [JsonPropertyName("buyer_memo")]
-            public string BuyerMemo { get; set; }
+            public string? BuyerMemo { get; set; }
 
             /// <summary>
             /// 团长免单优惠金额，只在团长免单活动中才会返回优惠金额
@@ -60,7 +60,7 @@ public partial class GetOrderInformationResponse
             /// 卡号信息列表
             /// </summary>
             [JsonPropertyName("card_info_list")]
-            public List<CardInfoListResponse> CardInfoList { get; set; }
+            public List<CardInfoListResponse?>? CardInfoList { get; set; }
 
             /// <summary>
             /// 商品一级分类
@@ -90,7 +90,7 @@ public partial class GetOrderInformationResponse
             /// 收件地城市
             /// </summary>
             [JsonPropertyName("city")]
-            public string City { get; set; }
+            public string? City { get; set; }
 
             /// <summary>
             /// 城市编码
@@ -108,19 +108,19 @@ public partial class GetOrderInformationResponse
             /// 成交时间
             /// </summary>
             [JsonPropertyName("confirm_time")]
-            public string ConfirmTime { get; set; }
+            public string? ConfirmTime { get; set; }
 
             /// <summary>
             /// 集运信息
             /// </summary>
             [JsonPropertyName("consolidate_info")]
-            public ConsolidateInfoResponse ConsolidateInfo { get; set; }
+            public ConsolidateInfoResponse? ConsolidateInfo { get; set; }
 
             /// <summary>
             /// 收件地国家或地区
             /// </summary>
             [JsonPropertyName("country")]
-            public string Country { get; set; }
+            public string? Country { get; set; }
 
             /// <summary>
             /// 国家或地区编码
@@ -132,7 +132,7 @@ public partial class GetOrderInformationResponse
             /// 创建时间
             /// </summary>
             [JsonPropertyName("created_time")]
-            public string CreatedTime { get; set; }
+            public string? CreatedTime { get; set; }
 
             /// <summary>
             /// 送货入户费用 单位：元
@@ -171,10 +171,16 @@ public partial class GetOrderInformationResponse
             public int? DuoduoWholesale { get; set; }
 
             /// <summary>
+            /// 延保服务信息
+            /// </summary>
+            [JsonPropertyName("extended_warranty_info")]
+            public ExtendedWarrantyInfoResponse? ExtendedWarrantyInfo { get; set; }
+
+            /// <summary>
             /// 订单多包裹发货时使用的其他发货快递信息
             /// </summary>
             [JsonPropertyName("extra_delivery_list")]
-            public List<ExtraDeliveryListResponse> ExtraDeliveryList { get; set; }
+            public List<ExtraDeliveryListResponse?>? ExtraDeliveryList { get; set; }
 
             /// <summary>
             /// 是否顺丰包邮 1表示是 0表示否
@@ -186,13 +192,13 @@ public partial class GetOrderInformationResponse
             /// 赠品额外运单列表
             /// </summary>
             [JsonPropertyName("gift_delivery_list")]
-            public List<GiftDeliveryListResponse> GiftDeliveryList { get; set; }
+            public List<GiftDeliveryListResponse?>? GiftDeliveryList { get; set; }
 
             /// <summary>
             /// 赠品列表
             /// </summary>
             [JsonPropertyName("gift_list")]
-            public List<GiftListResponse> GiftList { get; set; }
+            public List<GiftListResponse?>? GiftList { get; set; }
 
             /// <summary>
             /// 商品金额（元）商品金额=商品销售价格*商品数量-订单改价折扣金额
@@ -234,7 +240,7 @@ public partial class GetOrderInformationResponse
             /// 支付申报订单号（多多国际清关请使用此字段，单号以XP开头）
             /// </summary>
             [JsonPropertyName("inner_transaction_id")]
-            public string InnerTransactionId { get; set; }
+            public string? InnerTransactionId { get; set; }
 
             /// <summary>
             /// 发票申请,1代表有 0代表无
@@ -264,13 +270,13 @@ public partial class GetOrderInformationResponse
             /// 订单中商品sku列表
             /// </summary>
             [JsonPropertyName("item_list")]
-            public List<ItemListResponse> ItemList { get; set; }
+            public List<ItemListResponse?>? ItemList { get; set; }
 
             /// <summary>
             /// 订单承诺发货时间
             /// </summary>
             [JsonPropertyName("last_ship_time")]
-            public string LastShipTime { get; set; }
+            public string? LastShipTime { get; set; }
 
             /// <summary>
             /// 快递公司编号
@@ -294,7 +300,7 @@ public partial class GetOrderInformationResponse
             /// 合单ID
             /// </summary>
             [JsonPropertyName("open_address_id")]
-            public string OpenAddressId { get; set; }
+            public string? OpenAddressId { get; set; }
 
             /// <summary>
             /// 订单改价折扣金额，单位元
@@ -306,13 +312,13 @@ public partial class GetOrderInformationResponse
             /// 仓库信息
             /// </summary>
             [JsonPropertyName("order_depot_info")]
-            public OrderDepotInfoResponse OrderDepotInfo { get; set; }
+            public OrderDepotInfoResponse? OrderDepotInfo { get; set; }
 
             /// <summary>
             /// 订单编号
             /// </summary>
             [JsonPropertyName("order_sn")]
-            public string OrderSn { get; set; }
+            public string? OrderSn { get; set; }
 
             /// <summary>
             /// 发货状态，枚举值：1：待发货，2：已发货待签收，3：已签收
@@ -321,10 +327,10 @@ public partial class GetOrderInformationResponse
             public int? OrderStatus { get; set; }
 
             /// <summary>
-            /// 订单标签列表，no_trace_delivery=无痕发货，only_support_replace=只换不修，duoduo_wholesale=多多批发，return_freight_payer=退货包运费，free_sf=顺丰包邮，support_nationwide_warranty=全国联保，self_contained=门店自提，delivery_one_day=当日发货，oversea_tracing=全球购溯源，distributional_sale=分销订单，open_in_festival=不打烊，region_black_delay_shipping=发货时间可延迟，same_city_distribution=同城配送，has_subsidy_postage=补贴运费红包，has_sf_express_service=顺丰加价，community_group=小区团购，has_ship_additional=加运费发顺丰，ship_additional_order=加运费补差价订单，conso_order=集运订单，allergy_refund=过敏包退，professional_appraisal=专业鉴定，ship_hold=暂停发货，home_delivery_door=送货上门，direct_mail_activity=直邮活动，local_depot=本地仓订单，trade_in_national_subsidy=以旧换新·国家补贴
+            /// 订单标签列表，no_trace_delivery=无痕发货，only_support_replace=只换不修，duoduo_wholesale=多多批发，return_freight_payer=退货包运费，free_sf=顺丰包邮，support_nationwide_warranty=全国联保，self_contained=门店自提，delivery_one_day=当日发货，oversea_tracing=全球购溯源，distributional_sale=分销订单，open_in_festival=不打烊，region_black_delay_shipping=发货时间可延迟，same_city_distribution=同城配送，has_subsidy_postage=补贴运费红包，has_sf_express_service=顺丰加价，community_group=小区团购，has_ship_additional=加运费发顺丰，ship_additional_order=加运费补差价订单，conso_order=集运订单，allergy_refund=过敏包退，professional_appraisal=专业鉴定，ship_hold=暂停发货，home_delivery_door=送货上门，direct_mail_activity=直邮活动，local_depot=本地仓订单，trade_in_national_subsidy=以旧换新·国家补贴，bought_from_vegetable=多多买菜次日达·送货上门，delivery_schedule=分批发货
             /// </summary>
             [JsonPropertyName("order_tag_list")]
-            public List<OrderTagListResponse> OrderTagList { get; set; }
+            public List<OrderTagListResponse?>? OrderTagList { get; set; }
 
             /// <summary>
             /// 支付金额（元）支付金额=商品金额-折扣金额+邮费+服务费
@@ -336,19 +342,19 @@ public partial class GetOrderInformationResponse
             /// 支付单号
             /// </summary>
             [JsonPropertyName("pay_no")]
-            public string PayNo { get; set; }
+            public string? PayNo { get; set; }
 
             /// <summary>
             /// 支付时间
             /// </summary>
             [JsonPropertyName("pay_time")]
-            public string PayTime { get; set; }
+            public string? PayTime { get; set; }
 
             /// <summary>
             /// 支付方式，枚举值：QQ,WEIXIN,ALIPAY,LIANLIANPAY
             /// </summary>
             [JsonPropertyName("pay_type")]
-            public string PayType { get; set; }
+            public string? PayType { get; set; }
 
             /// <summary>
             /// 平台优惠金额
@@ -366,25 +372,25 @@ public partial class GetOrderInformationResponse
             /// 预售时间
             /// </summary>
             [JsonPropertyName("pre_sale_time")]
-            public string PreSaleTime { get; set; }
+            public string? PreSaleTime { get; set; }
 
             /// <summary>
             /// 承诺送达时间
             /// </summary>
             [JsonPropertyName("promise_delivery_time")]
-            public string PromiseDeliveryTime { get; set; }
+            public string? PromiseDeliveryTime { get; set; }
 
             /// <summary>
             /// 优惠券信息
             /// </summary>
             [JsonPropertyName("promotion_detail_list")]
-            public List<PromotionDetailListResponse> PromotionDetailList { get; set; }
+            public List<PromotionDetailListResponse?>? PromotionDetailList { get; set; }
 
             /// <summary>
             /// 收件地省份
             /// </summary>
             [JsonPropertyName("province")]
-            public string Province { get; set; }
+            public string? Province { get; set; }
 
             /// <summary>
             /// 省份编码
@@ -396,43 +402,43 @@ public partial class GetOrderInformationResponse
             /// 确认收货时间
             /// </summary>
             [JsonPropertyName("receive_time")]
-            public string ReceiveTime { get; set; }
+            public string? ReceiveTime { get; set; }
 
             /// <summary>
             /// 收件人地址，不拼接省市区。订单状态为待发货状态，且订单未被风控打标的情况下返回密文数据；其余情况返回空字符串。
             /// </summary>
             [JsonPropertyName("receiver_address")]
-            public string ReceiverAddress { get; set; }
+            public string? ReceiverAddress { get; set; }
 
             /// <summary>
             /// 收件人地址（打码）
             /// </summary>
             [JsonPropertyName("receiver_address_mask")]
-            public string ReceiverAddressMask { get; set; }
+            public string? ReceiverAddressMask { get; set; }
 
             /// <summary>
             /// 收件人姓名。订单状态为待发货状态，且订单未被风控打标的情况下返回密文数据；其余情况返回空字符串。
             /// </summary>
             [JsonPropertyName("receiver_name")]
-            public string ReceiverName { get; set; }
+            public string? ReceiverName { get; set; }
 
             /// <summary>
             /// 收件人姓名（打码）
             /// </summary>
             [JsonPropertyName("receiver_name_mask")]
-            public string ReceiverNameMask { get; set; }
+            public string? ReceiverNameMask { get; set; }
 
             /// <summary>
             /// 收件人电话。订单状态为待发货状态，且订单未被风控打标的情况下返回密文数据；其余情况返回空字符串。
             /// </summary>
             [JsonPropertyName("receiver_phone")]
-            public string ReceiverPhone { get; set; }
+            public string? ReceiverPhone { get; set; }
 
             /// <summary>
             /// 收件人手机号（打码）
             /// </summary>
             [JsonPropertyName("receiver_phone_mask")]
-            public string ReceiverPhoneMask { get; set; }
+            public string? ReceiverPhoneMask { get; set; }
 
             /// <summary>
             /// 退款状态，枚举值：1：无售后或售后关闭，2：售后处理中，3：退款中，4： 退款成功
@@ -444,7 +450,7 @@ public partial class GetOrderInformationResponse
             /// 商家订单备注
             /// </summary>
             [JsonPropertyName("remark")]
-            public string Remark { get; set; }
+            public string? Remark { get; set; }
 
             /// <summary>
             /// 订单备注标记，1-红色，2-黄色，3-绿色，4-蓝色，5-紫色
@@ -456,13 +462,13 @@ public partial class GetOrderInformationResponse
             /// 订单备注标记名称
             /// </summary>
             [JsonPropertyName("remark_tag_name")]
-            public string RemarkTagName { get; set; }
+            public string? RemarkTagName { get; set; }
 
             /// <summary>
             /// 补寄额外运单列表
             /// </summary>
             [JsonPropertyName("resend_delivery_list")]
-            public List<ResendDeliveryListResponse> ResendDeliveryList { get; set; }
+            public List<ResendDeliveryListResponse?>? ResendDeliveryList { get; set; }
 
             /// <summary>
             /// 退货包运费，1:是，0:否
@@ -492,25 +498,25 @@ public partial class GetOrderInformationResponse
             /// 服务费明细列表，sf_express_fee=顺丰加价服务，install_fee=上门安装服务，store_install_fee=到店安装服务，take_to_store_install_fee=携货到店安装，dismantle_and_home_install_fee=拆旧+上门安装
             /// </summary>
             [JsonPropertyName("service_fee_detail")]
-            public List<ServiceFeeDetailResponse> ServiceFeeDetail { get; set; }
+            public List<ServiceFeeDetailResponse?>? ServiceFeeDetail { get; set; }
 
             /// <summary>
             /// 关联的加运费发顺丰的补差价订单
             /// </summary>
             [JsonPropertyName("ship_additional_link_order")]
-            public string ShipAdditionalLinkOrder { get; set; }
+            public string? ShipAdditionalLinkOrder { get; set; }
 
             /// <summary>
             /// 加运费补差价订单的原单
             /// </summary>
             [JsonPropertyName("ship_additional_origin_order")]
-            public string ShipAdditionalOriginOrder { get; set; }
+            public string? ShipAdditionalOriginOrder { get; set; }
 
             /// <summary>
             /// 发货时间
             /// </summary>
             [JsonPropertyName("shipping_time")]
-            public string ShippingTime { get; set; }
+            public string? ShippingTime { get; set; }
 
             /// <summary>
             /// 创建交易时的物流方式(1-预约配送，2-1小时达，3-消费者预约送达)
@@ -522,7 +528,7 @@ public partial class GetOrderInformationResponse
             /// 定金订单信息 ，非定金订单该字段为null
             /// </summary>
             [JsonPropertyName("step_order_info")]
-            public StepOrderInfoResponse StepOrderInfo { get; set; }
+            public StepOrderInfoResponse? StepOrderInfo { get; set; }
 
             /// <summary>
             /// 缺货处理状态 -1:无缺货处理 0: 缺货待处理 1缺货已处理
@@ -534,7 +540,7 @@ public partial class GetOrderInformationResponse
             /// 门店信息
             /// </summary>
             [JsonPropertyName("store_info")]
-            public StoreInfoResponse StoreInfo { get; set; }
+            public StoreInfoResponse? StoreInfo { get; set; }
 
             /// <summary>
             /// 全国联保，1:是，0:否
@@ -546,7 +552,7 @@ public partial class GetOrderInformationResponse
             /// 收件地区县
             /// </summary>
             [JsonPropertyName("town")]
-            public string Town { get; set; }
+            public string? Town { get; set; }
 
             /// <summary>
             /// 区县编码
@@ -558,13 +564,19 @@ public partial class GetOrderInformationResponse
             /// 快递运单号
             /// </summary>
             [JsonPropertyName("tracking_number")]
-            public string TrackingNumber { get; set; }
+            public string? TrackingNumber { get; set; }
 
             /// <summary>
             /// 以旧换新国家补贴金额，单位：元
             /// </summary>
             [JsonPropertyName("trade_in_national_subsidy_amount")]
             public double? TradeInNationalSubsidyAmount { get; set; }
+
+            /// <summary>
+            /// 以旧换新国家补贴金额类型。1-支付优惠；2-商家优惠。国补支付优惠是指不同的支付渠道对应的补贴优惠。
+            /// </summary>
+            [JsonPropertyName("trade_in_national_subsidy_amount_type")]
+            public int? TradeInNationalSubsidyAmountType { get; set; }
 
             /// <summary>
             /// 订单类型 0-普通订单、1-定金订单
@@ -576,25 +588,31 @@ public partial class GetOrderInformationResponse
             /// 订单最近一次更新时间
             /// </summary>
             [JsonPropertyName("updated_at")]
-            public string UpdatedAt { get; set; }
+            public string? UpdatedAt { get; set; }
 
             /// <summary>
             /// 催发货时间
             /// </summary>
             [JsonPropertyName("urge_shipping_time")]
-            public string UrgeShippingTime { get; set; }
+            public string? UrgeShippingTime { get; set; }
 
             /// <summary>
             /// 预约配送日期
             /// </summary>
             [JsonPropertyName("yyps_date")]
-            public string YypsDate { get; set; }
+            public string? YypsDate { get; set; }
 
             /// <summary>
             /// 预约配送时段
             /// </summary>
             [JsonPropertyName("yyps_time")]
-            public string YypsTime { get; set; }
+            public string? YypsTime { get; set; }
+
+            /// <summary>
+            /// 多多买菜次日达·送货上门信息
+            /// </summary>
+            [JsonPropertyName("bought_from_vegetable_info")]
+            public BoughtFromVegetableInfoResponse? BoughtFromVegetableInfo { get; set; }
 
             public partial class CardInfoListResponse
             {
@@ -603,13 +621,13 @@ public partial class GetOrderInformationResponse
                 /// 卡号
                 /// </summary>
                 [JsonPropertyName("card_no")]
-                public string CardNo { get; set; }
+                public string? CardNo { get; set; }
 
                 /// <summary>
                 /// 卡密
                 /// </summary>
                 [JsonPropertyName("mask_password")]
-                public string MaskPassword { get; set; }
+                public string? MaskPassword { get; set; }
 
 
             }
@@ -621,6 +639,23 @@ public partial class GetOrderInformationResponse
                 /// </summary>
                 [JsonPropertyName("consolidate_type")]
                 public int? ConsolidateType { get; set; }
+
+
+            }
+            public partial class ExtendedWarrantyInfoResponse
+            {
+
+                /// <summary>
+                /// 延保保障范围，0:整机，1:核心部件
+                /// </summary>
+                [JsonPropertyName("extended_warranty_range")]
+                public int? ExtendedWarrantyRange { get; set; }
+
+                /// <summary>
+                /// 延保期年限
+                /// </summary>
+                [JsonPropertyName("extended_warranty_year")]
+                public int? ExtendedWarrantyYear { get; set; }
 
 
             }
@@ -637,7 +672,7 @@ public partial class GetOrderInformationResponse
                 /// 快递运单号
                 /// </summary>
                 [JsonPropertyName("tracking_number")]
-                public string TrackingNumber { get; set; }
+                public string? TrackingNumber { get; set; }
 
 
             }
@@ -654,7 +689,7 @@ public partial class GetOrderInformationResponse
                 /// 运单号
                 /// </summary>
                 [JsonPropertyName("tracking_number")]
-                public string TrackingNumber { get; set; }
+                public string? TrackingNumber { get; set; }
 
 
             }
@@ -677,13 +712,13 @@ public partial class GetOrderInformationResponse
                 /// 赠品图片
                 /// </summary>
                 [JsonPropertyName("goods_img")]
-                public string GoodsImg { get; set; }
+                public string? GoodsImg { get; set; }
 
                 /// <summary>
                 /// 赠品名称
                 /// </summary>
                 [JsonPropertyName("goods_name")]
-                public string GoodsName { get; set; }
+                public string? GoodsName { get; set; }
 
                 /// <summary>
                 /// 赠品销售价格
@@ -695,19 +730,19 @@ public partial class GetOrderInformationResponse
                 /// 赠品规格
                 /// </summary>
                 [JsonPropertyName("goods_spec")]
-                public string GoodsSpec { get; set; }
+                public string? GoodsSpec { get; set; }
 
                 /// <summary>
                 /// 商家外部商品编码
                 /// </summary>
                 [JsonPropertyName("outer_goods_id")]
-                public string OuterGoodsId { get; set; }
+                public string? OuterGoodsId { get; set; }
 
                 /// <summary>
                 /// 商家外部sku编码
                 /// </summary>
                 [JsonPropertyName("outer_id")]
-                public string OuterId { get; set; }
+                public string? OuterId { get; set; }
 
                 /// <summary>
                 /// 赠品规格编码
@@ -736,13 +771,13 @@ public partial class GetOrderInformationResponse
                 /// 商品图片
                 /// </summary>
                 [JsonPropertyName("goods_img")]
-                public string GoodsImg { get; set; }
+                public string? GoodsImg { get; set; }
 
                 /// <summary>
                 /// 商品名称
                 /// </summary>
                 [JsonPropertyName("goods_name")]
-                public string GoodsName { get; set; }
+                public string? GoodsName { get; set; }
 
                 /// <summary>
                 /// 商品销售价格
@@ -754,19 +789,19 @@ public partial class GetOrderInformationResponse
                 /// 商品规格，使用（规格值1,规格值2）组合作为sku的表示，中间以英文逗号隔开
                 /// </summary>
                 [JsonPropertyName("goods_spec")]
-                public string GoodsSpec { get; set; }
+                public string? GoodsSpec { get; set; }
 
                 /// <summary>
                 /// 商家外部编码（商品），注意：编辑商品后必须等待商品审核通过后方可生效，订单中商品信息为交易快照的商品信息。
                 /// </summary>
                 [JsonPropertyName("outer_goods_id")]
-                public string OuterGoodsId { get; set; }
+                public string? OuterGoodsId { get; set; }
 
                 /// <summary>
                 /// 商家外部编码（sku），注意：编辑商品后必须等待商品审核通过后方可生效，订单中商品信息为交易快照的商品信息。
                 /// </summary>
                 [JsonPropertyName("outer_id")]
-                public string OuterId { get; set; }
+                public string? OuterId { get; set; }
 
                 /// <summary>
                 /// 商品规格编码
@@ -783,19 +818,19 @@ public partial class GetOrderInformationResponse
                 /// 仓库编码
                 /// </summary>
                 [JsonPropertyName("depot_code")]
-                public string DepotCode { get; set; }
+                public string? DepotCode { get; set; }
 
                 /// <summary>
                 /// 仓库id
                 /// </summary>
                 [JsonPropertyName("depot_id")]
-                public string DepotId { get; set; }
+                public string? DepotId { get; set; }
 
                 /// <summary>
                 /// 仓库名称
                 /// </summary>
                 [JsonPropertyName("depot_name")]
-                public string DepotName { get; set; }
+                public string? DepotName { get; set; }
 
                 /// <summary>
                 /// 仓库类型，1：自有仓 2：订阅仓 两者都不是则传空
@@ -807,25 +842,25 @@ public partial class GetOrderInformationResponse
                 /// 货品id
                 /// </summary>
                 [JsonPropertyName("ware_id")]
-                public string WareId { get; set; }
+                public string? WareId { get; set; }
 
                 /// <summary>
                 /// 货品名称
                 /// </summary>
                 [JsonPropertyName("ware_name")]
-                public string WareName { get; set; }
+                public string? WareName { get; set; }
 
                 /// <summary>
                 /// 货品编码
                 /// </summary>
                 [JsonPropertyName("ware_sn")]
-                public string WareSn { get; set; }
+                public string? WareSn { get; set; }
 
                 /// <summary>
                 /// 子货品列表（组合货品才会有子货品信息）
                 /// </summary>
                 [JsonPropertyName("ware_sub_info_list")]
-                public List<WareSubInfoListResponse> WareSubInfoList { get; set; }
+                public List<WareSubInfoListResponse?>? WareSubInfoList { get; set; }
 
                 /// <summary>
                 /// 货品类型（0：普通货品，1：组合货品）
@@ -846,7 +881,7 @@ public partial class GetOrderInformationResponse
                     /// 子货品1编码
                     /// </summary>
                     [JsonPropertyName("ware_name")]
-                    public string WareName { get; set; }
+                    public string? WareName { get; set; }
 
                     /// <summary>
                     /// 子货品数量
@@ -858,7 +893,7 @@ public partial class GetOrderInformationResponse
                     /// 子货品编码
                     /// </summary>
                     [JsonPropertyName("ware_sn")]
-                    public string WareSn { get; set; }
+                    public string? WareSn { get; set; }
 
 
                 }
@@ -871,7 +906,7 @@ public partial class GetOrderInformationResponse
                 /// 标签名称
                 /// </summary>
                 [JsonPropertyName("name")]
-                public string Name { get; set; }
+                public string? Name { get; set; }
 
                 /// <summary>
                 /// 是否有标签：0=无标签，1=有标签
@@ -911,7 +946,7 @@ public partial class GetOrderInformationResponse
                 /// 运单号
                 /// </summary>
                 [JsonPropertyName("tracking_number")]
-                public string TrackingNumber { get; set; }
+                public string? TrackingNumber { get; set; }
 
 
             }
@@ -928,7 +963,7 @@ public partial class GetOrderInformationResponse
                 /// 服务费类型
                 /// </summary>
                 [JsonPropertyName("service_name")]
-                public string ServiceName { get; set; }
+                public string? ServiceName { get; set; }
 
 
             }
@@ -974,13 +1009,24 @@ public partial class GetOrderInformationResponse
                 /// 门店名称
                 /// </summary>
                 [JsonPropertyName("store_name")]
-                public string StoreName { get; set; }
+                public string? StoreName { get; set; }
 
                 /// <summary>
                 /// 门店自定义编码
                 /// </summary>
                 [JsonPropertyName("store_number")]
-                public string StoreNumber { get; set; }
+                public string? StoreNumber { get; set; }
+
+
+            }
+            public partial class BoughtFromVegetableInfoResponse
+            {
+
+                /// <summary>
+                /// 1-多多买菜次日达·送货上门 平台邀约测品订单
+                /// </summary>
+                [JsonPropertyName("not_sign")]
+                public int? NotSign { get; set; }
 
 
             }

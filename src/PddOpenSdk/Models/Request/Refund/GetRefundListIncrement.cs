@@ -23,7 +23,7 @@ public partial class GetRefundListIncrement
     /// 订单号。若入参含订单号，则可查询订单下的全部售后单。且入参中除订单号，page，page_size外的其他查询条件不起作用（标记必填的仍旧需要输入）。
     /// </summary>
     [JsonPropertyName("order_sn")]
-    public string OrderSn { get; set; }
+    public string? OrderSn { get; set; }
 
     /// <summary>
     /// 返回页码 默认 1，页码从 1 开始 PS：当前采用分页返回，数量和页数会一起传，如果不传，则采用 默认值

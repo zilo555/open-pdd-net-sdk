@@ -29,7 +29,7 @@ public partial class QueryDdkPromotionGoods
     /// 查询状态列表
     /// </summary>
     [JsonPropertyName("status_list")]
-    public List<int?> StatusList { get; set; }
+    public List<int?>? StatusList { get; set; }
 
     /// <summary>
     /// 最后更新开始时间

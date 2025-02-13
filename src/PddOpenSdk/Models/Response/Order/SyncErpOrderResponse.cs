@@ -12,7 +12,7 @@ public partial class SyncErpOrderResponse
     /// 错误参数
     /// </summary>
     [JsonPropertyName("error_msg")]
-    public string ErrorMsg { get; set; }
+    public string? ErrorMsg { get; set; }
 
     /// <summary>
     /// 是否有结果

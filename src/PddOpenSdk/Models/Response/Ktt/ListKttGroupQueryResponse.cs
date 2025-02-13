@@ -6,7 +6,7 @@ public partial class ListKttGroupQueryResponse
     /// 结果
     /// </summary>
     [JsonPropertyName("ktt_group_query_list_response")]
-    public KttGroupQueryListResponseResponse KttGroupQueryListResponse { get; set; }
+    public KttGroupQueryListResponseResponse? KttGroupQueryListResponse { get; set; }
 
     public partial class KttGroupQueryListResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class ListKttGroupQueryResponse
         /// 团列表
         /// </summary>
         [JsonPropertyName("activity_list")]
-        public List<ActivityListResponse> ActivityList { get; set; }
+        public List<ActivityListResponse?>? ActivityList { get; set; }
 
         /// <summary>
         /// 总团数量
@@ -30,7 +30,7 @@ public partial class ListKttGroupQueryResponse
             /// 团号
             /// </summary>
             [JsonPropertyName("activity_no")]
-            public string ActivityNo { get; set; }
+            public string? ActivityNo { get; set; }
 
             /// <summary>
             /// 创建时间（毫秒时间戳）
@@ -66,7 +66,7 @@ public partial class ListKttGroupQueryResponse
             /// 团标题
             /// </summary>
             [JsonPropertyName("title")]
-            public string Title { get; set; }
+            public string? Title { get; set; }
 
             /// <summary>
             /// 更新时间（毫秒时间戳）

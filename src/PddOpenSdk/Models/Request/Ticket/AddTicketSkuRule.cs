@@ -17,13 +17,13 @@ public partial class AddTicketSkuRule
     /// 下单限制
     /// </summary>
     [JsonPropertyName("order_limitation")]
-    public OrderLimitationModel OrderLimitation { get; set; }
+    public OrderLimitationModel? OrderLimitation { get; set; }
 
     /// <summary>
     /// 商户rule ID
     /// </summary>
     [JsonPropertyName("out_rule_id")]
-    public string OutRuleId { get; set; }
+    public string? OutRuleId { get; set; }
 
     /// <summary>
     /// 服务商联系方式
@@ -85,37 +85,37 @@ public partial class AddTicketSkuRule
         /// 入园时间
         /// </summary>
         [JsonPropertyName("enter_time")]
-        public List<EnterTimeModel> EnterTime { get; set; }
+        public List<EnterTimeModel?>? EnterTime { get; set; }
 
         /// <summary>
         /// 入园方式
         /// </summary>
         [JsonPropertyName("enter_ways")]
-        public string EnterWays { get; set; }
+        public string? EnterWays { get; set; }
 
         /// <summary>
         /// 补充说明
         /// </summary>
         [JsonPropertyName("extra_desc")]
-        public string ExtraDesc { get; set; }
+        public string? ExtraDesc { get; set; }
 
         /// <summary>
         /// 费用包含
         /// </summary>
         [JsonPropertyName("fee_include")]
-        public string FeeInclude { get; set; }
+        public string? FeeInclude { get; set; }
 
         /// <summary>
         /// 费用不包含
         /// </summary>
         [JsonPropertyName("fee_not_include")]
-        public string FeeNotInclude { get; set; }
+        public string? FeeNotInclude { get; set; }
 
         /// <summary>
         /// 重要提示
         /// </summary>
         [JsonPropertyName("important_notice")]
-        public string ImportantNotice { get; set; }
+        public string? ImportantNotice { get; set; }
 
         /// <summary>
         /// 通关限制时间
@@ -133,7 +133,7 @@ public partial class AddTicketSkuRule
         /// 换票时间
         /// </summary>
         [JsonPropertyName("ticket_time")]
-        public List<TicketTimeModel> TicketTime { get; set; }
+        public List<TicketTimeModel?>? TicketTime { get; set; }
 
 
         public partial class EnterTimeModel
@@ -142,7 +142,7 @@ public partial class AddTicketSkuRule
             /// 备注
             /// </summary>
             [JsonPropertyName("comment")]
-            public string Comment { get; set; }
+            public string? Comment { get; set; }
 
             /// <summary>
             /// 入园结束时间
@@ -165,19 +165,19 @@ public partial class AddTicketSkuRule
             /// 备注
             /// </summary>
             [JsonPropertyName("comment")]
-            public string Comment { get; set; }
+            public string? Comment { get; set; }
 
             /// <summary>
             /// 换票结束时间
             /// </summary>
             [JsonPropertyName("end_at")]
-            public string EndAt { get; set; }
+            public string? EndAt { get; set; }
 
             /// <summary>
             /// 换票开始时间
             /// </summary>
             [JsonPropertyName("start_at")]
-            public string StartAt { get; set; }
+            public string? StartAt { get; set; }
 
 
 
@@ -219,7 +219,7 @@ public partial class AddTicketSkuRule
         /// 服务时间
         /// </summary>
         [JsonPropertyName("provider_business_hour")]
-        public List<ProviderBusinessHourModel> ProviderBusinessHour { get; set; }
+        public List<ProviderBusinessHourModel?>? ProviderBusinessHour { get; set; }
 
         /// <summary>
         /// 服务商名称
@@ -240,19 +240,19 @@ public partial class AddTicketSkuRule
             /// 结束时间
             /// </summary>
             [JsonPropertyName("close_at")]
-            public string CloseAt { get; set; }
+            public string? CloseAt { get; set; }
 
             /// <summary>
             /// 开始时间
             /// </summary>
             [JsonPropertyName("open_at")]
-            public string OpenAt { get; set; }
+            public string? OpenAt { get; set; }
 
             /// <summary>
             /// 描述
             /// </summary>
             [JsonPropertyName("time_info")]
-            public string TimeInfo { get; set; }
+            public string? TimeInfo { get; set; }
 
 
 
@@ -271,7 +271,7 @@ public partial class AddTicketSkuRule
         /// 退款规则
         /// </summary>
         [JsonPropertyName("refund_rules")]
-        public List<RefundRulesModel> RefundRules { get; set; }
+        public List<RefundRulesModel?>? RefundRules { get; set; }
 
 
         public partial class RefundRulesModel

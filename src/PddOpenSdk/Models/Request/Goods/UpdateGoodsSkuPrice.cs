@@ -23,7 +23,7 @@ public partial class UpdateGoodsSkuPrice
     /// 参考价 （单位元）
     /// </summary>
     [JsonPropertyName("market_price_in_yuan")]
-    public string MarketPriceInYuan { get; set; }
+    public string? MarketPriceInYuan { get; set; }
 
     /// <summary>
     /// 待修改的sku价格

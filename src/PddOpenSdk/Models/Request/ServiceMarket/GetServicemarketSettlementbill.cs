@@ -17,7 +17,7 @@ public partial class GetServicemarketSettlementbill
     /// 服务订单号
     /// </summary>
     [JsonPropertyName("service_order_sn")]
-    public string ServiceOrderSn { get; set; }
+    public string? ServiceOrderSn { get; set; }
 
     /// <summary>
     /// 结算月份

@@ -6,7 +6,7 @@ public partial class EditGoodsChildSkuResponse
     /// 子sku新增或提交结果
     /// </summary>
     [JsonPropertyName("child_sku_edit_response")]
-    public ChildSkuEditResponseResponse ChildSkuEditResponse { get; set; }
+    public ChildSkuEditResponseResponse? ChildSkuEditResponse { get; set; }
 
     public partial class ChildSkuEditResponseResponse
     {

@@ -6,7 +6,7 @@ public partial class GetOrderBasicListResponse
     /// 请求response
     /// </summary>
     [JsonPropertyName("order_basic_list_get_response")]
-    public OrderBasicListGetResponseResponse OrderBasicListGetResponse { get; set; }
+    public OrderBasicListGetResponseResponse? OrderBasicListGetResponse { get; set; }
 
     public partial class OrderBasicListGetResponseResponse
     {
@@ -21,7 +21,7 @@ public partial class GetOrderBasicListResponse
         /// 订单信息列表
         /// </summary>
         [JsonPropertyName("order_list")]
-        public List<OrderListResponse> OrderList { get; set; }
+        public List<OrderListResponse?>? OrderList { get; set; }
 
         /// <summary>
         /// 订单总数
@@ -60,7 +60,7 @@ public partial class GetOrderBasicListResponse
             /// 成交时间
             /// </summary>
             [JsonPropertyName("confirm_time")]
-            public string ConfirmTime { get; set; }
+            public string? ConfirmTime { get; set; }
 
             /// <summary>
             /// 送货入户费用 单位：元
@@ -108,13 +108,13 @@ public partial class GetOrderBasicListResponse
             /// 订单商品列表
             /// </summary>
             [JsonPropertyName("item_list")]
-            public List<ItemListResponse> ItemList { get; set; }
+            public List<ItemListResponse?>? ItemList { get; set; }
 
             /// <summary>
             /// 订单编号
             /// </summary>
             [JsonPropertyName("order_sn")]
-            public string OrderSn { get; set; }
+            public string? OrderSn { get; set; }
 
             /// <summary>
             /// 订单状态
@@ -162,7 +162,7 @@ public partial class GetOrderBasicListResponse
             /// { "step_discount_amount":4, "advanced_paid_fee":1, "step_paid_fee":1.1, "step_trade_status":2 }
             /// </summary>
             [JsonPropertyName("step_order_info")]
-            public StepOrderInfoResponse StepOrderInfo { get; set; }
+            public StepOrderInfoResponse? StepOrderInfo { get; set; }
 
             /// <summary>
             /// 订单类型 0-普通订单 ，1- 定金订单
@@ -174,7 +174,7 @@ public partial class GetOrderBasicListResponse
             /// 订单的更新时间
             /// </summary>
             [JsonPropertyName("updated_at")]
-            public string UpdatedAt { get; set; }
+            public string? UpdatedAt { get; set; }
 
             public partial class ItemListResponse
             {
@@ -189,19 +189,19 @@ public partial class GetOrderBasicListResponse
                 /// 商品编码
                 /// </summary>
                 [JsonPropertyName("goods_id")]
-                public string GoodsId { get; set; }
+                public string? GoodsId { get; set; }
 
                 /// <summary>
                 /// 商品图片
                 /// </summary>
                 [JsonPropertyName("goods_img")]
-                public string GoodsImg { get; set; }
+                public string? GoodsImg { get; set; }
 
                 /// <summary>
                 /// 商品名称
                 /// </summary>
                 [JsonPropertyName("goods_name")]
-                public string GoodsName { get; set; }
+                public string? GoodsName { get; set; }
 
                 /// <summary>
                 /// 商品单件 单价：元
@@ -213,25 +213,25 @@ public partial class GetOrderBasicListResponse
                 /// 商品规格
                 /// </summary>
                 [JsonPropertyName("goods_spec")]
-                public string GoodsSpec { get; set; }
+                public string? GoodsSpec { get; set; }
 
                 /// <summary>
                 /// 商品维度外部编码，注意：编辑商品后必须等待商品审核通过后方可生效，订单中商品信息为交易快照的商品信息。
                 /// </summary>
                 [JsonPropertyName("outer_goods_id")]
-                public string OuterGoodsId { get; set; }
+                public string? OuterGoodsId { get; set; }
 
                 /// <summary>
                 /// sku维度商家外部编码，注意：编辑商品后必须等待商品审核通过后方可生效，订单中商品信息为交易快照的商品信息。
                 /// </summary>
                 [JsonPropertyName("outer_id")]
-                public string OuterId { get; set; }
+                public string? OuterId { get; set; }
 
                 /// <summary>
                 /// 商品sku编码
                 /// </summary>
                 [JsonPropertyName("sku_id")]
-                public string SkuId { get; set; }
+                public string? SkuId { get; set; }
 
 
             }

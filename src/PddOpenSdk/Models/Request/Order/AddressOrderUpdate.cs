@@ -5,7 +5,7 @@ public partial class AddressOrderUpdate
     /// 收件详细地址
     /// </summary>
     [JsonPropertyName("address")]
-    public string Address { get; set; }
+    public string? Address { get; set; }
 
     /// <summary>
     /// 收件地城市
@@ -41,13 +41,13 @@ public partial class AddressOrderUpdate
     /// 收件人姓名
     /// </summary>
     [JsonPropertyName("receiver_name")]
-    public string ReceiverName { get; set; }
+    public string? ReceiverName { get; set; }
 
     /// <summary>
     /// 收件人电话，明文
     /// </summary>
     [JsonPropertyName("receiver_phone")]
-    public string ReceiverPhone { get; set; }
+    public string? ReceiverPhone { get; set; }
 
     /// <summary>
     /// 收件地区县

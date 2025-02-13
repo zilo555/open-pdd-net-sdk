@@ -6,7 +6,7 @@ public partial class TemplateOneExpressCostResponse
     /// response
     /// </summary>
     [JsonPropertyName("one_express_cost_template_response")]
-    public OneExpressCostTemplateResponseResponse OneExpressCostTemplateResponse { get; set; }
+    public OneExpressCostTemplateResponseResponse? OneExpressCostTemplateResponse { get; set; }
 
     public partial class OneExpressCostTemplateResponseResponse
     {
@@ -45,7 +45,7 @@ public partial class TemplateOneExpressCostResponse
         /// 不包邮区域/需要买家付邮费区域
         /// </summary>
         [JsonPropertyName("cost_template_list")]
-        public List<CostTemplateListResponse> CostTemplateList { get; set; }
+        public List<CostTemplateListResponse?>? CostTemplateList { get; set; }
 
         /// <summary>
         /// 运费模板id
@@ -57,7 +57,7 @@ public partial class TemplateOneExpressCostResponse
         /// 运费模板名称
         /// </summary>
         [JsonPropertyName("template_name")]
-        public string TemplateName { get; set; }
+        public string? TemplateName { get; set; }
 
         /// <summary>
         /// 计费方式，0-按件计费，1-按重量计费
@@ -75,13 +75,13 @@ public partial class TemplateOneExpressCostResponse
         /// 送货上门地区列表
         /// </summary>
         [JsonPropertyName("free_deliver_house_area_list")]
-        public List<FreeDeliverHouseAreaListResponse> FreeDeliverHouseAreaList { get; set; }
+        public List<FreeDeliverHouseAreaListResponse?>? FreeDeliverHouseAreaList { get; set; }
 
         /// <summary>
         /// 包邮省份对象
         /// </summary>
         [JsonPropertyName("free_province_list")]
-        public List<FreeProvinceListResponse> FreeProvinceList { get; set; }
+        public List<FreeProvinceListResponse?>? FreeProvinceList { get; set; }
 
         public partial class CostTemplateListResponse
         {
@@ -90,7 +90,7 @@ public partial class TemplateOneExpressCostResponse
             /// 不包邮的区域
             /// </summary>
             [JsonPropertyName("cost_province_list")]
-            public List<CostProvinceListResponse> CostProvinceList { get; set; }
+            public List<CostProvinceListResponse?>? CostProvinceList { get; set; }
 
             /// <summary>
             /// 首件
@@ -147,7 +147,7 @@ public partial class TemplateOneExpressCostResponse
                 /// 省份
                 /// </summary>
                 [JsonPropertyName("province")]
-                public string Province { get; set; }
+                public string? Province { get; set; }
 
                 /// <summary>
                 /// 不包邮区域的ID
@@ -184,19 +184,19 @@ public partial class TemplateOneExpressCostResponse
             /// 包邮送货上门的省份
             /// </summary>
             [JsonPropertyName("province")]
-            public string Province { get; set; }
+            public string? Province { get; set; }
 
             /// <summary>
             /// 包邮送货上门的城市
             /// </summary>
             [JsonPropertyName("city")]
-            public string City { get; set; }
+            public string? City { get; set; }
 
             /// <summary>
             /// 包邮送货上门的城区
             /// </summary>
             [JsonPropertyName("town")]
-            public string Town { get; set; }
+            public string? Town { get; set; }
 
 
         }
@@ -213,7 +213,7 @@ public partial class TemplateOneExpressCostResponse
             /// 省份
             /// </summary>
             [JsonPropertyName("province")]
-            public string Province { get; set; }
+            public string? Province { get; set; }
 
 
         }

@@ -6,7 +6,7 @@ public partial class GetGoodsInformationResponse
     /// 商品详情响应对象
     /// </summary>
     [JsonPropertyName("goods_info_get_response")]
-    public GoodsInfoGetResponseResponse GoodsInfoGetResponse { get; set; }
+    public GoodsInfoGetResponseResponse? GoodsInfoGetResponse { get; set; }
 
     public partial class GoodsInfoGetResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class GetGoodsInformationResponse
         /// 商品详情对象
         /// </summary>
         [JsonPropertyName("goods_info")]
-        public GoodsInfoResponse GoodsInfo { get; set; }
+        public GoodsInfoResponse? GoodsInfo { get; set; }
 
         public partial class GoodsInfoResponse
         {
@@ -30,7 +30,7 @@ public partial class GetGoodsInformationResponse
             /// 商品序列编码
             /// </summary>
             [JsonPropertyName("goods_sn")]
-            public string GoodsSn { get; set; }
+            public string? GoodsSn { get; set; }
 
             /// <summary>
             /// 1-国内普通商品，2-进口，3-国外海淘，4-直邮 ,5-流量,6-话费,7,优惠券;8-QQ充值,9-加油卡,18-CC行邮
@@ -42,13 +42,13 @@ public partial class GetGoodsInformationResponse
             /// 商品一级类目
             /// </summary>
             [JsonPropertyName("goods_category")]
-            public string GoodsCategory { get; set; }
+            public string? GoodsCategory { get; set; }
 
             /// <summary>
             /// 叶子类目
             /// </summary>
             [JsonPropertyName("last_category")]
-            public string LastCategory { get; set; }
+            public string? LastCategory { get; set; }
 
             /// <summary>
             /// 是否七天无理由售后，0-不支持，1-支持
@@ -66,13 +66,13 @@ public partial class GetGoodsInformationResponse
             /// 商品名称
             /// </summary>
             [JsonPropertyName("goods_name")]
-            public string GoodsName { get; set; }
+            public string? GoodsName { get; set; }
 
             /// <summary>
             /// 商品图片 url
             /// </summary>
             [JsonPropertyName("image_url")]
-            public string ImageUrl { get; set; }
+            public string? ImageUrl { get; set; }
 
             /// <summary>
             /// 商品库存
@@ -102,7 +102,7 @@ public partial class GetGoodsInformationResponse
             /// sku列表对象
             /// </summary>
             [JsonPropertyName("sku_list")]
-            public List<SkuListResponse> SkuList { get; set; }
+            public List<SkuListResponse?>? SkuList { get; set; }
 
             public partial class SkuListResponse
             {
@@ -111,7 +111,7 @@ public partial class GetGoodsInformationResponse
                 /// 商品规格名称
                 /// </summary>
                 [JsonPropertyName("spec")]
-                public string Spec { get; set; }
+                public string? Spec { get; set; }
 
                 /// <summary>
                 /// 商品sku编码
@@ -129,31 +129,31 @@ public partial class GetGoodsInformationResponse
                 /// 商家外部编码（sku），同其他接口中的outer_id 、out_id、out_sku_sn、outer_sku_sn、out_sku_id、outer_sku_id 都为商家编码（sku维度）。
                 /// </summary>
                 [JsonPropertyName("outer_id")]
-                public string OuterId { get; set; }
+                public string? OuterId { get; set; }
 
                 /// <summary>
                 /// 商家外部编码（商品），同其他接口中的outer_goods_id 、out_goods_id、out_goods_sn、outer_goods_sn 都为商家编码（goods维度）。
                 /// </summary>
                 [JsonPropertyName("outer_goods_id")]
-                public string OuterGoodsId { get; set; }
+                public string? OuterGoodsId { get; set; }
 
                 /// <summary>
                 /// sku预览图
                 /// </summary>
                 [JsonPropertyName("sku_img")]
-                public string SkuImg { get; set; }
+                public string? SkuImg { get; set; }
 
                 /// <summary>
                 /// 拼团价格（元）
                 /// </summary>
                 [JsonPropertyName("group_price")]
-                public string GroupPrice { get; set; }
+                public string? GroupPrice { get; set; }
 
                 /// <summary>
                 /// 单买价格（元）
                 /// </summary>
                 [JsonPropertyName("single_price")]
-                public string SinglePrice { get; set; }
+                public string? SinglePrice { get; set; }
 
                 /// <summary>
                 /// 商品sku是否上架，0-下架，1-上架

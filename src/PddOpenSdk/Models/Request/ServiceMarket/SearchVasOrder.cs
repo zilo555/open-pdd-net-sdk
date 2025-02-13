@@ -23,7 +23,7 @@ public partial class SearchVasOrder
     /// 服务订单号
     /// </summary>
     [JsonPropertyName("order_sn")]
-    public string OrderSn { get; set; }
+    public string? OrderSn { get; set; }
 
     /// <summary>
     /// 订单状态，枚举值，0-未完成，1-已完成，2-已取消，空-全部

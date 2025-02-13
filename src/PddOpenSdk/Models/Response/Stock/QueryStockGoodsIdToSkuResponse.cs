@@ -6,7 +6,7 @@ public partial class QueryStockGoodsIdToSkuResponse
     /// response
     /// </summary>
     [JsonPropertyName("open_api_response")]
-    public OpenApiResponseResponse OpenApiResponse { get; set; }
+    public OpenApiResponseResponse? OpenApiResponse { get; set; }
 
     public partial class OpenApiResponseResponse
     {
@@ -15,7 +15,7 @@ public partial class QueryStockGoodsIdToSkuResponse
         /// sku信息
         /// </summary>
         [JsonPropertyName("skus")]
-        public List<SkusResponse> Skus { get; set; }
+        public List<SkusResponse?>? Skus { get; set; }
 
         /// <summary>
         /// 总数
@@ -54,7 +54,7 @@ public partial class QueryStockGoodsIdToSkuResponse
             /// 规格信息
             /// </summary>
             [JsonPropertyName("specs")]
-            public List<SpecsResponse> Specs { get; set; }
+            public List<SpecsResponse?>? Specs { get; set; }
 
             /// <summary>
             /// 货品id
@@ -75,13 +75,13 @@ public partial class QueryStockGoodsIdToSkuResponse
                 /// 规格名称
                 /// </summary>
                 [JsonPropertyName("spec_key")]
-                public string SpecKey { get; set; }
+                public string? SpecKey { get; set; }
 
                 /// <summary>
                 /// 规格值
                 /// </summary>
                 [JsonPropertyName("spec_value")]
-                public string SpecValue { get; set; }
+                public string? SpecValue { get; set; }
 
 
             }

@@ -11,7 +11,7 @@ public partial class GetPopMallBindTicket
     /// 当前店群包含的拼多多店铺id
     /// </summary>
     [JsonPropertyName("mall_list")]
-    public List<long?> MallList { get; set; }
+    public List<long?>? MallList { get; set; }
 
 
 
