@@ -40,18 +40,17 @@ public class NameHelper
         // 类型映射
         switch (type)
         {
-            case "int":
-                type = isMust == 0 ? "int?" : "int";
-                break;
             case "boolean":
                 type = isMust == 0 ? "bool?" : "bool";
                 break;
+            case "int":
             case "long":
             case "double":
+            case "string":
                 type = isMust == 0 ? type + "?" : type;
                 break;
             case "map":
-                type = "Dictionary<string, object>";
+                type = isMust == 0 ? "Dictionary<string, object>?" : "Dictionary<string, object>";
                 break;
             case "object":
                 if (hasChild)
@@ -63,8 +62,6 @@ public class NameHelper
                     type = "object";
                 }
                 break;
-            case "string":
-                break;
             default:
                 type = Function.ToPascalCase(type);
                 break;
@@ -72,7 +69,7 @@ public class NameHelper
         if (isArray)
         {
             // 可使用复数形式
-            type = $"List<{type}>";
+            type = isMust == 0 ? $"List<{type}>?" : $"List<{type}>";
         }
         attributionName = $"public {type} {name} {{ get; set; }}" + Environment.NewLine;
         return attributionName;
