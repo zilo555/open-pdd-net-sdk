@@ -79,7 +79,7 @@ public class PddSocketHostServiceBase : IHostedService, IDisposable
             _logger.LogInformation("连接失败:" + ex.Message);
         }
         OnMessage();
-        OnReconnectiong();
+        OnReconnecting();
     }
 
 
@@ -119,7 +119,7 @@ public class PddSocketHostServiceBase : IHostedService, IDisposable
     /// <summary>
     /// 重新连接的处理
     /// </summary>
-    public virtual void OnReconnectiong()
+    public virtual void OnReconnecting()
     {
         client.ReconnectionHappened.Subscribe(info => {
             _logger.LogInformation($"Reconnection happened, type: {info.Type}");

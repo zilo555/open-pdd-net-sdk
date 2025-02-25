@@ -3,7 +3,7 @@
 public class SocketMessageModel
 {
     [JsonPropertyName("id")]
-    public long Id { get; set; }
+    public long Id { get; set; } = DateTimeOffset.Now.ToUnixTimeMilliseconds();
     [JsonPropertyName("commandType")]
     public CommandType CommandType { get; set; }
     [JsonPropertyName("time")]
