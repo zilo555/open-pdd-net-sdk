@@ -24,19 +24,19 @@ public class ApiDocDetail
     public long CatId { get; set; }
 
     [JsonPropertyName("apiName")]
-    public string ApiName { get; set; }
+    public string ApiName { get; set; } = string.Empty;
 
     [JsonPropertyName("scopeName")]
-    public string ScopeName { get; set; }
+    public string ScopeName { get; set; } = string.Empty;
 
     [JsonPropertyName("usageScenarios")]
-    public string UsageScenarios { get; set; }
+    public string? UsageScenarios { get; set; }
 
     [JsonPropertyName("needOauth")]
     public long NeedOauth { get; set; }
 
     [JsonPropertyName("responseCodeExample")]
-    public string ResponseCodeExample { get; set; }
+    public string ResponseCodeExample { get; set; } = string.Empty;
 
     [JsonPropertyName("requestParamList")]
     public List<ParamList> RequestParamList { get; set; } = [];
@@ -60,16 +60,16 @@ public class ApiDocDetail
 public partial class ErrorParamList
 {
     [JsonPropertyName("errorCode")]
-    public string ErrorCode { get; set; }
+    public string? ErrorCode { get; set; }
 
     [JsonPropertyName("errorMsg")]
-    public string ErrorMsg { get; set; }
+    public string? ErrorMsg { get; set; }
 
     [JsonPropertyName("solution")]
-    public string Solution { get; set; }
+    public string? Solution { get; set; }
 
     [JsonPropertyName("outerErrorCode")]
-    public string OuterErrorCode { get; set; }
+    public string? OuterErrorCode { get; set; }
 }
 
 public partial class Limiter
@@ -90,13 +90,13 @@ public partial class PermissionsPkg
     public long Id { get; set; }
 
     [JsonPropertyName("name")]
-    public string Name { get; set; }
+    public string? Name { get; set; }
 
     [JsonPropertyName("description")]
-    public string Description { get; set; }
+    public string? Description { get; set; }
 
     [JsonPropertyName("appTypeList")]
-    public List<AppTypeList> AppTypeList { get; set; }
+    public List<AppTypeList> AppTypeList { get; set; } = [];
 }
 
 public partial class AppTypeList
@@ -105,7 +105,7 @@ public partial class AppTypeList
     public long Id { get; set; }
 
     [JsonPropertyName("name")]
-    public string Name { get; set; }
+    public string? Name { get; set; }
 }
 
 public partial class ParamList
@@ -120,37 +120,37 @@ public partial class ParamList
     public long ChildrenNum { get; set; }
 
     [JsonPropertyName("paramName")]
-    public string ParamName { get; set; }
+    public string? ParamName { get; set; }
 
     [JsonPropertyName("paramType")]
-    public string ParamType { get; set; }
+    public string? ParamType { get; set; }
 
     [JsonPropertyName("isMust")]
     public long? IsMust { get; set; } = 0;
 
     [JsonPropertyName("defaultValue")]
-    public string DefaultValue { get; set; }
+    public string DefaultValue { get; set; } = string.Empty;
 
     [JsonPropertyName("example")]
-    public string Example { get; set; }
+    public string Example { get; set; } = string.Empty;
 
     [JsonPropertyName("paramDesc")]
-    public string ParamDesc { get; set; }
+    public string? ParamDesc { get; set; }
 
     [JsonPropertyName("sourcePath")]
-    public object SourcePath { get; set; }
+    public object? SourcePath { get; set; }
 }
 
 public partial class SdkDemo
 {
     [JsonPropertyName("name")]
-    public string Name { get; set; }
+    public string Name { get; set; } = string.Empty;
 
     [JsonPropertyName("description")]
-    public string Description { get; set; }
+    public string Description { get; set; } = string.Empty;
 
     [JsonPropertyName("url")]
-    public string Url { get; set; }
+    public string Url { get; set; } = string.Empty;
 }
 
 public enum ParamType { Double, Integer, Long, Object, ObjectArray, StringArray, Boolean, String, IntegerArray, LongArray, Map, MapArray, File };

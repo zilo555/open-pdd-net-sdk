@@ -9,13 +9,9 @@ public class SocketMessageModel
     [JsonPropertyName("time")]
     public long Time { get; set; } = DateTimeOffset.Now.ToUnixTimeMilliseconds();
     [JsonPropertyName("message")]
-    public Message Message { get; set; }
+    public Message? Message { get; set; }
     [JsonPropertyName("sendTime")]
     public long SendTime { get; set; }
-
-    public SocketMessageModel()
-    {
-    }
 
     public SocketMessageModel(CommandType commandType)
     {
@@ -33,7 +29,7 @@ public class Message
      * 消息类型  
      */
     [JsonPropertyName("type")]
-    public string Type { get; set; }
+    public string Type { get; set; } = string.Empty;
     /**  
      * 商户ID  
      */
@@ -43,7 +39,7 @@ public class Message
      * 消息属性内容  
      */
     [JsonPropertyName("content")]
-    public string Content { get; set; }
+    public string Content { get; set; } = string.Empty;
 }
 public class AckMessage
 {
@@ -56,7 +52,7 @@ public class AckMessage
     [JsonPropertyName("sendTime")]
     public long SendTime { get; set; }
     [JsonPropertyName("type")]
-    public string Type { get; set; }
+    public string Type { get; set; } = string.Empty;
     [JsonPropertyName("mallID")]
     public long MallId { get; set; }
 }

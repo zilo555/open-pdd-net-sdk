@@ -80,19 +80,21 @@ public class PddSocketHostServiceBase : IHostedService, IDisposable
         }
         OnMessage();
         OnReconnecting();
-    }
 
+        client.DisconnectionHappened.Subscribe(info => {
+            _logger.LogInformation("Disconnection happened, info: {Type}, {CloseStatus}", info.Type, info.CloseStatus);
+        });
+    }
 
     public virtual void OnMessage()
     {
         // 接收信息
         client.MessageReceived.Subscribe(msg => {
-            _logger.LogInformation($"Message received: {msg}");
+            _logger.LogInformation("Message received: {msg}", msg);
             var serverMessage = JsonSerializer.Deserialize<SocketMessageModel>(msg.Text);
             AckMessage(serverMessage);
         });
     }
-
 
     /// <summary>
     /// 发送ack消息
@@ -122,7 +124,7 @@ public class PddSocketHostServiceBase : IHostedService, IDisposable
     public virtual void OnReconnecting()
     {
         client.ReconnectionHappened.Subscribe(info => {
-            _logger.LogInformation($"Reconnection happened, type: {info.Type}");
+            _logger.LogInformation("Reconnection happened, type: {type}", info.Type);
         });
 
     }
