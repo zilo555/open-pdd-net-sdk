@@ -5,17 +5,21 @@ public class SocketMessageModel
     [JsonPropertyName("id")]
     public long Id { get; set; } = DateTimeOffset.Now.ToUnixTimeMilliseconds();
     [JsonPropertyName("commandType")]
-    public CommandType CommandType { get; set; }
+    public string CommandType { get; set; }
     [JsonPropertyName("time")]
     public long Time { get; set; } = DateTimeOffset.Now.ToUnixTimeMilliseconds();
     [JsonPropertyName("message")]
     public Message? Message { get; set; }
     [JsonPropertyName("sendTime")]
-    public long SendTime { get; set; }
+    public long? SendTime { get; set; }
+
+    public SocketMessageModel()
+    {
+    }
 
     public SocketMessageModel(CommandType commandType)
     {
-        CommandType = commandType;
+        CommandType = commandType.ToString();
     }
 }
 
@@ -46,11 +50,11 @@ public class AckMessage
     [JsonPropertyName("id")]
     public long Id { get; set; }
     [JsonPropertyName("commandType")]
-    public CommandType CommandType { get; set; }
+    public string CommandType { get; set; }
     [JsonPropertyName("time")]
     public long Time { get; set; }
     [JsonPropertyName("sendTime")]
-    public long SendTime { get; set; }
+    public long? SendTime { get; set; }
     [JsonPropertyName("type")]
     public string Type { get; set; } = string.Empty;
     [JsonPropertyName("mallID")]

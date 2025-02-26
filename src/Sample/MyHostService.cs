@@ -20,18 +20,33 @@ public class MyHostService : PddSocketHostServiceBase
     {
         // 接收信息
         client.MessageReceived.Subscribe((message) => {
-            var serverMessage = JsonSerializer.Deserialize<SocketMessageModel>(message.Text);
-            // 心跳报文不处理
-            if (serverMessage.CommandType != CommandType.HeartBeat)
+            if (message.Text != null)
             {
-                // TODO:自定义处理逻辑
-                _logger.LogInformation("报文:" + serverMessage.Message.Content);
-                using var scope = Services.CreateScope();
-                // 获取数据库上下文
-                //var context = scope.ServiceProvider.GetRequiredService<DbContext>();
+                try
+                {
+                    var serverMessage = JsonSerializer.Deserialize<SocketMessageModel>(message.Text);
+                    if (serverMessage.CommandType == CommandType.Common.ToString())
+                    {
+                        // TODO:自定义处理逻辑
+                        _logger.LogInformation("报文:" + serverMessage.Message.Content);
+                        using var scope = Services.CreateScope();
+                        // 获取数据库上下文
+                        //var context = scope.ServiceProvider.GetRequiredService<DbContext>();
 
-                // ack确认，不确认消息会积压，重复发送
-               AckMessage(serverMessage);
+                        // ack确认，不确认消息会积压，重复发送
+                        AckMessage(serverMessage);
+                    }
+                    else if (serverMessage.CommandType == CommandType.HeartBeat.ToString())
+                    {
+#if true
+                        _logger.LogInformation("server heartbeat msg");
+#endif
+                    }
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError("msg error:{msg}", ex.Message);
+                }
             }
         });
     }

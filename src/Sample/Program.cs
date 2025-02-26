@@ -1,23 +1,33 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using PddOpenSdk.AspNetCore;
+using Sample;
 
-namespace Sample;
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
-public class Program
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
+
+builder.Services.Configure<PddOptions>(builder.Configuration.GetSection("Pdd"));
+builder.Services.AddPdd();
+
+builder.Services.AddHostedService<MyHostService>();
+
+builder.Services.AddControllersWithViews()
+    .AddJsonOptions(options => {
+        options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
+        options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
+    });
+
+WebApplication app = builder.Build();
+if (app.Environment.IsDevelopment())
 {
-    public static void Main(string[] args)
-    {
-        CreateHostBuilder(args).Build().Run();
-    }
-
-    public static IHostBuilder CreateHostBuilder(string[] args)
-    {
-        return Host.CreateDefaultBuilder(args)
-.ConfigureWebHostDefaults(webBuilder => {
-    webBuilder.UseStartup<Startup>();
-}).ConfigureServices(services => {
-    services.AddHostedService<MyHostService>();
-});
-    }
+    app.UseDeveloperExceptionPage();
 }
+
+app.UseStaticFiles();
+app.UseRouting();
+
+app.Run();

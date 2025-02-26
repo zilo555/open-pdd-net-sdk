@@ -63,7 +63,11 @@ public class PddSocketHostServiceBase : IHostedService, IDisposable
         var msg = new SocketMessageModel(CommandType.HeartBeat);
         if (client.IsRunning)
         {
-            client.Send(JsonSerializer.Serialize(msg));
+            var res = client.Send(JsonSerializer.Serialize(msg));
+            if (!res)
+            {
+                Console.WriteLine(res);
+            }
         }
     }
 
@@ -71,7 +75,7 @@ public class PddSocketHostServiceBase : IHostedService, IDisposable
     {
         try
         {
-            client.ReconnectTimeout = TimeSpan.FromSeconds(30);
+            client.ReconnectTimeout = TimeSpan.FromSeconds(60);
             await client.Start();
         }
         catch (Exception ex)
@@ -90,7 +94,10 @@ public class PddSocketHostServiceBase : IHostedService, IDisposable
     {
         // 接收信息
         client.MessageReceived.Subscribe(msg => {
+#if DEBUG
             _logger.LogInformation("Message received: {msg}", msg);
+#endif
+
             var serverMessage = JsonSerializer.Deserialize<SocketMessageModel>(msg.Text);
             AckMessage(serverMessage);
         });
@@ -106,7 +113,7 @@ public class PddSocketHostServiceBase : IHostedService, IDisposable
         {
             // 构建 ackMessage
             var ackMessage = new AckMessage {
-                CommandType = CommandType.Ack,
+                CommandType = CommandType.Ack.ToString(),
                 Id = serverMessage.Id,
                 MallId = serverMessage.Message.MallID,
                 SendTime = serverMessage.SendTime,
