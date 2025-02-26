@@ -2,9 +2,9 @@ namespace PddOpenSdk;
 
 public class ClientConfig
 {
-    public required string ClientId { get; set; }
-    public required string ClientSecret { get; set; }
-    public required string CallbackUrl { get; set; }
+    public string ClientId { get; set; }
+    public string ClientSecret { get; set; }
+    public string CallbackUrl { get; set; }
     public string AccessToken { get; set; } = string.Empty;
     /// <summary>
     /// 消息服务地址
