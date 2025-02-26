@@ -8,9 +8,7 @@
         <Authors>NilTor,AterDev</Authors>
         <Company>Geethin</Company>
         <Description>拼多多开放平台.NET SDK核心类库</Description>
-        <PackageReleaseNotes>1. 同步官方接口到最新(20250213);
-2. 模型中对可空字段的处理;
-3. 移除对.net6.0 的支持;
+        <PackageReleaseNotes>1. WebSockek中的CommandType类型
         </PackageReleaseNotes>
         <PackageProjectUrl>https://github.com/niltor/open-pdd-net-sdk</PackageProjectUrl>
         <RepositoryUrl>https://github.com/niltor/open-pdd-net-sdk</RepositoryUrl>
@@ -21,7 +19,7 @@
         <FileVersion>0.1.0.0</FileVersion>
         <PackageLicenseUrl></PackageLicenseUrl>
         <PackageIcon>logo.jpg</PackageIcon>
-        <Version>8.1.1</Version>
+        <Version>8.1.2</Version>
         <PackageId>MSDev.PddOpenSdk</PackageId>
         <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
         <Copyright />

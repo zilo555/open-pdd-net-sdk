@@ -85,7 +85,7 @@ Console.WriteLine(JsonSerializer.Serialize(response));
 
 先安装Nuget 包 `MSDev.PddOpenSdk.AspNetCore`。
 
-最新[示例代码](https://github.com/niltor/open-pdd-net-sdk/tree/v6/src/Sample)。
+最新[示例代码](https://github.com/niltor/open-pdd-net-sdk/tree/dev/src/Sample)。
 
 - 在 Startup.cs 中注入服务
 
@@ -196,7 +196,7 @@ public async Task<ActionResult> MultiTenantAsync()
             });
     ```
 
-`XXXHostService` 类可参考[Sample](https://github.com/niltor/open-pdd-net-sdk/tree/v6/src/Sample/MyHostService.cs)项目。
+`XXXHostService` 类可参考[Sample](https://github.com/niltor/open-pdd-net-sdk/tree/dev/src/Sample/MyHostService.cs)项目。
 
 - 心跳检测间隔可在`appsetting.json`配置中进行配置，可参考`Sample`项目中的配置。
 此外可在自定义的`XXXHostService`类中的构造方法中设置`HeartBeartSeconds`值，会覆盖配置中的值。
