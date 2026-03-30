@@ -1,3 +1,5 @@
+using System.Net;
+
 namespace Console.Helpers;
 
 /// <summary>
@@ -60,11 +62,10 @@ public class PddApiDocHelper
         CatMapClassName.Add("48", "Oversea");
         CatMapClassName.Add("49", "Ticket");
         CatMapClassName.Add("50", "Ktt");
-        // === 待定
-        //CatMapClassName.Add("51", "");
-        //CatMapClassName.Add("54", "PictureTool");
-        // === 以下取消
-        //CatMapClassName.Add("27", "Xinzhi");
+
+        CatMapClassName.Add("62", "VideoRecommend");
+        CatMapClassName.Add("64", "ERP");
+        CatMapClassName.Add("65", "OnlineDelivery");
 
         #endregion
     }
@@ -119,9 +120,18 @@ public class PddApiDocHelper
     /// <returns></returns>
     public async Task<ApiDocDetail?> GetDocDetailByIdAsync(string id)
     {
-        using var hc = new HttpClient();
-        var requestContent = new StringContent(JsonSerializer.Serialize(new { id }), Encoding.UTF8,
-                                               "application/json");
+
+        var cookies = new CookieContainer();
+        cookies.Add(
+            new Uri("https://open-api.pinduoduo.com"),
+            new Cookie("accesstoken", "44781441cbf4fb2caba5fd5aea1ace24d05fab437b051"));
+
+        var handler = new HttpClientHandler {
+            CookieContainer = cookies,
+            UseCookies = true
+        };
+        using var hc = new HttpClient(handler);
+        var requestContent = new StringContent(JsonSerializer.Serialize(new { id }), Encoding.UTF8, "application/json");
         var response = await hc.PostAsync(DocInfoUrl, requestContent);
         if (response.IsSuccessStatusCode)
         {
@@ -187,8 +197,11 @@ public class PddApiDocHelper
                             }
                         }
                         var docDetail = await GetDocDetailByIdAsync(pddDocInfo.Id);
-                        methodsContent += BuildRequestMethod(docDetail, className);
-                        System.Console.WriteLine($"✅ [{totalNumber}]" + docDetail.ScopeName);
+                        if (docDetail != null)
+                        {
+                            methodsContent += BuildRequestMethod(docDetail, className);
+                            System.Console.WriteLine($"✅ [{totalNumber}]" + docDetail.ScopeName);
+                        }
                     }
                     SaveApiClass(className, methodsContent);
                 }
